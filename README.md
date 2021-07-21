@@ -1,104 +1,403 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Book bar
 
-Welcome USER_NAME,
+## Data Centric Development - Milestone Project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+[View the Live Site here.](https://the-book-bar.herokuapp.com/)
 
-## Gitpod Reminders
+![logo](assets/images/readmeFiles/readmeLogo.png) 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Generated from Am I Responsive](assets/images/readmeFiles/TheBookbar.jpg)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+The Kaytea Crafts webshop was designed, built and deployed by Emma Harte as her final milestone project for the Code Institute Full Stack Web Development diploma.
+The webstore was created to replace an existing Etsy account, allowing for a fully customizated shopping experience. 
+This space is all about art. Enter the home of the artist, browse her online portfolio or even order your own customised piece. 
 
-Another blue button should appear to click: _Open Browser_.
+In this project, full CRUD functionality is present. 
+Security features are also present. Such include user permissions for the 'admin' user and safe storage of passwords and sensitive-security information.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+----------------------------
 
-A blue button should appear to click: _Make Public_,
+## Contents
+1. [UX](#ux)
+      - [Strategy](#strategy)
+      - [User Stories](#user-stories)
+        - [Visitor Stories](#visitor-stories)
+        - [Business Stories](#business-stories)
+    - [Project Scope](#project-scope)
+      - [In Scope](#in-scope)
+      - [Out of Scope](#out-of-scope)
+    - [Wireframes](#wireframes)
+    - [Design](#design)
+      - [User journey](#user-journey)
+      - [Typography](#typography)
+      - [Color Scheme](#color-scheme)
 
-Another blue button should appear to click: _Open Browser_.
+2. [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features Left to Implement](#features-left-to-implement)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+3. [Information Architecture](#information-architecture)
+    - [Database information](#database-information)
+    - [Datatypes](#datatypes)
+    - [Collections information](#collections-information)
 
-To log into the Heroku toolbelt CLI:
+4. [Technologies Used](#technologies-used)
+    - [Database](#database) 
+    - [Languages](#languages)
+    - [Libraries](#libraries)
+    - [Tools](#tools)
+    - [Deployment](#deployment-heroku)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+5. [Testing](https://github.com/emmahartedev/The-Book-bar/blob/master/testing.md)
+    
+6. [Deployment](#deployment)
+    - [Local Deployment](#local-deployment)
+    - [Heroku Deployment](#heroku-deployment)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+7. [Credits](#credits "goto credits")
+    - [Content](#content "goto Content")
+    - [Code](#code "goto code")
+    - [Media](#media "goto media")
+    - [Acknowledgments](#acknowledgments "goto acknowledgments")
 
-------
+----------------------------
 
-## Release History
+## UX
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Strategy
+The following information was declared during UX research, as part of the 5 plane investigation:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* The website will be created to target x, aged between 15 and 55.
+  More specifically, the website aims to target x
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* Only useful, useable, and essential data will be stored in the database.
+  E.g., 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* In investigating in-scope features for this release, the Importance v Feasibility was studied. Below is a graphic showcasing the results.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![ivf](assets/images/readmeFiles/ivf.jpg) 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### User Stories
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Visitor stories:
+**As an external user**:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. I want to be able to add x on the website so that I can x
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Business stories:
+**As the website owner**:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. I want to be able to add x on the website so that users can x
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Project Scope
+As part of the 5 plane investigation, the project scope was defined.
+During this process, the functional and content requirements were examined.
+In considering the functional requirements, each problem was examined to find a best-fit solution.
+In considering the content requirements, the following were questioned: 
+  1. What type of content would fulfill the need (image, video, text, mixed)
+  2. Whether or not adequate resources were available to produce the content.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The following is a statement of the defined scope:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### In scope
 
-------
+* User login and account registration
+  - Only if a user is registered and logged in, can the ..
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+#### Out of scope
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* A sophisticated recommendation algorithm
+  - Not possible due to the project time frame
 
-**How will this affect me?**
+### Wireframes
+All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
+These layouts were created following research on the five planes of UX, and before coding.\
+\
+<strong>
+Please note, the final website layout contains slight variations to the original wireframes.
+Each of the following files contain wireframes for desktop, tablet, and mobile devices.
+</strong>
+ 
+**Users: non-admin**
+- [Homepage](assets/images/readmeFiles/wireframes/home.png)
+- [Login](assets/images/readmeFiles/wireframes/login.png)
+- [Register](assets/images/readmeFiles/wireframes/register.png)
+- [Profile](assets/images/readmeFiles/wireframes/profile.png)
+- [](assets/images/readmeFiles/wireframes/addABook.png)
+  - The edit book page will be a direct copy of the Add a book page. The fields will be pre-selected.
+- [](assets/images/readmeFiles/wireframes/bookPage.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+**User: admin only**
+- [](assets/images/readmeFiles/wireframes/manageGenresAdmin.png)
+  - The 'add genre' book page will be a direct copy of the Add a book page.
+    - It will contain two fields: a genre title and an icon name.
+  - The Edit genre page will be a direct copy of the Add genre page. The fields will be pre-selected.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Design
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+#### User journey
+- The website structure was designed to be consistent, predictable, learnable, visible, and provide user feedback.
+- A user journey for non-admin users was created to aid the structural design.
 
-**So….?**
+![user journey](assets/images/readmeFiles/userjourney.jpg) 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+#### Typography
+- All fonts used in this project derive from [Google Fonts](https://fonts.google.com/). 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Fonts used include:
+  - [Raleway](https://fonts.google.com/specimen/Raleway?query=raleway) - used for h1 - h4
+  - [Lato](https://fonts.google.com/specimen/Lato?query=lato) - used for h5 - h6 and all other body text
+
+
+#### Color scheme
+- A ..
+
+![colour palette](assets/images/readmeFiles/example.jpg)
+
+--------------------------------------------------------------------------------------------
+
+## Features
+
+### Existing Features 
+
+#### Elements on all pages
+
+- NavBar
+  - The navigation features The logo in the top left corner in desktop view. This switches to a center position on smaller screen sizes.
+
+  - Access rights:
+    - Certain links are viewable only to a logged-in user...
+
+    - Below is a full list of navbar links shown for each user type.
+
+      - For **all users** who **are not logged in**, the following links are viewable:
+        1. Home 
+
+      - For **non-admin users** who **are logged in**, the following links are viewable:
+        1. 
+
+      - For an **admin user** who **is logged in**, the following links are viewable:
+        1. 
+
+
+- Footer
+  - The footer includes the following:
+    - ..
+
+#### Homepage
+
+
+### Features Left to Implement
+The following are features that were not included in this release. Once adequate time and a developed skillset are available, these points will be revisited.
+
+* name
+  - Implement ...
+
+
+
+## Information Architecture
+
+### Database information
+- MongoDB (a project requirement):
+  - This project utilizes MongoDB; a NoSQL database.
+
+- Take-away thoughts:
+  - A pre-defined schema would have simplified the development of the overall project.
+
+
+### Datatypes
+  - The datatypes utilized in this project include the following:
+    - ObjectId
+    - String
+    - Boolean
+    - DateTime
+    - Array
+    - Object
+
+### Collections information
+The website involves .. database collections. The details of each collection are detailed below.
+
+  #### Users collection
+
+| Title | Key in db | form validation type | Data type |
+--- | --- | --- | --- 
+Account Id | _id | None | ObjectId
+Username | created_by | Text, `maxlength="15"` |string
+Password | password | Text, `maxlength="15"` | string
+Books Added by User | books_added | None | array
+Reviews Added by User | reviews_added | None | array
+
+
+
+----------------------------
+
+## Technologies Used
+
+### Database
+
+* [MongoDB Atlas](https://www.mongodb.com/) - Used as the primary database for storing and retrieving the information in the website.
+
+### Languages
+
+* [HTML5](https://www.w3schools.com/html/) - Used for structuring the site pages.
+
+* [CSS](https://www.w3schools.com/css/) - Used for styling the site pages.
+
+* [Javascript](https://www.w3schools.com/js/DEFAULT.asp) - Used to make the website interactive.
+
+* [Python](https://www.python.org/) - Used to create database-driven functionalities.
+
+### Libraries
+
+* [jQuery](https://jquery.com/) - Used to make the website interactive.
+
+* [PyMongo](https://pypi.org/project/pymongo/) - Used to establish communication between MongoDB and Python.
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used to construct and render pages.
+
+* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - used in conjunction with flask to display data from the backend.
+
+### Tools
+
+* [Gitpod](https://www.gitpod.io/docs/) - Used as a development environment.
+
+* [PIP](https://pip.pypa.io/en/stable/installing/) - Used for tool installations.
+
+* [Git](https://www.gitpod.io/docs/) - Used to handle version control.
+
+* [Github](https://github.com/) - Used for repository hosting.
+
+* [Materialize](https://materializecss.com/about.html) - Used to develop the website design system.
+
+* [Canva](https://www.canva.com/) - Used to create the brand logo.
+
+* [IMgBB](https://imgbb.com/) - Used to store images.
+
+* [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) - Used to resize and edit images.
+
+* [Favicon.io](https://favicon.io/favicon-converter/) - Used for favicon creation.
+
+* [Am I Responsive](http://ami.responsivedesign.is/) - Used to create responsive images for different devices.
+
+* [Google Fonts](https://fonts.google.com/) - Used for typography.
+
+* [Font Awesome](https://fontawesome.com/) - Used for footer Icons.
+
+* [Google Icons](https://fonts.google.com/icons) - Used for all Icons (bar footer icons).
+
+* [LottieFiles](https://lottiefiles.com/) - All free animations are sourced from here.
+
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Used for monitoring the responsiveness of the website.
+
+* [LamdaTest](https://www.lambdatest.com/) - Used for monitoring the responsiveness of the website.
+### Deployment (Heroku)
+
+* [Heroku](https://id.heroku.com/login) - The cloud platform used to deploy the website.
+----------------------------
+## Testing
+All testing documentation is stored in a separate testing file, which can be accessed [here](https://github.com/emmahartedev/..).
+
+----------------------------
+
+## Deployment
+
+### Local Deployment
+To run this project on your own IDE, ensure that the following are installed on your machine:
+
+  * [Python 3](https://www.python.org/download/releases/3.0/)
+  * [PIP](https://pypi.org/project/pip/)
+  * [Git](https://git-scm.com/)
+
+Additionally, make sure that you also have the following set up: 
+  * [A MongoDB Atlas account](https://www.mongodb.com/)
+
+#### Forking the repository
+To fork the repository, the following steps must be followed:
+1. Navigate to the [project repository](https://github.com/emmahartedev/The-Book-bar).
+
+2. Click "Fork", located on the top right of the screen.
+
+3. You have successfully forked the repository. A copy of the original project will now be copied to your account.
+
+4. Create an [env.py](https://pypi.org/project/env.py/) file to store environmental variables. Add this to the [.gitignore](https://git-scm.com/docs/gitignore/en) file to ensure it is not uploaded.
+
+5. Run the application using the command: ```python3 app.py```
+
+#### Cloning the repository
+To clone the repository, the following steps must be followed:
+
+1. Navigate to the [project repository](https://github.com/emmahartedev/..).
+
+2. Click 'Code' and in the Clone with HTTPS window, copy the provided repository URL. 
+
+3. Open a terminal in your IDE.
+
+4. Change the current working directory to the location you wish to generate the cloned directory.
+
+5. Type ```git clone```, and then paste the URL from step 2. 
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+git clone https:..
 ```
+6. Create an [env.py](https://pypi.org/project/env.py/) file to store environmental variables. Add this to the [.gitignore](https://git-scm.com/docs/gitignore/en) to ensure it is not uploaded.
 
-**Anything more?**
+7. Run the application using the command: ```python3 app.py```
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Heroku Deployment
+To deploy 'The Book bar' to Heroku, the following steps must be followed:
+  1. Create a [requirements.txt](https://blog.usejournal.com/why-and-how-to-make-a-requirements-txt-f329c685181e) file using the command ```pip freeze > requirements.txt```.
 
----
+  2. Create a [Procfile](https://devcenter.heroku.com/articles/procfile) using the command ```echo web: python app.py > Procfile```.
 
-Happy coding!
+  3. Add both files to Github by using ```git add```, then ```git commit -m "Add a relevant git message here"``` and finally ```git push```.
+
+  4. Navigate to the [Heroku](https://id.heroku.com/login) website. On the dashboard page, click "New", then click "Create new app". Add a name and a region.
+
+  5. Connect the Heroku app to the Github repository. On the Heroku app dashboard, select the "Deploy" tab. Under "Deployment method", select "Github" and confirm.
+
+  6. Navigate to the "Settings" tab in the app dashboard. Under "Config Vars" click "Reveal Config Vars".
+
+  7. Set the following config vars:
+
+  | Key | Value |
+ --- | ---
+DEBUG | FALSE
+IP | 0.0.0.0
+MONGO_URI | `mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority`
+PORT | 5000
+SECRET_KEY | `<your_secret_key>`
+ 
+8. In the Heroku app click on the "Deploy" tab and navigate to the "Manual Deployment" section. Confirm that the "master" branch is selected and click "Deploy Branch".
+
+9. The website is now successfully deployed.
+
+----------------------------
+
+## Credits 
+The following material is not my own. Sources have been listed alongside a description of the content used. 
+
+### Content
+
+* [name of source](link) - Used for ...
+
+
+### Code
+The following code was used directly in this project:
+  * [name of source](link) - used to create ...
+
+The following code has been modified in this project:
+  * [Stack Overflow - dippas](https://stackoverflow.com/questions/37127123/change-color-of-underline-input-and-label-in-materialize-css-framework/37127156) - used to change the color of the materialize input fields.
+
+
+###  Media
+The images used on this website were obtained from the following sources:
+
+README.md:
+* image desc - [Source](link)
+
+### Acknowledgments
+* 

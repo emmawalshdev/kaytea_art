@@ -82,9 +82,35 @@ Security features are also present. Such include user permissions for the 'admin
 ### User Stories
 
 #### Visitor stories:
-**As an external user **:
+** As a visitor of the website I expect/want/need: **
 
-1. I want to be able to add x on the website so that I can x
+**Browsing**
+1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
+2. To be able to search for products by text, so that I can find something specific.
+3. To browse orginal artwork, prints and gifts, as these are the main categories of an artshop which I would expect to see. 
+4. To be able to filter by price within cargeory pages so that I can find a product to suit my budget.
+5. To see the image, media used and canvas size of each product. This information is vital to me.
+6. To be able to read product reviews as this helps me to decide on the quality and level of service delivered by the company.
+7. To request a quote for a pet commission so that I can decide myself whether this is something I would like to purchase.
+8. To receive feedback after I interact with the website so that I am aware if the interaction has or has not been a success.
+9. To learn more about the artist and the process behind the creations. As a supporter of small businessess, I like to feel a connection to the business owner.
+
+**Shopping**
+1. To know that the payment process is secure as I only shop on trustworthy sites.
+2. To be able to navigate to my shopping card easily so that I can quickly checkout.
+3. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
+4. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
+5. To receive an email after I submit an order so that I am aware the interaction had been a success.
+6. my shipping details should autofill if I am logged in so that I can quickly checkout.
+
+**Customer care**
+1. To be able to set up an account, so that I can login on return and view my data.
+2. To be able to contact the shop owner easily in case I have a question related to my order.
+3. To see a summary of my order after I make a purchase so that I can review the details.
+4. To see a list of my order history so that I can check up on my recent activity. 
+5. To have the choice to reset my account password in case I forget it.
+6. To be able to update my account details in case a change is required.
+7. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
 
 
 #### Business stories:

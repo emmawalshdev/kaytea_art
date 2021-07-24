@@ -1,6 +1,6 @@
-# The Book bar
+# KayTea Art
 
-## Data Centric Development - Milestone Project
+## Full Stack Development - Milestone Project
 
 [View the Live Site here.](https://the-book-bar.herokuapp.com/)
 
@@ -9,7 +9,7 @@
 ![Generated from Am I Responsive](assets/images/readmeFiles/TheBookbar.jpg)
 
 
-The Kaytea Crafts webshop was designed, built and deployed by Emma Harte as her final milestone project for the Code Institute Full Stack Web Development diploma.
+The Kaytea Art webshop was designed, built and deployed by Emma Harte as her final milestone project for the Code Institute Full Stack Web Development diploma.
 The webstore was created to replace an existing Etsy account, allowing for a fully customizated shopping experience. 
 This space is all about art. Enter the home of the artist, browse her online portfolio or even order your own customised piece. 
 
@@ -66,22 +66,23 @@ Security features are also present. Such include user permissions for the 'admin
 ## UX
 
 ### Strategy
-The following information was declared during UX research, as part of the 5 plane investigation:
 
-* The website will be created to target x, aged between 15 and 55.
-  More specifically, the website aims to target x
+**Target Audience:**
+* People who are interested in wildlife, plant and animal art.
+* Pet owners, interested in pet comissions.
+* People looking for unique art at an affordable price.
+* People looking for unique gift ideas.
 
-* Only useful, useable, and essential data will be stored in the database.
-  E.g., 
-
-* In investigating in-scope features for this release, the Importance v Feasibility was studied. Below is a graphic showcasing the results.
+**Importance v Feasability**
+* This study was carried out to investigating the in-scope features for this release. 
+* The graphic below showcases the results.
 
 ![ivf](assets/images/readmeFiles/ivf.jpg) 
 
 ### User Stories
 
 #### Visitor stories:
-**As an external user**:
+**As an external user **:
 
 1. I want to be able to add x on the website so that I can x
 

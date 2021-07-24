@@ -82,7 +82,7 @@ Security features are also present. Such include user permissions for the 'admin
 ### User Stories
 
 #### Visitor stories:
-** As a visitor of the website I expect/want/need: **
+**As a visitor of the website I expect/want/need:**
 
 **Browsing**
 1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
@@ -115,8 +115,21 @@ Security features are also present. Such include user permissions for the 'admin
 
 #### Business stories:
 **As the website owner**:
+**As a superuser of the website I expect/want/need:**
 
-1. I want to be able to add x on the website so that users can x
+**General**
+1. Build a beautiful, easy-to-use, trustworthy website so that I can build brand awareness and sell artwork.
+2. To be able to view customer/order/product data so that I easily pull up information if required. 
+
+**Website admin**
+1. To be able to add/edit and delete products on the website so that I can keep the information up-to-date.
+2. To be able to add/edit and delete gallery images on the website so that I can keep the page fresh.
+
+**Online shop admin**
+3. To receive order notifications so that I begin preparing these.
+4. To be able to issue refunds in case required.
+6. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
+5. To have the choice to accept or decline a comission request. I would need to access each request to see if it is feasible. 
 
 ### Project Scope
 As part of the 5 plane investigation, the project scope was defined.

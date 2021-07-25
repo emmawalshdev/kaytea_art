@@ -126,10 +126,10 @@ Security features are also present. Such include user permissions for the 'admin
 2. To be able to add/edit and delete gallery images on the website so that I can keep the page fresh.
 
 **Online shop admin**
-3. To receive order notifications so that I begin preparing these.
-4. To be able to issue refunds in case required.
-6. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
-5. To have the choice to accept or decline a comission request. I would need to access each request to see if it is feasible. 
+1. To receive order notifications so that I begin preparing these.
+2. To be able to issue refunds in case required.
+3. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
+4. To have the choice to accept or decline a comission request. I would need to access each request to see if it is feasible. 
 
 ### Project Scope
 As part of the 5 plane investigation, the project scope was defined.
@@ -143,9 +143,49 @@ The following is a statement of the defined scope:
 
 #### In scope
 
-* User login and account registration
-  - Only if a user is registered and logged in, can the ..
+* User feedback
+  - If a user interacts with a website feature, user feedback will be shared.
+  - This will be in the form of either a pop-up modal or email.
+  - Warning, error and success colors will be used for easy recognition.
 
+* User acount registration with verification
+  - A user will be asked to verify their email address before setup is complete. Email verification is designed to check accounts to make sure they are real.
+  - A user will be able to input personal details such as contact and shipping details. This will be stored in the database.
+  - if the user forgets their password, they will have the choice to reset it via an email link.
+
+* A webiste contact form
+  - This will allow users to contact the business owner. A message subject can be selected on the form, which lets the receiver know the topic of contact.
+  - The form will include a dropdown field called 'subject of message'.
+
+* An online store selling original artwork, prints and gifts
+  - Within each cateogry the user will be able to sort by price and filter by subcategory.
+  - Adding/editing and removing items from the shopping cart will be possible.
+  - If the user is logged in, any saved shipping details will autofill at the checkout.
+  - A fully secure checkout process will be in place, using Stripe.
+  - Shipping will be at the standard fee of €4.99. Orders above €50 will inlude free shipping.
+
+* Descriptive product pages
+  - The template will include the following information:
+    - Images
+    - canvas size
+    - media
+    - Stock level
+  - A section for customer reviews will be included at the bottom of each page. 
+
+* An about page
+  - This will be focused on introducing the artist and their work.
+  - As the focus will be on promoting the online shop, both this and a 'contact us' block will be incoporated into this page.
+
+* A gallery
+  - The business owner will be able to uplaod new content, edit and/or delete existing content.
+  - A hover effect will be present on each image revealing the tite, canvas size and media used.
+
+Time permitting - full task description
+* A Pet commision service that generates a quote which the user can review
+  - The user can upload an image and must then select the desired canvas size, media and confirm the number of pets in the picture. Based on the selection, a custom quote is generated.  
+  - The quote would be calculated based on the number of pets (max 3 pets) in an image and the canvas size.
+  - The request can then be accepted by the user. If submitted, it will be sent to the shop owner for review.
+  - The shop owner retains the right to accept or decline the quote. (The request may be declined due to poor image quality).
 
 #### Out of scope
 

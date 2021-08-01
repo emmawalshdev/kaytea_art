@@ -87,8 +87,8 @@ Security features are also present. Such include user permissions for the 'admin
 **Browsing**
 1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
 2. To be able to search for products by text, so that I can find something specific.
-3. To browse orginal artwork, prints and gifts, as these are the main categories of an artshop which I would expect to see. 
-4. To be able to filter by price within cargeory pages so that I can find a product to suit my budget.
+3. To browse orginal artwork and prints, as these are the main categories of an artshop which I would expect to see. 
+4. To be able to filter by price within category pages so that I can find a product to suit my budget.
 5. To see the image, media used and canvas size of each product. This information is vital to me.
 6. To be able to read product reviews as this helps me to decide on the quality and level of service delivered by the company.
 7. To request a quote for a pet commission so that I can decide myself whether this is something I would like to purchase.
@@ -97,11 +97,11 @@ Security features are also present. Such include user permissions for the 'admin
 
 **Shopping**
 1. To know that the payment process is secure as I only shop on trustworthy sites.
-2. To be able to navigate to my shopping card easily so that I can quickly checkout.
+2. To be able to navigate to my shopping cart easily so that I can quickly checkout.
 3. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
 4. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
 5. To receive an email after I submit an order so that I am aware the interaction had been a success.
-6. my shipping details should autofill if I am logged in so that I can quickly checkout.
+6. My shipping details should autofill if I am logged in so that I can quickly checkout.
 
 **Customer care**
 1. To be able to set up an account, so that I can login on return and view my data.
@@ -161,7 +161,8 @@ The following is a statement of the defined scope:
   - The form will include a dropdown field called 'subject of message'.
 
 * An online store selling original artwork, prints and gifts
-  - Within each cateogry the user will be able to sort by price and filter by subcategory.
+  - After speaking with the owner, the categories will be original artwork, prints and greeting cards. Once the product database builds, we will consider creating the gifts category.
+  - Within each category the user will be able to sort by price or easily switch categories.
   - Adding/editing and removing items from the shopping cart will be possible.
   - If the user is logged in, any saved shipping details will autofill at the checkout.
   - A fully secure checkout process will be in place, using Stripe.
@@ -170,30 +171,32 @@ The following is a statement of the defined scope:
 * Descriptive product pages
   - The template will include the following information:
     - Images
-    - canvas size
-    - media
-    - Stock level
-  - A section for customer reviews will be included at the bottom of each page. 
+    - Canvas size
+    - Media
+    - In stock or out of stock statement. I will not be adding the stock level. As the product is fine art, it is not produced in large volumes (sometimes it is a once off piece)
 
 * An about page
   - This will be focused on introducing the artist and their work.
-  - As the focus will be on promoting the online shop, both this and a 'contact us' block will be incoporated into this page.
+  - As the focus will be on promoting contact, a 'contact me' block will be incoporated into this page.
 
 * A gallery
-  - The business owner will be able to uplaod new content, edit and/or delete existing content.
-  - A hover effect will be present on each image revealing the tite, canvas size and media used.
+  - The business owner will be able to upload new content, edit and/or delete existing content.
+  - A pop up effect will be present on each image revealing the tite, canvas size and media used.
 
-Time permitting - full task description
-* A Pet commision service that generates a quote which the user can review
+* A Pet commision contact service that generates a quote which the user can review and submit
   - The user can upload an image and must then select the desired canvas size, media and confirm the number of pets in the picture. Based on the selection, a custom quote is generated.  
   - The quote would be calculated based on the number of pets (max 3 pets) in an image and the canvas size.
-  - The request can then be accepted by the user. If submitted, it will be sent to the shop owner for review.
+  - The request can then be sent by the user. If submitted, it will be sent to the shop owner for review.
   - The shop owner retains the right to accept or decline the quote. (The request may be declined due to poor image quality).
+  - No payment is immediately taken. The business owner has stressed that chatting to the client is important in the pet commission service, so for now, we will not be allowing payment to take place over the webiste. The focus will be on providing an reliable quote and initializing a conversation. 
 
 #### Out of scope
 
 The following features have not been included in the first rollout of this project. At this time, the focus will be on launching the webshop with the most fundamental features covered.
 
+* Product reviews - I would like to properly develop this will an average star rating for each product.
+* Online payment for commissions 
+* Optimised layouts for the checkout process and gallery - these will not be very sophisticated in this release.
 * Discount code and voucher capabilities
 * Video demos for products
 * Abandoned cart recovery
@@ -220,7 +223,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Get in touch](https://i.ibb.co/KGBdXGK/Connect.png)
 - [Shop - Categories](https://i.ibb.co/yFTdCFX/Shop-Categories.png)
 - [Shop - Commissions](https://i.ibb.co/8YsRSLZ/Shop-Pet-Commission.png)
-- [Product page](https://i.ibb.co/s3B4DtZ/Product-page.png)
+- [Product page](https://i.ibb.co/KzYVdR6/Product-page.png)
 - [Shopping bag](https://i.ibb.co/yfdr064/Shopping-bag.png)
 - [Checkout - info](https://i.ibb.co/0YHHQJN/Checkout-Info.png)
 - [Checkout - Address](https://i.ibb.co/XsS56yk/Checkout-Address.png)

@@ -148,6 +148,9 @@ The following is a statement of the defined scope:
   - This will be in the form of either a pop-up modal or email.
   - Warning, error and success colors will be used for easy recognition.
 
+* Text search
+  - keywords can be used to search the site for a product at a very deep level.
+
 * User acount registration with verification
   - A user will be asked to verify their email address before setup is complete. Email verification is designed to check accounts to make sure they are real.
   - A user will be able to input personal details such as contact and shipping details. This will be stored in the database.
@@ -189,8 +192,14 @@ Time permitting - full task description
 
 #### Out of scope
 
-* A sophisticated recommendation algorithm
-  - Not possible due to the project time frame
+The following features have not been included in the first rollout of this project. At this time, the focus will be on launching the webshop with the most fundamental features covered.
+
+* Discount code and voucher capabilities
+* Video demos for products
+* Abandoned cart recovery
+* Integrated blog
+* Integrated Social media share buttons on product pages
+* Personalised product recommendations for users
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
@@ -201,20 +210,31 @@ Please note, the final website layout contains slight variations to the original
 Each of the following files contain wireframes for desktop, tablet, and mobile devices.
 </strong>
  
-**Users: non-admin**
-- [Homepage](assets/images/readmeFiles/wireframes/home.png)
-- [Login](assets/images/readmeFiles/wireframes/login.png)
-- [Register](assets/images/readmeFiles/wireframes/register.png)
-- [Profile](assets/images/readmeFiles/wireframes/profile.png)
-- [](assets/images/readmeFiles/wireframes/addABook.png)
-  - The edit book page will be a direct copy of the Add a book page. The fields will be pre-selected.
-- [](assets/images/readmeFiles/wireframes/bookPage.png)
+- [Homepage](https://i.ibb.co/xXdWJth/Home.png)
+- [Search results](https://i.ibb.co/2ZjmbV1/Search-results.png)
+- [About](https://i.ibb.co/2KYqSZp/About.png)
+- [Gallery](https://i.ibb.co/WxTKYmT/Gallery.png)
+- [Login](https://i.ibb.co/S6VvwkP/Login.png)
+- [My profile](https://i.ibb.co/S3yrR80/My-account.png)
+- [Register](https://i.ibb.co/z4x0Jz8/Register.png)
+- [Get in touch](https://i.ibb.co/KGBdXGK/Connect.png)
+- [Shop - Categories](https://i.ibb.co/yFTdCFX/Shop-Categories.png)
+- [Shop - Commissions](https://i.ibb.co/8YsRSLZ/Shop-Pet-Commission.png)
+- [Product page](https://i.ibb.co/s3B4DtZ/Product-page.png)
+- [Shopping bag](https://i.ibb.co/yfdr064/Shopping-bag.png)
+- [Checkout - info](https://i.ibb.co/0YHHQJN/Checkout-Info.png)
+- [Checkout - Address](https://i.ibb.co/XsS56yk/Checkout-Address.png)
+- [Checkout - Payment](https://i.ibb.co/BBh5BxC/Checkout-Payment.png)
+- [Checkout - Done](https://i.ibb.co/59fGLL3/Checkout-Done.png)
 
-**User: admin only**
-- [](assets/images/readmeFiles/wireframes/manageGenresAdmin.png)
-  - The 'add genre' book page will be a direct copy of the Add a book page.
-    - It will contain two fields: a genre title and an icon name.
-  - The Edit genre page will be a direct copy of the Add genre page. The fields will be pre-selected.
+
+
+
+
+
+
+
+
 
 ### Design
 

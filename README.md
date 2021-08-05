@@ -68,7 +68,7 @@ Security features are also present. Such include user permissions for the 'admin
 ### Strategy
 
 **Target Audience:**
-* People who are interested in wildlife, plant and animal art.
+* People who are interested in realistic wildlife and animal art.
 * Pet owners, interested in pet comissions.
 * People looking for unique art at an affordable price.
 * People looking for unique gift ideas.
@@ -123,7 +123,7 @@ Security features are also present. Such include user permissions for the 'admin
 
 **Website admin**
 1. To be able to add/edit and delete products on the website so that I can keep the information up-to-date.
-2. To be able to add/edit and delete gallery images on the website so that I can keep the page fresh.
+2. To be able to add/edit and delete blog connect on the website so that I can keep the page fresh.
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
@@ -174,13 +174,15 @@ The following is a statement of the defined scope:
     - Canvas size
     - Media
     - In stock or out of stock statement. I will not be adding the stock level. As the product is fine art, it is not produced in large volumes (sometimes it is a once off piece)
+    - Product reviews
 
 * An about page
   - This will be focused on introducing the artist and their work.
   - As the focus will be on promoting contact, a 'contact me' block will be incoporated into this page.
 
-* A gallery
+* A Blog
   - The business owner will be able to upload new content, edit and/or delete existing content.
+  - Users will be able to add comments.
   - A pop up effect will be present on each image revealing the tite, canvas size and media used.
 
 * A Pet commision contact service that generates a quote which the user can review and submit
@@ -194,9 +196,8 @@ The following is a statement of the defined scope:
 
 The following features have not been included in the first rollout of this project. At this time, the focus will be on launching the webshop with the most fundamental features covered.
 
-* Product reviews - I would like to properly develop this will an average star rating for each product.
 * Online payment for commissions 
-* Optimised layouts for the checkout process and gallery - these will not be very sophisticated in this release.
+* Optimised layout for the checkout process - this will not be very sophisticated in this release.
 * Discount code and voucher capabilities
 * Video demos for products
 * Abandoned cart recovery
@@ -213,34 +214,32 @@ Please note, the final website layout contains slight variations to the original
 Each of the following files contain wireframes for desktop, tablet, and mobile devices.
 </strong>
  
-- [Homepage](https://i.ibb.co/xXdWJth/Home.png)
-- [Search results](https://i.ibb.co/2ZjmbV1/Search-results.png)
-- [About](https://i.ibb.co/2KYqSZp/About.png)
-- [Gallery](https://i.ibb.co/WxTKYmT/Gallery.png)
-- [Login](https://i.ibb.co/S6VvwkP/Login.png)
-- [My profile](https://i.ibb.co/S3yrR80/My-account.png)
-- [Register](https://i.ibb.co/z4x0Jz8/Register.png)
-- [Get in touch](https://i.ibb.co/KGBdXGK/Connect.png)
-- [Shop - Categories](https://i.ibb.co/yFTdCFX/Shop-Categories.png)
-- [Shop - Commissions](https://i.ibb.co/8YsRSLZ/Shop-Pet-Commission.png)
-- [Product page](https://i.ibb.co/KzYVdR6/Product-page.png)
-- [Shopping bag](https://i.ibb.co/yfdr064/Shopping-bag.png)
-- [Checkout - info](https://i.ibb.co/0YHHQJN/Checkout-Info.png)
-- [Checkout - Address](https://i.ibb.co/XsS56yk/Checkout-Address.png)
-- [Checkout - Payment](https://i.ibb.co/BBh5BxC/Checkout-Payment.png)
-- [Checkout - Done](https://i.ibb.co/59fGLL3/Checkout-Done.png)
-
-
-
-
-
-
-
-
+- [Homepage](https://i.ibb.co/ww9kx4v/Home.png)
+- [Search results](https://i.ibb.co/vxKr4pb/Search-results.png)
+- [About](https://i.ibb.co/jDC89Y8/About.png)
+- [Blog](https://i.ibb.co/ykNh6gQ/Blog.png)
+- [Blog inner page](https://i.ibb.co/RNcBNkP/Blog-inner-page.png)
+- [Login](https://i.ibb.co/FzYCFrR/Login.png)
+- [My profile](https://i.ibb.co/smZ5P0R/My-account.png)
+- [Register](https://i.ibb.co/Ytw4sM9/Register.png)
+- [Get in touch](https://i.ibb.co/k0xxsKM/Connect.png)
+- [Shop - Categories](https://i.ibb.co/G2VS1rz/Shop-Categories.png)
+- [Shop - Commissions](https://i.ibb.co/44BRG3k/Shop-Pet-Commission.png)
+- [Product page](https://i.ibb.co/1zrHyj0/Product-page.png)
+- [Shopping bag](https://i.ibb.co/r769pBh/Shopping-bag.png)
+- [Checkout - info](https://i.ibb.co/Lrh2vsh/Checkout-Info.png)
+- [Checkout - Address](https://i.ibb.co/tL5y603/Checkout-Address.png)
+- [Checkout - Payment](https://i.ibb.co/VjxRy0P/Checkout-Payment.png)
+- [Checkout - Done](https://i.ibb.co/JrnmNxw/Checkout-Done.png)
 
 
 ### Design
+The business owner experessed a strong desire to create a bright and vibrant website.
+After discussions, the following color palette was chosen:
 
+![Color Palette](https://i.ibb.co/M8kh6cp/color-palette-Katie-s-website.png) 
+
+As these colors are incredibly bright, they will be incorporated in which some darker undertones & white space.
 #### User journey
 - The website structure was designed to be consistent, predictable, learnable, visible, and provide user feedback.
 - A user journey for non-admin users was created to aid the structural design.

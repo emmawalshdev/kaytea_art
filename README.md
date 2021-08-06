@@ -233,6 +233,11 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Checkout - Done](https://i.ibb.co/JrnmNxw/Checkout-Done.png)
 
 
+### Schema
+Below is a schema created for the website
+
+![Schema](https://i.ibb.co/fqz0kMZ/schema-katie.png) 
+
 ### Design
 The business owner experessed a strong desire to create a bright and vibrant website.
 After discussions, the following color palette was chosen:

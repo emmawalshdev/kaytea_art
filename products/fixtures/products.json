@@ -1,0 +1,632 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara4nan",
+            "name": "Christmas Card Set",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 8.00,
+            "category": 3,
+            "image": "20210803_230039.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": " Cattle Christmas Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "20210803_230053.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Happy Birthday Sausage Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "20210803_230244.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Robin Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "20210803_230314.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Happy Birthday Garden Bird Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "20210803_230608.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Best of Luck Whale Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "20210803_231038.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Good Luck Elephant Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "20210803_231048.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Garden Birds Card Set",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 10.00,
+            "category": 3,
+            "image": "20210803_231729.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Christmas Cat Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "128850976_184966526662005_4615208549828783913_n.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Kitty Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "133185083_909079483169656_8041370006932908512_n.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Happy Catmas Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "3542424211.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Best of Luck Buddies Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "83757176752.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "cara5nan",
+            "name": "Happy Birthday Billy Goat Card",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 3.00,
+            "category": 3,
+            "image": "23342454224232.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Chocolate Lab",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 50.00,
+            "category": 1,
+            "image": "20210803_230117.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Colorful Kitten",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 40.00,
+            "category": 1,
+            "image": "20210803_230153.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Two Best Friends",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 60.00,
+            "category": 1,
+            "image": "20210803_230301.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Mr. Fox",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 100.00,
+            "category": 1,
+            "image": "20210803_230559.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Buddy the Dog",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 100.00,
+            "category": 1,
+            "image": "20210803_230621.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Ted the terrier",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 100.00,
+            "category": 1,
+            "image": "20210803_231655.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Wally's World",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 120.00,
+            "category": 1,
+            "image": "20210803_231706.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Chester the Whippet",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 90.00,
+            "category": 1,
+            "image": "20210803_231720.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Sasha the Sausage Dog",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 110.00,
+            "category": 1,
+            "image": "20210803_231835.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "At the Stables",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 130.00,
+            "category": 1,
+            "image": "148977287_1112601402502474_7078980149364022112_n.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Happy to See you",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 140.00,
+            "category": 1,
+            "image": "149073199_967727600424994_5242715498205098862_n.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Hardy and Woody",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 90.00,
+            "category": 1,
+            "image": "532323422.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "Hooky",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 90.00,
+            "category": 1,
+            "image": "20348271464.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4pen",
+            "name": "First Day Home",
+            "description": "",
+            "size": "A4",
+            "media": "Pencil",
+            "stock": 1,
+            "price": 110.00,
+            "category": 1,
+            "image": "55443524242.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Tina the Poodle",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 150.00,
+            "category": 1,
+            "image": "FB_IMG_1628027467015.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Oscar the Lab",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 150.00,
+            "category": 1,
+            "image": "FB_IMG_1628027493739.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "Chrissy mix-breed",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 150.00,
+            "category": 1,
+            "image": "FB_IMG_1628027507898.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "oria4wat",
+            "name": "All Smiles for You",
+            "description": "",
+            "size": "A4",
+            "media": "Watercolor",
+            "stock": 1,
+            "price": 200.00,
+            "category": 1,
+            "image": "FB_IMG_1628027511939.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria4nan",
+            "name": "A Day at the Stables",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 50.00,
+            "category": 2,
+            "image": "20210803_230137.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria5nan",
+            "name": "Finch",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 30.00,
+            "category": 2,
+            "image": "20210803_230324.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria4nan",
+            "name": "Visting Fred",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 50.00,
+            "category": 2,
+            "image": "20210803_230336.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria5nan",
+            "name": "Dawn's Chorus",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 50.00,
+            "category": 2,
+            "image": "20210803_230527.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria5nan",
+            "name": "Bichon Buddies",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 50.00,
+            "category": 2,
+            "image": "20210803_230536.jpg"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria5nan",
+            "name": "Blue Tit",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 50.00,
+            "category": 2,
+            "image": "20210803_231123.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria5nan",
+            "name": "Daisy and Rocky",
+            "description": "",
+            "size": "A5",
+            "media": "Print",
+            "stock": 1,
+            "price": 60.00,
+            "category": 2,
+            "image": "20210803_231155.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria4nan",
+            "name": "Puppy Eyes",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 65.00,
+            "category": 2,
+            "image": "20210803_231817.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "sku": "pria4nan",
+            "name": "Red Breast Robin",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 35.00,
+            "category": 2,
+            "image": "133762883_875288339951498_252081557607398480_n.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "sku": "pri4nan",
+            "name": "Race Day",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 40.00,
+            "category": 2,
+            "image": "3425433454.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "sku": "pri4nan",
+            "name": "Relaxing with the Horses",
+            "description": "",
+            "size": "A4",
+            "media": "Print",
+            "stock": 1,
+            "price": 70.00,
+            "category": 2,
+            "image": "535223441111.jpg"
+        }
+    }
+]

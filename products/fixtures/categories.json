@@ -1,0 +1,26 @@
+[
+   {
+      "pk":1,
+      "model":"products.category",
+      "fields":{
+         "name":"original_artwork",
+         "friendly_name":"Original Artwork"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.category",
+      "fields":{
+         "name":"prints",
+         "friendly_name":"Prints"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.category",
+      "fields":{
+         "name":"greeting_cards",
+         "friendly_name":"Greeting Cards"
+      }
+   }
+]

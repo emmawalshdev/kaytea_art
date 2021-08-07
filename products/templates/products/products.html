@@ -16,10 +16,61 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col">
-            {{products}}
+        <div class="col text-left">
+            <h1>category title</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                <!-- print each product -->
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card product-card h-100 border-0">
+                            <!-- Product image -->
+                            {% if product.image %}            
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{product.image.url}}">
+                                </a>
+                            {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
+                            <!-- Product details -->
+                            <div class="card-body">
+                                <p class="mb-0">{{ product.name }}</p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        
+                                        <p class="lead mb-1 text-left font-weight-bold">€{{ product.price }}
+                                        </p>
+                                        
+                                        
+                                        <div class="small mt-1 mb-0">
+                                            <a class="text-muted" href="">
+                                                {% if product.category == 3 %}
+                                                    <a href=""><i class="fas fa-envelope-open-text"></i>Greeting Cards</a>
+                                                {% elif product.category == 2 %}
+                                                    <a href=""><i class="fas fa-stamp"></i>Orginal Artwork</a>
+                                                {% elif product.category == 1 %}
+                                                    <a href=""><i class="fas fa-stamp"></i>Print Media</a>
+                                                {% else %}
+    
+                                                {% endif %}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>               
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
-
 {% endblock %}

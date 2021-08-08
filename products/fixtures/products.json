@@ -161,7 +161,7 @@
             "stock": 1,
             "price": 3.00,
             "category": 3,
-            "image": "3542424211.jpg"
+            "image": "3542424211.JPG"
         }
     },
     {
@@ -176,7 +176,7 @@
             "stock": 1,
             "price": 3.00,
             "category": 3,
-            "image": "83757176752.jpg"
+            "image": "83757176752.JPG"
         }
     },
     {
@@ -371,7 +371,7 @@
             "stock": 1,
             "price": 90.00,
             "category": 1,
-            "image": "532323422.jpg"
+            "image": "532323422.JPG"
         }
     },
     {
@@ -379,14 +379,14 @@
         "model": "products.product",
         "fields": {
             "sku": "oria4pen",
-            "name": "Hooky",
+            "name": "Hook",
             "description": "",
             "size": "A4",
             "media": "Pencil",
             "stock": 1,
             "price": 90.00,
             "category": 1,
-            "image": "20348271464.jpg"
+            "image": "20348271464.JPG"
         }
     },
     {
@@ -401,7 +401,7 @@
             "stock": 1,
             "price": 110.00,
             "category": 1,
-            "image": "55443524242.jpg"
+            "image": "55443524242.JPG"
         }
     },
     {
@@ -611,7 +611,7 @@
             "stock": 1,
             "price": 40.00,
             "category": 2,
-            "image": "3425433454.jpg"
+            "image": "3425433454.JPG"
         }
     },
     {
@@ -626,7 +626,7 @@
             "stock": 1,
             "price": 70.00,
             "category": 2,
-            "image": "535223441111.jpg"
+            "image": "535223441111.JPG"
         }
     }
 ]

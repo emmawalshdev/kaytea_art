@@ -17,7 +17,7 @@
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'products' %}" class="dropdown-item">View all</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">View all</a>
                 <a href="{% url 'products' %}?category=original_artwork" class="dropdown-item">Original Artwork</a>
                 <a href="{% url 'products' %}?category=prints" class="dropdown-item">Prints</a>
                 <a href="{% url 'products' %}?category=greeting_cards" class="dropdown-item">Greeting Cards</a>

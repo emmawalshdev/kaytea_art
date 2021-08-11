@@ -31,6 +31,8 @@
                 <!-- for each item in the bag print a new col -->
                 <div class="col-12">
                     {% if bag_items %}
+                    {{ bag_items }}<br>
+                    {{ request.session.bag }}
                         <div class="table-responsive rounded">
                             <table class="table table-sm table-borderless">
                                 <thread>

@@ -58,7 +58,18 @@
                                         <p>€{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p>{{ item.quantity }}</p>
+                                        <form class="form update-form" method="POST" action="">
+                                            {% csrf_token %}
+                                            <div class="form-group w-50 form-quantity">
+                                                <input class="hidden" type="hidden" id="product_quantity" name="product_quantity" value="{{ item.quantity }}">
+                                                <div class="form-group qty_{{item.quantity}}">
+                                                    <select id="quantity_id_{{item.item_id}}"  selected = "{{ item.quantity }}" class="form-select form-control form-control-sm qty_input" name="quantity">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-link"><small class="green-text">Update</small></a>
+                                        <a class="remove-item text-danger ml-4" id=""><i class="fas fa-times"></i></a>
                                     </td>
                                     <td class="py-3">
                                         <p>{{ item.product.price }}</p>
@@ -112,4 +123,25 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_dropdown_script.html' %}
+
+<script type="text/javascript">
+    $(function () {
+        let $quantity = $(".qty_input");
+        for (i = 1; i < 100; i++) {
+            $quantity.append($('<option></option>').val(i).html(i));
+        }
+
+        $('.hidden').each(function () {
+            let quantity = $(this).val();
+            $(`div.qty_${quantity} select`).val(quantity);
+        });
+    });
+
+</script>
+
 {% endblock %}

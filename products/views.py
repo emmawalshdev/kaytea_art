@@ -65,10 +65,13 @@ def product_detail(request, product_id):
     '''A view to show individual product details'''
     # return all products
     product = get_object_or_404(Product, pk=product_id)
+    int_prod = int(product.stock)
+    stock_num = [x for x in range(int_prod)]
 
     # Make products available in template
     context = {
         'product': product,
+        'stock_num': stock_num
     }
 
     return render(request, 'products/product_detail.html', context)

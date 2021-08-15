@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -32,6 +33,7 @@
                 <div class="col-12">
                     {% if bag_items %}
                     {{ bag_items }}<br>
+                    {{ max_avail }}
                     {{ request.session.bag }}
                         <div class="table-responsive rounded">
                             <table class="table table-sm table-borderless">
@@ -56,31 +58,41 @@
                                     </td>
                                     <td class="py-3">
                                         <p>€{{ item.product.price }}</p>
+                                         
+                                        {{ item.quantity }}
                                     </td>
                                     <td class="py-3">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
-                                            <div class="form-group w-50 form-quantity">
-                                                <input class="hidden" type="hidden" id="product_quantity" name="product_quantity" value="{{ item.quantity }}">
-                                                <div class="form-group qty_{{item.quantity}}">
-                                                    <select id="quantity_id_{{item.item_id}}"  selected = "{{ item.quantity }}" class="form-select form-control form-control-sm qty_input" name="quantity">
+                                                <div class="form-group w-50 form-quantity">
+                                                    <!-- show quantity -->
+                                                    <select class="form-control form-select qty_input" type="number" 
+                                                        name="quantity" value="{{ item.quantity }}" 
+                                                        data-item-id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}" >
+                                                            {% for each in max_avail %}
+                                                                {% if each.item_id ==  item.item_id %}
+                                                                    {% for i in each.max_avail %}
+                                                                        <option value="{{ i|add:1 }}"{% if i|add:1 == item.quantity %} selected {% endif %}>{{ i|add:1 }}</option>
+                                                                    {% endfor %}
+                                                                {% endif %}
+                                                            {% endfor %}
                                                     </select>
                                                 </div>
-                                            </div>
                                         </form>
                                         <a class="update-link"><small class="green-text">Update</small></a>
-                                        <a class="remove-item text-danger ml-4" id=""><i class="fas fa-times"></i></a>
+                                        <a class="remove-item text-danger ml-4" id="remove_{{ item.item_id }}">remove<i class="fas fa-times"></i></a>
                                     </td>
                                     <td class="py-3">
-                                        <p>{{ item.product.price }}</p>
+                                        <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                                 {% endfor %}
                                 <tr>
                                     <td colspan="5" class="pt-5 text-right">
-                                        <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                        <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                        <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                        <h6><strong>Bag Total: {{ total|floatformat:2 }}</strong></h6>
+                                        <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                                        <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                         {% if free_delivery_delta > 0 %}
                                             <p class="mb-1 text-danger">
                                                 You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
@@ -127,21 +139,26 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_dropdown_script.html' %}
 
 <script type="text/javascript">
-    $(function () {
-        let $quantity = $(".qty_input");
-        for (i = 1; i < 100; i++) {
-            $quantity.append($('<option></option>').val(i).html(i));
-        }
-
-        $('.hidden').each(function () {
-            let quantity = $(this).val();
-            $(`div.qty_${quantity} select`).val(quantity);
-        });
+    // update the quantity in bag
+    $('.update-link').click(function(e){
+        var form = $(this).prev('.update-form');
+        form.submit();
     });
 
+    // remove the item from bag
+    $('.remove-item').click(function(e){
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+        $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+        });
 </script>
-
 {% endblock %}

@@ -6,6 +6,7 @@ from products.models import Product
 def bag_contents(request):
 
     bag_items = []
+    max_avail = []
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
@@ -18,6 +19,12 @@ def bag_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
+        })
+        int_prod = int(product.stock)
+        stock_avail = [x for x in range(int_prod)]
+        max_avail.append({
+            'item_id': item_id,
+            'max_avail': stock_avail
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -32,6 +39,7 @@ def bag_contents(request):
     context = {
         'bag_items': bag_items,
         'total': total,
+        'max_avail': max_avail,
         'product_count': product_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,

@@ -28,6 +28,15 @@ body{
     width: fit-content;
 }
 
+.update-link,
+.remove-item{
+    cursor: pointer;
+}
+/* forms */
+
+.form-select {
+    width: 70px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

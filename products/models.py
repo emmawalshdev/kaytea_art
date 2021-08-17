@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator
 
 class Category(models.Model):
 
@@ -23,7 +23,7 @@ class Product(models.Model):
     description = models.TextField()
     size = models.TextField()
     media = models.TextField()
-    stock = models.DecimalField(max_digits=6, decimal_places=0)
+    stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(100)])
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
 

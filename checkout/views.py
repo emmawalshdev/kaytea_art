@@ -20,6 +20,8 @@ def checkout(request):
     # add the context contact order form
     context = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_51JBeYiHQIUQ1yNuAsUso4liqOnjxVSJN5KyNnE7UtQPZ2x9viNN7B62kpD57kHhZfZ43Bb9uj7127i0aRGVpmFPR00CBWqg1Ri',
+        'client_secret': 'test client secret',
     }
 
     # render it all out

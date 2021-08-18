@@ -227,10 +227,8 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Shop - Commissions](https://i.ibb.co/44BRG3k/Shop-Pet-Commission.png)
 - [Product page](https://i.ibb.co/1zrHyj0/Product-page.png)
 - [Shopping bag](https://i.ibb.co/r769pBh/Shopping-bag.png)
-- [Checkout - info](https://i.ibb.co/Lrh2vsh/Checkout-Info.png)
-- [Checkout - Address](https://i.ibb.co/tL5y603/Checkout-Address.png)
-- [Checkout - Payment](https://i.ibb.co/VjxRy0P/Checkout-Payment.png)
-- [Checkout - Done](https://i.ibb.co/JrnmNxw/Checkout-Done.png)
+- [Checkout - Information + Payment](https://i.ibb.co/4g1cbR6/Checkout-Info-payment.png)
+- [Checkout - Complete](https://i.ibb.co/JC7ddpx/Checkout-Complete.png)
 
 
 ### Schema

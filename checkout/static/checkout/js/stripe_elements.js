@@ -79,6 +79,7 @@ form.addEventListener('submit', function(ev) {
                 billing_details: {
                     name: `${$.trim(form.first_name.value)} ${$.trim(form.last_name.value)}`,
                     email: $.trim(form.email.value),
+                    phone: $.trim(form.mobile_number.value),
                     address: {
                         line1: $.trim(form.address_line1.value),
                         line2: $.trim(form.address_line2.value),
@@ -90,6 +91,7 @@ form.addEventListener('submit', function(ev) {
             },
             shipping: {
                 name: `${$.trim(form.first_name.value)} ${$.trim(form.last_name.value)}`,
+                phone: $.trim(form.mobile_number.value),
                 address: {
                     line1: $.trim(form.address_line1.value),
                     line2: $.trim(form.address_line2.value),

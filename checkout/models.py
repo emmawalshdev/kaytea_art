@@ -8,10 +8,16 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from products.models import Product
+# attach user profile to model
+from profiles.models import UserProfile
 
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    # SET NULL if profile is deleted to keep order history, allow to be null & blank
+    # to allow purchases for users without account
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
     date = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)

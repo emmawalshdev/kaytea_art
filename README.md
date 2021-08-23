@@ -220,7 +220,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Blog](https://i.ibb.co/ykNh6gQ/Blog.png)
 - [Blog inner page](https://i.ibb.co/RNcBNkP/Blog-inner-page.png)
 - [Login](https://i.ibb.co/FzYCFrR/Login.png)
-- [My profile](https://i.ibb.co/smZ5P0R/My-account.png)
+- [My profile](https://i.ibb.co/Wvw3nTj/My-account.png)
 - [Register](https://i.ibb.co/Ytw4sM9/Register.png)
 - [Get in touch](https://i.ibb.co/k0xxsKM/Connect.png)
 - [Shop - Categories](https://i.ibb.co/G2VS1rz/Shop-Categories.png)

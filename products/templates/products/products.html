@@ -76,8 +76,7 @@
                                         
                                         <p class="lead mb-1 text-left font-weight-bold">€{{ product.price }}
                                         </p>
-                                        
-                                        
+
                                         <div class="small mt-1 mb-0">
                                             <a class="text-muted" href="">
                                                 {% if product.category.name %}
@@ -97,6 +96,13 @@
                                                 {% endif %}
                                             </a>
                                         </div>
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
+                                        
                                     </div>
                                 </div>
                             </div>

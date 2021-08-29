@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Blog
 
 from django.core.paginator import Paginator
@@ -20,3 +20,16 @@ def all_blogs(request):
     }
 
     return render(request, 'blog/blog.html', context)
+
+
+# Create your views here.
+def blog_detail(request, blog_id):
+    '''A view to show individual blog details'''
+    blog = get_object_or_404(Blog, pk=blog_id)
+    # Show 25 contacts per page.
+
+    context = {
+        'blog': blog,
+    }
+
+    return render(request, 'blog/blog_detail.html', context)

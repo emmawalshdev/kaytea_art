@@ -14,7 +14,7 @@ class Keyword(models.Model):
 class Blog(models.Model):
     slug = models.SlugField(max_length=254, unique=True, db_index=True)
     date = models.DateTimeField(auto_now_add=True)
-    keyword = models.ManyToManyField(Keyword, blank=True)
+    keywords = models.ManyToManyField(Keyword, blank=True)
     title = models.CharField(max_length=254)
     body = models.TextField(validators=[MinLengthValidator(20)])
     image = models.ImageField(null=True, blank=True)

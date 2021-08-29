@@ -17,7 +17,7 @@ class Blog(models.Model):
     keyword = models.ManyToManyField(Keyword, blank=True)
     title = models.CharField(max_length=254)
     body = models.TextField(validators=[MinLengthValidator(20)])
-    image_url = models.URLField(max_length=1000, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
 
     class Meta:
         ordering = ['-date']

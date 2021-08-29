@@ -6,7 +6,7 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'date',
-        'image_url',
+        'image',
     )
 
     prepopulated_fields = {'slug': ('title',)}

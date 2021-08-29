@@ -12,12 +12,71 @@
 
 {% endblock %}
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
+    <div class="container">
+        <div class="row">
             <div class="col-12">
-                {{ blogs }}
+                Katie's Blog
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur nisi metus, sagittis placerat arcu elementum vel. Cras eu lectus congue, blandit neque sit amet, accumsan nisl. Morbi bibendum, elit a rutrum porttitor, lorem nisl molestie augue, id suscipit urna magna nec enim. Cras id ultricies metus, in venenatis mauris. Praesent quis ipsum id felis mollis bibendum. Pellentesque dapibus lobortis mauris non consequat.
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for blog in page_obj %}
 
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="image-container my-5">
+                            {% if blog.image %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid h-100"  src="{{ MEDIA_URL }}noimage.jpg"
+                                    alt="{{ blog.title }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>{{ blog.title }}</p>
+                        <p>{{ blog.date }}</p>
+                        <p>{{ blog.body }}</p>
+                        <button type="button" class="btn btn-outline-primary uppercase">READ MORE</button>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="pagination justify-content-center">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+            
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+            
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
     </div>
 {% endblock %}

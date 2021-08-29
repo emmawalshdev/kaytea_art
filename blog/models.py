@@ -12,7 +12,7 @@ class Keyword(models.Model):
 
 
 class Blog(models.Model):
-    slug = models.SlugField(max_length=254, unique=True)
+    slug = models.SlugField(max_length=254, unique=True, db_index=True)
     date = models.DateTimeField(auto_now_add=True)
     keyword = models.ManyToManyField(Keyword, blank=True)
     title = models.CharField(max_length=254)

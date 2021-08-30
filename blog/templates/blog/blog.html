@@ -28,6 +28,16 @@
     </div>
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <!-- Add blog post button -->
+                {% if request.user.is_superuser %}
+                <a class="btn btn-outline-primary" href="{% url 'add_blog' %}">Add Blog Post</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
             {% for blog in page_obj %}
 
             <div class="col-12">

@@ -48,9 +48,9 @@ def add_blog(request):
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
-            blog = form.save(commit=False)
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('blog', args=[blog.id]))
+            blog = form.save()
+            messages.success(request, 'Successfully added blog!')
+            return redirect('blog')
         else:
             messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
     else:

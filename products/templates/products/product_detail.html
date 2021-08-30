@@ -64,7 +64,7 @@
                 <div class="mt-4">
                     <!-- Superuser edit & delete product buttons -->
                     {% if request.user.is_superuser %}
-                        <a class="btn btn-outline-info mr-2" href=""
+                        <a class="btn btn-outline-info mr-2" href="{% url 'edit_product' product.id %}"
                             data-toggle="tooltip" data-placement="top" title="Edit Product">
                             <i class="far fa-edit"></i>
                         </a>
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <a class="btn btn-danger" href="">Delete</a>
+                                        <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </div>
                                 </div>
                             </div>

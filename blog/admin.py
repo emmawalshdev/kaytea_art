@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog, Keyword
+from .models import Blog, Keyword, Reply
 
 
 class BlogAdmin(admin.ModelAdmin):
@@ -9,6 +9,14 @@ class BlogAdmin(admin.ModelAdmin):
         'image',
     )
 
+    list_filter = ('date',)
+
+
+class ReplyAdmin(admin.ModelAdmin):
+    list_display = ('blog', 'user_profile', 'date')
+    list_filter = ('date',)
+
 
 admin.site.register(Blog, BlogAdmin)
+admin.site.register(Reply, ReplyAdmin)
 admin.site.register(Keyword)

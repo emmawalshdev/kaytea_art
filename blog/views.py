@@ -31,9 +31,11 @@ def blog_detail(request, blog_id):
     '''A view to show individual blog details'''
     blog = get_object_or_404(Blog, pk=blog_id)
     # Show 25 contacts per page.
+    replies = blog.replies.all().order_by('-id')
 
     context = {
         'blog': blog,
+        'replies': replies,
     }
 
     return render(request, 'blog/blog_detail.html', context)

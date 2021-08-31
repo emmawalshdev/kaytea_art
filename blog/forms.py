@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Blog, Keyword
+from .models import Blog, Keyword, Reply
 
 
 class BlogForm(forms.ModelForm):
@@ -27,3 +27,12 @@ class BlogForm(forms.ModelForm):
         self.fields['keywords'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class ReplyForm(forms.ModelForm):
+    class Meta:
+        model = Reply
+        exclude = ['blog', 'user_profile']
+        labels = {
+            'body': 'Your Comment',
+        }

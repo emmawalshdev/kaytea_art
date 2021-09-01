@@ -32,7 +32,7 @@ class BlogForm(forms.ModelForm):
 class ReplyForm(forms.ModelForm):
     class Meta:
         model = Reply
-        exclude = ['blog', 'user']
+        exclude = ['blog', 'author']
 
         labels = {
             'author': 'Your name',

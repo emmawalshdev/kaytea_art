@@ -6,6 +6,7 @@ from .forms import BlogForm, ReplyForm
 
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -38,6 +39,8 @@ def blog_detail(request, blog_id):
         form = ReplyForm(request.POST)
 
         if form.is_valid():
+            user = User.objects.get(username=request.user.username)
+            form.instance.author = user
             reply = form.save(commit=False)
             reply.blog = blog
             reply.save()

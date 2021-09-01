@@ -13,7 +13,7 @@ class BlogAdmin(admin.ModelAdmin):
 
 
 class ReplyAdmin(admin.ModelAdmin):
-    list_display = ('blog', 'user_profile', 'date')
+    list_display = ('blog', 'date')
     list_filter = ('date',)
 
 

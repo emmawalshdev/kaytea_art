@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Blog
-from .forms import BlogForm
+from .forms import BlogForm, ReplyForm
 
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
@@ -32,10 +32,25 @@ def blog_detail(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     # Show 25 contacts per page.
     replies = blog.replies.all().order_by('-id')
+    username = None
+
+    if request.method == "POST":
+        form = ReplyForm(request.POST)
+
+        if form.is_valid():
+            reply = form.save(commit=False)
+            reply.blog = blog
+            reply.save()
+            messages.success(request, 'Your reply was successfully saved!')
+            redirect(reverse('blog_detail', args=[blog.id]))
+    else:
+        form = ReplyForm()
 
     context = {
         'blog': blog,
         'replies': replies,
+        'form': form,
+        'username': username
     }
 
     return render(request, 'blog/blog_detail.html', context)

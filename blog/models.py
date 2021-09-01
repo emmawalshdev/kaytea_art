@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 
-from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -34,10 +34,10 @@ class Blog(models.Model):
 class Reply(models.Model):
     blog = models.ForeignKey(Blog, related_name='replies',
                              on_delete=models.CASCADE)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
-                                     related_name='reply_user')
+    author = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
     body = models.TextField(max_length=1000)
 
     def __str__(self):
-        return self.body
+        return self.author

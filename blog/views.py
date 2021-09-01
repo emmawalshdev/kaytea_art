@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Blog
+from .models import Blog, Reply
 from .forms import BlogForm, ReplyForm
 
 from django.core.paginator import Paginator
@@ -120,4 +120,20 @@ def delete_blog(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     blog.delete()
     messages.success(request, 'blog deleted!')
+    return redirect(reverse('blog'))
+
+
+@login_required
+def delete_reply(request, reply_id):
+    """ Delete a comment from a blog post """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permssion \
+            to delete a comment.')
+        return redirect(reverse('blog'))
+
+    reply = get_object_or_404(Reply, pk=reply_id)
+    reply.delete()
+    messages.success(request, 'Comment successfully deleted.')
+
     return redirect(reverse('blog'))

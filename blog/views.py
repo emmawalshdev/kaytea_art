@@ -130,6 +130,8 @@ def delete_blog(request, blog_id):
 def delete_reply(request, reply_id):
     """ Delete a comment from a blog post """
     reply = get_object_or_404(Reply, pk=reply_id)
+    blog_id = reply.blog.id
+    blog = get_object_or_404(Blog, pk=blog_id)
     user = User.objects.get(username=request.user.username)
     author = reply.author
 
@@ -142,13 +144,13 @@ def delete_reply(request, reply_id):
         messages.error(request, 'Sorry, you do not have permssion \
             to delete a comment.')
         print(user, author)
-        return redirect(reverse('blog'))
+        return redirect(reverse('blog_detail', args=[blog.id]))
 
     reply = get_object_or_404(Reply, pk=reply_id)
     reply.delete()
     messages.success(request, 'Comment successfully deleted.')
 
-    return redirect(reverse('blog'))
+    return redirect(reverse('blog_detail', args=[blog.id]))
 
 
 @login_required
@@ -158,18 +160,17 @@ def edit_reply(request, reply_id):
     blog_id = reply.blog.id
     blog = get_object_or_404(Blog, pk=blog_id)
     user = User.objects.get(username=request.user.username)
-    template = 'blog/edit_reply.html'
+
     if reply.author != user and not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
 
-    '''
     if request.method == 'POST':
         form = ReplyForm(request.POST, request.FILES, instance=reply)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated comment!')
-            return redirect(reverse('blog_detail', args=[reply.id]))
+            return redirect(reverse('blog_detail', args=[blog.id]))
         else:
             messages.error(request, 'Failed to update comment. Please ensure the form is valid.')
     else:
@@ -177,10 +178,11 @@ def edit_reply(request, reply_id):
         messages.info(request, f'You are editing your comment for {reply.blog}')
 
     template = 'blog/edit_reply.html'
-        '''
+
     context = {
         'reply': reply,
         'blog': blog,
+        'form': form,
     }
 
     return render(request, template, context)

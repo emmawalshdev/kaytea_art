@@ -49,11 +49,66 @@
 
 #search-query-submit > button :hover {
     cursor: pointer;
-  }
-
+}
 
 .input-group>.form-control:focus, .input-group>.form-select:focus {
     z-index: 0;
+}
+
+.nav-link{
+    color: #035cd8;
+}
+
+.nav-link:hover{
+    color: #3e8cfb;
+}
+
+/* Grow hover effect */
+/* https://ianlunn.github.io/Hover/ */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.3);
+}
+
+.body-wrapper{
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.fabric-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.ibb.co/QrXcP79/foggy-birds.png);
+    background-position: 0 0;
+    background-size: 250px;
+    opacity: .65;
 }
 html{
     height: 100%;

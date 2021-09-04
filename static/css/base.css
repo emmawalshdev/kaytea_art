@@ -12,6 +12,10 @@
     color: #985de5;
 }
 
+.fixed-top{
+    background-color: white;
+}
+
 .form-control:focus {
     color: #212529;
     background-color: #fff;
@@ -74,10 +78,14 @@
     font-size:1rem;
 }
 
-.text-active{
+.text-active,
+.text-blue{
     color: #035cd8
 }
 
+.text-purple{
+    color: purple;
+}
 #cart-has-contents {
     background-color: #F15bb5;
     height: 18px;
@@ -166,8 +174,10 @@ body{
     font-size:1.3rem
 }
 
-.navbar-light .navbar-nav .nav-link{
+.navbar-light .navbar-nav .nav-link,
+footer a{
     color: black;
+    text-decoration: none;
 }
 .navbar-web-links{
     font-size: 1.5rem;
@@ -185,6 +195,10 @@ body{
 /* search bar*/
 input[name='q']::placeholder{
     color: #aab7c4
+}
+
+.custom-icon{
+    font-size: 30px;
 }
 
 /* forms */
@@ -206,6 +220,25 @@ input[name='q']::placeholder{
     overflow-y: auto;
 }
 
+#footer{
+    background-color: #f9c5e4ad;
+    padding: 30px 0 0
+}
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+footer li {
+    list-style: none;
+    font-size:1.1rem;
+}
+
+hr{
+    background-color: #000000;
+    border: 3px solid black;
+    border-radius: 7px 7px 7px 7px;
+    margin: auto
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -227,7 +260,8 @@ input[name='q']::placeholder{
       #mobile-icons{
         display:none;
     }
-    .user-icon{
+    .user-icon,
+    .custom-icon{
         font-size:1.6rem
     }
       .header-container {
@@ -246,7 +280,18 @@ input[name='q']::placeholder{
       body{
           height: calc(100vh - 116px);
       }
+      #footer{
+          text-align: center;
+      }
+      .main-logo-link {
+         width: 100%;
+    }
+    #footer .row .col-12{
+        margin-bottom:30px;
+        vertical-align: center;
+    }
   }
+  
 
   @media (max-width: 991px){
 .card-img-top {

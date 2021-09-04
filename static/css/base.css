@@ -55,14 +55,41 @@
     z-index: 0;
 }
 
-.nav-link{
+.nav-link,
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+
+.nav-link:hover,
+.navbar-light .navbar-nav .nav-link:hover,
+.dropdown-item:hover{
     color: #035cd8;
 }
 
-.nav-link:hover{
-    color: #3e8cfb;
+.dropdown-item:hover{
+    background-color: white;
 }
 
+.dropdown-item{
+    font-size:1rem;
+}
+
+.text-active{
+    color: #035cd8
+}
+
+#cart-has-contents {
+    background-color: #F15bb5;
+    height: 18px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-left: -18px;
+}
 /* Grow hover effect */
 /* https://ianlunn.github.io/Hover/ */
 .hvr-grow {
@@ -102,7 +129,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     height: 100%;
     background-image: url(https://i.ibb.co/QrXcP79/foggy-birds.png);
@@ -110,6 +137,11 @@
     background-size: 250px;
     opacity: .65;
 }
+
+.nav-item{
+    padding: 0 10px;
+}
+
 html{
     height: 100%;
 }
@@ -130,9 +162,15 @@ body{
     width: 1.5rem;
 }
 
-.btn-black{
-    background:black;
-    color:white;
+.user-icon{
+    font-size:1.3rem
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+.navbar-web-links{
+    font-size: 1.5rem;
 }
 
 .main-logo-link{
@@ -186,10 +224,18 @@ input[name='q']::placeholder{
           left: 0;
           z-index: 1030;
       }
-  
+      #mobile-icons{
+        display:none;
+    }
+    .user-icon{
+        font-size:1.6rem
+    }
       .header-container {
           padding-top: 164px;
       }
+      .text-lg-right {
+        text-align: right!important;
+    }
   }
 
   @media (max-width:991px){

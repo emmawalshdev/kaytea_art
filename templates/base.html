@@ -77,10 +77,9 @@
                 <div class="col-12 col-lg-4 my-auto py-1">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link user-icon" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user-circle fa-lg"></i></i></div>
-                                    <p class="my-0">Account</p>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -97,23 +96,26 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                                <div class="text-center">
-                                    <div><i class="fas fa-shopping-basket fa-lg"></i></div>
-                                    <p class="my-0">
+                            <a class="{% if grand_total %}text-active {% else %}text-black{% endif %} nav-link user-icon" href="{% url 'view_bag' %}">
+                                 <div class="text-center">
+                                    <div><i class="fas fa-shopping-basket fa-lg"></i>
+                                        <div id="cart-has-contents"><i class="fas fa-check"></i></i></div>
+                                    </div>
+                                    
+                                    <!--<p class="my-0">
                                         {% if grand_total %}
                                         €{{ grand_total|floatformat:2 }}
                                         {% else %}
                                             €0.00
                                         {% endif %}
-                                    </p>
-                                </div>
+                                    </p> -->
+                                </div> 
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row">
+            <div class="row navbar-web-links">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

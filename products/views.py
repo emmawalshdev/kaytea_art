@@ -5,7 +5,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, ProductReviewForm
+
 
 # Create your views here.
 def all_products(request):
@@ -72,10 +73,13 @@ def product_detail(request, product_id):
     int_prod = int(product.stock)
     stock_num = [x for x in range(int_prod)]
 
+    form = ProductReviewForm()
+
     # Make products available in template
     context = {
         'product': product,
-        'stock_num': stock_num
+        'stock_num': stock_num,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)

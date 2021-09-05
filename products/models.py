@@ -35,6 +35,7 @@ class Product(models.Model):
 
 
 RATING = (
+    (' ', 'Rating *'),
     ('1', '1'),
     ('2', '2'),
     ('3', '3'),
@@ -49,7 +50,10 @@ class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name='reviews',
                                 on_delete=models.CASCADE)
     review_text = models.TextField()
-    review_rating = models.CharField(choices=RATING, max_length=150)
+    review_rating = models.CharField(choices=RATING,
+                                     max_length=1,
+                                     default=" ",
+                                     null=True)
 
     def __str__(self):
         return f'{self.product} review by {self.author}'

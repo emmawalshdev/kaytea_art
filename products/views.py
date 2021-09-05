@@ -77,6 +77,15 @@ def product_detail(request, product_id):
     int_prod = int(product.stock)
     stock_num = [x for x in range(int_prod)]
 
+    # calculate avg rating
+    ratings = 0
+    if len(reviews) != 0:
+        for review in reviews:
+            ratings += float(review.review_rating)
+        avg_rating = ratings / len(reviews)
+    else:
+        avg_rating = None
+
     if request.method == "POST":
         form = ProductReviewForm(request.POST)
 
@@ -97,6 +106,7 @@ def product_detail(request, product_id):
         'stock_num': stock_num,
         'form': form,
         'reviews': reviews,
+        'avg_rating': avg_rating,
     }
 
     return render(request, 'products/product_detail.html', context)

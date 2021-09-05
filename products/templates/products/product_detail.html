@@ -49,6 +49,9 @@
                     </p>
                 <p>Canvas Size: {{ product.size }}</p>
                 <p>Media: {{ product.media }}</p>
+                {% if avg_rating %}
+                    {{ avg_rating }}
+                {% endif %}
                 {% if product.category.name %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -86,7 +89,8 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="deleteProductModal">Delete
-                                            {{ product.name }}</h5>
+                                            {{ product.name }}
+                                        </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>

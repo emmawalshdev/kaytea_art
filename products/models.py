@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.validators import MaxValueValidator
 
+from django.contrib.auth.models import User
+
+
 class Category(models.Model):
 
     class Meta:
@@ -29,3 +32,24 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+RATING = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+)
+
+
+class ProductReview(models.Model):
+    author = models.ForeignKey(User, null=True,
+                               blank=True, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='reviews',
+                                on_delete=models.CASCADE)
+    review_text = models.TextField()
+    review_rating = models.CharField(choices=RATING, max_length=150)
+
+    def __str__(self):
+        return f'{self.product} review by {self.author}'

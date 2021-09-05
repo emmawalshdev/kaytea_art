@@ -34,8 +34,8 @@ class Blog(models.Model):
 class Reply(models.Model):
     blog = models.ForeignKey(Blog, related_name='replies',
                              on_delete=models.CASCADE)
-    author = models.ForeignKey(
-        User, null=True, blank=True, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, null=True, blank=True,
+                               on_delete=models.CASCADE)
     email = models.EmailField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
     body = models.TextField(max_length=1000)

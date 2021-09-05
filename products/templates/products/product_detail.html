@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -145,57 +149,18 @@
                     <div class="row">
                         <div class="col text-center mt-4">
                             <h2>
-                                Join the Conversation
+                                Reviews
                            
                             </h2>
                         </div>
                     </div>
                      {% for review in reviews %} 
                     <p>
-                         reply.blog.id 
-                         reply.date - reply.name
-                        reply.author 
+                         {{ review.date }} - {{ review.author }}
                     <br>
-                         reply.body 
+                         {{ review.review_text }} 
                     </p>
-                    {% if request.user == review.author or request.user.is_superuser %}
-                    <!--<a class="btn btn-outline-info mr-2" href="{% url 'edit_reply' reply.id %}" data-toggle="tooltip" data-placement="top"
-                    title="Edit Blog">
-                        <i class="far fa-edit"></i>
-                    </a> -->
-                    <!-- Button trigger delete comment modal -->
-                    <span data-toggle="modal" data-target="#deleteReview_{{ review.id }}">
-                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip"
-                            data-placement="right" title="Delete Review">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                    </span>
-                    <!-- Modal -->
-                    <div class="modal fade" id="deleteReview_{{ review.id }}" tabindex="-1" role="dialog"
-                        aria-labelledby="deleteReviewModal" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="deleteReviewModal">Delete Review</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Are you sure you want to delete this Review?</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <a class="btn btn-danger" href="{% url 'delete_review' review.id %}">Delete</a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-                    <!-- exclue hr element after last comment -->
-                    {% if not forloop.last %}
-                    <hr>
-                    {% endif %}
+
                     {% empty %}
                     <p class="text-center">No Reviews yet!</p>
                     {% endfor %}
@@ -211,11 +176,17 @@
                     </div>
                     <form action="{% url 'product_detail' product.id %}" method="POST">
                         {% csrf_token %}
-                        {{ form | crispy }}
+                        {{ form.review_text | as_crispy_field }}
+                        {{ form.review_rating | as_crispy_field }}
                         <button class="btn btn-outline-primary">Post Review</button>
                     </form>
                 </div>
             </section>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'products/js/ratingfield.js' %}" ></script>
 {% endblock %}
 

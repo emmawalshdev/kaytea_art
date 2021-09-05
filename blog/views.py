@@ -45,7 +45,7 @@ def blog_detail(request, blog_id):
             reply.blog = blog
             reply.save()
             messages.success(request, 'Your reply was successfully saved!')
-            redirect(reverse('blog_detail', args=[blog.id]))
+            return redirect(reverse('blog_detail', args=[blog.id]))
     else:
         form = ReplyForm()
 

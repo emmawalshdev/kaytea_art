@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User  
 
 
 class Category(models.Model):
@@ -21,6 +21,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    date_added = models.DateTimeField(auto_now_add=True) 
     sku = models.CharField(max_length=200, null=True, blank=True)
     name = models.CharField(max_length=200)
     description = models.TextField()
@@ -47,6 +48,7 @@ RATING = (
 class ProductReview(models.Model):
     author = models.ForeignKey(User, null=True,
                                blank=True, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, related_name='reviews',
                                 on_delete=models.CASCADE)
     review_text = models.TextField()

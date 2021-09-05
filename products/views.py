@@ -4,7 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from django.contrib.auth.models import User
+
+from .models import Product, Category, ProductReview
 from .forms import ProductForm, ProductReviewForm
 
 
@@ -70,16 +72,31 @@ def product_detail(request, product_id):
     '''A view to show individual product details'''
     # return all products
     product = get_object_or_404(Product, pk=product_id)
+    reviews = ProductReview.objects.filter(product=product_id).order_by('-id')
+
     int_prod = int(product.stock)
     stock_num = [x for x in range(int_prod)]
 
-    form = ProductReviewForm()
+    if request.method == "POST":
+        form = ProductReviewForm(request.POST)
+
+        if form.is_valid():
+            user = User.objects.get(username=request.user.username)
+            form.instance.author = user
+            review = form.save(commit=False)
+            review.product = product
+            review.save()
+            messages.success(request, 'Your reply was successfully saved!')
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        form = ProductReviewForm()
 
     # Make products available in template
     context = {
         'product': product,
         'stock_num': stock_num,
         'form': form,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)

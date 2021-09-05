@@ -1,0 +1,9 @@
+#id_review_rating,
+#id_review_rating option:not(:first-child) {
+    color: #000;
+}
+
+#id_review_rating,
+#id_review_rating option:first-child {
+    color: #aab7c4;
+}

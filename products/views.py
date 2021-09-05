@@ -167,3 +167,36 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def edit_review(request, review_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(ProductReview, pk=review_id)
+    product_id = review.product.id
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ProductReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated review!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+    else:
+        form = ProductReviewForm(instance=review)
+        messages.info(request, 'You are editing your review')
+
+    template = 'products/edit_review.html'
+    context = {
+        'form': form,
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, template, context)

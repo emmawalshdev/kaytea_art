@@ -149,46 +149,29 @@
                     <div class="row">
                         <div class="col text-center mt-4">
                             <h2>
-                                Reviews
+                                Edit your Review
                            
                             </h2>
                         </div>
                     </div>
-                     {% for review in reviews %} 
-                    <p>
-                         {{ review.date }} - {{ review.author }}
-                    <br>
-                         {{ review.review_text }}
-                         {{ review.review_rating }} 
-                    </p>
-                    {% if request.user == review.author or request.user.is_superuser %}
-                    <a class="btn btn-outline-info mr-2" href="{% url 'edit_review' review.id %}" data-toggle="tooltip" data-placement="top"
-                    title="Edit Blog">
-                        <i class="far fa-edit"></i>
-                    </a>
+                    <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
+                        <div class="text-right">
+                            <a class="btn btn-outline-black rounded-0" href="{% url 'product_detail' product.id %}">Cancel</a>
+                            <button class="btn btn-black rounded-0" type="submit">Save Changes</button>
+                        </div>
+                    </form>
 
-                    {% endif %}
-                    {% empty %}
-                    <p class="text-center">No Reviews yet!</p>
-                    {% endfor %}
                 </div>
             </section>
             <!-- Leave a Comment -->
-            <section>
-                <div class="col-12 col-md-8 offset-md-2">
-                    <div class="row">
-                        <div class="col text-center mt-4">
-                            <h2 class="heading small-heading">Leave a Review</h2>
-                        </div>
-                    </div>
-                    <form action="{% url 'product_detail' product.id %}" method="POST">
-                        {% csrf_token %}
-                        {{ form.review_text | as_crispy_field }}
-                        {{ form.review_rating | as_crispy_field }}
-                        <button class="btn btn-outline-primary">Post Review</button>
-                    </form>
-                </div>
-            </section>
 </div>
 {% endblock %}
 

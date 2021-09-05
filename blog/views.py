@@ -140,7 +140,7 @@ def delete_reply(request, reply_id):
     else:
         print('equal')
 
-    if reply.author != user and not request.user.is_superuser:
+    if reply.author != request.user and not request.user.is_superuser:
         messages.error(request, 'Sorry, you do not have permssion \
             to delete a comment.')
         print(user, author)
@@ -161,7 +161,7 @@ def edit_reply(request, reply_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     user = User.objects.get(username=request.user.username)
 
-    if reply.author != user and not request.user.is_superuser:
+    if reply.author != request.user and not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
 

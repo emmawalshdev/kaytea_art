@@ -172,13 +172,13 @@ def delete_product(request, product_id):
 @login_required
 def edit_review(request, review_id):
     """ Edit a review on a product page """
-    if review.author != user and not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
     review = get_object_or_404(ProductReview, pk=review_id)
     product_id = review.product.id
     product = get_object_or_404(Product, pk=product_id)
+
+    if review.author != request.user and not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductReviewForm(request.POST, request.FILES, instance=review)
@@ -209,7 +209,7 @@ def delete_review(request, review_id):
     product_id = review.product.id
     product = get_object_or_404(Product, pk=product_id)
 
-    if review.author != review and not request.user.is_superuser:
+    if review.author != request.user and not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('product_detail', args=[product.id]))
 

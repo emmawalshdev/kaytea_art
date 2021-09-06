@@ -99,7 +99,9 @@
                             <a class="{% if grand_total %}text-active {% else %}text-black{% endif %} nav-link user-icon" href="{% url 'view_bag' %}">
                                  <div class="text-center">
                                     <div><i class="fas fa-shopping-basket fa-lg"></i>
+                                    {% if grand_total %}
                                         <div id="cart-has-contents"><i class="fas fa-check"></i></i></div>
+                                    {% endif %}
                                     </div>
                                     
                                     <!--<p class="my-0">

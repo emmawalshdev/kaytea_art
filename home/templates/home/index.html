@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- not working for now-->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -12,18 +17,107 @@
 
 {% endblock %}
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo">
-                    The new collections are here
-                </h1>
-                <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4> 
-                <div class="my-5">
-
+    <!-- hero banner -->
+    <!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
+    <section class="top-banner-section">
+        <!-- The CSS grid area that displays the image (layer 1) -->
+        <div class="banner-image-div">
+            <img class="banner-image" src="https://images.unsplash.com/photo-1614107069293-7d5bd9aba22e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80" alt="Banner Image" />
+        </div>
+        <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
+        <div class="banner-overlay-div"></div>
+    </section>
+    <section class="home-intro container text-center">
+         <div class="row">
+             <div class="col-12">
+                <h1> Beautifully Illustrated Artwork, by Katie Harte.</h1>
+                <p> Full time vet nurse & passionate artist.</p>
+                <a href="#" class="btn btn-outline-info text-uppercase">About me</a>
+             </div>
+         </div>
+    </section>
+    <section class="home-shop container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Shop Online</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <p>
+                    <strong>Big, bold, statement work to grace your world.</strong>
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                </p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <span class="circle">worldwide shipping</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <a href="{% url 'products' %}?category=original_artwork">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/media/20210803_230559.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h3 class="card-text text-center">
+                            Original Artwork
+                        </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4">
+                <a href="{% url 'products' %}?category=prints">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/media/20210803_230336.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h3 class="card-text text-center">
+                            Prints
+                        </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4">
+                <a href="{% url 'products' %}?category=greeting_cards">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/media/20210803_230314.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h3 class="card-text text-center">
+                        Greeting Cards
+                      </h3>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section>
+    <section class="home-commissions container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <h2>
+                    Pet Commissions
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+                <a href="#" class="btn btn-outline-info text-uppercase">Read more</a>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/media/20210803_231835.jpg" alt="Card image cap">
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
+    </section>
 {% endblock %}

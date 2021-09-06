@@ -214,7 +214,7 @@ Please note, the final website layout contains slight variations to the original
 Each of the following files contain wireframes for desktop, tablet, and mobile devices.
 </strong>
  
-- [Homepage](https://i.ibb.co/ww9kx4v/Home.png)
+- [Homepage](https://i.ibb.co/kQXB9RC/Home.png)
 - [Search results](https://i.ibb.co/vxKr4pb/Search-results.png)
 - [About](https://i.ibb.co/jDC89Y8/About.png)
 - [Blog](https://i.ibb.co/ykNh6gQ/Blog.png)

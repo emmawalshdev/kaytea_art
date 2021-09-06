@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
-.logo-wrapper{
-    font-family: 'Neucha', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
+
+
+
+body *{
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1,
+h2,
+h3{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .logo-text{
+    font-family: 'Neucha', cursive !important;
+} 
+
+section{
+    padding: 40px 0;
+}
+
+
+.btn{
+    font-weight:bold;
+}
+.logo-text{
     color: #1f63bf;
+}
+
+.home-shop{
+    background-color:#0095ff1a;
 }
 
 .btn-check:active+.btn-outline-warning, .btn-check:checked+.btn-outline-warning, .btn-outline-warning.active, .btn-outline-warning.dropdown-toggle.show, .btn-outline-warning:active {
@@ -22,24 +48,6 @@
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 0.1rem rgb(255 201 41);
-}
-
-
-.circle{
-    display:block;
-    height:70px;
-    width:70px;
-    border-radius:50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin:auto;
-    color:#fff;
-    text-align:center;
-}
-
-.card-img-top{
-    height: 24vw !important;
 }
 
 

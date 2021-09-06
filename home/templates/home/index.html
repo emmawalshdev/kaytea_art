@@ -32,75 +32,74 @@
              <div class="col-12">
                 <h1> Beautifully Illustrated Artwork, by Katie Harte.</h1>
                 <p> Full time vet nurse & passionate artist.</p>
-                <a href="#" class="btn btn-outline-info text-uppercase">About me</a>
+                <a href="#" class="mt-4 btn btn-outline-primary">About me</a>
              </div>
          </div>
     </section>
-    <section class="home-shop container">
-        <div class="row">
-            <div class="col-12">
-                <h2>Shop Online</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-8">
-                <p>
-                    <strong>Big, bold, statement work to grace your world.</strong>
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                </p>
-            </div>
-            <div class="col-12 col-lg-4">
-                <span class="circle">worldwide shipping</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <a href="{% url 'products' %}?category=original_artwork">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="/media/20210803_230559.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h3 class="card-text text-center">
-                            Original Artwork
-                        </h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4">
-                <a href="{% url 'products' %}?category=prints">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="/media/20210803_230336.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h3 class="card-text text-center">
-                            Prints
-                        </h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4">
-                <a href="{% url 'products' %}?category=greeting_cards">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="/media/20210803_230314.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h3 class="card-text text-center">
-                        Greeting Cards
-                      </h3>
-                    </div>
+    <section class="home-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Shop Online</h2>
                 </div>
-            </a>
             </div>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <p>
+                        <strong>Big, bold, statement work to grace your world.</strong>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
+                        sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <a href="{% url 'products' %}?category=original_artwork">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/media/20210803_230559.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h3 class="card-text text-center">
+                                Original Artwork
+                            </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="{% url 'products' %}?category=prints">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/media/20210803_230336.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h3 class="card-text text-center">
+                                Prints
+                            </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="{% url 'products' %}?category=greeting_cards">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/media/20210803_230314.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h3 class="card-text text-center">
+                            Greeting Cards
+                        </h3>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>      
         </div>
     </section>
     <section class="home-commissions container">
         <div class="row">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-md-8">
                 <h2>
                     Pet Commissions
                 </h2>
@@ -110,9 +109,9 @@
                     voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
-                <a href="#" class="btn btn-outline-info text-uppercase">Read more</a>
+                <a href="#" class="mt-4 btn btn-outline-info"><strong>Read more</strong></a>
             </div>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-md-4">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="/media/20210803_231835.jpg" alt="Card image cap">
                     </div>

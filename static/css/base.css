@@ -16,6 +16,7 @@ h3{
 
 .logo-text{
     font-family: 'Neucha', cursive !important;
+    font-size: 2em;
 } 
 
 section{
@@ -225,10 +226,13 @@ body{
   background: black;
   background: linear-gradient(
     8deg
-    , rgba(80, 223, 233, 0.637) 0%, rgba(255,255,255,0) 49%); 
+    , rgb(60 14 76 / 64%) 0%, rgba(255,255,255,0) 49%); 
 }
 
-
+.page-header-block{
+    background-color: #0095ff1a;
+    margin-bottom: 20px;
+}
 
 .icon{
     align-items:center;

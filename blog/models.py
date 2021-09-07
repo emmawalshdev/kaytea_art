@@ -24,7 +24,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=254)
     author = models.ForeignKey(User, null=True, blank=True,
                                on_delete=models.CASCADE)
-    body = RichTextField(blank=True, null=True)
+    body = RichTextField(validators=[MinLengthValidator(70)])
     teaser = RichTextField(validators=[MinLengthValidator(70)])
     image = models.ImageField(null=True, blank=True)
 

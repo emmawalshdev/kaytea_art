@@ -11,7 +11,7 @@ class BlogForm(forms.ModelForm):
         labels = {
             'keywords': 'Keywords',
             'title': 'Title',
-            'body': 'Body of Text',
+            'body': 'Body',
             'teaser': 'Teaser',
         }
         widgets = {

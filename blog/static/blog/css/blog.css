@@ -48,3 +48,7 @@
     border-radius: 10%;
     background-color: #b338ff;
 }
+
+.cke_reset{
+    width: 100% !important;
+}

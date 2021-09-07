@@ -414,3 +414,7 @@ hr{
     border-color: #dc3545;
     border-radius: 0;
 }
+.form-group > label{
+    font-weight: 600;
+    margin-bottom: .6rem;
+}

@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
+{% endblock %}
+
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -12,36 +18,43 @@
 
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {{ blog.title }}
+    <!-- page title -->
+    <section class="page-header-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        {{ blog.title|capfirst }}
+                    <h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </section>
+    <!-- blog page contents -->
+    <section class="container pt-0">
+        <!-- image -->
         <div class="row">
             <div class="col-12">
-                <div class="image-container my-5">
+                <div class="image-container my-3 my-md-4">
                     {% if blog.image %}
                     <a href="">
-                        <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                        <img class="blog-img-top img-fluid inner-blog-img" src="{{ blog.image.url }}" alt="{{ blog.title }}">
                     </a>
                     {% else %}
                     <a href="">
-                        <img class="card-img-top img-fluid h-100"  src="{{ MEDIA_URL }}noimage.jpg"
+                        <img class="blog-img-top img-fluid inner-blog-img"  src="{{ MEDIA_URL }}noimage.jpg"
                             alt="{{ blog.title }}">
                     </a>
                     {% endif %}
                 </div>
             </div>
         </div>
-        <!-- edit delete buttons -->
-        <div class="row">
+        <!-- edit + delete buttons -->
+        {% if request.user.is_superuser %}
+        <div class="row mb-3">
             <div class="col-12">
                 <!-- Superuser edit & delete product buttons -->
-                {% if request.user.is_superuser %}
-                <a class="btn btn-outline-info mr-2" href="{% url 'edit_blog' blog.id %}" data-toggle="tooltip" data-placement="top"
+                <a class="btn btn-outline-info mr-3" href="{% url 'edit_blog' blog.id %}" data-toggle="tooltip" data-placement="top"
                     title="Edit Blog">
                     <i class="far fa-edit"></i>
                 </a>
@@ -74,69 +87,65 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
             </div>
         </div>
-        <!-- blog section -->
+        {% endif %}
+        <!-- author/date info -->
         <div class="row">
             <div class="col-12">
-                {{ blog.date }}
+                <p>
+                {{ blog.date|date:'Y-m-d H:i' }} <br>
+                <strong>Posted by: </strong> {{ blog.author }}
+                </p>
             </div>
         </div>
-        <div class="row">
+        <!-- keywords -->
+        {% if blog.keywords %}
+        <div class="row mb-3">
             <div class="col-12">
                 {% for keyword in blog.keywords.all %}
-                <span >{{ keyword.name }} </span>
+                <span class="badge-purple">{{ keyword.name }} </span>
                 {% endfor %}
             </div>
         </div>
+        {% endif %}
+        <!-- blog body -->
         <div class="row">
             <div class="col-12">
-                {{ blog.body }}
+                {{ blog.body|safe }}
             </div>
         </div>
+    </section>
+
         <!-- Comments -->
-        <section>
-            <div class="col-12 col-md-8 offset-md-2">
-                <div class="row">
-                    <div class="col text-center mt-4">
-                        <h2>
-                            Edit your comment
-                       
-                        </h2>
+        <section class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <div class="row">
+                        <div class="col text-center my-4">
+                            <h2 class="small-heading mb-3">
+                               Edit your comment
+                            </h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {% for field in form %}
-                                {% if field.name != 'image' %}
-                                    {{ field | as_crispy_field }}
-                                {% else %}
-                                    {{ field }}
-                                {% endif %}
-                            {% endfor %}
-                            <div class="text-right">
-                                <a class="btn btn-outline-black rounded-0" href="{% url 'blog' %}">Cancel</a>
-                                <button class="btn btn-black rounded-0" type="submit">Save Changes</button>
-                            </div>
-                        </form>
-                    </div>            
-                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {% for field in form %}
+                                        {{ field | as_crispy_field }}
+                                {% endfor %}
+                                <div class="text-right">
+                                    <a class="btn btn-outline-primary" href="{% url 'blog_detail' blog.id %}">Cancel</a>
+                                    <button class="btn btn-outline-primary" type="submit">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>            
+                    </div>
+                </div>               
             </div>
         </section>
         <!-- Leave a Comment -->
-        <section>
-            <div class="col-12 col-md-8 offset-md-2">
-
-                
-            </div>
-        </section>
     </div>
-    <div class="container">
-        <div class="row">
 
-        </div>
-    </div>
 {% endblock %}

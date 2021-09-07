@@ -162,6 +162,7 @@ def edit_reply(request, reply_id):
     blog_id = reply.blog.id
     blog = get_object_or_404(Blog, pk=blog_id)
     user = User.objects.get(username=request.user.username)
+    replies = blog.replies.all().order_by('-id')
 
     if reply.author != request.user and not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -183,6 +184,7 @@ def edit_reply(request, reply_id):
 
     context = {
         'reply': reply,
+        'replies': replies,
         'blog': blog,
         'form': form,
     }

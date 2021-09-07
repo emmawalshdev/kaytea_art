@@ -7,10 +7,12 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = '__all__'
+        exclude = ['author']
         labels = {
             'keywords': 'Keywords',
             'title': 'Title',
             'body': 'Body of Text',
+            'teaser': 'Teaser',
         }
         widgets = {
             'keywords': forms.CheckboxSelectMultiple,

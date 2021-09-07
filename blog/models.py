@@ -21,7 +21,10 @@ class Blog(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     keywords = models.ManyToManyField(Keyword, blank=True)
     title = models.CharField(max_length=254)
+    author = models.ForeignKey(User, null=True, blank=True,
+                               on_delete=models.CASCADE)
     body = models.TextField(validators=[MinLengthValidator(20)])
+    teaser = models.TextField(validators=[MinLengthValidator(70)])
     image = models.ImageField(null=True, blank=True)
 
     class Meta:

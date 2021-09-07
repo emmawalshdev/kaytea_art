@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -37,7 +41,7 @@
             <div class="col-12">
                 <!-- Add blog post button -->
                 {% if request.user.is_superuser %}
-                <a class="btn btn-outline-primary my-4" href="{% url 'add_blog' %}">Add Blog Post</a>
+                <a class="btn btn-outline-primary my-4 mb-5" href="{% url 'add_blog' %}">Add Blog Post</a>
                 {% endif %}
             </div>
         </div>
@@ -47,27 +51,32 @@
         <div class="row">
             {% for blog in page_obj %}
             <div class="col-12">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-5">
+                <div class="row mb-5">
+                    <div class="col-12 col-md-4 col-lg-4">
                         {% if blog.image %}
-                            <div class="image-container mb-4">
+                            <div class="image-container">
                                 <a href="{% url 'blog_detail' blog.id %}">
-                                    <img class="card-img-top img-fluid img-blog" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                                    <img class="img-fluid img-top blog-img" src="{{ blog.image.url }}" alt="{{ blog.title }}">
                                 </a>
                              </div>
                         {% else %}
-                            <div class="image-container mb-4">
+                            <div class="image-container">
                                 <a href="{% url 'blog_detail' blog.id %}">
-                                    <img class="card-img-top img-fluid h-100"  src="{{ MEDIA_URL }}noimage.jpg" alt="{{ blog.title }}">
+                                    <img class="img-fluid img-top blog-img"  src="{{ MEDIA_URL }}noimage.jpg" alt="{{ blog.title }}">
                                 </a>
                             </div>
                         {% endif %}
                     </div>
-                    <div class="col-12 col-md-6 col-lg-7">
-                        <h2><strong>{{ blog.title }}</strong></h2>
-                        <p>{{ blog.date }}</p>
-                        <p>{{ blog.body }}</p>
-                        <button type="button" class="btn btn-outline-primary uppercase">READ MORE</button>
+                    <div class="col-12 col-md-8 col-lg-8">
+                        <div class="blog-teaser-content mt-3 mt-md-0">
+                            <h2><strong>{{ blog.title|capfirst }}</strong></h2>
+                            <p>{{ blog.date|date:'Y-m-d' }} by {{ blog.author }}</p>
+                            <p>
+                                {{ blog.teaser|truncatechars:100 }}
+                                <a href="{% url 'blog_detail' blog.id %}" class="blog-read-more"> Read more
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,11 +85,11 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <div class="pagination justify-content-center">
+            <div class="pagination justify-content-center mt-5 mb-3">
                 <span class="step-links">
                     {% if page_obj.has_previous %}
-                        <a href="?page=1">&laquo; first</a>
-                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        <a href="?page=1" class="btn btn-outline-primary">&laquo; </a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-primary">previus</a>
                     {% endif %}
             
                     <span class="current">
@@ -88,8 +97,8 @@
                     </span>
             
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}">next</a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-primary">next </a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-outline-primary"> &raquo;</a>
                     {% endif %}
                 </span>
             </div>

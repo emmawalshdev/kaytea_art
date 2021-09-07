@@ -1,0 +1,16 @@
+.blog-img {
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+@media (max-width: 375px) {
+
+    .blog-img {
+        height: 150px;
+    }
+}
+
+.blog-read-more{
+    color:#035cd8; 
+    font-style: italic;
+}

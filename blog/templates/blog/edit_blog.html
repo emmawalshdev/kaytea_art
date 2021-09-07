@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -10,14 +14,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h2>Edit Blog</h2>
+    <!-- page title -->
+    <section class="page-header-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        Edit Blog
+                    <h1>
+                </div>
             </div>
         </div>
-
+    </section>
+    <!-- blog form -->
+    <section class="container">
         <div class="row">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'edit_blog' blog.id %}" class="form mb-2" enctype="multipart/form-data">
@@ -31,13 +41,13 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'blog' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Blog</button>
+                        <a class="btn btn-outline-primary" href="{% url 'blog' %}">Cancel</a>
+                        <button class="btn btn-outline-primary" type="submit">Update Blog</button>
                     </div>
                 </form>
             </div>            
         </div>
-    </div>
+    </section>
 {% endblock %}
 
 {% block postloadjs %}

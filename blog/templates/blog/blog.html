@@ -47,7 +47,7 @@
         </div>
     </div>
     <!-- show current blogs -->
-    <div class="container">
+    <section class="container">
         <div class="row">
             {% for blog in page_obj %}
             <div class="col-12">
@@ -72,7 +72,7 @@
                             <h2><strong>{{ blog.title|capfirst }}</strong></h2>
                             <p>{{ blog.date|date:'Y-m-d' }} by {{ blog.author }}</p>
                             <p>
-                                {{ blog.teaser|truncatechars:100 }}
+                                {{ blog.teaser|truncatechars:200|safe }}
                                 <a href="{% url 'blog_detail' blog.id %}" class="blog-read-more"> Read more
                                 </a>
                             </p>
@@ -82,7 +82,8 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
+    <!-- pagination -->
     <div class="row">
         <div class="col-12">
             <div class="pagination justify-content-center mt-5 mb-3">

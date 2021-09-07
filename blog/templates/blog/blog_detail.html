@@ -12,31 +12,38 @@
 
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {{ blog.title }}
+    <!-- page title -->
+    <section class="page-header-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        {{ blog.title|capfirst }}
+                    <h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </section>
+    <!-- blog page contents -->
+    <section class="container">
+        <!-- image -->
         <div class="row">
             <div class="col-12">
                 <div class="image-container my-5">
                     {% if blog.image %}
                     <a href="">
-                        <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                        <img class="card-img-top img-fluid inner-blog-img" src="{{ blog.image.url }}" alt="{{ blog.title }}">
                     </a>
                     {% else %}
                     <a href="">
-                        <img class="card-img-top img-fluid h-100"  src="{{ MEDIA_URL }}noimage.jpg"
+                        <img class="card-img-top img-fluid inner-blog-img"  src="{{ MEDIA_URL }}noimage.jpg"
                             alt="{{ blog.title }}">
                     </a>
                     {% endif %}
                 </div>
             </div>
         </div>
-        <!-- edit delete buttons -->
+        <!-- edit + delete buttons -->
         <div class="row">
             <div class="col-12">
                 <!-- Superuser edit & delete product buttons -->
@@ -77,10 +84,13 @@
                 {% endif %}
             </div>
         </div>
-        <!-- blog section -->
+        <!-- author/date info -->
         <div class="row">
             <div class="col-12">
-                {{ blog.date }}
+                <p>
+                {{ blog.date|date:'Y-m-d' }} <br>
+                <strong>Posted by: </strong> {{ blog.author }}
+                </p>
             </div>
         </div>
         <div class="row">
@@ -92,7 +102,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                {{ blog.body }}
+                {{ blog.body|safe }}
             </div>
         </div>
         <!-- Comments -->
@@ -173,9 +183,5 @@
             </div>
         </section>
     </div>
-    <div class="container">
-        <div class="row">
 
-        </div>
-    </div>
 {% endblock %}

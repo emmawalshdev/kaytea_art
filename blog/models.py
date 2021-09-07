@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinLengthValidator
 
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -23,8 +24,8 @@ class Blog(models.Model):
     title = models.CharField(max_length=254)
     author = models.ForeignKey(User, null=True, blank=True,
                                on_delete=models.CASCADE)
-    body = models.TextField(validators=[MinLengthValidator(20)])
-    teaser = models.TextField(validators=[MinLengthValidator(70)])
+    body = RichTextField(blank=True, null=True)
+    teaser = RichTextField(validators=[MinLengthValidator(70)])
     image = models.ImageField(null=True, blank=True)
 
     class Meta:

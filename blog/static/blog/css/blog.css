@@ -31,3 +31,20 @@
         height: 30vw;
     }
 }
+
+/* add blog */
+.form-check {
+    display: inline-block;
+}
+
+.form-group{
+    margin-bottom: 1.4rem;
+}
+
+.badge-purple{
+    color: white;
+    padding: 3px 5px;
+    font-weight: bold;
+    border-radius: 10%;
+    background-color: #b338ff;
+}

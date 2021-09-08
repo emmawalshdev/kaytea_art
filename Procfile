@@ -1,0 +1,1 @@
+web: gunicorn katie_harte_art.wsgi:application

@@ -6,3 +6,10 @@
 #id_review_rating option:first-child {
     color: #aab7c4;
 }
+ 
+
+@media (min-width: 768px){
+    .text-md-left {
+        text-align: left !important;
+    }
+}

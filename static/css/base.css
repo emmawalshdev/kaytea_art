@@ -33,6 +33,11 @@ section{
 }
 
 
+.h2-color{
+    color: #1f63bf;
+    font-weight:500;
+}
+
 .btn{
     font-weight:bold;
 }

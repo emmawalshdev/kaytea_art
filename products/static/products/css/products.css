@@ -26,3 +26,16 @@
     right: 1rem;
     font-size: 1.7rem;
 }
+
+.star-rating-icon{
+    color: gold;
+}
+
+.replies-section{
+    background-color: #d4d3ff59;
+}
+
+.hr-reviews{
+    margin: 15px 0;
+    border: 1px;
+}

@@ -18,15 +18,6 @@
     height: 23vw;
 }
 
-.back-to-top-button{
-    height: 3rem;
-    width: 3rem;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    font-size: 1.7rem;
-}
-
 .star-rating-icon{
     color: gold;
 }

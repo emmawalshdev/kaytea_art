@@ -293,11 +293,21 @@ input[name='q']::placeholder{
     width: 70px;
 }
 
+:focus-visible {
+    outline: 0;
+}
 .message-container {
     position: fixed;
     top: 5rem;
     right: 1rem;
     z-index: 9999;
+}
+.form input,
+.form textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
 }
 
 .bag-notification-wrapper {

@@ -33,7 +33,7 @@ class Commissions(models.Model):
     pet_num = models.CharField(max_length=30, choices=PET_NUM_CHOICES, default='Number of Pets *')
     media = models.CharField(max_length=40, choices=MEDIA_CHOICES, default= 'Media Preference *')
     image = models.ImageField(null=True, blank=True)
-    message = models.TextField()
+    message = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.email

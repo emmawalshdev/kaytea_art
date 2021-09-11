@@ -7,7 +7,7 @@ from django.contrib import messages
 def commissions(request):
     '''A view to return the contact form page'''
     if request.method == 'POST':
-        form = CommissionsForm(request.POST)
+        form = CommissionsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message was\

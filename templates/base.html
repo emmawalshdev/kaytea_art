@@ -163,12 +163,12 @@
                         <h3>Quick Links</h3>
                         <ul>
                             <li>
-                                <a href="">
+                                <a href="{% url 'about' %}">
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{% url 'blog' %}">
                                     Blog
                                 </a>
                             </li>
@@ -183,17 +183,17 @@
                         <h3>Artwork</h3>
                         <ul>
                             <li>
-                                <a href="">
+                                <a href="{% url 'products' %}?category=original_artwork,prints,greeting_cards">
                                     Original Artwork
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{% url 'products' %}?category=original_artwork">
                                     Prints
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{% url 'products' %}?category=prints">
                                     Greeting Cards
                                 </a>
                             </li>

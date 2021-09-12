@@ -26,16 +26,16 @@
         <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
         <div class="banner-overlay-div"></div>
     </section>
-    <section class="home-intro container text-center">
+    <section class="home-intro container text-center py-4 py-md-5">
          <div class="row">
              <div class="col-12">
                 <h1> Beautifully Illustrated Artwork, by Katie Harte.</h1>
-                <p> Full time vet nurse & passionate artist.</p>
-                <a href="#" class="mt-4 btn btn-outline-primary">About me</a>
+                <p class="lead pt-3"> Full time vet nurse & passionate artist.</p>
+                <a href="#" class="mt-3 mt-sm-4 btn btn-outline-primary about-btn">About me</a>
              </div>
          </div>
     </section>
-    <section class="home-shop">
+    <section class="home-shop py-4 py-md-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -44,77 +44,89 @@
             </div>
             <div class="row">
                 <div class="col-12 col-lg-8">
-                    <p>
+                    <p class="lead">
                         <strong>Big, bold, statement work to grace your world.</strong>
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                        sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
-                        sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                        sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 home-category-wrapper">
                     <a href="{% url 'products' %}?category=original_artwork">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://katie-harte-art.s3.amazonaws.com/media/20210803_230621.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h3 class="card-text text-center">
-                                Original Artwork
-                            </h3>
+                        <div id="category-img-1"
+                            class="home-category-img d-flex align-items-end box-shadow sm-box-shadow-hover"
+                            title="Original Artwork">
+                            <div class="category-title-wrapper text-center">
+                                <h3>Original Artwork</h3>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 home-category-wrapper">
                     <a href="{% url 'products' %}?category=prints">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://katie-harte-art.s3.amazonaws.com/media/20210803_230336.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h3 class="card-text text-center">
-                                Prints
-                            </h3>
+                        <div id="category-img-2"
+                            class="home-category-img d-flex align-items-end box-shadow sm-box-shadow-hover"
+                            title="Prints">
+                            <div class="category-title-wrapper text-center">
+                                <h3>Prints</h3>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 home-category-wrapper">
                     <a href="{% url 'products' %}?category=greeting_cards">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://8000-bronze-beetle-9jka3mep.ws-eu16.gitpod.io/media/20210803_230053.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h3 class="card-text text-center">
-                            Greeting Cards
-                        </h3>
+                        <div id="category-img-3"
+                            class="home-category-img d-flex align-items-end box-shadow sm-box-shadow-hover"
+                            title="Greeting Cards">
+                            <div class="category-title-wrapper text-center">
+                                <h3>Greeting Cards</h3>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
                 </div>
-            </div>      
-        </div>
+            </div> 
+        </div>     
     </section>
-    <section class="home-commissions container">
+    <section class="home-commissions container py-4">
         <div class="row">
-            <div class="col-12 col-md-8">
+            <div class="col-12">
                 <h2>
                     Pet Commissions
                 </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
                     eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
                     voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
-                <a href="#" class="mt-4 btn btn-outline-info"><strong>Read more</strong></a>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://katie-harte-art.s3.amazonaws.com/media/54242424311.JPG" alt="Card image cap">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+                <div class="row">
+                    <div class="col-12 text-center text-md-left">
+                        <a href="{% url 'commissions' %}" class="mt-3 mt-sm-4 btn btn-outline-info commissions-btn"><strong>Read more</strong></a>
                     </div>
                 </div>
+            </div>
+            <div class="col-12 col-lg-6 home-commission-wrapper ">
+                    <div id="category-img-4"
+                        class="home-commission-img box-shadow box-shadow-hover"
+                            title="Pet Commissions">
+                    </div>
             </div>
         </div>
     </section>

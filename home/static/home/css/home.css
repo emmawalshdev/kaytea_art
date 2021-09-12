@@ -14,3 +14,83 @@
     height: 24vw;
 }
 
+.home-category-wrapper {
+    height: 400px;
+    padding: 15px;
+}
+
+.home-commission-wrapper {
+    padding: 15px;
+    height: 400px;
+}
+
+@media screen and (min-width: 992px){
+    .home-category-wrapper {
+        height: 450px;
+    }
+    .home-commission-wrapper {
+        padding-left:100px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .commissions-btn{
+        width:300px;
+    }
+}
+
+
+
+.commissions-btn,
+.about-btn{
+    width:300px;
+}
+
+#category-img-1 {
+    background-image: url(https://katie-harte-art.s3.amazonaws.com/media/20210803_230621.jpg);
+}
+
+#category-img-2 {
+    background-image: url(https://katie-harte-art.s3.amazonaws.com/media/20210803_230336.jpg);
+}
+
+#category-img-3 {
+    background-image: url(https://katie-harte-art.s3.amazonaws.com/media/20210803_230053.jpg);
+}
+
+#category-img-4 {
+    background-image: url(https://katie-harte-art.s3.amazonaws.com/media/commissions-three-dogs.JPG);
+}
+
+
+.home-category-img {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    -webkit-transition: 0.2s all ease-in-out 0.2s;
+    transition: 0.2s all ease-in-out 0.2s;
+    background-position: top 15%;
+}
+
+.home-commission-img {
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    -webkit-transition: 0.2s all ease-in-out 0.2s;
+    transition: 0.2s all ease-in-out 0.2s;
+    background-position: top left;
+}
+
+
+.box-shadow {
+    -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 16%), 0 2px 4px rgb(0 0 0 / 23%);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 16%), 0 2px 4px rgb(0 0 0 / 23%);
+}
+
+.category-title-wrapper {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgba(255,255,255,0.5);
+}

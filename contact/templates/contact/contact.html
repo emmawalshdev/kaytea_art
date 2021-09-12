@@ -29,13 +29,13 @@
 </section>
 <section class="contact-form-wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
+        <div class="row justify-content-left">
+            <div class="col-12 col-md-8">
                 <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form }}
-                    <div class="text-right">
-                        <button class="btn btn-outline-primary" type="submit">Submit</button>
+                    <div class="text-center">
+                        <button class="btn btn-outline-primary submit-btn" type="submit">Submit</button>
                     </div>
                  </form>
             </div>

@@ -1,3 +1,5 @@
+
+
 .back-to-top-button{
     height: 3rem;
     width: 3rem;
@@ -53,6 +55,8 @@ section{
 .logo-text{
     color: #1f63bf;
 }
+
+
 
 .home-shop{
     background-color:#0095ff1a;
@@ -356,6 +360,9 @@ hr{
   
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
+      .text-md-left{
+          text-align: left !important;
+      }
       .fixed-top-desktop-only {
           position: fixed;
           top: 0;

@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -24,16 +27,18 @@
         </div>
     </div>
 </section>
-<section class="container">
-    <div class="row">
-        <div class="col-12">
-            <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form }}
-                <div class="text-right">
-                    <button class="btn btn-outline-primary" type="submit">Submit</button>
-                </div>
-             </form>
+<section class="contact-form-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="text-right">
+                        <button class="btn btn-outline-primary" type="submit">Submit</button>
+                    </div>
+                 </form>
+            </div>
         </div>
     </div>
 </section>

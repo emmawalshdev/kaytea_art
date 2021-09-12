@@ -11,3 +11,10 @@
     color: #aab7c4;
 }
 
+#id_message{
+    height:100px !important;
+}
+
+#commissions-submit-btn{
+    width:100%;
+}

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'commissions/css/commissions.css' %}">
+    <link rel="stylesheet" href="{% static 'commissions/css/commissions.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -27,25 +27,101 @@
         </div>
     </div>
 </section>
-<section class="container">
-    <div class="row">
-        <div class="col-12">
-            <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
-                    {% if field.name != 'image' %}
-                        {{ field | as_crispy_field }}
-                    {% else %}
-                        {{ field }}
-                    {% endif %}
+    <!-- interactive settings -->
+    <section class="container">
+        <!-- category buttons -->
+        <div class="row">
+            <div class="col-12">
+                {% for category in all_categories %}
+                <a class="btn btn-outline-primary" href="{% url 'products' %}?category={{ category.name }}">
+                    <span class="p-2 mt-2 ">{{ category.friendly_name }}</span>
+                </a>
                 {% endfor %}
-                <div class="text-right">
-                    <button class="btn btn-outline-primary" type="submit">Submit</button>
-                </div>
-             </form>
+                <a class="btn btn-outline-primary" href="{% url 'commissions' %}">
+                    <span class="p-2 mt-2 ">Pet Commissions</span>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!-- intro + image -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quam nulla, rutrum in volutpat
+                    vitae, commodo sed libero. Donec consectetur massa vel fermentum pharetra. Etiam auctor leo sapien,
+                    a euismod nisi volutpat non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Etiam vel arcu fermentum, auctor odio pretium, facilisis erat. Pellentesque a lacinia
+                    neque, at imperdiet dolor.
+                </p>
+                <p>
+                    Vivamus vitae nisi sit amet metus ornare iaculis in eget purus. In
+                    vulputate quam ac laoreet lacinia. Orci varius natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. In nec porta libero. Mauris sed imperdiet odio. Nullam congue nisl sit amet
+                    lorem ultricies, quis viverra est placerat. Mauris sed tellus porttitor, viverra odio commodo,
+                    scelerisque lorem. Donec id nisi massa. Sed ac eros quis nisi facilisis aliquam.
+
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card m-auto" style="width: 28rem;">
+                    <img src="https://katie-harte-art.s3.amazonaws.com/media/commissions-pugs.jpg" alt="Card image cap">
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- process section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                <h2>
+                    The Process
+                </h2>
+                <p>
+                    <ol>
+                        <li>
+                            Get in touch, by filling in the form below.
+                        </li>
+                        <li>
+                            Once a request has been made, I will be in touch to chat about your requirements & will confirm the total cost and approximate timescale.
+                        </li>
+                        <li>
+                            When the Artwork is complete, I will send you photographs. If you are happy with the painting, I will request payment and the painting is yours.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 30rem;">
+                    <img src="https://katie-harte-art.s3.amazonaws.com/media/commissions-main.jpg" alt="Card image cap">
+               </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2>Take the First Step</h2>
+                <p>
+                    Bring a beloved pet to life, on paper.
+                    Fill in the form below, and I'll be in touch with a quote.
+                </p>
+                <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <button class="btn btn-outline-primary" id="commissions-submit-btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
 {% endblock %}

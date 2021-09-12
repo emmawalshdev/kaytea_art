@@ -1,7 +1,7 @@
 from django.db import models
 
 SIZE_CHOICES = (
-    (' ', 'Canvas size *'),
+    ('', 'Canvas size *'),
     ('A5', 'A5'),
     ('A4', 'A4'),
     ('A2', 'A2'),
@@ -10,14 +10,14 @@ SIZE_CHOICES = (
 )
 
 PET_NUM_CHOICES = (
-    (' ', 'Number of Pets *'),
+    ('', 'Number of Pets *'),
     ('1', '1'),
     ('2', '2'),
     ('3', '3'),
 )
 
 MEDIA_CHOICES = (
-    (' ', 'Media Preference *'),
+    ('', 'Media Preference *'),
     ('penil', 'Pencil'),
     ('Acrylic', 'Acrylic'),
     ('Watercolor', 'Watercolor'),

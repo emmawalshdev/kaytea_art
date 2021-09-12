@@ -1,13 +1,8 @@
-#id_review_rating,
-#id_size option:not(:first-child),
-#id_media option:not(:first-child),
-#id_pet_num option:not(:first-child){
+select option:not(:first-child){
     color: #000;
 }
 
-#id_size option:first-child,
-#id_media option:first-child,
-#id_pet_num option:first-child {
+select option:first-child{
     color: #aab7c4;
 }
 
@@ -18,3 +13,4 @@
 #commissions-submit-btn{
     width:100%;
 }
+

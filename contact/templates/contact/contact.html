@@ -29,15 +29,27 @@
 </section>
 <section class="contact-form-wrapper">
     <div class="container">
-        <div class="row justify-content-left">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <h2>Have some questions?</h2>
+                <p>
+                   Let me know! All enquiries submitted below reach me directly.
+                </p>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12 col-md-8">
                 <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form }}
                     <div class="text-center">
-                        <button class="btn btn-outline-primary submit-btn" type="submit">Submit</button>
+                        <button class="btn btn-outline-primary submit-btn mt-3 mt-sm-4" type="submit">Submit</button>
                     </div>
                  </form>
+            </div>
+            <div class="col-12 col-md-4 my-auto">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_T5tVEx.json"  background="transparent"  speed=".7"  style="margin:auto; width: 90%;" hover   autoplay></lottie-player>
             </div>
         </div>
     </div>

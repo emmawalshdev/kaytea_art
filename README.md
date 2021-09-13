@@ -505,6 +505,7 @@ README.md:
 * image desc - [Source](link)
 
 https://www.toptal.com/designers/subtlepatterns/ - pattern overlay
+bird singing animation - https://lottiefiles.com/23100-happy-bird
 
 ### Acknowledgments
 * 

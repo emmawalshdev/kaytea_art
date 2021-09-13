@@ -1,12 +1,3 @@
-.contact-form-wrapper{
-    background-image: url(https://katie-harte-art.s3.amazonaws.com/media/contactus-background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100%;
-    background-position: center 5%;
-}
-
 .submit-btn{
-    width:100px;
+    width:300px;
 }

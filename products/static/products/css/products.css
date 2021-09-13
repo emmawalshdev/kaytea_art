@@ -13,7 +13,7 @@ select option:first-child{
 }
 
 .product-card .card-img-top{
-    height: 23vw;
+    height: 300px !important;
 }
 
 .star-rating-icon{

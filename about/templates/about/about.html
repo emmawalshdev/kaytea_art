@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -27,8 +30,10 @@
 <section class="container">
     <div class="row">
         <div class="col-12 col-md-4">
-            <div class="card">
-                <img src="https://katie-harte-art.s3.amazonaws.com/media/katie-main.JPG" alt="Card image cap">
+            <div class="card-wrapper">
+                <div class="card about-img">
+                    <img src="https://katie-harte-art.s3.amazonaws.com/media/katie-main.JPG" class="rounded" alt="Card image cap">
+                </div>
             </div>
         </div>
         <div class="col-12 col-md-8">
@@ -51,17 +56,17 @@
     <div class="row">
         <div class="col-12 col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="https://katie-harte-art.s3.amazonaws.com/media/about-1.jpg" alt="Card image cap">
+                <img class="rounded" src="https://katie-harte-art.s3.amazonaws.com/media/about-1.jpg" alt="Card image cap">
             </div>
         </div>
         <div class="col-12 col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="https://katie-harte-art.s3.amazonaws.com/media/katie-painting2.png" alt="Card image cap">
+                <img class="rounded" src="https://katie-harte-art.s3.amazonaws.com/media/katie-painting2.png" alt="Card image cap">
             </div>
         </div>
         <div class="col-12 col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="https://katie-harte-art.s3.amazonaws.com/media/katie_about.jpg" alt="Card image cap">
+                <img class="rounded" src="https://katie-harte-art.s3.amazonaws.com/media/katie_about.jpg" alt="Card image cap">
             </div>
         </div>
     </div>

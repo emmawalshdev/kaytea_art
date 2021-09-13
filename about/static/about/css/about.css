@@ -1,0 +1,14 @@
+
+.card-wrapper {
+    height: 400px;
+}
+
+.about-img {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    -webkit-transition: 0.2s all ease-in-out 0.2s;
+    transition: 0.2s all ease-in-out 0.2s;
+    background-position: top 15%;
+}

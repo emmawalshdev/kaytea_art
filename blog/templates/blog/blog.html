@@ -41,7 +41,7 @@
             <div class="col-12">
                 <!-- Add blog post button -->
                 {% if request.user.is_superuser %}
-                <a class="btn btn-outline-primary my-4 mb-5" href="{% url 'add_blog' %}">Add Blog Post</a>
+                <a class="btn my-4 mb-5" href="{% url 'add_blog' %}">Add Blog Post</a>
                 {% endif %}
             </div>
         </div>
@@ -89,8 +89,8 @@
             <div class="pagination justify-content-center mt-5 mb-3">
                 <span class="step-links">
                     {% if page_obj.has_previous %}
-                        <a href="?page=1" class="btn btn-outline-primary">&laquo; </a>
-                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-primary">previus</a>
+                        <a href="?page=1" class="btn">&laquo; </a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="btn">previus</a>
                     {% endif %}
             
                     <span class="current">
@@ -98,8 +98,8 @@
                     </span>
             
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-primary">next </a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-outline-primary"> &raquo;</a>
+                        <a href="?page={{ page_obj.next_page_number }}" class="btn">next </a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn"> &raquo;</a>
                     {% endif %}
                 </span>
             </div>

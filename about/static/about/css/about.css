@@ -1,8 +1,4 @@
 
-.card-wrapper {
-    height: 400px;
-}
-
 .about-img {
     height: 100%;
     background-repeat: no-repeat;
@@ -11,4 +7,18 @@
     -webkit-transition: 0.2s all ease-in-out 0.2s;
     transition: 0.2s all ease-in-out 0.2s;
     background-position: top 15%;
+}
+
+.card-img-about{
+        width: 100%;
+        height: 30vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+        object-position: center 20%;
+}
+
+@media (max-width: 991px){
+    .card-img-about {
+        height: 350px !important;
+    }
 }

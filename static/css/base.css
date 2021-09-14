@@ -1,4 +1,32 @@
+.card {
+    border:none;
+}
 
+
+.commissions-btn,
+.about-btn,
+.about-contact-btn{
+    width: 20rem;
+}
+
+.btn {
+    border-color: #1abfd0;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #1abfd0 inset, 0 0 0 0 #1abfd0;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    font-weight: bold;
+  }
+  .btn:hover {
+    box-shadow: 0 0 2px 0 #1abfd0 inset, 0 0 2px 2px #1abfd0;
+    color: #1abfd0;
+    background-color:white
+  }
+
+  /* search bar */
+  .input-group .btn {
+    height: 2.8rem;
+  }
 
 .back-to-top-button{
     height: 3rem;
@@ -49,9 +77,6 @@ section{
     font-weight:500;
 }
 
-.btn{
-    font-weight:bold;
-}
 .logo-text{
     color: #1f63bf;
 }
@@ -62,9 +87,11 @@ section{
     background-color:#0095ff1a;
 }
 
+/*
 .btn-check:active+.btn-outline-warning, .btn-check:checked+.btn-outline-warning, .btn-outline-warning.active, .btn-outline-warning.dropdown-toggle.show, .btn-outline-warning:active {
     color: #985de5;
 }
+*/
 
 .fixed-top{
     background-color: white;

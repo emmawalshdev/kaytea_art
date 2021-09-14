@@ -43,3 +43,10 @@ max-height: 100%;
 max-width: 100%;
 }
 
+.blue-text{
+    color:blue;
+}
+
+.price-text{
+    font-size:1.6rem;
+}

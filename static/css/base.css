@@ -5,19 +5,24 @@
 
 .commissions-btn,
 .about-btn,
-.about-contact-btn{
-    width: 20rem;
+.about-contact-btn,
+.btn-long{
+    width: 20rem !important;
 }
 
-.btn {
+.btn{
+    font-weight: bold;
+}
+
+.btn-gen {
     border-color: #1abfd0;
     color: #fff;
     box-shadow: 0 0 40px 40px #1abfd0 inset, 0 0 0 0 #1abfd0;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
-    font-weight: bold;
   }
-  .btn:hover {
+
+  .btn-gen:hover {
     box-shadow: 0 0 2px 0 #1abfd0 inset, 0 0 2px 2px #1abfd0;
     color: #1abfd0;
     background-color:white
@@ -61,6 +66,9 @@ h2,
 h3{
     font-family: 'Montserrat', sans-serif;
 }
+h2{
+    font-size: 2.4rem;
+}
 
 .logo-text{
     font-family: 'Neucha', cursive !important;
@@ -72,9 +80,8 @@ section{
 }
 
 
-.h2-color{
+.blue-text{
     color: #1f63bf;
-    font-weight:500;
 }
 
 .logo-text{

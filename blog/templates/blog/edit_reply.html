@@ -54,7 +54,7 @@
         <div class="row mb-3">
             <div class="col-12">
                 <!-- Superuser edit & delete product buttons -->
-                <a class="btn btn-outline-info mr-3" href="{% url 'edit_blog' blog.id %}" data-toggle="tooltip" data-placement="top"
+                <a class="btn btn-info mr-3" href="{% url 'edit_blog' blog.id %}" data-toggle="tooltip" data-placement="top"
                     title="Edit Blog">
                     <i class="far fa-edit"></i>
                 </a>
@@ -136,8 +136,8 @@
                                         {{ field | as_crispy_field }}
                                 {% endfor %}
                                 <div class="text-right">
-                                    <a class="btn btn-outline-primary" href="{% url 'blog_detail' blog.id %}">Cancel</a>
-                                    <button class="btn btn-outline-primary" type="submit">Save Changes</button>
+                                    <a class="btn " href="{% url 'blog_detail' blog.id %}">Cancel</a>
+                                    <button class="btn btn-gen" type="submit">Save Changes</button>
                                 </div>
                             </form>
                         </div>            

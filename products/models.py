@@ -23,7 +23,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     date_added = models.DateTimeField(auto_now_add=True, null=True) 
     sku = models.CharField(max_length=200, null=True, blank=True)
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, null=True, blank=True)
     description = models.TextField()
     size = models.TextField()
     media = models.TextField()

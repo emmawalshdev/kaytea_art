@@ -187,6 +187,7 @@
             </div>
         </div>
     </section>
+
     <!-- Comments -->
     <section class="replies-section">
         <div class="container">
@@ -207,20 +208,29 @@
                                 <p>No reviews yet!</p>
                             {% endif %}
                         </div>
-                        <!-- toggle leave a review -->
-                        <div class="col-12 text-center">
-                            <p>
-                                <i class="fas fa-arrows-alt"></i>
-                                <a data-toggle="collapse" href="#collapseExample" role="button"
-                                    aria-expanded="false" aria-controls="collapseExample">
-                                    Review this Artwork
-                                </a>
-                            </p>
-                        </div>
+                        {% if user.is_authenticated %}
+                            <!-- toggle leave a review -->
+                            <div class="col-12 text-center">
+                                <p>
+                                    <i class="fas fa-arrows-alt"></i>
+                                    <a data-toggle="collapse" href="#collapseExample" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Review this Artwork
+                                    </a>
+                                </p>
+                            </div>
+                        {% else %}
+                            <div class="col-12 text-center">
+                                <p>
+                                    Please <a href="{% url 'account_login' %}" class="font-weight-bold">Login</a> to leave a review.
+                                </p>
+                            </div>
+                        {% endif %}
                     </div>
                     <!-- leave a review form-->
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-2 collapse mt-2 mt-md-3" id="collapseExample">
+                            {% if user.is_authenticated %}
                             <!--header row-->
                             <div class="row">
                                 <div class="col-12 text-center mt-4">
@@ -232,24 +242,25 @@
                             <!--review for row-->
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <form action="{% url 'product_detail' product.id %}" method="POST">
-                                        {% csrf_token %}
-                                            {{ form.review_text | as_crispy_field }}
-                                            {{ form.review_rating | as_crispy_field }}
-                                            <div class="text-start">
-                                                <strong>
-                                                    Username:
-                                                </strong>
-                                                    {{ request.user.username }}
-                                            </div>
-                                            <div>
-                                                <button class="btn btn-gen btn-long my-4">
-                                                    Post Review
-                                                </button>
-                                            </div>
-                                    </form>
+                                        <form action="{% url 'product_detail' product.id %}" method="POST">
+                                            {% csrf_token %}
+                                                {{ form.review_text | as_crispy_field }}
+                                                {{ form.review_rating | as_crispy_field }}
+                                                <div class="text-start">
+                                                    <strong>
+                                                        Username:
+                                                    </strong>
+                                                        {{ request.user.username }}
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-gen btn-long my-4">
+                                                        Post Review
+                                                    </button>
+                                                </div>
+                                        </form>
                                 </div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

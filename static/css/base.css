@@ -310,7 +310,11 @@ body{
 .user-icon{
     font-size:1.3rem
 }
-
+/*
+a{
+    font-weight:700;
+}
+*/
 .navbar-light .navbar-nav .nav-link,
 footer a{
     color: black;

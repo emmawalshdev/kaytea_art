@@ -61,6 +61,10 @@ body *{
     font-family: 'Roboto Mono', monospace;
 }
 
+.red-text{
+    color: rgb(155, 4, 4);
+}
+
 h1,
 h2,
 h3{
@@ -356,6 +360,12 @@ input[name='q']::placeholder{
     padding: 6px 8px;
     margin: 8px 0;
     display: inline-block;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    margin-bottom: 10px;
 }
 
 .bag-notification-wrapper {

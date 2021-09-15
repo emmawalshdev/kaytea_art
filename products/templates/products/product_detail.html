@@ -38,7 +38,7 @@
             <div class="col-12 col-md-7">
                 <div class="mb-3 mt-md-2">
                     <div class="product-title-wrapper">
-                        <h2 class="h2-color blue-text">
+                        <h2 class="blue-text">
                             {{ product.name }}
                         <!-- average rating -->
                         </h2>
@@ -239,7 +239,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <!--review for row-->
+                            <!--review for, row-->
                             <div class="row">
                                 <div class="col-12 text-center">
                                     <form action="{% url 'product_detail' product.id %}" method="POST">
@@ -280,15 +280,16 @@
                                 <strong>
                                     Posted by:
                                 </strong>
-                                    {{ review.author }}
+                                {{ review.author }}
                             </div>
                             <div class="review-rating">
                                 <i class="fas fa-star star-rating-icon fa-lg"></i> 
                                 {{ review.review_rating }}/5
                             </div>
+                            <p>
                                 {{ review.review_text }}
                             </p>
-                                {% if request.user == review.author or request.user.is_superuser %}
+                            {% if request.user == review.author or request.user.is_superuser %}
                                 <div class="row">
                                     <div class="col-12">
                                         <a class="btn btn-success mr-2" href="{% url 'edit_review' review.id %}" data-toggle="tooltip"
@@ -325,7 +326,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                {% endif %}
+                            {% endif %}
                         </div>
                         <!-- exclue hr element after last comment -->
                         {% if not forloop.last %}

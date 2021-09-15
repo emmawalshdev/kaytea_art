@@ -50,3 +50,7 @@ max-width: 100%;
 .price-text{
     font-size:1.6rem;
 }
+
+#image-clear_id{
+    width:auto;
+}

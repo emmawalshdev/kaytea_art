@@ -85,7 +85,7 @@ section{
 
 
 .blue-text{
-    color: #1f63bf;
+    color: #1f63c0;
 }
 
 .logo-text{
@@ -366,6 +366,9 @@ input[name='q']::placeholder{
     display: inline-block;
 }
 
+.form textarea{
+    max-height: 100px;
+}
 .form-group input,
 .form-group textarea,
 .form-group select{

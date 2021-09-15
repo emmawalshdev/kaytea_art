@@ -367,8 +367,9 @@ input[name='q']::placeholder{
 }
 
 .form textarea{
-    max-height: 100px;
+    max-height: 200px;
 }
+
 .form-group input,
 .form-group textarea,
 .form-group select{

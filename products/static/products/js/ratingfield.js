@@ -1,6 +1,9 @@
 
+
+
 let optionSelected = ""
-$( "select option:first-child" ).attr("disabled","disabled");
+$("option[value='']").attr("disabled", "disabled");
+
 
 if (optionSelected == "") {
     $('select').css('color', '#aab7c4');

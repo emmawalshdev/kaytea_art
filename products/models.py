@@ -27,7 +27,7 @@ class Product(models.Model):
     description = models.TextField(max_length="100", null=True, blank=True)
     size = models.CharField(max_length=200)
     media = models.CharField(max_length=200)
-    stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(200)])
+    stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(20)])
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
 

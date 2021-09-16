@@ -35,6 +35,6 @@ class Migration(migrations.Migration):
             model_name='product',
             name='stock',
             field=models.PositiveSmallIntegerField(
-                validators=[django.core.validators.MaxValueValidator(200)]),
+                validators=[django.core.validators.MaxValueValidator(20)]),
         ),
     ]

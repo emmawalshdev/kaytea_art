@@ -18,6 +18,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='productreview',
             name='review_rating',
-            field=models.CharField(choices=[('', 'Rating *'), ('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5')], default='Rating *', max_length=1),
+            field=models.CharField(choices=[('', 'Rating *'), ('1', '1'), (
+                '2', '2'), ('3', '3'), ('4', '4'), (
+                    '5', '5')], default='Rating *', max_length=10),
         ),
     ]

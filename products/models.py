@@ -22,12 +22,12 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     date_added = models.DateTimeField(auto_now_add=True, null=True) 
-    sku = models.CharField(max_length=100, null=True, blank=True)
-    name = models.CharField(max_length=100, null=True, blank=True)
+    sku = models.CharField(max_length=200, null=True, blank=True)
+    name = models.CharField(max_length=200, null=True, blank=True)
     description = models.TextField(max_length="100", null=True, blank=True)
-    size = models.CharField(max_length=100)
-    media = models.CharField(max_length=100)
-    stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(100)])
+    size = models.CharField(max_length=200)
+    media = models.CharField(max_length=200)
+    stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(200)])
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
 

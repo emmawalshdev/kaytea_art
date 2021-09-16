@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='media',
-            field=models.CharField(max_length=100),
+            field=models.CharField(max_length=200),
         ),
         migrations.AlterField(
             model_name='product',
             name='size',
-            field=models.CharField(max_length=100),
+            field=models.CharField(max_length=200),
         ),
     ]

@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='description',
-            field=models.TextField(blank=True, max_length='100', null=True),
+            field=models.TextField(blank=True, max_length=100, null=True),
         ),
         migrations.AlterField(
             model_name='product',

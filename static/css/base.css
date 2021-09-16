@@ -12,14 +12,34 @@
     border-bottom: 1px solid rgba(0,0,0,.05);
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
-    justify-content: space-between
+    justify-content: space-between;
+    font-size:1.1rem;
 }
 
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-size:1.7rem;
+}
+
+/* toasts  */
+.toast-hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
 .commissions-btn,
 .about-btn,
 .about-contact-btn,
 .btn-long{
     width: 20rem !important;
+}
+
+.btn-blue{
+    background-color: #1a7cd0;
+    color:white;
 }
 
 .btn{
@@ -96,10 +116,7 @@ section{
 }
 
 
-.blue-text{
-    color: #1f63c0;
-}
-
+.blue-text,
 .logo-text{
     color: #1f63bf;
 }
@@ -186,8 +203,7 @@ a:hover,
     font-size:1rem;
 }
 
-.text-active,
-.text-blue{
+.text-active{
     color: #035cd8
 }
 

@@ -1,6 +1,3 @@
-
-
-
 let optionSelected = ""
 $("option[value='']").attr("disabled", "disabled");
 

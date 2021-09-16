@@ -53,7 +53,7 @@ class ProductReview(models.Model):
                                 on_delete=models.CASCADE)
     review_text = models.TextField()
     review_rating = models.CharField(choices=RATING,
-                                     max_length=1,
+                                     max_length=10,
                                      default='Rating *')
 
     def __str__(self):

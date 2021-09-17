@@ -506,6 +506,8 @@ README.md:
 
 https://www.toptal.com/designers/subtlepatterns/ - pattern overlay
 bird singing animation - https://lottiefiles.com/23100-happy-bird
+bag
+https://lottiefiles.com/web-player?lottie_url=https%3A%2F%2Fassets8.lottiefiles.com%2Fprivate_files%2Flf30_94juvpzy.json
 
 ### Acknowledgments
 * 

@@ -24,7 +24,8 @@ button.close {
 }
 
 /* toasts  */
-.toast-hr {
+.toast-hr,
+.bag-hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
@@ -91,6 +92,7 @@ button.close {
 
 body *{
     font-family: 'Roboto Mono', monospace;
+    letter-spacing: -.01rem;
 }
 
 .red-text{
@@ -120,13 +122,18 @@ section{
 .logo-text{
     color: #1f63bf;
 }
-
-
-
+/*
+.bag-section{
+    background-color:#d4d3ff59;
+}
+*/
 .home-shop{
     background-color:#0095ff1a;
 }
 
+.text-pink{
+    color:#e715a6;
+}
 /*
 .btn-check:active+.btn-outline-warning, .btn-check:checked+.btn-outline-warning, .btn-outline-warning.active, .btn-outline-warning.dropdown-toggle.show, .btn-outline-warning:active {
     color: #985de5;
@@ -269,6 +276,9 @@ a:hover,
     background-size: 250px;
     opacity: .65;
 }
+.background-img{
+    background-image: url(https://i.ibb.co/QrXcP79/foggy-birds.png);
+}
 
 .nav-item{
     padding: 0 10px;
@@ -324,7 +334,6 @@ body{
 
 .page-header-block{
     background-color: #0095ff1a;
-    margin-bottom: 20px;
 }
 
 .icon{
@@ -428,6 +437,10 @@ hr{
     border: 3px solid black;
     border-radius: 7px 7px 7px 7px;
     margin: auto
+}
+
+.bag-hr{
+
 }
 /* -------------------------------- Media Queries */
 

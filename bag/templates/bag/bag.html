@@ -25,102 +25,159 @@
             </div>
         </div>
     </section>
-
-    <section class="container">
-        <div class="row">
-            <!-- bag items -->
-            <div class="col-12 col-md-9">
-                <div class="row">
-                    <!-- for each item in the bag print a new col -->
-                    <div class="col-12">
-                        {% if bag_items %}
-                            <div class="my-3 p-3 table-responsive rounded d-none d-lg-block border">
-                                <h2 class="my-3 ">Your bag ({{ product_count}} {% if product_count > 1%} items{% else %} item{% endif %})</h2>
-                                <table class="table table-sm table-borderless">
-                                    {% for item in bag_items %}
-                                    <tr>
-                                        <td class="w-25"> 
-                                            {% if item.product.image %}
-                                            <img class="img-fluid rounded card-img-top" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                                            {% else %}
-                                            <img class="img-fluid rounded card-img-top" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
-                                            {% endif %}
-                                        </td>
-                                        <td class="py-3">
-                                            <p>{{ item.product.name }}
-                                                <br>
-                                                Size: {{ item.product.size }}
-                                                <br>
-                                                Media: {{ item.product.media }}
-                                            </p>
-                                            <a class="remove-item text-danger ml-4" id="remove_{{ item.item_id }}">remove<i class="fas fa-times"></i></a>
-                                        </td>
-                                        <td class="py-3">
-                                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                                                {% csrf_token %}
-                                                    <div class="form-group w-50 form-quantity">
-                                                        <!-- show quantity -->
-                                                        <select class="form-control form-select qty_input" type="number" 
-                                                            name="quantity" value="{{ item.quantity }}" 
-                                                            data-item-id="{{ item.item_id }}"
-                                                            id="id_qty_{{ item.item_id }}" >
-                                                                {% for each in max_avail %}
-                                                                    {% if each.item_id ==  item.item_id %}
-                                                                        {% for i in each.max_avail %}
-                                                                            <option value="{{ i|add:1 }}"{% if i|add:1 == item.quantity %} selected {% endif %}>{{ i|add:1 }}</option>
-                                                                        {% endfor %}
-                                                                    {% endif %}
-                                                                {% endfor %}
-                                                        </select>
-                                                    </div>
-                                            </form>
-                                            <a class="update-link"><small class="green-text">Update</small></a>
-                                            <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                        </td>
-                                    </tr>
-                                    {% endfor %}
-                                </table>
+    <section class="bag-section">
+        <div class="container">
+            <div class="row">
+                <!-- bag items -->
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <div class="col-12">
+                            {% if bag_items %}
+                                <div class="my-3 p-3 table-responsive bg-white shadow-lg rounded d-none d-lg-block borderless">
+                                    <!--header-->
+                                    <h2 class="my-3 ">Your bag ({{ product_count}} {% if product_count > 1%} items{% else %} item{% endif %})</h2>
+                                    <table class="table table-sm table-borderless">
+                                        {% for item in bag_items %}
+                                        <tr>
+                                            <!--cropped image-->
+                                            <td class="w-25"> 
+                                                {% if item.product.image %}
+                                                <img class="img-fluid rounded card-img-top" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                                {% else %}
+                                                <img class="img-fluid rounded card-img-top" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
+                                                {% endif %}
+                                            </td>
+                                            <!--product details-->
+                                            <td class="py-3">
+                                                <p>
+                                                    <strong>{{ item.product.name }}</strong>
+                                                    <br>
+                                                    Size: {{ item.product.size }}
+                                                    <br>
+                                                    Media: {{ item.product.media }}
+                                                </p>
+                                                <a class="remove-item text-danger ml-4" id="remove_{{ item.item_id }}"><i class="fas fa-trash-alt"></i> Remove</a>
+                                            </td>
+                                            <!--adjust quantity-->
+                                            <td class="py-3">
+                                                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                                    {% csrf_token %}
+                                                        <div class="form-group w-50 form-quantity">
+                                                            <!-- show quantity -->
+                                                            <select class="form-control form-select qty_input" type="number" 
+                                                                name="quantity" value="{{ item.quantity }}" 
+                                                                data-item-id="{{ item.item_id }}"
+                                                                id="id_qty_{{ item.item_id }}" >
+                                                                    {% for each in max_avail %}
+                                                                        {% if each.item_id ==  item.item_id %}
+                                                                            {% for i in each.max_avail %}
+                                                                                <option value="{{ i|add:1 }}"{% if i|add:1 == item.quantity %} selected {% endif %}>{{ i|add:1 }}</option>
+                                                                            {% endfor %}
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                </form>
+                                                <a class="update-link">
+                                                    <small class="text-success">
+                                                        <i class="fas fa-check"></i>
+                                                        Update
+                                                    </small>
+                                                </a>
+                                                <p class="mt-4 font-weight-bold">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                            </td>
+                                        </tr>
+                                        <!-- exclue hr element after last bag item -->
+                                        <tr>
+                                            <td colspan="3" class="text-center">
+                                                {% if not forloop.last %}
+                                                    <hr class="bag-hr">
+                                                {% endif %}
+                                            </td>
+                                        </tr>                          
+                                        {% endfor %}
+                                    </table>
+                                </div>
+                            {% else %}
+                            <div class="empty-bag-wrapper text-center">
+                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_94juvpzy.json"  class="m-auto" background="transparent"  speed=".75"  style="width: 300px; height: 300px;"> </lottie-player>
+                                <p class="lead mb-5">
+                                    Your bag is empty! 
+                                </p>
+                                <a href="{% url 'account_login' %}" class="btn btn-outline-info btn-long ">
+                                    Login
+                                </a>
+                                <a href="{% url 'products' %}" class="btn btn-gen btn-long">
+                                    Continue Shopping
+                                </a>
                             </div>
-                        {% else %}
-                            <p class="lead mb-5">
-                                Your bag is empty
-                            </p>
-                            <a href="{% url 'products' %}" class="btn btn-gen">
-
-                            </a>
-                        {% endif %}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- total box -->
-            <div class="col-12 col-md-3">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="my-3 p-3 total-box-wrapper table-responsive border">
-                            <h2 class="my-3">Total</h2>
-                            <h6><strong>Bag Total: {{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                            {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
-                            </p>
-                            {% endif %}
-                            <a href="{% url 'products' %}" class="btn">
+                <!-- total box -->
+                {% if bag_items %}
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="my-3 p-3 total-box-wrapper table-responsive bg-white shadow-lg borderless">
+                                <h2 scope="col" class="text-center mt-3">Total</h2>
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td class="pt-3 text-end">
+                                                <h6>
+                                                    <strong>Sub total: </strong>{{ total|floatformat:2 }}
+                                                </h6>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-1 text-end">
+                                                <h6>
+                                                    <strong> Delivery: </strong> €{{ delivery|floatformat:2 }}
+                                                </h6>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-2 text-end">
+                                                <h5 class="my-3"><strong>Total <span class="small">(VAT inc)</span>: €{{ grand_total|floatformat:2 }}</strong></h5>
+                                            </td>
+                                        </tr>
+                                        {% if free_delivery_delta > 0 %}
+                                        <tr>
+                                            <td class="pt-2 text-end">
+                                                <p class="mb-1 text-pink">
+                                                    Avail of free delivery by spending <strong>€{{ free_delivery_delta }}</strong> more!
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'checkout' %}" class="btn btn-gen w-100 btn-lg">
+                                                    Secure Checkout
+                                                    <span class="icon">
+                                                        <i class="fas fa-lock"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <a href="{% url 'products' %}" >
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-gen">
-                                <span class="text-uppercase">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
+                                <span class="text-uppercase">Continue shopping</span>
                             </a>
                         </div>
                     </div>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>

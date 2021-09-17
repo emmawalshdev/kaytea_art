@@ -17,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+<!--checkout progress-->
 <section class="page-header-block">
     <div class="container">
         <div class="row justify-content-center">
@@ -55,10 +56,87 @@
         </div>
     </div>
 </section>
-
-
+<!--payement & info section-->
+<section class="container">
     <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-5">
+            <!--mobile bag-->
+            <div class="col-12 d-block bg-white shadow-lg rounded p-3">
+                <!--header-->
+                <h3 class="my-3 ">
+                    Order Summary
+                </h3>
+                {% for item in bag_items %}
+                <!--item details-->
+                <div class="row">
+                    <div class="col-4 mb-3">
+                        {% include 'bag/product-image.html' %}
+                    </div>
+                    <div class="col-8 b-3">
+                        <p>
+                            <strong>{{ item.product.name }}</strong>
+                            <br>
+                            Size: {{ item.product.size }}
+                            <br>
+                            Media: {{ item.product.media }}
+                        </p>
+                        <p class="text-end">
+                            x {{item.quantity}} @ 
+                            €{{ item.product.price | calc_subtotal:item.quantity }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-12">
+                        <hr class="bag-hr">
+                    </div>
+                </div>
+                {% endfor %}
+                <!--total box-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="total-box-wrapper table-responsive borderless">
+                            <table class="table table-sm table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td class="pt-3 text-end">
+                                            <h6>
+                                                <strong>Sub total: </strong>{{ total|floatformat:2 }}
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pt-1 text-end">
+                                            <h6>
+                                                <strong> Delivery: </strong> €{{ delivery|floatformat:2 }}
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pt-2 text-end">
+                                            <h5 class="my-2"><strong>Total <span class="small">(VAT inc)</span>:
+                                                    €{{ grand_total|floatformat:2 }}</strong></h5>
+                                        </td>
+                                    </tr>
+                                    {% if free_delivery_delta > 0 %}
+                                    <tr>
+                                        <td class="pt-2 text-end">
+                                            <p class="mb-1 text-pink">
+                                                Avail of free delivery by spending
+                                                <strong>€{{ free_delivery_delta }}</strong> more!
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end mobile bag-->
+        </div>
+        <div class="col-12 col-lg-7">
             <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
@@ -123,7 +201,9 @@
             </form>
         </div>
     </div>
-</div>
+
+</section>
+
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">

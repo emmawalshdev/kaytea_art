@@ -1,0 +1,18 @@
+<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+    {% csrf_token %}
+        <div class="form-group w-50 form-quantity">
+            <!-- show quantity -->
+            <select class="form-control form-select qty_input" type="number" 
+                name="quantity" value="{{ item.quantity }}" 
+                data-item-id="{{ item.item_id }}"
+                id="id_qty_{{ item.item_id }}" >
+                    {% for each in max_avail %}
+                        {% if each.item_id ==  item.item_id %}
+                            {% for i in each.max_avail %}
+                                <option value="{{ i|add:1 }}"{% if i|add:1 == item.quantity %} selected {% endif %}>{{ i|add:1 }}</option>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+            </select>
+        </div>
+</form>

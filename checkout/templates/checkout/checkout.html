@@ -60,9 +60,9 @@
 <section class="container">
     <div class="row">
         <!--order summary-->
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5 d-block">
             <!--mobile bag-->
-            <div class="col-12 d-block bg-white shadow-lg rounded p-3">
+            <div class="bg-white shadow-lg rounded p-3">
                 <!--header-->
                 <h3>
                     Order Summary
@@ -139,10 +139,10 @@
             <!--end mobile bag-->
         </div>
         <!--order form-->
-        <div class="col-12 col-lg-7 p-3 bg-white shadow">
+        <div class="col-12 col-lg-7">
             <!--header-->
-
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <div class="p-3 bg-white shadow mt-3 mt-md-0">
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class=" mb-5">
                     <legend class="fieldset-label text-black px-2 w-auto">
@@ -209,7 +209,8 @@
                         <span class="font-weight-bold">Adjust Bag</span>
                     </a>
                 </div>
-            </form>
+                </form>            
+            </div>
         </div>
     </div>
 

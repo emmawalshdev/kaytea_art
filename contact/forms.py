@@ -15,8 +15,8 @@ class ContactForm(ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'message': 'Your comment',
-            'name': 'name',
-            'email': 'email address'
+            'name': 'Name',
+            'email': 'Email address'
         }
 
         self.fields['name'].widget.attrs['autofocus'] = True
@@ -27,5 +27,5 @@ class ContactForm(ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             # add class for styling
-            self.fields[field].widget.attrs['class'] = 'profile-form-input'
+            self.fields[field].widget.attrs['class'] = ''
             self.fields[field].label = False

@@ -59,11 +59,12 @@
 <!--payement & info section-->
 <section class="container">
     <div class="row">
+        <!--order summary-->
         <div class="col-12 col-lg-5">
             <!--mobile bag-->
             <div class="col-12 d-block bg-white shadow-lg rounded p-3">
                 <!--header-->
-                <h3 class="my-3 ">
+                <h3>
                     Order Summary
                 </h3>
                 {% for item in bag_items %}
@@ -86,6 +87,7 @@
                         </p>
                     </div>
                 </div>
+                <!--hr-->
                 <div class="row my-2">
                     <div class="col-12">
                         <hr class="bag-hr">
@@ -136,18 +138,22 @@
             </div>
             <!--end mobile bag-->
         </div>
-        <div class="col-12 col-lg-7">
-            <p class="text-muted">Please fill out the form below to complete your order</p>
+        <!--order form-->
+        <div class="col-12 col-lg-7 p-3 bg-white shadow">
+            <!--header-->
+
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                <fieldset class=" mb-5">
+                    <legend class="fieldset-label text-black px-2 w-auto">
+                    Your Information
+                    </legend>
                     {{ order_form.first_name | as_crispy_field }}
                     {{ order_form.last_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                <fieldset class="mb-5">
+                    <legend class="fieldset-label text-black px-2 w-auto">Shipping info:</legend>
                     {{ order_form.mobile_number | as_crispy_field }}
                     {{ order_form.address_line1 | as_crispy_field }} 
                     {{ order_form.address_line2 | as_crispy_field }}
@@ -161,14 +167,19 @@
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
                             <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                <a href="{% url 'account_login' %}">
+                                    Login
+                                </a>or 
+                                <a href="{% url 'account_signup' %}">
+                                    Register
+                                </a>
+                                to save this information.
                             </label>
                         {% endif %}
                     </div>
                 </fieldset>
-                <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                <fieldset>
+                    <legend class="fieldset-label text-black w-auto px-2">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
 
@@ -178,25 +189,25 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
-                <div class="submit-button text-right mt-5 mb-2">                    
-                    <a href="{% url 'view_bag' %}" class="btn btn-gen">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
-                    </a>
-                    <button id="submit-button" class="btn btn-gen">
+                <div class="submit-button text-right my-2"> 
+                    <button id="submit-button" class="btn btn-gen w-100 btn-lg">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
                     </button>
-                    <p class="small text-danger my-0">
+                    <p class="small text-danger my-3">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
                         <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
+                    </p>               
+                    <a href="{% url 'view_bag' %}">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Adjust Bag</span>
+                    </a>
                 </div>
             </form>
         </div>

@@ -33,8 +33,9 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid rgb(190 184 184);
 }
+
 
 select,
 select option {

@@ -12,7 +12,7 @@
     </div>
 
 {% endblock %}
-{% block content %}
+    {% block content %}
     <!-- page title -->
     <section class="page-header-block">
         <div class="container">
@@ -20,29 +20,85 @@
                 <div class="col-12">
                     <h1>
                         Your Bag
-                    <h1>
+                        <h1>
                 </div>
             </div>
         </div>
     </section>
+    
     <section class="bag-section">
         <div class="container">
             <div class="row">
+                {% if bag_items %}
                 <!-- bag items -->
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-6 col-lg-8">
                     <div class="row">
-                        <div class="col-12">
-                            {% if bag_items %}
-                                <!--mobile bag-->
-                                <div class="d-block d-lg-none">
-                                    <h2 class="my-3 ">Your bag ({{ product_count}} {% if product_count > 1%}
-                                        items{% else %} item{% endif %})</h2>
+                        <!--mobile bag-->
+                        <div class="col-12 d-block d-lg-none bg-white shadow-lg rounded p-3">
+                            <!--header-->
+                            <h3 class="my-3 ">
+                                Your bag ({{ product_count}} {% if product_count > 1%}
+                                items{% else %} item{% endif %})
+                            </h3>
+                            {% for item in bag_items %}
+                            <!--item details-->
+                            <div class="row">
+                                <div class="col-4 mb-3">
+                                    {% include 'bag/product-image.html' %}
+                                </div>
+                                <div class="col-5 b-3">
+                                    <p>
+                                        <strong>{{ item.product.name }}</strong>
+                                        <br>
+                                        Size: {{ item.product.size }}
+                                        <br>
+                                        Media: {{ item.product.media }}
+                                    </p>
+                                    <a class="remove-item text-danger ml-4" id="remove_{{ item.item_id }}">
+                                        <i class="fas fa-trash-alt"></i>
+                                        Remove
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    {% include 'bag/quantity-form.html' %}
+                                    <a class="update-link">
+                                        <small class="text-success">
+                                            <i class="fas fa-check"></i>
+                                            Update
+                                        </small>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--exclude hr for last item-->
+                            {% if not forloop.last %}
+                            <div class="row my-2">
+                                <div class="col-12">
+                                    <hr class="bag-hr">
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <!--end mobile bag-->
+
+                        <!--desktop bag -->
+                        <div class="col-12 d-none d-lg-block">
+                            <div class="p-3 table-responsive bg-white shadow-lg rounded d-none d-lg-block borderless">
+                                <!--header-->
+                                <h3 class="my-3 ">
+                                    Your bag ({{ product_count}} {% if product_count > 1%} items{% else %}
+                                    item{% endif %})
+                                </h3>
+                                <!--items-->
+                                <table class="table table-sm table-borderless">
                                     {% for item in bag_items %}
-                                    <div class="row">
-                                        <div class="col-4 mb-3">
+                                    <tr>
+                                        <!--cropped image-->
+                                        <td class="w-25">
                                             {% include 'bag/product-image.html' %}
-                                        </div>
-                                        <div class="col-5 b-3">
+                                        </td>
+                                        <!--product details-->
+                                        <td class="py-3">
                                             <p>
                                                 <strong>{{ item.product.name }}</strong>
                                                 <br>
@@ -54,8 +110,9 @@
                                                 <i class="fas fa-trash-alt"></i>
                                                 Remove
                                             </a>
-                                        </div>
-                                        <div class="col-3">
+                                        </td>
+                                        <!--adjust quantity-->
+                                        <td class="py-3">
                                             {% include 'bag/quantity-form.html' %}
                                             <a class="update-link">
                                                 <small class="text-success">
@@ -63,103 +120,32 @@
                                                     Update
                                                 </small>
                                             </a>
-                                        </div>
-                                    </div>
-                                    {% if not forloop.last %}
-                                    <div class="row my-2">
-                                        <div class="col-12">
+                                            <p class="mt-4 font-weight-bold">
+                                                €{{ item.product.price | calc_subtotal:item.quantity }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <!-- exclue hr element after last bag item -->
+                                    <tr>
+                                        <td colspan="3" class="text-center">
+                                            {% if not forloop.last %}
                                             <hr class="bag-hr">
-                                        </div>
-                                    </div>
-                                    {% endif %}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
                                     {% endfor %}
-                                    <div class="row">
-                                        <div class="col-12">
-                                            basket-total
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            bag buttons
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-
-                                <!--desktop bag -->
-                                <div class="my-3 p-3 table-responsive bg-white shadow-lg rounded d-none d-lg-block borderless">
-                                    <!--header-->
-                                    <h2 class="my-3 ">Your bag ({{ product_count}} {% if product_count > 1%} items{% else %} item{% endif %})</h2>
-                                    <table class="table table-sm table-borderless">
-                                        {% for item in bag_items %}
-                                        <tr>
-                                            <!--cropped image-->
-                                            <td class="w-25"> 
-                                                {% include 'bag/product-image.html' %}
-                                            </td>
-                                            <!--product details-->
-                                            <td class="py-3">
-                                                <p>
-                                                    <strong>{{ item.product.name }}</strong>
-                                                    <br>
-                                                    Size: {{ item.product.size }}
-                                                    <br>
-                                                    Media: {{ item.product.media }}
-                                                </p>
-                                                <a class="remove-item text-danger ml-4" id="remove_{{ item.item_id }}">
-                                                    <i class="fas fa-trash-alt"></i> 
-                                                    Remove
-                                                </a>
-                                            </td>
-                                            <!--adjust quantity-->
-                                            <td class="py-3">
-                                                {% include 'bag/quantity-form.html' %}
-                                                <a class="update-link">
-                                                    <small class="text-success">
-                                                        <i class="fas fa-check"></i>
-                                                        Update
-                                                    </small>
-                                                </a>
-                                                <p class="mt-4 font-weight-bold">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                            </td>
-                                        </tr>
-                                        <!-- exclue hr element after last bag item -->
-                                        <tr>
-                                            <td colspan="3" class="text-center">
-                                                {% if not forloop.last %}
-                                                    <hr class="bag-hr">
-                                                {% endif %}
-                                            </td>
-                                        </tr>                          
-                                        {% endfor %}
-                                    </table>
-                                </div>
-                            <!-- end desktop bag-->
-                            {% else %}
-                            <div class="empty-bag-wrapper text-center">
-                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                                <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_94juvpzy.json"  class="m-auto" background="transparent"  speed=".75"  style="width: 300px; height: 300px;"> </lottie-player>
-                                <p class="lead mb-5">
-                                    Your bag is empty! 
-                                </p>
-                                <a href="{% url 'account_login' %}" class="btn btn-outline-info btn-long ">
-                                    Login
-                                </a>
-                                <a href="{% url 'products' %}" class="btn btn-gen btn-long">
-                                    Continue Shopping
-                                </a>
+                                </table>
                             </div>
-                            {% endif %}
                         </div>
+                        <!-- end desktop bag-->
                     </div>
                 </div>
                 <!-- total box -->
-                {% if bag_items %}
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pt-5 pt-md-0 ">
                     <div class="row">
                         <div class="col-12">
-                            <div class="my-3 p-3 total-box-wrapper table-responsive bg-white shadow-lg borderless">
-                                <h2 scope="col" class="text-center mt-3">Total</h2>
+                            <div class="p-3 total-box-wrapper table-responsive bg-white shadow-lg borderless">
+                                <h3 scope="col" class="text-center my-3">Total</h3>
                                 <table class="table table-sm table-borderless">
                                     <tbody>
                                         <tr>
@@ -178,14 +164,16 @@
                                         </tr>
                                         <tr>
                                             <td class="pt-2 text-end">
-                                                <h5 class="my-3"><strong>Total <span class="small">(VAT inc)</span>: €{{ grand_total|floatformat:2 }}</strong></h5>
+                                                <h5 class="my-3"><strong>Total <span class="small">(VAT inc)</span>:
+                                                        €{{ grand_total|floatformat:2 }}</strong></h5>
                                             </td>
                                         </tr>
                                         {% if free_delivery_delta > 0 %}
                                         <tr>
                                             <td class="pt-2 text-end">
                                                 <p class="mb-1 text-pink">
-                                                    Avail of free delivery by spending <strong>€{{ free_delivery_delta }}</strong> more!
+                                                    Avail of free delivery by spending
+                                                    <strong>€{{ free_delivery_delta }}</strong> more!
                                                 </p>
                                             </td>
                                         </tr>
@@ -204,8 +192,8 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <a href="{% url 'products' %}" >
+                        <div class="col-12 pt-3">
+                            <a href="{% url 'products' %}">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -214,11 +202,29 @@
                         </div>
                     </div>
                 </div>
+                <!-- bag is empty msg-->
+                {% else %}
+                <div class="col-12 text-center">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+                    </script>
+                    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_94juvpzy.json" class="m-auto"
+                        background="transparent" speed=".75" style="width: 300px; height: 300px;">
+                    </lottie-player>
+                    <p class="lead mb-5">
+                        Your bag is empty!
+                    </p>
+                    <a href="{% url 'account_login' %}" class="btn btn-outline-info btn-long ">
+                        Login
+                    </a>
+                    <a href="{% url 'products' %}" class="btn btn-gen btn-long">
+                        Continue Shopping
+                    </a>
+                </div>
                 {% endif %}
             </div>
         </div>
     </section>
-{% endblock %}
+    {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}

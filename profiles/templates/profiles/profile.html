@@ -14,22 +14,33 @@
         </div>
     </div>
 {% endblock %}
-
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">My Profile</h2>
-            <hr>
+<!-- page title -->
+<section class="page-header-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>
+                    My Profile
+                    <h1>
+            </div>
         </div>
     </div>
+</section>
+<!-- personal/shipping info-->
+<section class="container">
+    <!--intro text-->
+    <div class="row">
+        <div class="col-12">
+            Welcome, {{ request.user.username}}.</br>
+            Below you can view or update you shipping information and view your order history.
+        </div>
+    </div>
+    <!--personal info-->
     <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
         {% csrf_token %}
-     
         <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-md-7">
                 <p>some text here</p>
                 <h3>
                     Personal details
@@ -40,8 +51,6 @@
 
                         {{ form.default_mobile_number | as_crispy_field }}
                 </fieldset>
-            </div>
-            <div class="col-12 col-lg-6">
                 <h3>
                     Shipping details
                 </h3>
@@ -54,10 +63,15 @@
                     {{ form.default_country | as_crispy_field }}
                     {{ form.default_postcode | as_crispy_field }}
                 </fieldset>
-                <button class="btn text-uppercase">Update Information</button>
+                <button class="btn btn-long btn-lg btn-gen">Update Information</button>
             </div>
         </div>
-    </form>
+
+    </div>
+</section>
+
+<!--order history-->
+<section class="container">
     <div class="row">
         <div class="col-12">
             <p>Order History</p>
@@ -103,6 +117,7 @@
             </div>
         </div>
     </div>
+</section>
 {% endblock %}
 
 {% block postloadjs %}

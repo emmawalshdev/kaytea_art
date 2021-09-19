@@ -1,4 +1,3 @@
-
 /* shop category cards */
 .home-category-wrapper {
     height: 400px;
@@ -6,19 +5,62 @@
 }
 
 
-.circle{
-    display:block;
-    height:70px;
-    width:70px;
-    border-radius:50%;
+/* home banner*/
+/* https://dev.to/billraymond/creating-a-pure-responsive-css-grid-hero-image-or-banner-image-2pej */
+.top-banner-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-content: center;
+    justify-content: center;
+}
+
+.banner-image-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-overlay-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-text-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-image {
+    display: grid;
+    min-width: 350px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay-div {
+    display: grid;
+    max-width: 100%;
+    background: black;
+    background: linear-gradient(8deg, rgb(60 14 76 / 64%) 0%, rgba(255, 255, 255, 0) 49%);
+}
+
+.home-shop {
+    background-color: #0095ff1a;
+}
+
+.circle {
+    display: block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin:auto;
-    text-align:center;
+    margin: auto;
+    text-align: center;
 }
 
-.card-img-top{
+.card-img-top {
     height: 24vw;
 }
 
@@ -27,18 +69,19 @@
     height: 400px;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
     .home-category-wrapper {
         height: 450px;
     }
+
     .home-commission-wrapper {
-        padding-left:100px;
+        padding-left: 100px;
     }
 }
 
-@media screen and (max-width: 992px){
-    .commissions-btn{
-        width:300px;
+@media screen and (max-width: 992px) {
+    .commissions-btn {
+        width: 300px;
     }
 }
 
@@ -70,7 +113,7 @@
 }
 
 .home-commission-img {
-    height:100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
@@ -88,5 +131,5 @@
 .category-title-wrapper {
     width: 100%;
     padding: 0.5rem;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }

@@ -1,3 +1,8 @@
+/* */
+.min-height-container{
+    min-height:30vh;
+}
+
 .card {
     border:none;
 }

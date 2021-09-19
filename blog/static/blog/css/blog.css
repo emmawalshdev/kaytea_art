@@ -3,15 +3,10 @@
     object-position: 50% 50%;
 }
 
-@media (max-width: 375px) {
-    .blog-img {
-        height: 150px;
-    }
-}
-
 .blog-read-more{
     color:#035cd8; 
     font-style: italic;
+    font-weight: bold;
 }
 
 .comments-section{
@@ -66,7 +61,3 @@
     object-position: center 20%;
 }
 
-.blog-details-wrapper{
-    display: flex;
-    align-items: stretch;
-}

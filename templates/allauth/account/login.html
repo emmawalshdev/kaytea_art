@@ -6,60 +6,69 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
-
 <section class="page-header-block">
   <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <h1>
-                {% trans "Sign In" %}
-              <h1>
-          </div>
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          {% trans "Sign In" %}
+          <h1>
       </div>
-  </div>
-</section>
-<section class="container">
-  <div class="row">
-    <div class="col-12 col-md-7">
-      {% get_providers as socialaccount_providers %}
-
-      {% if socialaccount_providers %}
-      <p>{% blocktrans with site.name as site_name %}Please sign in with one
-      of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-      for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-      
-      <div class="socialaccount_ballot">
-      
-        <ul class="socialaccount_providers">
-          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-        </ul>
-      
-        <div class="login-or">{% trans 'or' %}</div>
-      
-      </div>
-      
-      {% include "socialaccount/snippets/login_extra.html" %}
-      
-      {% else %}
-      <h2>
-        Welcome back!
-      </h2>
-      <p>{% blocktrans %}If you have not created an account yet, then please
-      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-      {% endif %}
-      
-      <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form|crispy }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-        <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-      </form>
-      <h2>I'm new here</h2>
-      <a class="btn" href="{{ signup_url }}">Register</button>
-      {% endblock %}      
     </div>
   </div>
 </section>
+<section class="container">
+  {% get_providers as socialaccount_providers %}
+  <!-- social account providers-->
+  {% if socialaccount_providers %}
+  <p>{% blocktrans with site.name as site_name %}Please sign in with one
+    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+  <div class="socialaccount_ballot">
+
+    <ul class="socialaccount_providers">
+      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    </ul>
+
+    <div class="login-or">{% trans 'or' %}</div>
+
+  </div>
+
+  {% include "socialaccount/snippets/login_extra.html" %}
+  <!--if no social account providers-->
+  {% else %}
+  <div class="login-wrapper my-3">
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <h2 class="mb-3">
+          Welcome back!
+        </h2>
+        {% endif %}
+
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form|crispy }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <!--sign in btn-->
+          <button class="primaryAction btn btn-gen btn-long btn-lg my-3" type="submit">{% trans "Sign In" %}</button>
+          <!--forgot password-->
+          <a class="button secondaryAction d-block" href="{% url 'account_reset_password' %}">
+            {% trans "Forgotten your Password?" %}
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="register-wrapper mt-5">
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <h2>I'm new here.</h2>
+        <a class="btn btn-lg btn-gen btn-long my-3" href="{{ signup_url }}">Register</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

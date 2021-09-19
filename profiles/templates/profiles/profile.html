@@ -36,84 +36,126 @@
             Below you can view or update you shipping information and view your order history.
         </div>
     </div>
-    <!--personal info-->
-        <div class="row">
-            <div class="col-12 col-md-7 bg-white shadow-lg p-3">
-                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                    {% csrf_token %}
-                    <!--personal details-->
-                    <h3 class="my-3">
-                        Personal details
-                    </h3>
-                    <fieldset class="rounded mb-3 mb-md-5">
-                        {{ form.default_first_name | as_crispy_field }}
-                        {{ form.default_last_name | as_crispy_field }}
-                        {{ form.default_mobile_number | as_crispy_field }}
-                    </fieldset>
-                    <!--shipping details-->
-                    <h3 class="my-3">
-                        Shipping details
-                    </h3>
-                    <fieldset class="rounded mb-3 mb-md-5">
-                        {{ form.default_address_line1 | as_crispy_field }}
-                        {{ form.default_address_line2 | as_crispy_field }}
-                        {{ form.default_town_or_city | as_crispy_field }}
-                        {{ form.default_county | as_crispy_field }}
-                        {{ form.default_country | as_crispy_field }}
-                        {{ form.default_postcode | as_crispy_field }}
-                    </fieldset>
-                    <button class="btn btn-long btn-lg btn-gen">
-                        Update Information
-                    </button>
-                </form>
-            </div>
+    <!--update info form-->
+    <div class="row">
+        <div class="col-12 col-md-7 bg-white shadow-lg p-3">
+            <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                <!--personal details-->
+                <h3 class="my-3">
+                    Personal details
+                </h3>
+                <fieldset class="rounded mb-3 mb-md-5">
+                    {{ form.default_first_name | as_crispy_field }}
+                    {{ form.default_last_name | as_crispy_field }}
+                    {{ form.default_mobile_number | as_crispy_field }}
+                </fieldset>
+                <!--shipping details-->
+                <h3 class="my-3">
+                    Shipping details
+                </h3>
+                <fieldset class="rounded mb-3 mb-md-5">
+                    {{ form.default_address_line1 | as_crispy_field }}
+                    {{ form.default_address_line2 | as_crispy_field }}
+                    {{ form.default_town_or_city | as_crispy_field }}
+                    {{ form.default_county | as_crispy_field }}
+                    {{ form.default_country | as_crispy_field }}
+                    {{ form.default_postcode | as_crispy_field }}
+                </fieldset>
+                <button class="btn btn-long btn-lg btn-gen">
+                    Update Information
+                </button>
+            </form>
         </div>
+    </div>
 </section>
 
 <!--order history-->
 <section class="container">
     <div class="row">
         <div class="col-12">
-            <p>Order History</p>
-            <div class="order-history table-responsive">
-                <div class="table table-sm table-borderless">
-                    <thead>
-                        <tr>
-                            <th>Order summary</th>
-                            <th>Product details</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    
-                        {% for order in orders %}
-                        <tr>
-                            <td>
-                                <a href="{% url 'order_history' order.order_number %}">
-                                    {{ order.order_number|truncatechars:6 }}
-                                </a>
-                                order count 
-                                {{order.lineitems.count }}
-                                <br>
-                                {{ order.grand_total }}
-                            </td>
-                            <td>
-                                 (ordered items)
-                                 <ul class="list-unstyled">
-                                     {% for item in order.lineitems.all %}
-                                     <li class="small">
-                                         {{ item.product.name }} @ {{ item.quantity }}
-                                     </li>
-                                     {% endfor %}
-                                 </ul>
-                            </td>
-                            <td>
-                                {{ order.date }}
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
+            <div class="order-history borderless rounded bg-white shadow p-3">
+                <h2>Order History</h2>
+                <!--mobile view-->
+                <div class="table table-responsive d-block d-md-none">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            {% for order in orders %}
+                            <tr>
+                                <!--order num, cost, total items ordered-->
+                                <td>
+                                    <span class="font-weight-bold">
+                                        Total cost:
+                                    </span>                                    
+                                    € {{ order.grand_total }}
+                                    </br>
+                                    <span class="font-weight-bold">
+                                        Total items:
+                                    </span>
+                                    {{order.lineitems.count }}
+                                    </br>
+                                    <span class="font-weight-bold">
+                                        Order num:
+                                    </span>
+                                    <a href="{% url 'order_history' order.order_number %}">
+                                        {{ order.order_number|truncatechars:8 }}
+                                    </a>
+                                </td>
+                                <!--items ordered - details-->
+                                <td>
+                                    {{ order.date|date }}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
+                <!--end mobile view-->
+
+                <!--desktop view-->
+                <div class="table table-responsive d-none d-md-block">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            {% for order in orders %}
+                            <tr>
+                                <!--order num, cost, total items ordered-->
+                                <td>
+                                    <span class="font-weight-bold">
+                                        Total cost:
+                                    </span>                                    
+                                    € {{ order.grand_total }}
+                                    </br>
+                                    <span class="font-weight-bold">
+                                        Total items:
+                                    </span>
+                                    {{order.lineitems.count }}
+                                    </br>
+                                    <span class="font-weight-bold">
+                                        Order num:
+                                    </span>
+                                    <a href="{% url 'order_history' order.order_number %}">
+                                        {{ order.order_number|truncatechars:8 }}
+                                    </a>
+                                </td>
+                                <!--items ordered - details-->
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                        <li>
+                                            {{ item.product.name }} x {{ item.quantity }}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>
+                                    {{ order.date|date }}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <!--end desktop view-->
             </div>
         </div>
     </div>

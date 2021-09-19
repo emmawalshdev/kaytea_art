@@ -27,25 +27,29 @@
             </div>
         </div>
     </section>
-    <!-- introduction -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur nisi metus, sagittis placerat arcu elementum vel. Cras eu lectus congue, blandit neque sit amet, accumsan nisl. Morbi bibendum, elit a rutrum porttitor, lorem nisl molestie augue, id suscipit urna magna nec enim. Cras id ultricies metus, in venenatis mauris. Praesent quis ipsum id felis mollis bibendum. Pellentesque dapibus lobortis mauris non consequat.
+    <section class="container">
+        <!-- introduction -->
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        Welcome to my blog!
+                        </br>
+                        Here you will find a collection of posts, inspired by my life in West Cork.
+                        </br>
+                        Please feel free to join the conversation, by leaving a comment after the post.
+                    </p>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- admin add blog post button -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- Add blog post button -->
-                {% if request.user.is_superuser %}
-                <a class="btn btn-gen my-4 mb-5" href="{% url 'add_blog' %}">Add Blog Post</a>
-                {% endif %}
+        <!-- admin add blog post button -->
+            <div class="row">
+                <div class="col-12">
+                    <!-- Add blog post button -->
+                    {% if request.user.is_superuser %}
+                    <a class="btn btn-gen btn-long" href="{% url 'add_blog' %}">Post blog</a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    </div>
+    </section>
     <!-- show current blogs -->
     <section class="container">
         <div class="row">
@@ -89,8 +93,8 @@
             <div class="pagination justify-content-center mt-5 mb-3">
                 <span class="step-links">
                     {% if page_obj.has_previous %}
-                        <a href="?page=1" class="btn">&laquo; </a>
-                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-gen">previus</a>
+                        <a href="?page=1" class="btn btn-gen">&laquo; </a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-gen">previous</a>
                     {% endif %}
             
                     <span class="current">

@@ -33,11 +33,11 @@
         <div class="row">
             <div class="col-12">
                 {% for category in all_categories %}
-                <a class="btn btn-outline-primary" href="{% url 'products' %}?category={{ category.name }}">
+                <a class="btn btn-gen" href="{% url 'products' %}?category={{ category.name }}">
                     <span class="p-2 mt-2 ">{{ category.friendly_name }}</span>
                 </a>
                 {% endfor %}
-                <a class="btn btn-outline-primary" href="{% url 'commissions' %}">
+                <a class="btn btn-gen" href="{% url 'commissions' %}">
                     <span class="p-2 mt-2 ">Pet Commissions</span>
                 </a>
             </div>
@@ -48,19 +48,16 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quam nulla, rutrum in volutpat
-                    vitae, commodo sed libero. Donec consectetur massa vel fermentum pharetra. Etiam auctor leo sapien,
-                    a euismod nisi volutpat non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Etiam vel arcu fermentum, auctor odio pretium, facilisis erat. Pellentesque a lacinia
-                    neque, at imperdiet dolor.
+                    I create commissions of a wide range of animals and wildlife in a variety of media and canvas sizes.
+                    Studying photographs as a reference, I use pencil, watercolor, or acrylic; to hand-created each piece.
                 </p>
                 <p>
-                    Vivamus vitae nisi sit amet metus ornare iaculis in eget purus. In
-                    vulputate quam ac laoreet lacinia. Orci varius natoque penatibus et magnis dis parturient montes,
-                    nascetur ridiculus mus. In nec porta libero. Mauris sed imperdiet odio. Nullam congue nisl sit amet
-                    lorem ultricies, quis viverra est placerat. Mauris sed tellus porttitor, viverra odio commodo,
-                    scelerisque lorem. Donec id nisi massa. Sed ac eros quis nisi facilisis aliquam.
-
+                    All work takes place in my West Cork Studio.
+                    Using only the finest quality canvas, commissions can be created in various sizes, from A5 up to A1. 
+                    The details of each commission vary according to both the subject & the client's budget, all of which can be discussed throughout.
+                </p>
+                <p>
+                    Whether it's a cat, dog, horse, or goldfish; I aim to capture every animal's personality in every piece.
                 </p>
             </div>
             <div class="col-12 col-md-6">
@@ -77,16 +74,23 @@
                 <h2>
                     The Process
                 </h2>
+                <p class="lead">Here's how the commission process works:</p>
                 <p>
                     <ol>
                         <li>
                             Get in touch, by filling in the form below.
                         </li>
                         <li>
-                            Once a request has been made, I will be in touch to chat about your requirements & will confirm the total cost and approximate timescale.
+                            Once a request has been made, I will be in touch to chat about your requirements. At this time, we can discuss all available options.
                         </li>
                         <li>
-                            When the Artwork is complete, I will send you photographs. If you are happy with the painting, I will request payment and the painting is yours.
+                            Based on your preferences, I will confirm the total cost and approximate timescale.
+                        </li>
+                        <li>
+                            Once the quote is accepted, the artwork will commence. 
+                        </li>
+                        <li>
+                            When the Artwork is complete, I will send you photographs. If you are happy with the piece, I will request payment and the painting is yours.
                         </li>
                     </ol>
                 </p>
@@ -105,8 +109,7 @@
             <div class="col-12 col-md-8">
                 <h2>Take the First Step</h2>
                 <p>
-                    Bring a beloved pet to life, on paper.
-                    Fill in the form below, and I'll be in touch with a quote.
+                    Fill out the form below, specifying your preferences.
                 </p>
                 <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -118,7 +121,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <button class="btn btn-outline-primary" id="commissions-submit-btn" type="submit">Submit</button>
+                        <button class="btn btn-gen gtn-lg btn-long" id="commissions-submit-btn" type="submit">Submit</button>
                     </div>
                 </form>
             </div>

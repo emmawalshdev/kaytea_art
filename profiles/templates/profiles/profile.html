@@ -31,43 +31,43 @@
 <section class="container">
     <!--intro text-->
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-5">
             Welcome, {{ request.user.username}}.</br>
             Below you can view or update you shipping information and view your order history.
         </div>
     </div>
     <!--personal info-->
-    <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
-        {% csrf_token %}
         <div class="row">
-            <div class="col-12 col-md-7">
-                <p>some text here</p>
-                <h3>
-                    Personal details
-                </h3>
-                <fieldset class="rounded px-3 mb-5">
-                    {{ form.default_first_name | as_crispy_field }}
-                    {{ form.default_last_name | as_crispy_field }}
-
+            <div class="col-12 col-md-7 bg-white shadow-lg p-3">
+                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    <!--personal details-->
+                    <h3 class="my-3">
+                        Personal details
+                    </h3>
+                    <fieldset class="rounded mb-3 mb-md-5">
+                        {{ form.default_first_name | as_crispy_field }}
+                        {{ form.default_last_name | as_crispy_field }}
                         {{ form.default_mobile_number | as_crispy_field }}
-                </fieldset>
-                <h3>
-                    Shipping details
-                </h3>
-                
-                <fieldset class="rounded px-3 mb-5">
-                    {{ form.default_address_line1 | as_crispy_field }}
-                    {{ form.default_address_line2 | as_crispy_field }}
-                    {{ form.default_town_or_city | as_crispy_field }}
-                    {{ form.default_county | as_crispy_field }}
-                    {{ form.default_country | as_crispy_field }}
-                    {{ form.default_postcode | as_crispy_field }}
-                </fieldset>
-                <button class="btn btn-long btn-lg btn-gen">Update Information</button>
+                    </fieldset>
+                    <!--shipping details-->
+                    <h3 class="my-3">
+                        Shipping details
+                    </h3>
+                    <fieldset class="rounded mb-3 mb-md-5">
+                        {{ form.default_address_line1 | as_crispy_field }}
+                        {{ form.default_address_line2 | as_crispy_field }}
+                        {{ form.default_town_or_city | as_crispy_field }}
+                        {{ form.default_county | as_crispy_field }}
+                        {{ form.default_country | as_crispy_field }}
+                        {{ form.default_postcode | as_crispy_field }}
+                    </fieldset>
+                    <button class="btn btn-long btn-lg btn-gen">
+                        Update Information
+                    </button>
+                </form>
             </div>
         </div>
-
-    </div>
 </section>
 
 <!--order history-->

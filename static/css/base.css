@@ -91,8 +91,6 @@ section{
     align-items: center;
     padding: .5rem .75rem;
     color: #6c757d;
-    background-color: rgba(255,255,255,.85);
-    background-clip: padding-box;
     border-bottom: 1px solid rgba(0,0,0,.05);
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
@@ -354,11 +352,12 @@ input[name='q']::placeholder{
 }
 
 .form input,
+form input[type=text],
 .form textarea,
 .form select {
     /*width: 100%; */
     padding: 6px 8px;
-    margin: 8px 0;
+    margin: 8px 0 !important;
     display: inline-block;
 }
 
@@ -393,6 +392,7 @@ input[name='q']::placeholder{
     top: 5rem;
     right: 1rem;
     z-index: 9999;
+    background-color: #ffffffc9;
 }
 
 /* footer */
@@ -460,7 +460,7 @@ footer li {
 /* max 991px */
 @media (max-width:991px) {
     .header-container {
-        padding-top: 90px;
+        padding-top: 110px;
     }
 
     body {

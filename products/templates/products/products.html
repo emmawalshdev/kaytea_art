@@ -36,23 +36,23 @@
         </div>
     </section>
     <!-- interactive settings -->
-    <section class="container">
+    <section class="container pb-0">
         <!-- category buttons -->
         <div class="row">
             <div class="col-12">
                 {% for category in all_categories %}
                    
-                <a class="btn btn-gen" href="{% url 'products' %}?category={{ category.name }}">
+                <a class="btn btn-gen m-2" href="{% url 'products' %}?category={{ category.name }}">
                     <span class="p-2 mt-2 ">{{ category.friendly_name }}</span>
                 </a>
                 {% endfor %}
-                <a class="btn btn-gen" href="{% url 'commissions' %}">
+                <a class="btn btn-gen m-2" href="{% url 'commissions' %}">
                     <span class="p-2 mt-2 ">Pet Commissions</span>
                 </a>
 
             </div>
         </div>
-        <div class="row mt-1 mb-2">
+        <div class="row mt-3">
             <div class="col-12 col-md-6 my-auto order-sm-last sm-my-4 d-flex justify-content-center justify-content-md-end">
                 <div class="sort-select-wrapper">
                     <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">

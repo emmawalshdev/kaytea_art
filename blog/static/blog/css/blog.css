@@ -36,6 +36,14 @@
     margin-bottom: 1.4rem;
 }
 
+.form-check {
+    padding-left: 0rem;
+}
+
+.form-check-input[type=checkbox] {
+    margin-right: 8px !important;
+}
+
 .badge-purple{
     color: white;
     padding: 3px 5px;

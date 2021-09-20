@@ -42,11 +42,11 @@
             <div class="col-12">
                 {% for category in all_categories %}
                    
-                <a class="btn btn-gen m-2" href="{% url 'products' %}?category={{ category.name }}">
+                <a class="btn btn-gen m-2 btn-sm" href="{% url 'products' %}?category={{ category.name }}">
                     <span class="p-2 mt-2 ">{{ category.friendly_name }}</span>
                 </a>
                 {% endfor %}
-                <a class="btn btn-gen m-2" href="{% url 'commissions' %}">
+                <a class="btn btn-gen m-2 btn-sm" href="{% url 'commissions' %}">
                     <span class="p-2 mt-2 ">Pet Commissions</span>
                 </a>
 
@@ -104,8 +104,7 @@
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col">
-                                            
+                                        <div class="col">                       
                                             <p class="lead mb-1 text-center font-weight-bold">€{{ product.price }}
                                             </p>
 
@@ -118,13 +117,6 @@
                                                     </p>
                                                     {% endif %}
                                             </div>
-                                            {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                            {% endif %}
-                                            
                                         </div>
                                     </div>
                                 </div>

@@ -520,4 +520,13 @@ footer li {
     margin: auto;
     text-align: center;
 }
+
+#image-clear_id{
+    width:auto;
+}
+products
+img{
+    max-height: 100%;
+    max-width: 100%;
+}
 */

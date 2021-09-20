@@ -1,3 +1,10 @@
+
+/* typography */
+.price-text{
+    font-size:1.6rem;
+}
+
+/* form */
 select option:not(:first-child){
     color: #000;
 }
@@ -6,20 +13,10 @@ select option:first-child{
     color: #aab7c4;
 }
 
-@media (min-width: 768px){
-    .text-md-left {
-        text-align: left !important;
-    }
-}
-
+/* cards */
 .product-card .card-img-top{
     height: 300px !important;
 }
-
-.star-rating-icon{
-    color: gold;
-}
-
 
 .main-card-img {
     width: 100%;
@@ -29,24 +26,19 @@ select option:first-child{
     object-position: center 20%;
 }
 
-.replies-section{
-    background-color: #d4d3ff59;
+/* star rating */
+
+.star-rating-icon{
+    color: gold;
 }
 
+/* hrs */
 .hr-reviews{
     margin: 15px 0;
     border: 1px;
 } 
 
-img{
-max-height: 100%;
-max-width: 100%;
-}
-
-.price-text{
-    font-size:1.6rem;
-}
-
-#image-clear_id{
-    width:auto;
+/* color styling */
+.replies-section{
+    background-color: #d4d3ff59;
 }

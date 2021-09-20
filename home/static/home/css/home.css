@@ -92,26 +92,26 @@
 
 /* commission section */
 .home-commission-wrapper {
-    padding: 5px;
+    padding: 10px;
     height: 350px;
 }
 
 .home-commission-img {
-    height: 100%;
+    height: 105%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
     -webkit-transition: 0.2s all ease-in-out 0.2s;
     transition: 0.2s all ease-in-out 0.2s;
-    background-position: top left;
+    background-position: top;
 }
 
 /* 992px plus */
 @media screen and (min-width: 992px) {
     .home-category-wrapper {
-        height: 450px;
+        height: 420px;
     }
     .home-commission-wrapper {
-        padding-left: 100px;
+        padding-left: 150px;
     }
 }

@@ -214,21 +214,21 @@ Please note, the final website layout contains slight variations to the original
 Each of the following files contain wireframes for desktop, tablet, and mobile devices.
 </strong>
  
-- [Homepage](https://i.ibb.co/kQXB9RC/Home.png)
-- [Search results](https://i.ibb.co/vxKr4pb/Search-results.png)
-- [About](https://i.ibb.co/jDC89Y8/About.png)
-- [Blog](https://i.ibb.co/ykNh6gQ/Blog.png)
-- [Blog inner page](https://i.ibb.co/Btk9bwM/Blog-inner-page.png)
-- [Login](https://i.ibb.co/FzYCFrR/Login.png)
-- [My profile](https://i.ibb.co/3f7pCsG/My-account.png)
-- [Register](https://i.ibb.co/Ytw4sM9/Register.png)
-- [Get in touch](https://i.ibb.co/k0xxsKM/Connect.png)
-- [Shop - Categories](https://i.ibb.co/G2VS1rz/Shop-Categories.png)
-- [Shop - Commissions](https://i.ibb.co/44BRG3k/Shop-Pet-Commission.png)
-- [Product page](https://i.ibb.co/1zrHyj0/Product-page.png)
-- [Shopping bag](https://i.ibb.co/r769pBh/Shopping-bag.png)
-- [Checkout - Information + Payment](https://i.ibb.co/4g1cbR6/Checkout-Info-payment.png)
-- [Checkout - Complete](https://i.ibb.co/JC7ddpx/Checkout-Complete.png)
+- [Homepage](https://i.ibb.co/QYHKLWC/Home.png)
+- [Search results](https://i.ibb.co/YjGDyfM/Search-results.png)
+- [About](https://i.ibb.co/vdwGFnF/About.png)
+- [Blog](https://i.ibb.co/bLfcX9k/Blog.png)
+- [Blog inner page](https://i.ibb.co/tcZ5YXV/Blog-inner-page.png)
+- [Login](https://i.ibb.co/1Zzt9Fp/Login.png)
+- [My profile](https://i.ibb.co/55H1gV7/My-account.png)
+- [Register](https://i.ibb.co/yq92r4Z/Register.png)
+- [Get in touch](https://i.ibb.co/MpvvwVr/Connect.png)
+- [Shop - Categories](https://i.ibb.co/M9tDYLN/Shop-Categories.png)
+- [Shop - Commissions](https://i.ibb.co/BtXZRD8/Shop-Pet-Commission.png)
+- [Product page](https://i.ibb.co/CW02BCw/Product-page.png)
+- [Shopping bag](https://i.ibb.co/5KBJLWy/Shopping-bag.png)
+- [Checkout - Information + Payment](https://i.ibb.co/HnsrbMX/Checkout-Info.png)
+- [Checkout - Complete](https://i.ibb.co/FbkNqCP/Checkout-Complete.png)
 
 
 ### Schema

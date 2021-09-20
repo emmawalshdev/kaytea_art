@@ -4,7 +4,7 @@
 /* typography */
 body *{
     font-family: 'Roboto Mono', monospace;
-    letter-spacing: -.01rem;
+    letter-spacing: -.03rem;
 }
 
 .red-text{
@@ -309,7 +309,7 @@ footer a{
 
 /*icons */
 .user-icon{
-    font-size:1.4rem
+    font-size:2rem
 }
 
 .update-link,
@@ -320,10 +320,6 @@ footer a{
 /* search bar*/
 input[name='q']::placeholder{
     color: #aab7c4
-}
-
-.custom-icon{
-    font-size: 1.9rem;
 }
 
 /* forms */
@@ -382,10 +378,13 @@ input[name='q']::placeholder{
 }
 
 /* footer */
+
 #footer{
     background-color: #f9c5e4ad;
-    padding: 30px 0 0
+    padding: 30px 0 20px;
+    overflow-x: hidden;
 }
+
 footer ul {
     padding: 0;
     margin: 0;
@@ -395,7 +394,6 @@ footer li {
     list-style: none;
     font-size:1.1rem;
 }
-
 /* alluath */
 
 .allauth-form-inner-content label:not([for='id_remember']){
@@ -430,15 +428,14 @@ footer li {
     #mobile-icons {
         display: none;
     }
-    .user-icon,
-    .custom-icon {
-        font-size: 1.6rem
-    }
     .header-container {
         padding-top: 144px;
     }
     .text-lg-right {
         text-align: right !important;
+    }
+    .logo-text{
+        font-size: 1.8rem;
     }
 }
 

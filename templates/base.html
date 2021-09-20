@@ -52,7 +52,7 @@
                 <div class="col-12 col-lg-4  logo-wrapper">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <img src="https://i.ibb.co/0qDRdG3/bird.png"  height="73"/>
-                            <span class="ml-6 logo-text">
+                            <span class="logo-text">
                                 Kaytea Art
                             </span>
                     </a>
@@ -150,20 +150,24 @@
 
         {% block content %}
         {% endblock %}
-        
+        <!--footer-->
         <footer id="footer">
+            <div class="container-fluid">
+                <!--logo + links row-->
                 <div class="row mb-4">
+                    <!--logo col-->
                     <div class="col-12 col-lg-3 logo-wrapper">
-                            <a href="/" class="nav-link main-logo-link">
-                                <img src="https://i.ibb.co/0qDRdG3/bird.png" height="73">
-                                    <span class="ml-6 logo-text">
-                                        Kaytea Art
-                                    </span>
-                            </a>
+                        <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0">
+                            <img src="https://i.ibb.co/0qDRdG3/bird.png" height="73">
+                            <span class="logo-text">
+                                Kaytea Art
+                            </span>
+                        </a>
                     </div>
+                    <!-- quick links col-->
                     <div class="col-12 col-md-4 col-lg-3">
                         <h3>Quick Links</h3>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>
                                 <a href="{% url 'about' %}">
                                     About
@@ -174,16 +178,12 @@
                                     Blog
                                 </a>
                             </li>
-                            <li>
-                                <a href="">
-                                    Search
-                                </a>
-                            </li>
                         </ul>
                     </div>
+                    <!--shop links-->
                     <div class="col-12 col-md-4 col-lg-3">
                         <h3>Artwork</h3>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li>
                                 <a href="{% url 'products' %}?category=original_artwork,prints,greeting_cards">
                                     Original Artwork
@@ -206,6 +206,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!--connect-->
                     <div class="col-12 col-md-4 col-lg-3 mb-0">
                         <h3>Connect</h3>
                         <p>
@@ -213,34 +214,40 @@
                                 Do you have a question? let me know!
                             </a>
                         </p>
+                        <div>
+                            <ul class="list-inline list-unstyled">
+                                <li class="list-inline-item ">
+                                    <a class="user-icon" href="https://www.facebook.com/katie.harte2" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fab fa-facebook square custom-icon hvr-grow text-primary"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <a class="user-icon" href="https://www.instagram.com/kaytea_art/" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fab fa-instagram-square custom-icon hvr-grow text-purple"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <!--hr row-->
                 <div class="row">
-                    <div class="col-12 col-md-6 offset-md-3">
+                    <div class="col-12 col-md-9 offset-md-3">
                         <hr>
                     </div>
                 </div>
+                <!-- copyright row-->
                 <div class="row mt-4">
-                    <div class="col-12 col-md-3 offset-md-3 my-auto">
+                    <div class="col-12 col-md-9 offset-md-3">
                         <span>
-                            &copy Katie Harte 2021 | Web development by Emma Harte
+                            <i class="far fa-copyright"></i>
+                             Katie Harte 2021 
+                             <span class="d-none d-md-inline">|</span>
+                              <span class="d-block d-md-none"><br></span>Web development by Emma Harte
                         </span>
                     </div>
-                    <div class="col-12 col-md-3">
-                        <ul class="list-inline list-unstyled my-0">
-                            <li class="list-inline-item ">
-                                <a class="user-icon" href="https://www.facebook.com/katie.harte2" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fab fa-facebook square custom-icon hvr-grow text-blue"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item ">
-                                <a class="user-icon" href="https://www.instagram.com/kaytea_art/" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fab fa-instagram-square custom-icon hvr-grow text-purple"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </div>                  
+            </div>
         </footer>
       </div>
       

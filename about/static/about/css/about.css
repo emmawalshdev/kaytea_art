@@ -10,8 +10,7 @@
 }
 
 .card-img-about{
-        width: 100%;
-        height: 30vw;
+        height: 22vw;
         -o-object-fit: cover;
         object-fit: cover;
         object-position: center 20%;

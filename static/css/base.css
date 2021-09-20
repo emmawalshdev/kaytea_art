@@ -483,8 +483,10 @@ footer li {
         top: 5%;
         left: 98%;
     }
+    .nav-link{
+        text-align: left;
 }
-
+}
 
 @media (max-width: 991px) {
     .card-img-top {

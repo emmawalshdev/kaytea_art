@@ -44,6 +44,10 @@ h3{
     font-weight: 500;
 } 
 
+.user-icon-text{
+    display:block;
+    font-size: 1rem;
+}
 /* global formatting */
 html{
     height: 100%;
@@ -223,6 +227,12 @@ a:hover,
     padding: 0 10px;
 }
 
+.nav-link {
+    display: block;
+    padding: .2rem .5rem;
+    text-align: center;
+}
+
 .dropdown-item{
     font-size:1rem;
 }
@@ -237,11 +247,19 @@ footer a{
     text-decoration: none;
 }
 .navbar-web-links{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .main-logo-link{
     width: fit-content;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 /* overlay */
@@ -442,7 +460,7 @@ footer li {
 /* max 991px */
 @media (max-width:991px) {
     .header-container {
-        padding-top: 60px;
+        padding-top: 90px;
     }
 
     body {
@@ -460,6 +478,10 @@ footer li {
     #footer .row .col-12 {
         margin-bottom: 30px;
         vertical-align: center;
+    }
+    #cart-has-contents {
+        top: 5%;
+        left: 98%;
     }
 }
 

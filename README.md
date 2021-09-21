@@ -2,25 +2,21 @@
 
 ## Full Stack Development - Milestone Project
 
-[View the Live Site here.](https://the-book-bar.herokuapp.com/)
+[View the Live Site here.](https://katie-harte-art.herokuapp.com/)
 
 ![logo](assets/images/readmeFiles/readmeLogo.png) 
 
 ![Generated from Am I Responsive](assets/images/readmeFiles/TheBookbar.jpg)
 
 
-The Kaytea Art webshop was designed, built and deployed by Emma Harte as her final milestone project for the Code Institute Full Stack Web Development diploma.
-The webstore was created to replace an existing Etsy account, allowing for a fully customizated shopping experience. 
-This space is all about art. Enter the home of the artist, browse her online portfolio or even order your own customised piece. 
-
-In this project, full CRUD functionality is present. 
-Security features are also present. Such include user permissions for the 'admin' user and safe storage of passwords and sensitive-security information.
+The Kaytea Art webshop was designed, built and deployed by Emma Harte. The project was undertaken as the final milestone project for the Code Institute Full Stack; Web Development diploma.
+The webstore was created to replace an existing Etsy account, allowing for a fully customizated shopping experience.
 
 ----------------------------
 
 ## Contents
 1. [UX](#ux)
-      - [Strategy](#strategy)
+      - [Goals](#goals)
       - [User Stories](#user-stories)
         - [Visitor Stories](#visitor-stories)
         - [Business Stories](#business-stories)
@@ -29,9 +25,8 @@ Security features are also present. Such include user permissions for the 'admin
       - [Out of Scope](#out-of-scope)
     - [Wireframes](#wireframes)
     - [Design](#design)
-      - [User journey](#user-journey)
-      - [Typography](#typography)
       - [Color Scheme](#color-scheme)
+      - [Typography](#typography)
 
 2. [Features](#features)
     - [Existing Features](#existing-features)
@@ -63,7 +58,7 @@ Security features are also present. Such include user permissions for the 'admin
 
 ## UX
 
-### Strategy
+### Goals
 
 **Target Audience:**
 * People who are interested in realistic wildlife and animal art.
@@ -71,11 +66,6 @@ Security features are also present. Such include user permissions for the 'admin
 * People looking for unique art at an affordable price.
 * People looking for unique gift ideas.
 
-**Importance v Feasability**
-* This study was carried out to investigating the in-scope features for this release. 
-* The graphic below showcases the results.
-
-![ivf](assets/images/readmeFiles/ivf.jpg) 
 
 ### User Stories
 
@@ -121,21 +111,13 @@ Security features are also present. Such include user permissions for the 'admin
 
 **Website admin**
 1. To be able to add/edit and delete products on the website so that I can keep the information up-to-date.
-2. To be able to add/edit and delete blog connect on the website so that I can keep the page fresh.
+2. To be able to add/edit and delete blog content on the website so that I can keep the page fresh.
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
-2. To be able to issue refunds in case required.
-3. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
-4. To have the choice to accept or decline a comission request. I would need to access each request to see if it is feasible. 
+2. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
 
 ### Project Scope
-As part of the 5 plane investigation, the project scope was defined.
-During this process, the functional and content requirements were examined.
-In considering the functional requirements, each problem was examined to find a best-fit solution.
-In considering the content requirements, the following were questioned: 
-  1. What type of content would fulfill the need (image, video, text, mixed)
-  2. Whether or not adequate resources were available to produce the content.
 
 The following is a statement of the defined scope:
 
@@ -154,52 +136,48 @@ The following is a statement of the defined scope:
   - A user will be able to input personal details such as contact and shipping details. This will be stored in the database.
   - if the user forgets their password, they will have the choice to reset it via an email link.
 
-* A webiste contact form
-  - This will allow users to contact the business owner. A message subject can be selected on the form, which lets the receiver know the topic of contact.
-  - The form will include a dropdown field called 'subject of message'.
+* A website contact form
 
 * An online store selling original artwork, prints and gifts
-  - After speaking with the owner, the categories will be original artwork, prints and greeting cards. Once the product database builds, we will consider creating the gifts category.
+  - The categories will be:
+    - original artwork, 
+    - prints
+    - greeting cards. 
   - Within each category the user will be able to sort by price or easily switch categories.
   - Adding/editing and removing items from the shopping cart will be possible.
   - If the user is logged in, any saved shipping details will autofill at the checkout.
   - A fully secure checkout process will be in place, using Stripe.
-  - Shipping will be at the standard fee of €4.99. Orders above €50 will inlude free shipping.
+  - Orders above €50 will inlude free shipping.
 
 * Descriptive product pages
   - The template will include the following information:
     - Images
     - Canvas size
     - Media
-    - In stock or out of stock statement. I will not be adding the stock level. As the product is fine art, it is not produced in large volumes (sometimes it is a once off piece)
-    - Product reviews
+    - Out of stock message (if applicable)
+  - Product reviews
 
 * An about page
   - This will be focused on introducing the artist and their work.
-  - As the focus will be on promoting contact, a 'contact me' block will be incoporated into this page.
+  - As the focus will be on promoting contact, a 'contact me' button will be added to this page.
 
 * A Blog
   - The business owner will be able to upload new content, edit and/or delete existing content.
-  - Users will be able to add comments.
-  - A pop up effect will be present on each image revealing the tite, canvas size and media used.
+  - Logged in users will be able to add comments.
 
-* A Pet commision contact service that generates a quote which the user can review and submit
-  - The user can upload an image and must then select the desired canvas size, media and confirm the number of pets in the picture. Based on the selection, a custom quote is generated.  
-  - The quote would be calculated based on the number of pets (max 3 pets) in an image and the canvas size.
-  - The request can then be sent by the user. If submitted, it will be sent to the shop owner for review.
-  - The shop owner retains the right to accept or decline the quote. (The request may be declined due to poor image quality).
-  - No payment is immediately taken. The business owner has stressed that chatting to the client is important in the pet commission service, so for now, we will not be allowing payment to take place over the webiste. The focus will be on providing an reliable quote and initializing a conversation. 
+* A Pet commision contact service
+  - The user can fill out the form and the admin will be in contact.
 
 #### Out of scope
 
 The following features have not been included in the first rollout of this project. At this time, the focus will be on launching the webshop with the most fundamental features covered.
 
-* Online payment for commissions 
-* Optimised layout for the checkout process - this will not be very sophisticated in this release.
+* Online payment for commissions
+* Product filtering by rating
 * Discount code and voucher capabilities
-* Video demos for products
+* Cart counter - showing number of items in cart instead of the cart cost
+* Automatic deduction of product stock (upon sale)
 * Abandoned cart recovery
-* Integrated blog
 * Integrated Social media share buttons on product pages
 * Personalised product recommendations for users
 
@@ -231,34 +209,22 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 ### Design
 #### Colour Palette
 
-- ![Color Palette](https://i.ibb.co/M8kh6cp/color-palette-Katie-s-website.png) 
+- ![Color Palette](https://i.ibb.co/HNzkKYt/Color-Palette.png) 
   - #D4D3FF (Lavender Blue)
   - #FFCD69 (Maize Crayolla)
   - #2AA6B3 (Pacific Blue)
   - #F9CFE4 (Mini Pink)
   - #0095FF (Dodger Blue)
 
-- Katie really wanted to achive a playful, colour-rich website. The above color palette was chosen to achieve this, with the intention of using alot of whitespace inbetween. 
-
-#### User journey
-- The website structure was designed to be consistent, predictable, learnable, visible, and provide user feedback.
-- A user journey for non-admin users was created to aid the structural design.
-
-![user journey](assets/images/readmeFiles/userjourney.jpg) 
+- Katie really wanted to acheive a playful, colour-rich website. The above color palette was chosen to create this, with the intention of using alot of whitespace inbetween. 
 
 
 #### Typography
 - All fonts used in this project derive from [Google Fonts](https://fonts.google.com/). 
 
 - Fonts used include:
-  - [Raleway](https://fonts.google.com/specimen/Raleway?query=raleway) - used for h1 - h4
-  - [Lato](https://fonts.google.com/specimen/Lato?query=lato) - used for h5 - h6 and all other body text
-
-
-#### Design
-- Co
-
-![colour palette](https://i.ibb.co/HNzkKYt/Color-Palette.png)
+  - ['Roboto Mono'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of monospace, is used for h1 - h4
+  - ['Montserrat'](https://fonts.google.com/specimen/Montserrat) with a fallback of sans-serif, is used for h5 - h6 and all other body text
 
 --------------------------------------------------------------------------------------------
 

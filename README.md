@@ -38,9 +38,7 @@ Security features are also present. Such include user permissions for the 'admin
     - [Features Left to Implement](#features-left-to-implement)
 
 3. [Information Architecture](#information-architecture)
-    - [Database information](#database-information)
-    - [Datatypes](#datatypes)
-    - [Collections information](#collections-information)
+
 
 4. [Technologies Used](#technologies-used)
     - [Database](#database) 
@@ -230,12 +228,6 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Checkout - Information + Payment](https://i.ibb.co/HnsrbMX/Checkout-Info.png)
 - [Checkout - Complete](https://i.ibb.co/FbkNqCP/Checkout-Complete.png)
 
-
-### Schema
-Below is a schema created for the website
-
-![Schema](https://i.ibb.co/fqz0kMZ/schema-katie.png) 
-
 ### Design
 The business owner experessed a strong desire to create a bright and vibrant website.
 After discussions, the following color palette was chosen:
@@ -306,36 +298,155 @@ The following are features that were not included in this release. Once adequate
 
 ## Information Architecture
 
-### Database information
-- MongoDB (a project requirement):
-  - This project utilizes MongoDB; a NoSQL database.
+SQLite was used in the development of this project as it is the default database used with Django. On deployment with Heroku, a Postgres database is used.
 
-- Take-away thoughts:
-  - A pre-defined schema would have simplified the development of the overall project.
+### Data Models
+
+**Profiles App**
+
+`User` model
+
+Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/) model is used for this project. 
+
+`UserProfile` model 
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| User | user | OneToOneField 'User' | on_delete=models.CASCADE |
+| First Name | Default_first_name | CharField | max_length=40 |
+| Last Name | Default_last_name | CharField | max_length=40 |
+| Default Mobile Number | default_mobile_number | CharField | max_length=20, null=True, blank=True |
+| Default Address Line 1 | default_address_line_1 | CharField | max_length=80, null=True, blank=True |
+| Default Address Line 2 | default_address_line_2 | CharField | max_length=80, null=True, blank=True |
+| Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True |
+| Default County | default_county | CharField | max_length=80, null=True, blank=True |
+| Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True |
+| Default Country | default_country | CountryField | blank_label='Country', null=True, blank=True |
+
+**Products App**
+
+`Category` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Name | name | CharField | max_length=254 |
+| Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True |
+
+`Product` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL |
+| Date Added | date_added | DateTimeField | auto_now_add=True, null=True |
+| SKU | sku | CharField | max_length=200, null=True, blank=True |
+| Name | name | CharField | max_length=200 |
+| Description | description | TextField |
+| Size | size | CharField | max_length=200 |
+| Media | media | CharField | max_length=200 |
+| Price | price | DecimalField | max_digits=6, decimal_places=2 |
+| Image | image | ImageField | null=True, blank=True |
+
+`ProductReview` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Author | author | ForeignKey 'User' | null=True, blank=True, on_delete=models.CASCADE |
+| Date | date | DateTimeField | auto_now_add=True |
+| Product | product | ForeignKey 'Product' | related_name='reviews', on_delete=models.CASCADE |
+| Review Text | review_text | TextField | max_length=500 |
+| Rating | review_rating | CharField | max_length=1, choices=RATING, default='2' |
+
+**Checkout App**
+
+`Order` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Order Number | order_number | CharField | max_length=32, null=False, editable=False |
+| User Profile | user_profile | ForeignKey 'UserProfile' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' |
+| Date | date | DateTimeField | auto_now_add=True |
+| First Name | first_name | CharField | max_length=50, null=False, blank=False |
+| Last Name | last_name | CharField | max_length=50, null=False, blank=False |
+| Email | email | EmailField | max_length=254, null=False, blank=False |
+| Mobile Number | mobile_number | CharField | max_length=20, null=False, blank=False |
+| Address Line 1 | address_line_1 | CharField | max_length=80, null=True, blank=True |
+| Address Line 2 | address_line_2 | CharField | max_length=80, null=True, blank=True |
+| Town or City | town_or_city | CharField | max_length=40, null=True, blank=True |
+| County | county | CharField | max_length=80, null=True, blank=True |
+| Postcode | postcode | CharField | max_length=20, null=True, blank=True |
+| Country | country | CountryField | blank_label='Country *', null=True, blank=True |
+| Delivery Cost | delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0 |
+| Order Total | order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
+| Grand Total | grand_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
+| Original Basket | original_basket | TextField | null=False, blank=False, default='' |
+| Stripe PID | stripe_pid | CharField | max_length=254, null=False, blank=False |
+
+`OrderLineItem` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Order | order | ForeignKey 'Order' | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| Product | product | ForeignKey 'Product' | null=False, blank=False, on_delete=models.CASCADE |
+| Quantity | quantity | IntegerField | null=False, blank=False, default=0 |
+| Line Item Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False |
+
+**Blog App**
+
+`Keyword` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Name | name | CharField | max_length=20 |
+| Friendly Name | friendly_name | CharField | max_length=20 |
+
+`Blog` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Date | date | DateTimeField | auto_now_add=True |
+| Keywords | keywords | ManyToManyField 'Keyword' | blank=True |
+| Title | title | CharField | max_length=80 |
+| Author | author | ForeginKey 'User' | null=True, blank=True, on_delete=models.CASCADE |
+| Teaser | teaser | RichTextField | validators=[MinLengthValidator(70)] |
+| Body Text | body | RichTextField | validators=[MinLengthValidator(70)] |
+| Image | image | ImageField | null=True, blank=True |
 
 
-### Datatypes
-  - The datatypes utilized in this project include the following:
-    - ObjectId
-    - String
-    - Boolean
-    - DateTime
-    - Array
-    - Object
+`Reply` model
 
-### Collections information
-The website involves .. database collections. The details of each collection are detailed below.
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Blog | blog | ForeignKey 'Blog' | related_name='replies', on_delete=models.CASCADE |
+| Author | author | ForeignKey 'User' | null=True, blank=True, on_delete=models.CASCADE |
+| Date | date | DateTimeField | auto_now_add=True |
+| Body Text | body | TextField | max_length=600 | 
 
-  #### Users collection
 
-| Title | Key in db | form validation type | Data type |
---- | --- | --- | --- 
-Account Id | _id | None | ObjectId
-Username | created_by | Text, `maxlength="15"` |string
-Password | password | Text, `maxlength="15"` | string
-Books Added by User | books_added | None | array
-Reviews Added by User | reviews_added | None | array
+**Commissions App**
 
+`Commissions` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Date | date | DateTimeField | auto_now_add=True, null=True, blank=True |
+| Name | name | CharField | max_length=255 |
+| Email | email | EmailField | max_length=254, null=False, blank=False |
+| Size | size | CharField | max_length=30, choices=SIZE_CHOICES, default='Canvas size *'|
+| Number of Pets | pet_num | CharField | max_length=30, choices=PET_NUM_CHOICES, default='Number of Pets *'|
+| Media | media | CharField | max_length=30, choices=MEDIA_CHOICES, default='Media Preference *'|
+| Message | message | TextField | null=True, blank=True |
+| Image | image | ImageField | null=True, blank=True |
+
+**Contact App**
+
+`Contact` model
+
+| **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
+| ---------- | ------------------ | ---------------- | --------------------- |
+| Date | date | DateTimeField | auto_now_add=True, null=True, blank=True |
+| Name | name | CharField | max_length=255 |
+| Email | email | EmailField | max_length=254, null=False, blank=False |
+| Message | message | TextField | max_length=1000 |
 
 
 ----------------------------

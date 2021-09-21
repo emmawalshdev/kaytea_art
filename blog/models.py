@@ -8,8 +8,8 @@ from ckeditor.fields import RichTextField
 
 
 class Keyword(models.Model):
-    name = models.CharField(max_length=20)
-    friendly_name = models.CharField(max_length=200, null=True, blank=True)
+    name = models.CharField(max_length=80)
+    friendly_name = models.CharField(max_length=80)
 
     def __str__(self):
         return self.name
@@ -21,11 +21,11 @@ class Keyword(models.Model):
 class Blog(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     keywords = models.ManyToManyField(Keyword, blank=True)
-    title = models.CharField(max_length=254)
+    title = models.CharField(max_length=80)
     author = models.ForeignKey(User, null=True, blank=True,
                                on_delete=models.CASCADE)
-    body = RichTextField(validators=[MinLengthValidator(70)])
     teaser = RichTextField(validators=[MinLengthValidator(70)])
+    body = RichTextField(validators=[MinLengthValidator(70)])
     image = models.ImageField(null=True, blank=True)
 
     class Meta:
@@ -41,7 +41,7 @@ class Reply(models.Model):
     author = models.ForeignKey(User, null=True, blank=True,
                                on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
-    body = models.TextField(max_length=1000)
+    body = models.TextField(max_length=600)
 
     def __str__(self):
         return self.body

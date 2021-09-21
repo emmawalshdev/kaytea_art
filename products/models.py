@@ -23,8 +23,8 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     date_added = models.DateTimeField(auto_now_add=True, null=True) 
     sku = models.CharField(max_length=200, null=True, blank=True)
-    name = models.CharField(max_length=200, null=True, blank=True)
-    description = models.TextField(max_length="100", null=True, blank=True)
+    name = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
     size = models.CharField(max_length=200)
     media = models.CharField(max_length=200)
     stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(20)])
@@ -51,9 +51,9 @@ class ProductReview(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, related_name='reviews',
                                 on_delete=models.CASCADE)
-    review_text = models.TextField()
+    review_text = models.TextField(max_length=600)
     review_rating = models.CharField(choices=RATING,
-                                     max_length=10,
+                                     max_length=2,
                                      default='Rating *')
 
     def __str__(self):

@@ -27,8 +27,9 @@ MEDIA_CHOICES = (
 
 # Create your models here.
 class Commissions(models.Model):
+    date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     name = models.CharField(max_length=255)
-    email = models.EmailField()
+    email = models.EmailField(max_length=254, null=False, blank=False)
     size = models.CharField(max_length=30, choices=SIZE_CHOICES, default='Canvas size *')
     pet_num = models.CharField(max_length=30, choices=PET_NUM_CHOICES, default='Number of Pets *')
     media = models.CharField(max_length=40, choices=MEDIA_CHOICES, default= 'Media Preference *')

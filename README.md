@@ -229,12 +229,17 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Checkout - Complete](https://i.ibb.co/FbkNqCP/Checkout-Complete.png)
 
 ### Design
-The business owner experessed a strong desire to create a bright and vibrant website.
-After discussions, the following color palette was chosen:
+#### Colour Palette
 
-![Color Palette](https://i.ibb.co/M8kh6cp/color-palette-Katie-s-website.png) 
+- ![Color Palette](https://i.ibb.co/M8kh6cp/color-palette-Katie-s-website.png) 
+  - #D4D3FF (Lavender Blue)
+  - #FFCD69 (Maize Crayolla)
+  - #2AA6B3 (Pacific Blue)
+  - #F9CFE4 (Mini Pink)
+  - #0095FF (Dodger Blue)
 
-As these colors are incredibly bright, they will be incorporated in which some darker undertones & white space.
+- Katie really wanted to achive a playful, colour-rich website. The above color palette was chosen to achieve this, with the intention of using alot of whitespace inbetween. 
+
 #### User journey
 - The website structure was designed to be consistent, predictable, learnable, visible, and provide user feedback.
 - A user journey for non-admin users was created to aid the structural design.
@@ -250,10 +255,10 @@ As these colors are incredibly bright, they will be incorporated in which some d
   - [Lato](https://fonts.google.com/specimen/Lato?query=lato) - used for h5 - h6 and all other body text
 
 
-#### Color scheme
-- A ..
+#### Design
+- Co
 
-![colour palette](assets/images/readmeFiles/example.jpg)
+![colour palette](https://i.ibb.co/HNzkKYt/Color-Palette.png)
 
 --------------------------------------------------------------------------------------------
 

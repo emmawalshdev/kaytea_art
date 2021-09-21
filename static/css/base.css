@@ -132,14 +132,14 @@ hr{
 .btn-gen {
     border-color: #1abfd0;
     color: #fff;
-    box-shadow: 0 0 40px 40px #1abfd0 inset, 0 0 0 0 #1abfd0;
+    box-shadow: 0 0 40px 40px #2aa6b3 inset, 0 0 0 0 #2aa6b3;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
   }
 
 .btn-gen:hover {
-    box-shadow: 0 0 2px 0 #1abfd0 inset, 0 0 2px 2px #1abfd0;
-    color: #1abfd0;
+    box-shadow: 0 0 2px 0 #2aa6b3 inset, 0 0 2px 2px #2aa6b3;
+    color: #2aa6b3;
     background-color:white
 }
 

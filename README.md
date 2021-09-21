@@ -175,6 +175,7 @@ The following features have not been included in the first rollout of this proje
 * Online payment for commissions
 * Product filtering by rating
 * Discount code and voucher capabilities
+* functionality to add a keyword from the site.
 * Cart counter - showing number of items in cart instead of the cart cost
 * Automatic deduction of product stock (upon sale)
 * Abandoned cart recovery
@@ -234,29 +235,70 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 #### Elements on all pages
 
-- NavBar
-  - The navigation features The logo in the top left corner in desktop view. This switches to a center position on smaller screen sizes.
-
-  - Access rights:
-    - Certain links are viewable only to a logged-in user...
-
-    - Below is a full list of navbar links shown for each user type.
-
-      - For **all users** who **are not logged in**, the following links are viewable:
-        1. Home 
-
-      - For **non-admin users** who **are logged in**, the following links are viewable:
-        1. 
-
-      - For an **admin user** who **is logged in**, the following links are viewable:
-        1. 
-
+- Navigation
+  - The navigation features The logo which is present on both mobile and desktop screen sizes.
+  - Links to the blog, shop, about and contact pages are featured on the navbar. These are contained within the hamburger menu on mobile devices.
+  - A search bar based on title and description allows for text searches. 
+  - A shopping cart showing it's total cost is shown on the navbar. This is available across all pages. 
 
 - Footer
-  - The footer includes the following:
-    - ..
+  - The footer contains quick links, copyright information and social media icons.
 
-#### Homepage
+- Toast messages
+  - These notifications are available across the site, showing information, success and error messages.
+  - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
+
+- Custom 404, 403 and 500 pages
+  - These error pages have been customised to fit the brand, ensuring that the user does not run into a dead end.
+
+#### Home Page
+
+The homepage features snippets of various pages, driving traffic to the about, shop and commissions page.
+Cards are used to create visual cues and lead to the user to the next page. 
+
+#### About Page
+
+The about page simply features some text about Katie, images from her personal life and a link to the contact page.
+The contact page acts as the CTA for this page.
+
+#### Blog Page
+The blog page contains an overview of the blog collection, showing the title, teaser, date and image of each. Pagination shows 3 blogs per page, organised by date.
+The user can click into either the image or 'read more' link of any blog to reach the inner page.  
+
+#### Blog Details Page
+The blog details page contains the image, author, date, keywords and body of text content.
+For superusers, an edit and delete button are visible.
+Beneath the blog, lives a comment section. Only logged in users are permitted to post a comment and their username will be added to this.
+
+#### Products Page
+The products page an overview of products within the selected cateogry. 
+These are presented on cards, which feature information such as the title, price and category name. Clicking on a card brings the user straight to the product details page.
+Category buttons at the top of the page allow the user to switch easy between sub-sections.
+Furthermore, 'sort by' functionality allows the user to sort by price or name.
+Lastly, a 'back to top' button allows the user to quicky navigate back up the page. Pagination was not included on this template as it is unlikely product number will exceed 50. 
+
+#### Product Details Page
+The product details page contains the title, image, description, media, size and product price.
+If an average star rating exists, this is also presented.
+Quantity available is displayed in a dropdown menu. The user selected the desired quanity and add it to their shopping bag.
+For superusers, an edit and delete button are visible.
+Beneath the product section, lives a review section. Only logged in users are permitted to post a review and their username will be added to this. 
+
+#### Product Admin Page 
+
+
+#### Pet Commissions Page
+
+#### Contact Page
+
+#### Bag Page
+
+#### Checkout page
+
+#### Checkout success page
+
+#### Additional Pages
+The django-allauth library is used to manage user registeation and authentication on the site. The allauth templates inluding login, register, forgotten password etc hae been customised to suit the brand styling.
 
 
 ### Features Left to Implement

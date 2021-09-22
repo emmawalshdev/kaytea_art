@@ -39,11 +39,9 @@ The webstore was created to replace an existing Etsy account, allowing for a ful
 3. [Information Architecture](#information-architecture)
 
 4. [Technologies Used](#technologies-used)
-    - [Database](#database) 
     - [Languages](#languages)
-    - [Libraries](#libraries)
-    - [Tools](#tools)
-    - [Deployment](#deployment-heroku)
+    - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+    - [Dependencies](#dependencies)
 
 5. [Testing](https://github.com/emmahartedev/The-Book-bar/blob/master/testing.md)
     
@@ -507,11 +505,13 @@ Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
 
 * [Python](https://www.python.org/)
 
-### Frameworks, Libraries & Programs
+### Frameworks, Libraries and Programs
 
 * [Django](https://www.djangoproject.com/) - A Python-based free and open-source web framework that follows the model–template–views architectural pattern.
 
 * [jQuery](https://jquery.com/) - Used for website interactivity.
+
+* [Heroku](https://www.heroku.com/) - Heroku is used to deploy this website.
 
 * [Bootstrap 4](https://getbootstrap.com/) - Used in creating the responsiveness and styling of the website.
 
@@ -591,12 +591,9 @@ Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
 
 * [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
 
-### Deployment (Heroku)
 
-* [Heroku](https://id.heroku.com/login) - The cloud platform used to deploy the website.
-----------------------------
 ## Testing
-All testing documentation is stored in a separate testing file, which can be accessed [here](https://github.com/emmahartedev/..).
+All testing documentation for this project is stored in a separate [TESTING.md](https://github.com/emmahartedev/testing.md) file.
 
 ----------------------------
 

@@ -599,7 +599,6 @@ All testing documentation for this project is stored in a separate [TESTING.md](
 
 ## Deployment
 
-### Local Deployment
 To run this project on your own IDE, ensure that the following are installed on your machine:
 
   * [Python 3](https://www.python.org/download/releases/3.0/)
@@ -607,7 +606,85 @@ To run this project on your own IDE, ensure that the following are installed on 
   * [Git](https://git-scm.com/)
 
 Additionally, make sure that you also have the following set up: 
-  * [A MongoDB Atlas account](https://www.mongodb.com/)
+  * [Heroku](https://www.heroku.com/)
+  * [Stripe](https://stripe.com/)
+  * [Gmail](https://www.google.com/gmail/) with 2 step verification
+  * [AWS S3 bucket](https://aws.amazon.com/s3/)
+
+### Local Deployment
+
+1. Clone the GitHub Repository
+
+* Login to GitHub and Navigate to the [project repository](https://github.com/emmahartedev/kaytea_art.).
+
+* Click 'Code' and in the Clone with HTTPS window, copy the provided repository URL. 
+
+* Open a terminal in your IDE.
+
+* Change the current working directory to the location you wish to generate the cloned directory.
+
+* Type ```git clone```, and then paste the URL from step 2. 
+
+```
+git clone https://github.com/emmahartedev/kaytea_art.git
+```
+
+2. Create a Virtual Environment
+
+  * cd into the project directory and create a new virtual environment by typing:
+  ```
+  python -m .venv venv
+  ```
+  * Activate the virtual environment byt typing:
+  ```
+  .venv\Scripts\activate.bat
+  ```
+
+3. Install the project requirements by typing:
+  ```
+  pip install -r requirements.txt
+  ```
+
+4. Set up the environment variables.
+
+  * Create an env.py file in the root directory, adding it to the .gitignore file.
+
+  * Add the following import and variables to the file.
+    ```
+    import os
+    os.environ["DEVELOPMENT"] = "True"
+    os.environ["SECRET_KEY"] = "<Your Key>"
+    os.environ["STRIPE_PUBLIC_KEY"] = "<Your Key>"
+    os.environ["STRIPE_SECRET_KEY"] = "<Your Key>"
+    os.environ["STRIPE_WH_SECRET"] = "<Your Key>"
+    ```
+5. Migrate the models to create your database by typing:
+
+  ```
+  python manage.py migrate
+  ```
+6. Load the products & category data by typing
+
+  ```
+  python3 manage.py loaddata categories
+
+  python3 manage.py loaddata products
+  ```
+
+7. Create a superuser account by typing:
+
+  ```
+  python manage.py createsuperuser
+  ```
+
+8. You should now be able to run the project locally by typing:
+  ```
+  python manage.py runserver
+  ```
+
+6. Create an [env.py](https://pypi.org/project/env.py/) file to store environmental variables. Add this to the [.gitignore](https://git-scm.com/docs/gitignore/en) to ensure it is not uploaded.
+
+7. Run the application using the command: ```python3 app.py```
 
 #### Forking the repository
 To fork the repository, the following steps must be followed:

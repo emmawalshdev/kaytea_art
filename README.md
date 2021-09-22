@@ -537,6 +537,14 @@ Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
 
 * [Favicon.io](https://favicon.io/) - Used to generate the favicons.
 
+* [IMgBB](https://imgbb.com/) - Used to store images.
+
+* [Am I Responsive](http://ami.responsivedesign.is/) - Used to create responsive images for different devices.
+
+* [LottieFiles](https://lottiefiles.com/) - All free animations are sourced from here.
+
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Used for monitoring the responsiveness of the website.
+
 ### Dependencies
 
 * [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and is positioned as an asynchronous successor to WSGI.
@@ -583,27 +591,6 @@ Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
 
 * [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
 
-### Dependencies
-
-* [IMgBB](https://imgbb.com/) - Used to store images.
-
-* [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) - Used to resize and edit images.
-
-* [Favicon.io](https://favicon.io/favicon-converter/) - Used for favicon creation.
-
-* [Am I Responsive](http://ami.responsivedesign.is/) - Used to create responsive images for different devices.
-
-* [Google Fonts](https://fonts.google.com/) - Used for typography.
-
-* [Font Awesome](https://fontawesome.com/) - Used for footer Icons.
-
-* [Google Icons](https://fonts.google.com/icons) - Used for all Icons (bar footer icons).
-
-* [LottieFiles](https://lottiefiles.com/) - All free animations are sourced from here.
-
-* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Used for monitoring the responsiveness of the website.
-
-* [LamdaTest](https://www.lambdatest.com/) - Used for monitoring the responsiveness of the website.
 ### Deployment (Heroku)
 
 * [Heroku](https://id.heroku.com/login) - The cloud platform used to deploy the website.

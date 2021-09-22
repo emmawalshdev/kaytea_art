@@ -182,7 +182,9 @@ The following features have not been included in the first rollout of this proje
 * functionality to add a keyword from the site.
 * Cart counter - showing number of items in cart instead of the cart cost
 * Automatic deduction of product stock (upon sale)
+* Automatic quote generation for pet commissions
 * Abandoned cart recovery
+* multiple media for products
 * Integrated Social media share buttons on product pages
 * Personalised product recommendations for users
 
@@ -288,18 +290,40 @@ Quantity available is displayed in a dropdown menu. The user selected the desire
 For superusers, an edit and delete button are visible.
 Beneath the product section, lives a review section. Only logged in users are permitted to post a review and their username will be added to this. 
 
-#### Product Admin Page 
+#### Product Admin Page
+The product admin page is accessible to superusers only. The page link is located under the user icon on the navbar.
+The page includes a form, from which a new product can be added.
+As well as the product title, description, media, size, SKU and price, the user can select which category the product will live in. 
+Furthermore, an image can be selected which will be displayed on the front-end.
+If an image is not added, a default picture will be showm. 
 
 
 #### Pet Commissions Page
+The pet commissions page contains information about the service as well as a contact form.
+The user can submit the form, stating their preferences for media type, canvas size and the number of pets per commission.
 
 #### Contact Page
+The contact page contains an enquiry form and lottie file animation.
+This can be used for all general queries from users. 
 
 #### Bag Page
+he bag page displays every product and their quantity, which the user has added. 
+Here, shoppers can update the quantities or remove products from their basket.
+A bag summary shows the subtotal, delivery cost and the grand total. If a shopper us under the free shipping bag total, a message is displayed. This communicates the total extra cost required to avail of free delivery. A button with the summary box leads the shopper to the checkout page.
+A second link allows the shopper to navigate back to the shop.
 
 #### Checkout page
+The checkout page contains an order form that shoppers must fill out to complete the checkout process.
+If a user is logged in, they are promted to tick a checkbox in order to save their default information. 
+If a user is not logged in, they are prompted to sign in to save their details.
+An order summary reminds the shopper of their bag contents and cost.  
+Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payement is successful, a confirmation email is sent. 
+**Please note**: The website currently uses Stripe's test functionality as opposed to live payments.
 
 #### Checkout success page
+The checkout success page provides a summary of the order, stating that it was successful.
+The summary includes the order number, order date, the products ordered as well as delivery and billing information. 
+A link directing users back to the shop is provided underneath.
 
 #### Additional Pages
 The django-allauth library is used to manage user registeation and authentication on the site. The allauth templates inluding login, register, forgotten password etc hae been customised to suit the brand styling.

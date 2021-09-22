@@ -4,9 +4,13 @@
 
 [View the Live Site here.](https://katie-harte-art.herokuapp.com/)
 
-![logo](assets/images/readmeFiles/readmeLogo.png) 
+<div align="center">
+    <a href="https://katie-harte-art.herokuapp.com/" target="_blank">
+      <img src="https://i.ibb.co/t4wz8DR/logo.png" alt="Katie Harte Art webshop">
+    </a>
+</div>
 
-![Generated from Am I Responsive](assets/images/readmeFiles/TheBookbar.jpg)
+![Generated from Am I Responsive](https://i.ibb.co/WDmNFFv/amiresponsive.png)
 
 
 The Kaytea Art webshop was designed, built and deployed by Emma Harte. The project was undertaken as the final milestone project for the Code Institute Full Stack; Web Development diploma.

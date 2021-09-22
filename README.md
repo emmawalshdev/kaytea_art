@@ -686,64 +686,104 @@ git clone https://github.com/emmahartedev/kaytea_art.git
 
 7. Run the application using the command: ```python3 app.py```
 
-#### Forking the repository
-To fork the repository, the following steps must be followed:
-1. Navigate to the [project repository](https://github.com/emmahartedev/The-Book-bar).
-
-2. Click "Fork", located on the top right of the screen.
-
-3. You have successfully forked the repository. A copy of the original project will now be copied to your account.
-
-4. Create an [env.py](https://pypi.org/project/env.py/) file to store environmental variables. Add this to the [.gitignore](https://git-scm.com/docs/gitignore/en) file to ensure it is not uploaded.
-
-5. Run the application using the command: ```python3 app.py```
-
-#### Cloning the repository
-To clone the repository, the following steps must be followed:
-
-1. Navigate to the [project repository](https://github.com/emmahartedev/..).
-
-2. Click 'Code' and in the Clone with HTTPS window, copy the provided repository URL. 
-
-3. Open a terminal in your IDE.
-
-4. Change the current working directory to the location you wish to generate the cloned directory.
-
-5. Type ```git clone```, and then paste the URL from step 2. 
-
-```
-git clone https:..
-```
-6. Create an [env.py](https://pypi.org/project/env.py/) file to store environmental variables. Add this to the [.gitignore](https://git-scm.com/docs/gitignore/en) to ensure it is not uploaded.
-
-7. Run the application using the command: ```python3 app.py```
-
 ### Heroku Deployment
-To deploy 'The Book bar' to Heroku, the following steps must be followed:
-  1. Create a [requirements.txt](https://blog.usejournal.com/why-and-how-to-make-a-requirements-txt-f329c685181e) file using the command ```pip freeze > requirements.txt```.
+1. Set up the Heroku app.
 
-  2. Create a [Procfile](https://devcenter.heroku.com/articles/procfile) using the command ```echo web: python app.py > Procfile```.
+* Login to Heroku. On the dashboard, click on the 'New' button, then click 'Create new app'.
+* Name the app, pick your region and click 'Create app'.
+* In the 'Add-ons' search bar search for postgres and choose 'Heroku Postgres'.
+* Submit the form, choosing the free plan.
+* In the deployment tab, choose GitHub as the deployment method. Link the repository you cloned by searching it's name.
+* Choose the master branch to deploy and click 'Enable Automatic Deploys'.
+* Navigate to the settings tab, click 'Reveal Config Vars' and add the following:
+```
+Key	Value
+AWS_ACCESS_KEY_ID	< your AWS access key ID >
+AWS_SECRET_ACCESS_KEY	< your AWS secret access key >
+DATABASE_URL	< your postgres database URL >
+EMAIL_HOST_PASS	< 16-character password from Gmail >
+EMAIL_HOST_USER	< your Gmail >
+SECRET_KEY	< your secret key >
+STRIPE_PUBLIC_KEY	< your stripe public key >
+STRIPE_SECRET_KEY	< your stripe secret key >
+STRIPE_WH_SECRET	< your stripe webhook key >
+USE_AWS	True
+```
 
-  3. Add both files to Github by using ```git add```, then ```git commit -m "Add a relevant git message here"``` and finally ```git push```.
+2. Set up your Database
+  * In your settings.py file import dj_database_url
+  * Comment out the default DATABASES configuration and add the following:
 
-  4. Navigate to the [Heroku](https://id.heroku.com/login) website. On the dashboard page, click "New", then click "Create new app". Add a name and a region.
+  ```
+    DATABASES = {
+        'default': dj_database_url.parse('DATABASE_URL')
+    }
+  ```
+  * Set up the database through the terminal by typing:
+  ```
+  python manage.py migrate
+  ```
 
-  5. Connect the Heroku app to the Github repository. On the Heroku app dashboard, select the "Deploy" tab. Under "Deployment method", select "Github" and confirm.
+  * Load the products & category data through thr terminal by typing:
+  ```
+  python3 manage.py loaddata categories
 
-  6. Navigate to the "Settings" tab in the app dashboard. Under "Config Vars" click "Reveal Config Vars".
+  python3 manage.py loaddata products
+  ```
 
-  7. Set the following config vars:
+  * Create a superuser account through the terminal by typing:
 
-  | Key | Value |
- --- | ---
-DEBUG | FALSE
-IP | 0.0.0.0
-MONGO_URI | `mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority`
-PORT | 5000
-SECRET_KEY | `<your_secret_key>`
+  ```
+    python manage.py createsuperuser
+  ```
+
+  * Replace the DATABASES configuration with the following:
+
+      ```
+      if "DATABASE_URL" in os.environ:
+          DATABASES = {
+              "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+          }
+      else:
+          DATABASES = {
+              'default': {
+                  'ENGINE': 'django.db.backends.sqlite3',
+                  'NAME': BASE_DIR / 'db.sqlite3',
+              }
+          }
+      ```
+
+3. Deploy the site
+
+  * Create a Procfile in the root directory and add the following code:
+      ```
+      web: gunicorn <app name>.wsgi:application
+      ```
+  * Log into Heroku through your IDE terminal by typing:
+    ```
+    heroku login -i
+    ```
+  * Temporarily disable static file collection by typing the following:
+    ```
+    heroku config:set DISABLE_COLLECTSTATIC=1 --app <app name>
+    ```
+    This will be re-enabled once AWS is up and running.
+
+  * In your settings.py file add the following:
+    ```
+      ALLOWED_HOSTS = ["<heroku app name>.herokuapp.com", "localhost"]
+    ```
+  * Git commit and Git push the changes to Github
+
+  * Deploy to Heroku through the terminal by typing:
+    ```
+    heroku git:remote -a <heroku app name>
+    git push heroku master
+    ```
+  * You're app should now be deployed to Heroku.
+
+  * As a final step, The AWS bucket can be linked to the project and COLLECTSTATIC can be re-enabled. This will gather all static files including media, CSS and js files. 
  
-8. In the Heroku app click on the "Deploy" tab and navigate to the "Manual Deployment" section. Confirm that the "master" branch is selected and click "Deploy Branch".
-
 9. The website is now successfully deployed.
 
 ----------------------------

@@ -497,43 +497,93 @@ Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
 
 ## Technologies Used
 
-### Database
-
-* [MongoDB Atlas](https://www.mongodb.com/) - Used as the primary database for storing and retrieving the information in the website.
-
 ### Languages
 
-* [HTML5](https://www.w3schools.com/html/) - Used for structuring the site pages.
+* [HTML5](https://www.w3schools.com/html/)
 
-* [CSS](https://www.w3schools.com/css/) - Used for styling the site pages.
+* [CSS](https://www.w3schools.com/css/)
 
-* [Javascript](https://www.w3schools.com/js/DEFAULT.asp) - Used to make the website interactive.
+* [Javascript](https://www.w3schools.com/js/DEFAULT.asp)
 
-* [Python](https://www.python.org/) - Used to create database-driven functionalities.
+* [Python](https://www.python.org/)
 
-### Libraries
+### Frameworks, Libraries & Programs
 
-* [jQuery](https://jquery.com/) - Used to make the website interactive.
+* [Django](https://www.djangoproject.com/) - A Python-based free and open-source web framework that follows the model–template–views architectural pattern.
 
-* [PyMongo](https://pypi.org/project/pymongo/) - Used to establish communication between MongoDB and Python.
+* [jQuery](https://jquery.com/) - Used for website interactivity.
 
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used to construct and render pages.
+* [Bootstrap 4](https://getbootstrap.com/) - Used in creating the responsiveness and styling of the website.
 
-* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - used in conjunction with flask to display data from the backend.
+* [Font Awesome](https://fontawesome.com/) - All icons used derive from here.
 
-### Tools
+* [AWS](https://aws.amazon.com/) - AWS Simple Cloud Storage S3 is used for storing static and media files.
 
-* [Gitpod](https://www.gitpod.io/docs/) - Used as a development environment.
+* [Stripe](https://stripe.com/en-de) - The platfrom used for online payment and credit card processing.
 
-* [PIP](https://pip.pypa.io/en/stable/installing/) - Used for tool installations.
+* [SQLite](https://www.sqlite.org/index.html) - The default database used with Django. Used throughout the development phase of this project.
+
+* [PostgreSQL](https://www.postgresql.org/) - The database used, upon project deployment with Heroku.
 
 * [Git](https://www.gitpod.io/docs/) - Used to handle version control.
 
+* [Gitpod](https://www.gitpod.io/docs/) - The IDE used for this project.
+
 * [Github](https://github.com/) - Used for repository hosting.
 
-* [Materialize](https://materializecss.com/about.html) - Used to develop the website design system.
+* [Balsamiq](https://balsamiq.com/) - Used to create the wireframes during the design process.
 
-* [Canva](https://www.canva.com/) - Used to create the brand logo.
+* [Google Fonts](https://fonts.google.com/) - Usedd to obtain the website font.
+
+* [Favicon.io](https://favicon.io/) - Used to generate the favicons.
+
+### Dependencies
+
+* [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and is positioned as an asynchronous successor to WSGI.
+
+* [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Used to create, configure, and manage AWS S3.
+
+* [botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html) - Botocore provides the low level clients, session, and credential & configuration data.
+
+* [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility that allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
+
+* [Django](https://www.djangoproject.com/) - A Python-based free and open-source web framework that follows the model–template–views architectural pattern.
+
+* [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - An integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+
+* [django-ckeditor](https://django-ckeditor.readthedocs.io/en/latest/) - A rich text WYSIWYG editor used within the 'Add a Blog' page.
+
+* [django-countries](https://pypi.org/project/django-countries/) - A Django application that provides country choices for use with forms, flag icons static files, and a country field for models.
+
+* [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that allows for control over the rendering behaviour of Django forms in a very elegant and DRY way.
+
+* [django-js-asset](https://pypi.org/project/django-js-asset/) - Provides a way of inserting script tags into Django templates that provide extra attributes such as `id` and `data-*` for CSP-compatible data injection.
+
+* [django-storages](https://pypi.org/project/django-storages/) - Provides a variety of storage backends in a single library.
+
+* [gunicorn](https://docs.gunicorn.org/en/stable/) - The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP server.
+
+* [jmespath](https://pypi.org/project/jmespath/) - JMESPath allows declaratively specify how to extract elements from a JSON document.
+
+* [oauthlib](https://oauthlib.readthedocs.io/en/latest/) - A framework that implements the logic of OAuth1 or OAuth2 without assuming a specific HTTP request object or web framework.
+
+* [Pillow](https://pypi.org/project/Pillow/) - A Python Imaging Library adds image processing capabilities to your Python interpreter.
+
+* [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) -  A popular PostgreSQL database adapter for the Python programming language.
+
+* [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support the use of the OpenID decentralized identity system in applications.
+
+* [pytz](https://pypi.org/project/pytz/) - Brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python 2.4 or higher.
+
+* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - Uses the Python Requests and OAuthlib libraries to provide an easy-to-use Python interface for building OAuth1 and OAuth2 clients. 
+
+* [s3transfer](https://pypi.org/project/s3transfer/) - A Python library for managing Amazon S3 transfers.
+
+* [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+
+* [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
+
+### Dependencies
 
 * [IMgBB](https://imgbb.com/) - Used to store images.
 

@@ -34,10 +34,9 @@ The webstore was created to replace an existing Etsy account, allowing for a ful
 
 2. [Features](#features)
     - [Existing Features](#existing-features)
-    - [Features Left to Implement](#features-left-to-implement)
+    - [Future Features](#future-features)
 
 3. [Information Architecture](#information-architecture)
-
 
 4. [Technologies Used](#technologies-used)
     - [Database](#database) 
@@ -329,13 +328,17 @@ A link directing users back to the shop is provided underneath.
 The django-allauth library is used to manage user registeation and authentication on the site. The allauth templates inluding login, register, forgotten password etc hae been customised to suit the brand styling.
 
 
-### Features Left to Implement
-The following are features that were not included in this release. Once adequate time and a developed skillset are available, these points will be revisited.
+### Future Features
+The following are Features that were not included in this release. Once adequate time is available, these points will be revisited.
 
-* name
-  - Implement ...
-
-
+* Sort by - average rating functionality
+* Structure change to allow multiple picture uploads for products
+* Development of the pet commissions app, to generate an automatic quote based on form field selection
+* Social media sign up and login with allauth
+* Paypal integration for checkout
+* Allow users to set seperate billing and delivery addresses
+* Replace the cart total with an item counter, on the navigation link
+* Add user's name and email address to profile page
 
 ## Information Architecture
 

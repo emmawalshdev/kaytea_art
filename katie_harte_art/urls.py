@@ -31,3 +31,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('commissions/', include('commissions.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler403 = 'home.views.error_403'
+handler404 = 'home.views.error_404'
+handler500 = 'home.views.error_500'

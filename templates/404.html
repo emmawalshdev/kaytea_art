@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -17,9 +13,27 @@
 {% endblock %}
 {% block content %}
 
-<p>404</p>
-
-
-
+    <!-- page title -->
+    <section class="page-header-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        404
+                    <h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container min-height-container">
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Oh no! The page could not be found.
+                </p>
+                <a href="{% url 'home' %}" class="mt-3 mt-sm-4 btn btn-gen btn-md">Take me home</a>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

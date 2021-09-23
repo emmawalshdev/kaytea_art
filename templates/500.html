@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -17,9 +13,31 @@
 {% endblock %}
 {% block content %}
 
-<p>500</p>
-
-
-
+    <!-- page title -->
+    <section class="page-header-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        500
+                    <h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container min-height-container">
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Oops! Looks like this page is under construction.
+                    Please try again later.
+                </p>
+                <p>
+                    If you continue to see this message, please contact me on <strong><a href="mailto:katie-harte-art@outlook.com">katie-harte-art@outlook.com</a></strong>.
+                </p>
+                <a href="{% url 'home' %}" class="mt-3 mt-sm-4 btn btn-gen btn-md">Take me home</a>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

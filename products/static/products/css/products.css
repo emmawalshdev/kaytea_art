@@ -4,6 +4,13 @@
     font-size:1.6rem;
 }
 
+.product-name {
+    overflow: hidden;
+    max-width: 20ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
 /* form */
 select option:not(:first-child){
     color: #000;

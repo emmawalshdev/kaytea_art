@@ -48,12 +48,12 @@
 
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
-          {{ form|crispy }}
+            {{ form|crispy }}
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
           <!--sign in btn-->
-          <button class="primaryAction btn btn-gen btn-long btn-lg my-3" type="submit">{% trans "Sign In" %}</button>
+          <button class="primaryAction btn btn-gen btn-long btn-md my-3" type="submit">{% trans "Sign In" %}</button>
           <!--forgot password-->
           <a class="button secondaryAction d-block" href="{% url 'account_reset_password' %}">
             {% trans "Forgotten your Password?" %}
@@ -66,7 +66,7 @@
     <div class="row">
       <div class="col-12 col-md-7">
         <h2>I'm new here.</h2>
-        <a class="btn btn-lg btn-gen btn-long my-3" href="{{ signup_url }}">Register</a>
+        <a class="btn btn-md btn-gen btn-long my-3" href="{{ signup_url }}">Register</a>
       </div>
     </div>
   </div>

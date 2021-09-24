@@ -389,10 +389,10 @@ input[name='q']::placeholder{
 /* forms */
 .form-control:focus {
     color: #212529;
-    background-color: #fff;
-    border-color: #86b7fe;
+    background-color: #ffffff;
+    border-color: #0095ff1a;
     outline: 0;
-    box-shadow: 0 0 0 0.1rem rgb(255 201 41);
+    box-shadow: 0 0 0 0.1rem #0095ff1a;
 }
 
 :focus-visible {
@@ -401,6 +401,8 @@ input[name='q']::placeholder{
 
 .form input,
 form input[type=text],
+form input[type=email],
+form input[type=password],
 .form textarea,
 .form select {
     /*width: 100%; */

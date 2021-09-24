@@ -47,14 +47,6 @@ select option[value=""]{
   color: #aab7c4!important;
 }
 
-/* hr */
-#checkout-hr {
-  border-top: 1px solid #000;
-  margin: .9rem auto;
-  width: 80%;
-  opacity: 1;
-}
-
 /* loading spinner */
 #loading-overlay {
 	display: none;
@@ -73,32 +65,4 @@ select option[value=""]{
     justify-content: center;
     margin: 0;
     height: 100%;
-}
-
-/* process steps */
-#checkout-circles {
-  margin-top: -3.3rem;
-}
-
-.checkout-circle-wrapper {
-  width: 100px;
-  text-align: center;
-  display: inline-block;
-}
-
-.checkout-circle {
-  background-color: white;
-  border: 1px solid #373737;
-  color: #373737;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin: 0 auto;
-  line-height: 4.5rem;
-  font-size: 1.3rem;
-}
-
-.checkout-circle.active {
-  background-color: #f15bb5;
-  color: white;
 }

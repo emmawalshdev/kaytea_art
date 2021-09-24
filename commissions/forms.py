@@ -25,7 +25,6 @@ class CommissionsForm(forms.ModelForm):
             'pet_num': 'Numbet of pets'
         }
 
-        self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'image':
                 if field != 'size' and field != 'pet_num' and field != 'media':

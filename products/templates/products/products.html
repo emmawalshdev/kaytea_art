@@ -53,9 +53,9 @@
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-12 col-md-6 my-auto order-sm-last sm-my-4 d-flex justify-content-center justify-content-md-end">
+            <div class="col-12 col-md-6 my-auto order-sm-last sm-my-4 d-flex justify-content-end">
                 <div class="sort-select-wrapper">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <select id="sort-selector" class="custom-select border border-{% if current_sorting != 'None_None' %}active{% else %}muted{% endif %}">
                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -66,7 +66,7 @@
             </div>
             <!-- product total -->
             <div class="col-12 col-md-6 order-md-first">
-                <p class="text-muted mt-3 text-center text-md-start">
+                <p class="text-muted mt-3 text-end text-md-start">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                     {% endif %}

@@ -207,6 +207,10 @@ hr{
     padding-bottom: 0;
 }
 
+.navbar-light .navbar-toggler {
+    border: hidden;
+}
+
 .fixed-top{
     box-shadow: 0px 1px 10px #999;
 }
@@ -530,12 +534,9 @@ footer li {
     .nav-link{
         text-align: left;
     }
-    .user-icon{
-        font-size:1rem
+    .btn-long{
+        width:100% !important;
     }
-}
-
-@media (max-width: 991px) {
     .card-img-top {
         height: 200px !important;
     }

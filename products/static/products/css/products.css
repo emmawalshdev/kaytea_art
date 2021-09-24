@@ -58,3 +58,21 @@ select option:first-child{
 .replies-section{
     background-color: #d4d3ff59;
 }
+
+/* sort by bar */
+
+.custom-select{
+    width: 300px;
+    padding: 2px;
+}
+
+.border-active {
+    border: 3px solid #2aa6b3!important;
+}
+
+/* max 991px */
+@media (max-width:991px) {
+    .custom-select {
+        width: 200px;
+    }
+}

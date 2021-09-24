@@ -205,7 +205,7 @@ hr{
 }
 
 .fixed-top{
-    background-color: white;
+    box-shadow: 0px 1px 10px #999;
 }
 
 .nav-link,
@@ -484,7 +484,7 @@ footer li {
         display: none;
     }
     .header-container {
-        padding-top: 144px;
+        padding-top: 140px;
     }
     .text-lg-right {
         text-align: right !important;
@@ -497,7 +497,7 @@ footer li {
 /* max 991px */
 @media (max-width:991px) {
     .header-container {
-        padding-top: 110px;
+        padding-top: 100px;
     }
 
     body {

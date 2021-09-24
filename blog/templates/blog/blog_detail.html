@@ -88,7 +88,7 @@
                 {% if blog.keywords %}
                 <div class="blog-keywords my-3">
                     {% for keyword in blog.keywords.all %}
-                    <h4><span class="badge bg-secondary">{{ keyword.name }} </span></h4>
+                    <h4 class="d-inline"><span class="badge bg-secondary">{{ keyword.name }} </span></h4>
                     {% endfor %}
                 </div>
                 {% endif %}

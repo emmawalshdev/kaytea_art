@@ -252,20 +252,20 @@
         <div class="col-12 col-lg-7 text-right">
             <a href="{% url 'products' %}?category=view_all" class="btn">
                 <span class="icon mr-2">
-                    <i class="fas fa-long-arrow-alt-left"></i>
+                    <i class="fas fa-chevron-left mx-2"></i>
                 </span>
-                <span class="text-uppercase">CONTINUE SHOPPING</span>
+                <span class="text-uppercase font-weight-bold">CONTINUE SHOPPING</span>
             </a>
         </div>
     </div>
     {% if from_profile %}
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
-            <a href="{% url 'profile' %}" class="btn btn-gen">
+            <a href="{% url 'profile' %}" class="btn btn-gen btn-long btn-md text-start mt-3 mt-sm-4">
                 <span class="icon mr-2">
-                    <i class="fas fa-long-arrow-alt-left"></i>
+                    <i class="fas fa-chevron-left mx-2"></i>
                 </span>
-                <span class="text-uppercase">GO TO PROFILE</span>
+                Go to Profile
             </a>
         </div>
     </div>

@@ -20,6 +20,10 @@ select option:first-child{
     color: #aab7c4;
 }
 
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
 /* cards */
 .product-card .card-img-top{
     height: 300px !important;

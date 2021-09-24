@@ -40,13 +40,15 @@
                         {% endif %}
                     {% endfor %}
                     <div>
-                        <button class="btn btn-gen btn-long btn-lg" type="submit">Add Blog</button>
+                        <button class="btn btn-gen btn-long btn-md my-2" type="submit">Add Blog</button>
                     </div>
                     <div class="mt-2">
+                        <a href="{% url 'blog' %}" class="text-uppercase font-weight-bold">
                         <span class="icon">
-                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            <i class="fas fa-chevron-left mx-2" aria-hidden="true"></i>
                         </span>
-                        <a href="{% url 'blog' %}" class="text-uppercase">Cancel</a>
+                        Cancel
+                        </a>
                     </div>
                 </form>
             </div>            

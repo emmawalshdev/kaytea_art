@@ -73,7 +73,7 @@
                     </div>
                     <div class="col-12 col-md-8 col-lg-8">
                         <div class="blog-teaser-content mt-3 mt-md-0">
-                            <h2><strong>{{ blog.title|capfirst }}</strong></h2>
+                            <h3 class="blog-tuncate"><strong>{{ blog.title|capfirst }}</strong></h3>
                             <p>{{ blog.date|date:'Y-m-d' }} by {{ blog.author }}</p>
                             <p>
                                 {{ blog.teaser|truncatechars:200|safe }}

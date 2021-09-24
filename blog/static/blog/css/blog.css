@@ -21,6 +21,13 @@
     object-position: center 20%;
 }
 
+.blog-tuncate{
+    overflow: hidden;
+    max-width: 40ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @media (max-width: 900px) {
     .blog-img-top {
         height: 30vw;

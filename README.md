@@ -227,8 +227,8 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - All fonts used in this project derive from [Google Fonts](https://fonts.google.com/). 
 
 - Fonts used include:
-  - ['Roboto Mono'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of monospace, is used for h1 - h4
-  - ['Montserrat'](https://fonts.google.com/specimen/Montserrat) with a fallback of sans-serif, is used for h5 - h6 and all other body text
+  - [''Sniglet'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of cursive, is used for h1 - h6.
+  - [''Roboto'](https://fonts.google.com/specimen/Montserrat) with a fallback of sans-serif, is used and all other body text.
 
 --------------------------------------------------------------------------------------------
 

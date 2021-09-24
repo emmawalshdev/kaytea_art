@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sniglet&display=swap');
+
 /* typography */
 body *{
-    font-family:  'Montserrat', sans-serif;
-    letter-spacing: -.03rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1,
 h2,
-h3{
-    font-family: 'Roboto Mono', monospace;
+h3,
+.lead {
+    font-family: 'Sniglet', cursive;
 }
 
 .red-text{
@@ -71,7 +74,7 @@ body{
 }
 
 section{
-    padding: 40px 0;
+    padding: 2rem 0;
 }
 
 /* cards */
@@ -370,6 +373,10 @@ button:focus:not(:focus-visible) {
     cursor: pointer;
 }
 
+#mobile-icons{
+    margin-bottom: 0;
+}
+
 /* search bar*/
 input[name='q']::placeholder{
     color: #aab7c4
@@ -497,7 +504,7 @@ footer li {
 /* max 991px */
 @media (max-width:991px) {
     .header-container {
-        padding-top: 100px;
+        padding-top: 70px;
     }
 
     body {
@@ -522,7 +529,10 @@ footer li {
     }
     .nav-link{
         text-align: left;
-}
+    }
+    .user-icon{
+        font-size:1rem
+    }
 }
 
 @media (max-width: 991px) {

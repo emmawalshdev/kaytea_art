@@ -241,90 +241,95 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 - Navigation
   - The navigation features the company logo, which is present on both mobile and desktop screen sizes.
-  - Links to the blog, shop, about and contact pages are featured on the navbar. These are contained within the hamburger menu on mobile devices.
-  - A search bar based on title and description allows for text searches. 
-  - A shopping cart showing it's total cost is shown on the navbar. This is available across all pages. 
+  - Links to the blog, shop, about and contact pages are featured on the navbar. These are contained within the hamburger menu on the mobile view.
+  - The search bar field, located on the navbar allows the user to search by title or description. 
+  - A shopping cart icon changes color if the value is greater than 0. Underneath, the user's cart total is displayed.
 
 - Footer
-  - The footer contains quick links, copyright information and social media icons.
+  - The footer contains the company logo, quick links, copyright information and social media icons.
 
 - Toast messages
   - These notifications are available across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
 
 - Custom 404, 403 and 500 pages
-  - These error pages have been customised to fit the brand with a redirect link, ensuring that the user does not run into a dead end.
+  - These error pages have been customised to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
 
 #### Home Page
-
-The homepage features snippets of various pages, driving traffic to the about, shop and commissions page.
-Cards are used to create visual cues and lead to the user to the next page. 
+* The Home page features snippets of the about and shop pages. This helps to introduce the artist and her work.
+Cards are used to display Artwork from each category, enticing the user to click into the page.
 
 #### About Page
-
-The about page simply features some text about Katie, images from her personal life and a link to the contact page.
-The contact page acts as the CTA for this page.
+* The About page features descriptive text about Katie;  the artist behind the work, along with some personal imagery.
+* The aim of this page is to provide the user with more information and a way to connect with the artist.
+* A link to the contact page is also provided, welcoming all enquiries.
 
 #### Blog Page
-The blog page contains an overview of the blog collection, showing the title, teaser, date and image of each. Pagination shows 3 blogs per page, organised by date.
-The user can click into either the image or 'read more' link of any blog to reach the inner page.  
+* The Blog page contains an overview of the blog collection. The title, teaser, date, author and image of each blog is displayed.
+* The title and teaser text are truncated to prevent large unslight strings. To view a specific blog, the user can click either the image or 'read more' teaser link.  
+* Pagination restricts the number of blogs per page to 3.
+
 
 #### Blog Details Page
-The blog details page contains the image, author, date, keywords and body of text content.
-For superusers, an edit and delete button are visible.
-Beneath the blog, lives a comment section. Only logged in users are permitted to post a comment and their username will be added to this.
+* The Blog Details page contains two sections: Blog content and blog comments. 
+* In the blog content section, the image, author, date, keywords and body of text are displayed. For superusers, edit and delete button are visible.
+* In the comments section, a toggle link invites the user to join the conversation. Only logged in users are permitted to submit a comment.
+* Featured existing comments are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 
 #### Products Page
-The products page an overview of products within the selected cateogry. 
-These are presented on cards, which feature information such as the title, price and category name. Clicking on a card brings the user straight to the product details page.
-Category buttons at the top of the page allow the user to switch easy between sub-sections.
-Furthermore, 'sort by' functionality allows the user to sort by price or name.
-Lastly, a 'back to top' button allows the user to quicky navigate back up the page. Pagination was not included on this template as it is unlikely product number will exceed 50. 
+* The Products page contains an overview of products within the selected category. 
+* Category buttons at the top of the page allow the user to switch easy between categories.
+* The product count for the selected category is displayed alongside a button to 'view all artwork'.
+* A'sort by' dropdown field allows the user to sort by price or name. 
+* Each product's title, price and category name is displayed on a card. Clicking on the product card leads the user to the product details page.
+* A 'back to top' button allows the user to quickly navigate back up the page. Pagination was not included on this template as it is unlikely the product count will ever exceed 50. 
 
 #### Product Details Page
-The product details page contains the title, image, description, media, size and product price.
-If an average star rating exists, this is also presented.
-Quantity available is displayed in a dropdown menu. The user selected the desired quanity and add it to their shopping bag.
-For superusers, an edit and delete button are visible.
-Beneath the product section, lives a review section. Only logged in users are permitted to post a review and their username will be added to this. 
+* The Products Details page contains two sections: Product detail and product reviews.
+* In the product detail section, the title, image, description, average rating, media, size and product price are displayed. For superusers, edit and delete button are visible.
+*  Quantity available is displayed in a dropdown menu. This value derives from the stock available.
+In selecting a quantity, the user is able to add the product to their bag. 
+* In the product reviews section, a toggle link invites the user to leave a review. Only logged in users are permitted to submit a review.
+* Featured existing reviews are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
+
 
 #### Product Admin Page
-The product admin page is accessible to superusers only. The page link is located under the user icon on the navbar.
-The page includes a form, from which a new product can be added.
-As well as the product title, description, media, size, SKU and price, the user can select which category the product will live in. 
+* The Product Admin page is accessible to superusers only and is accessible through the 'Account' icon dropdown on the navbar.
+* The page contains a form, from which a new product can be added to the store.
+* As well as the product title, description, media, size, SKU and price, the user can select which category the product will live in. 
 Furthermore, an image can be selected which will be displayed on the front-end.
-If an image is not added, a default picture will be showm. 
+If an image is not added, a default picture will be shown. 
 
 
 #### Pet Commissions Page
-The pet commissions page contains information about the service as well as a contact form.
-The user can submit the form, stating their preferences for media type, canvas size and the number of pets per commission.
+* The Pet Commissions page contains service information and a customer contact form.
+* The user can submit a commision request, stating their preferences for media type, canvas size and the number of pets per commission.
 
 #### Contact Page
-The contact page contains an enquiry form and lottie file animation.
-This can be used for all general queries from users. 
+* The Contact page contains an enquiry form, taking the user's name, email address and message as required fields. 
 
 #### Bag Page
-he bag page displays every product and their quantity, which the user has added. 
-Here, shoppers can update the quantities or remove products from their basket.
-A bag summary shows the subtotal, delivery cost and the grand total. If a shopper us under the free shipping bag total, a message is displayed. This communicates the total extra cost required to avail of free delivery. A button with the summary box leads the shopper to the checkout page.
-A second link allows the shopper to navigate back to the shop.
+* The Bag Page displays each product (plus the quantity), which the user has 'added to bag'.
+* The user is able to update the quantities or entirely remove products from their basket.
+* A bag summary shows the subtotal, delivery cost and the order grand total. If a shopper does not currently qualify for free shipping, a message is displayed. This communicates the total extra cost required to avail of free delivery. 
+* A 'Secure Checkout' button leads the shopper to the checkout page. A 'Continue Shopping' link allows the shopper to navigate back to the store.
+* Progress steps at the top of the bag show the user where they stand on the chekout process.
 
 #### Checkout page
-The checkout page contains an order form that shoppers must fill out to complete the checkout process.
-If a user is logged in, they are promted to tick a checkbox in order to save their default information. 
-If a user is not logged in, they are prompted to sign in to save their details.
-An order summary reminds the shopper of their bag contents and cost.  
-Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payement is successful, a confirmation email is sent. 
+* The checkout page contains an order form that shoppers must fill out to complete the checkout process.
+* If a user is logged in, they are promted to tick a checkbox in order to save their default information. 
+If a user is not logged in, they are prompted to 'Login or Register' to save their details.
+* An order summary reminds the shopper of their bag contents and the order total.  
+* Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payement is successful, a confirmation email is sent. 
 **Please note**: The website currently uses Stripe's test functionality as opposed to live payments.
 
 #### Checkout success page
-The checkout success page provides a summary of the order, stating that it was successful.
-The summary includes the order number, order date, the products ordered as well as delivery and billing information. 
-A link directing users back to the shop is provided underneath.
+* The checkout success page provides a summary of the order, stating that it was successful.
+* The summary includes the order number, order date, the products ordered as well as delivery and billing information. 
+* A link directing users back to the shop is provided underneath.
 
 #### Additional Pages
-The django-allauth library is used to manage user registeation and authentication on the site. The allauth templates inluding login, register, forgotten password etc hae been customised to suit the brand styling.
+* The django-allauth library is used to manage user registeation and authentication on the site. The allauth templates; inluding login, register, forgotten password etc hae been customised to suit the brand styling.
 
 
 ### Future Features

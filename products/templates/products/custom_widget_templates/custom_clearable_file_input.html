@@ -10,8 +10,9 @@
         </div>
     {% endif %}<br>
     {{ widget.input_text }}
+{% else %}
+    <span class="btn btn-file btn-md btn-second">
+        Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+    </span>
+    <strong><p class="text-danger" id="filename"></p></strong>
 {% endif %}
-<span class="btn btn-file btn-md btn-second">
-    Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
-</span>
-<strong><p class="text-danger" id="filename"></p></strong>

@@ -45,8 +45,13 @@ h3,
     font-size: 2em;
     color: #1f63bf;
     font-weight: 500;
+    vertical-align: middle;
+    padding-left:5px;
 } 
 
+#mobile-nav-logo .logo-text{
+    font-size:1.5rem !important;
+}
 .user-icon-text{
     display:block;
     font-size: 1rem;
@@ -518,6 +523,9 @@ footer li {
     }
     .logo-text{
         font-size: 1.8rem;
+    }
+    #mobile-nav-logo{
+        display:none;
     }
 }
 

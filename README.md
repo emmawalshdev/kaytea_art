@@ -176,7 +176,8 @@ The following features have not been included in the first rollout of this proje
 * Online payment for commissions
 * Product filtering by rating
 * Discount code and voucher capabilities
-* functionality to add a keyword from the site.
+* functionality to add a keyword from the font-end site
+* URL structure change for blog and product detail pages
 * Cart counter - showing number of items in cart instead of the cart cost
 * Automatic deduction of product stock (upon sale)
 * Automatic quote generation for pet commissions
@@ -198,7 +199,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Search results](https://i.ibb.co/YjGDyfM/Search-results.png)
 - [About](https://i.ibb.co/vdwGFnF/About.png)
 - [Blog](https://i.ibb.co/bLfcX9k/Blog.png)
-- [Blog inner page](https://i.ibb.co/tcZ5YXV/Blog-inner-page.png)
+- [Blog inner page](https://i.ibb.co/3Y98Pxb/Blog-inner-page.png)
 - [Login](https://i.ibb.co/1Zzt9Fp/Login.png)
 - [My profile](https://i.ibb.co/55H1gV7/My-account.png)
 - [Register](https://i.ibb.co/yq92r4Z/Register.png)
@@ -227,7 +228,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - All fonts used in this project derive from [Google Fonts](https://fonts.google.com/). 
 
 - Fonts used include:
-  - [''Sniglet'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of cursive, is used for h1 - h6.
+  - ['Sniglet'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of cursive, is used for h1 - h6.
   - [''Roboto'](https://fonts.google.com/specimen/Montserrat) with a fallback of sans-serif, is used and all other body text.
 
 --------------------------------------------------------------------------------------------
@@ -239,7 +240,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 #### Elements on all pages
 
 - Navigation
-  - The navigation features The logo which is present on both mobile and desktop screen sizes.
+  - The navigation features the company logo, which is present on both mobile and desktop screen sizes.
   - Links to the blog, shop, about and contact pages are featured on the navbar. These are contained within the hamburger menu on mobile devices.
   - A search bar based on title and description allows for text searches. 
   - A shopping cart showing it's total cost is shown on the navbar. This is available across all pages. 
@@ -252,7 +253,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
 
 - Custom 404, 403 and 500 pages
-  - These error pages have been customised to fit the brand, ensuring that the user does not run into a dead end.
+  - These error pages have been customised to fit the brand with a redirect link, ensuring that the user does not run into a dead end.
 
 #### Home Page
 

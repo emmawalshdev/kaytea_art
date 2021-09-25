@@ -7,7 +7,7 @@ from products.models import Category
 
 # Create your views here.
 def commissions(request):
-    '''A view to return the contact form page'''
+    ''' A view to return the commissions page '''
     all_categories = Category.objects.all()
     if request.method == 'POST':
         form = CommissionsForm(request.POST, request.FILES)

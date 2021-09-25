@@ -69,7 +69,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    '''A view to show individual product details'''
+    ''' A view to show individual product details '''
     # return all products
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product_id).order_by('-id')
@@ -114,7 +114,7 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    ''' A view to add a product to the store '''
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -140,7 +140,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    ''' A view to edit a product in the store '''
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -169,7 +169,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    ''' Delete a product from the store '''
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -181,7 +181,7 @@ def delete_product(request, product_id):
 
 @login_required
 def edit_review(request, review_id):
-    """ Edit a review on a product page """
+    ''' A view to edit a review on a product page '''
     review = get_object_or_404(ProductReview, pk=review_id)
     product_id = review.product.id
     product = get_object_or_404(Product, pk=product_id)
@@ -214,7 +214,7 @@ def edit_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
-    """ Delete a review from a product page """
+    ''' Delete a review from a product page '''
     review = get_object_or_404(ProductReview, pk=review_id)
     product_id = review.product.id
     product = get_object_or_404(Product, pk=product_id)

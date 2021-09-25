@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
-# Create your views here.
+
 def all_blogs(request):
     '''A view to return all blogs'''
     blogs = Blog.objects.all()
@@ -27,9 +27,8 @@ def all_blogs(request):
     return render(request, 'blog/blog.html', context)
 
 
-# Create your views here.
 def blog_detail(request, blog_id):
-    '''A view to show individual blog details'''
+    '''A view to show the details of an individual blog'''
     blog = get_object_or_404(Blog, pk=blog_id)
     # Show 25 contacts per page.
     replies = blog.replies.all().order_by('-id')
@@ -61,7 +60,7 @@ def blog_detail(request, blog_id):
 
 @login_required
 def add_blog(request):
-    """ A view to add a blog post """
+    ''' A view to add a blog post '''
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -89,7 +88,7 @@ def add_blog(request):
 
 @login_required
 def edit_blog(request, blog_id):
-    """ A view to edit a blog post """
+    ''' A view to edit a blog post '''
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
@@ -118,7 +117,7 @@ def edit_blog(request, blog_id):
 
 @login_required
 def delete_blog(request, blog_id):
-    """ Delete a blog post """
+    ''' Delete a blog post '''
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
@@ -130,7 +129,7 @@ def delete_blog(request, blog_id):
 
 @login_required
 def delete_reply(request, reply_id):
-    """ Delete a comment from a blog post """
+    ''' Delete a comment from a blog details page '''
     reply = get_object_or_404(Reply, pk=reply_id)
     blog_id = reply.blog.id
     blog = get_object_or_404(Blog, pk=blog_id)
@@ -157,7 +156,7 @@ def delete_reply(request, reply_id):
 
 @login_required
 def edit_reply(request, reply_id):
-    """ A view to edit a blog post """
+    ''' A view to edit a blog post comment '''
     reply = get_object_or_404(Reply, pk=reply_id)
     blog_id = reply.blog.id
     blog = get_object_or_404(Blog, pk=blog_id)

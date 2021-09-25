@@ -5,7 +5,7 @@ from django.contrib import messages
 
 # Create your views here.
 def contact(request):
-    '''A view to return the contact form page'''
+    ''' A view to return the contact form page '''
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():

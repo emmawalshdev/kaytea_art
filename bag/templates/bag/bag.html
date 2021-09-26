@@ -227,19 +227,22 @@
                 </div>
                 <!-- bag is empty msg-->
                 {% else %}
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mb-4">
+                    <h2>
+                        Your bag is empty!
+                    </h2>
+                    <p class="lead">
+                        Select from the options below to continue your shopping journey.
+                    </p>
                     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
                     </script>
                     <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_94juvpzy.json" class="m-auto"
-                        background="transparent" speed=".75" style="width: 300px; height: 300px;">
+                        background="transparent" hover autoplay speed=".75" style="width: 300px; height: 250px;">
                     </lottie-player>
-                    <p class="lead mb-5">
-                        Your bag is empty!
-                    </p>
-                    <a href="{% url 'account_login' %}" class="btn btn-second btn-md btn-long ">
+                    <a href="{% url 'account_login' %}" class="btn btn-second btn-md btn-long my-2">
                         Login
                     </a>
-                    <a href="{% url 'products' %}" class="btn btn-gen btn-md btn-long">
+                    <a href="{% url 'products' %}" class="btn btn-gen btn-md btn-long my-2">
                         Continue Shopping
                     </a>
                 </div>

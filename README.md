@@ -315,7 +315,7 @@ If an image is not added, a default picture will be shown.
 * A 'Secure Checkout' button leads the shopper to the checkout page. A 'Continue Shopping' link allows the shopper to navigate back to the store.
 * Progress steps at the top of the bag show the user where they stand on the chekout process.
 
-#### Checkout page
+#### Checkout Page
 * The checkout page contains an order form that shoppers must fill out to complete the checkout process.
 * If a user is logged in, they are promted to tick a checkbox in order to save their default information. 
 If a user is not logged in, they are prompted to 'Login or Register' to save their details.
@@ -323,17 +323,17 @@ If a user is not logged in, they are prompted to 'Login or Register' to save the
 * Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payement is successful, a confirmation email is sent. 
 **Please note**: The website currently uses Stripe's test functionality as opposed to live payments.
 
-#### Checkout success page
+#### Checkout Success Page
 * The checkout success page provides a summary of the order, stating that it was successful.
 * The summary includes the order number, order date, the products ordered as well as delivery and billing information. 
 * A link directing users back to the shop is provided underneath.
 
 #### Additional Pages
-* The django-allauth library is used to manage user registeation and authentication on the site. The allauth templates; inluding login, register, forgotten password etc hae been customised to suit the brand styling.
+* The django-allauth library is used to manage user registrtion and authentication on the site. The allauth templates; inluding login, register, forgotten password etc hae been customised to suit the brand styling.
 
 
 ### Future Features
-The following are Features that were not included in this release. Once adequate time is available, these points will be revisited.
+The following are Features that were not included in this release. These points will be revisited in future rollouts.
 
 * Sort by - average rating functionality
 * Structure change to allow multiple picture uploads for products
@@ -346,7 +346,7 @@ The following are Features that were not included in this release. Once adequate
 
 ## Information Architecture
 
-SQLite was used in the development of this project as it is the default database used with Django. On deployment with Heroku, a Postgres database is used.
+* SQLite was used in the development of this project as it is the default database used with Django. On deployment with Heroku, a Postgres database is used.
 
 ### Data Models
 
@@ -354,7 +354,7 @@ SQLite was used in the development of this project as it is the default database
 
 `User` model
 
-Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/) model is used for this project. 
+* Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/) model is used for this project. 
 
 `UserProfile` model 
 
@@ -599,7 +599,7 @@ Django's default [User](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
 
 
 ## Testing
-All testing documentation for this project is stored in a separate [TESTING.md](https://github.com/emmahartedev/testing.md) file.
+* All testing documentation for this project is stored in a separate [TESTING.md](https://github.com/emmahartedev/testing.md) file.
 
 ----------------------------
 
@@ -795,31 +795,21 @@ USE_AWS	True
 ----------------------------
 
 ## Credits 
-The following material is not my own. Sources have been listed alongside a description of the content used. 
-
-### Content
-
-* [name of source](link) - Used for ...
-
+The following material is not my own. Sources are listing below:
 
 ### Code
-The following code was used directly in this project:
-  * [name of source](link) - used to create ...
 
-The following code has been modified in this project:
-  * [Stack Overflow - dippas](https://stackoverflow.com/questions/37127123/change-color-of-underline-input-and-label-in-materialize-css-framework/37127156) - used to change the color of the materialize input fields.
+  * Icon Hover effect - [Hover.CSS](https://ianlunn.github.io/Hover/)
+  * Responsive home page banner [Bill Raymond](https://dev.to/billraymond/creating-a-pure-responsive-css-grid-hero-image-or-banner-image-2pej)
+
 
 
 ###  Media
-The images used on this website were obtained from the following sources:
-
-README.md:
-* image desc - [Source](link)
-
-https://www.toptal.com/designers/subtlepatterns/ - pattern overlay
-bird singing animation - https://lottiefiles.com/23100-happy-bird
-bag
-https://lottiefiles.com/web-player?lottie_url=https%3A%2F%2Fassets8.lottiefiles.com%2Fprivate_files%2Flf30_94juvpzy.json
+* Body overlay - [Toptal Subtle Pattern, Pete Fecteau](https://www.toptal.com/designers/subtlepatterns/?s=foggy)
+* Contact page, bird animation - [Lottie files](https://lottiefiles.com/23100-happy-bird)
+* Bag page, empty bag animation - [Lottie files](https://lottiefiles.com/web-player?lottie_url=https%3A%2F%2Fassets8.lottiefiles.com%2Fprivate_files%2Flf30_94juvpzy.json)
+* Coming soon default image -  [Pexels, alleksana](https://www.pexels.com/photo/dirty-laptop-writing-business-4271927/)
+* Brid company logo - [flaticon](https://www.flaticon.com/free-icon/bird_3069186?term=bird&page=1&position=4&page=1&position=4&related_id=3069186&origin=tag)
 
 ### Acknowledgments
-* 
+* Thank you to Gerard McBride for his guidance and support throughout this project. 

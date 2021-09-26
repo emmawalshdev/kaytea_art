@@ -174,7 +174,7 @@
                                         <tr>
                                             <td class="pt-3 text-end">
                                                 <h6>
-                                                    <strong>Sub total: </strong>{{ total|floatformat:2 }}
+                                                    <strong>Subtotal: </strong>{{ total|floatformat:2 }}
                                                 </h6>
                                             </td>
                                         </tr>
@@ -242,7 +242,7 @@
                     <a href="{% url 'account_login' %}" class="btn btn-second btn-md btn-long my-2">
                         Login
                     </a>
-                    <a href="{% url 'products' %}" class="btn btn-gen btn-md btn-long my-2">
+                    <a href="{% url 'products' %}?category=original_artwork,prints,greeting_cards" class="btn btn-gen btn-md btn-long my-2">
                         Continue Shopping
                     </a>
                 </div>

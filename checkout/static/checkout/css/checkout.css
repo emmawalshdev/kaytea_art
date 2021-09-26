@@ -47,6 +47,10 @@ select option[value=""]{
   color: #aab7c4!important;
 }
 
+#id-save-info{
+  margin: .3em .5em;
+}
+
 /* loading spinner */
 #loading-overlay {
 	display: none;

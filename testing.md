@@ -99,9 +99,42 @@ To run these tests:
 
 ### Desktop Manual Testing
 
-The following manual testing was undertaken on a desktop computer using Google Chrome.
+Manual testing was carried on a desktop computer using Google Chrome.
 
 #### Navigation
+    - Click the navbar company logo, confirm redirect to home page.
+    - Click the 'About' link, confirm confirm that redirect to About page.
+    - Click the 'Blog' link, confirm redirect to Blog page.
+    - Click the 'Shop' link, confirm that correct sub-links appear in dropdown menu.
+    - Click each link in the 'shop' dropdown menu, confirm redirect to the correct page.
+    - While logged out, click the 'Accoount' link. Confirm that correct sub-links appear in dropdown menu (Login and Register).
+    - Log in as a non-superuser, click on the 'Account' link. Confirm that the dropdown-menu displays 'My Profile' and 'Logout'.
+    - Log in as a superuser, click on 'Account'. 
+    Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logout'.
+    - Click each link in the 'Account' dropdown menu. Confirm redirects to correct pages.
+    - Add an item to the user's bag, confirm that the bag total updates to the correct value and the icon color changes to blue.
+    - Delete all bag items, confirm that the bag total updates to €0.00 and the icon color changes to black.
+    - Search for a product with in the search bar, confirm that the results of the search are displayed correctly.
+
+#### Footer
+    - Click on footer links, confirm redirect to correct page.
+    - Click the company logo, confirm redirect to home page.
+    - Click on social media links, confirm redirect to correct site.
+
+#### Homepage
+    - Click on the 'About' link, confirm redirect to about page.
+    - Hover over the category cards, confirm text color change to blue and hover effect.
+    - Click on each category card, confirm redirect to correct page.
+    - Click on the Pet Commision 'Read More' link, confirm redirect to commissions page.
+
+#### Products Page
+    - Click on each of the category buttons. Confirm redirect to correct page.
+    - Click each option within the 'Sort by' dropdown menu, confirm the the expected result appears.
+    - Click on the card image for each product, confirm redirect to correct page.
+    - Click on the each of the card category tags, confirm redirect to correct category page.  
+    - Hover over each product card, confirm that a shadow effect is applied.
+    - Click the category for each product, confirm each product for that category is displayed.
+    - Click on the 'back to top' button. Confirm navigation to the top of page.
 
 
 ### Mobile and Tablet Manual Testing

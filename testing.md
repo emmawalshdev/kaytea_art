@@ -128,7 +128,7 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Click on the Pet Commision 'Read More' link, confirm redirect to commissions page.
 
 #### Products Page
-- Click on each of the category buttons. Confirm redirect to correct page.
+- Click on each of the category buttons. Confirm redirect to correct page. 
 - Click each option within the 'Sort by' dropdown menu, confirm the the expected result appears.
 - Click on the card image for each product, confirm redirect to correct page.
 - Click on the each of the card category tags, confirm redirect to correct category page.  
@@ -136,9 +136,18 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Click the category for each product, confirm each product for that category is displayed.
 - Click on the 'back to top' button. Confirm navigation to the top of page.
 
+#### Product Admin Page
+- Attempt to access the 'Product Admin' page while logged in as a non superuser by URL. Confirm redirect to homepage, along with the display of an Error toast message.
+- Attempt to access the 'Product Admin' page while logged out. Confirm redirect to Login page.
+* Form submission
+    - Submit the form with incorrect data, confirm the relevant warning messages are displayed.
+    - Submit a valid form, confirm redirect to the new product page.
+    - Confirm that a default image is displayed for products which do not have a saved image.
+
+
 #### Product Detail Page
 * Product section
-    - Click on the product image, confirm that the image in a new tab.
+    - Click on the product image, confirm that the image opens in a new tab.
     - Click on the product category, confirm redirect to correct category page.
     - Login as a superuser, confirm that the edit and delete buttons are visible. Click on each button, confirm that the correct template/popup is rendered.
     - Delete the product, confirm that it is removed from the store.
@@ -148,7 +157,7 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 
 * Reviews section
     - Confirm the message 'No reviews yet!' is displayed for a product that has no reviews. 
-    - Logout. Confirm that the 'Please Login' message is displayed.
+    - Logout. Confirm that the 'Please Login' to leave a review message is displayed.
     - Login, confirm that the review form is visible.
     - Attempt to submit the form with invalid data, confirm the relevant warning message is displayed.
     - Submit a valid form, confirm that new review is added. Check that reviews are ordered by date, showing the username, rating and comment.
@@ -170,7 +179,6 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Click the 'Secure Checkout' button, confirm redirect to the checkout page.
 
 #### Checkout Page
-
 - Attempt to access the checkout page by URL with an empty bag, Confirm redirect to the homepage with an error message.
 
 - Confirm that the products in the order summary box are correct.
@@ -191,7 +199,52 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 
     - Confirm that a confirmation email is sent to the user.
 
+#### Profile Page
+* Order history section
+    - Confirm the order history correctly contains a list of past orders.
+    - Click on an order number, confirm that the correct order details are rendered.
+    Confirm that an information message is displayed, stating that this is a past order.
+    - Click on the 'Back to Profile' button, confirm redirect to profile page.
 
+* Profile form
+    - Add or edit default delivery information, click the 'Update Information' button. Confirm that the information correctly updates.
+    - Click on the bag icon having added items. Confirm that the order form is pre-filled with the users delivery details.
+
+#### Blog Page
+
+- Confirm the 'Blog Blog' button is only visible to logged in superusers. Click button. Confirm redirect to 'Add Blog' page.
+
+- Click on a blog image, confirm it directs to the correct blog details page.
+
+- Click on the 'read more' link and blog image, confirm redirect to the correct blog detail page.
+
+- Confirm pagination links are working correctly.
+
+#### Add Blog Page
+- Attempt to access the 'Add Blog' page while logged in as a non superuser by URL. Confirm redirect to homepage, along with the display of an Error toast message.
+
+- Attempt to access the 'Add Blog' page while logged out. Confirm redirect to Login page.
+
+* Form submission
+    - Submit the form with incorrect data, confirm the relevant warning messages are displayed.
+    - Submit a valid form, confirm redirect back to the blog overview page, with the new blog post appearing in the first position.
+    - Confirm that a default image is displayed for blogs which do not have a saved image.
+
+#### Blog Detail Page
+
+* Blog section
+    - Click on the blog image, confirm that the image opens in a new tab.
+    - Login as a superuser, confirm that the edit and delete buttons are visible. Click on each button, confirm that the correct template/popup is rendered.
+    - Delete the blog, confirm that it is removed from overview page.
+
+* Comments section
+    - Confirm the message 'No comments yet!' is displayed for a blog that has no comments. 
+    - Logout. Confirm that the 'Please Login' to leave a comment message is displayed.
+    - Login, confirm that the comment form is visible.
+    - Attempt to submit the form with invalid data, confirm the relevant warning message is displayed.
+    - Submit a valid form, confirm that new comment is added. Check that comments are ordered by date, showing the username and comment.
+
+ 
 ### Mobile and Tablet Manual Testing
 
 

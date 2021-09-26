@@ -798,7 +798,7 @@ USE_AWS	True
 The following material is not my own. Sources are listing below:
 
 ### Code
-
+  * The code for this project has been created with the guidance of the Code Institute's; Boutique Ado Project.
   * Icon Hover effect - [Hover.CSS](https://ianlunn.github.io/Hover/)
   * Responsive home page banner [Bill Raymond](https://dev.to/billraymond/creating-a-pure-responsive-css-grid-hero-image-or-banner-image-2pej)
 

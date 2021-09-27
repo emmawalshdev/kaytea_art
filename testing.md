@@ -141,12 +141,23 @@ The following section revisits the user stories identified in the UX section of 
     * links to the about page are feautred on the navigation bar and footer as well as on the homepage.
 
 **Shopping**
-1. To know that the payment process is secure as I only shop on trustworthy sites.
-2. To be able to navigate to my shopping cart easily so that I can quickly checkout.
-3. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
-4. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
-5. To receive an email after I submit an order so that I am aware the interaction had been a success.
-6. My shipping details should autofill if I am logged in so that I can quickly checkout.
+1. To be able to navigate to my shopping cart easily so that I can quickly checkout.
+    * The shopping cart is featured on the navbar which makes it easily assessible from all pages.
+    * The bag icon changes color and displayed the cost total when items have been added to it. This gives the user a visual represntation of their active session. 
+2. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
+    * Within the bag page, the user can easily update quantities or remove products entirely.
+    * With every successful update or product removal, a toast message is triggered notifying the user of their action.
+
+3. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
+    * If the product is out of stock, the user will not be able to add the item to their shopping bag. An 'Out of Stock' message is instead displayed on the product page. In future rollouts, functionality to publish and unpublish the page will be investigated.
+
+4. To receive an email after I submit an order so that I am aware the interaction had been a success.
+    * Once an order is complete, an email confirmation is sent to the supplied email address.
+    * A Toast message stating the transaction has been a success, is displayed.
+    * The user is redirected to a 'Checkout Success' page. This contains a thank you message and a summary of the order.
+    * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
+
+5. My shipping details should autofill if I am logged in so that I can quickly checkout.
 
 **Customer care**
 1. To be able to set up an account, so that I can login on return and view my data.

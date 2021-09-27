@@ -85,12 +85,11 @@ The webstore was created to replace an existing Etsy account, allowing for a ful
 9. To learn more about the artist and the process behind the creations. As a supporter of small businessess, I like to feel a connection to the business owner.
 
 **Shopping**
-1. To know that the payment process is secure as I only shop on trustworthy sites.
-2. To be able to navigate to my shopping cart easily so that I can quickly checkout.
-3. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
-4. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
-5. To receive an email after I submit an order so that I am aware the interaction had been a success.
-6. My shipping details should autofill if I am logged in so that I can quickly checkout.
+1. To be able to navigate to my shopping cart easily so that I can quickly checkout.
+2. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
+3. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
+4. To receive an email after I submit an order so that I am aware the interaction had been a success.
+5. My shipping details should autofill if I am logged in so that I can quickly checkout.
 
 **Customer care**
 1. To be able to set up an account, so that I can login on return and view my data.

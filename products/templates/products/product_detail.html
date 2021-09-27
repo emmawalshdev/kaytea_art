@@ -108,6 +108,7 @@
                     {% if product.stock == 0 %}
                         <p class="red-text">Out of Stock</p>
                     {% endif %}
+                    {% if product.stock > 0 %}
                     <!-- Add to basket form -->
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
@@ -144,6 +145,7 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                    {% endif %}
                 </div>
             </div>
         </div>

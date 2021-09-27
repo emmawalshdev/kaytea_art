@@ -158,6 +158,8 @@ The following section revisits the user stories identified in the UX section of 
     * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 5. My shipping details should autofill if I am logged in so that I can quickly checkout.
+    * The Profile page gives the logged in user the ability to update their personal and shipping information. This infomation is used to prefill the order form on the checkout page.
+    * Shipping details can also be updated on the checkout page. If the user is logged in, a checkbox labelled 'Save this delivery information to my profile' handles the request. If the user is not logged in, the message 'Login or Register to save this information.' is displayed instead.
 
 **Customer care**
 1. To be able to set up an account, so that I can login on return and view my data.

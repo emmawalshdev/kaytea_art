@@ -93,6 +93,86 @@ To run these tests:
 
 
 ## Testing User Stories
+The following section revisits the user stories identified in the UX section of README.md. The aim is to check that the site meets those needs.
+
+### Visitor stories:
+**As a visitor of the website I expect/want/need:**
+
+**Browsing**
+1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
+    * The placement of site elements including the navbar, search, footer, icons, products lists, and website forms have been designed and developed to satisfy this specific UX need. 
+    * The site's key pages can be accessed from both the navigation bar and the footer, which are included on all site pages.
+
+2. To be able to search for products by text, so that I can find something specific.
+    * A search bar located on the navigation bar allows the user to search by product title or description. Additionally, the user can sort the result to drill the search down even further.
+
+3. To browse orginal artwork and prints, as these are the main categories of an artshop which I would expect to see. 
+    * These categories, along with 'All Artwork' have been included in the current rollout.
+    * Buttons for each category are also present within each individial page, allowing the user to easily switch views.
+
+4. To be able to filter by price within category pages so that I can find a product to suit my budget.
+    * A 'Sort by' dropdown field is presented on each cateogory page. This allows the user to sort by price and also my name.
+
+5. To see the image, media used and canvas size of each product. This information is vital to me.
+    * This information has been included in the product upload form assessible to superusers.
+    * The size and media field are required. The image field is optional, and takes a default 'coming soon' image in case no picture has been saved.
+
+6. To be able to read product reviews as this helps me to decide on the quality and level of service delivered by the company.
+    * A  reviews section has been added to the product details template, allowing users to leave a review (text and rating ) and to view existing reviews.
+    * To help fish out disingenuous submissions, the user must be logged in to submit a form. Alongside each review, the author's username is posted.
+    * An average star rating, pinned to the product section, is calculated based on existing reviews.
+    * The reviews are ordered by date. This makes sure that the most recent comments are shown first.
+
+7. To request a quote for a pet commission so that I can decide myself whether this is something I would like to purchase. 
+    * A form on the Pet Commissions page allows the user to make a service request. As stated in the page text, the Artist will then get in touch with the client to discuss a quote.
+    * As well as contact information, the commission form fields include media and canvas size preference,  number of pets and a textfield for extra comments. This allows the artist to calculate a preliminary quote, before speaking to the client. 
+
+8. To receive feedback after I interact with the website so that I am aware if the interaction has or has not been a success.
+    * Toast messages provides user feedback about an operation in a small popup.
+    In this release, Information, Error and Success Toast messages have been included. 
+
+    * The user can quickly identify Success, information or error messages. Each Toast has been styled to clearly stand out with font color and icons.
+
+    * These inform them of failed or successful interaction. Examples include form submission and user login. Toast messages also show Information and Success messages are triggered by user activity and inform the user if their interaction.
+    * On success Toast messages, a summary of the user's bag contents is included (if items have been added). This keeps the user updated with their activity.
+ 
+9. To learn more about the artist and the process behind the creations. As a supporter of small businessess, I like to feel a connection to the business owner.
+    * An about page containing imagery and text, allows the user to gain a detailed insight into the Artist's life. 
+    * links to the about page are feautred on the navigation bar and footer as well as on the homepage.
+
+**Shopping**
+1. To know that the payment process is secure as I only shop on trustworthy sites.
+2. To be able to navigate to my shopping cart easily so that I can quickly checkout.
+3. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
+4. To know that the stock levels on products are accurate so that I know shipping delays won't occur. 
+5. To receive an email after I submit an order so that I am aware the interaction had been a success.
+6. My shipping details should autofill if I am logged in so that I can quickly checkout.
+
+**Customer care**
+1. To be able to set up an account, so that I can login on return and view my data.
+2. To be able to contact the shop owner easily in case I have a question related to my order.
+3. To see a summary of my order after I make a purchase so that I can review the details.
+4. To see a list of my order history so that I can check up on my recent activity. 
+5. To have the choice to reset my account password in case I forget it.
+6. To be able to update my account details in case a change is required.
+7. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
+
+
+### Business stories:
+**As the website owner**:
+**As a superuser of the website I expect/want/need:**
+
+**General**
+1. Build a beautiful, easy-to-use, trustworthy website so that I can build brand awareness and sell artwork.
+2. To be able to view customer/order/product data so that I easily pull up information if required. 
+
+**Website admin**
+1. To be able to add/edit and delete products on the website so that I can keep the information up-to-date.
+2. To be able to add/edit and delete blog content on the website so that I can keep the page fresh.
+
+**Online shop admin**
+1. To receive order notifications so that I begin preparing these.
+2. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
 
 
 ## Manual Testing on Live Site
@@ -254,10 +334,18 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 
 1. When attempting to add a new image to a blog/product and remove an existing image at the same time, an error occured.
 
+2. Adding an item with zero stock dissallowed.
+
 
 
 ### Unresolved Bugs
 
+2. After deploying to Heroku, Issues were encountered while working locally.
+This has temporarily been fixed by running command on workspage setup
+```
+unset DATABASE_URL
+```
+To permanently fix this issue, futher investigation is required.
 
 
 > [Back to Top](#table-of-contents)

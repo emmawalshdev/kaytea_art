@@ -163,12 +163,31 @@ The following section revisits the user stories identified in the UX section of 
 
 **Customer care**
 1. To be able to set up an account, so that I can login on return and view my data.
+    * Customised allauth Login and Register pages have been developed, allowing the user to set up and login to an account.
+    * On the Profile page. the user is able to add and edit their personal and shipping information.
+    * Setting up an account and logging in allows the user to review products and leave blog comments. 
+       
 2. To be able to contact the shop owner easily in case I have a question related to my order.
+    * A Contact page is accessible from the navigation bar and footer,  which is visible on all website pages.
+    * The contact form welcomes all general enquiries from users.
+
 3. To see a summary of my order after I make a purchase so that I can review the details.
+    * After an order has been submitted, an email confirmation is sent to the supplied email address. This can be kept by the customer for personal record.  
+    * Upon order submission, the user is redirected to a 'Checkout Success' page. This contains a thank you message and a summary of the order.
+    * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
+
+
 4. To see a list of my order history so that I can check up on my recent activity. 
-5. To have the choice to reset my account password in case I forget it.
-6. To be able to update my account details in case a change is required.
-7. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
+    * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
+
+
+5. To be able to update my account details in case a change is required.
+    * The Account page gives the logged in user the ability to update their first name, last name and mobile number.
+    At the moment the user cannot change their email adress, username password. This will be included in future releases. 
+
+
+6. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
+    * Social media links are located in the website footer. These are visible on all pages.
 
 
 ### Business stories:

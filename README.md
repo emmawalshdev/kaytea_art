@@ -96,9 +96,8 @@ The webstore was created to replace an existing Etsy account, allowing for a ful
 2. To be able to contact the shop owner easily in case I have a question related to my order.
 3. To see a summary of my order after I make a purchase so that I can review the details.
 4. To see a list of my order history so that I can check up on my recent activity. 
-5. To have the choice to reset my account password in case I forget it.
-6. To be able to update my account details in case a change is required.
-7. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
+5. To be able to update my account details in case a change is required.
+6. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
 
 
 #### Business stories:

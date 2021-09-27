@@ -114,7 +114,7 @@ The webstore was created to replace an existing Etsy account, allowing for a ful
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
-2. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
+2. To be able to provide a commision quote based on canvas size and number of pets. 2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them.  
 
 ### Project Scope
 

@@ -196,15 +196,34 @@ The following section revisits the user stories identified in the UX section of 
 
 **General**
 1. Build a beautiful, easy-to-use, trustworthy website so that I can build brand awareness and sell artwork.
+    * The website has been designed 
+
+
 2. To be able to view customer/order/product data so that I easily pull up information if required. 
+    * The admin site allows the superuser to view a host of information including form submissions, orders, products, customer and user data 
+    * The super user has full CRUD capabilities within the admin panel. E.g, adding, editing and removing a product.
+
 
 **Website admin**
 1. To be able to add/edit and delete products on the website so that I can keep the information up-to-date.
+    * The 'Product Admin' link under 'Account' on the navigation bar allows the user to add a product to the store.
+    * The 'Post Blog' button on the blog overview page allows the user to add a blog to the site.
+    * Edit and delete buttons are visible within product pages only to the superuser. 
+    * All CRUD operations can be easily executed on the Admin site.
+
+
 2. To be able to add/edit and delete blog content on the website so that I can keep the page fresh.
+    * The 'Post Blog' button on the blog overview page allows the user to add a blog to the site.
+    * Edit and delete buttons are visible within product and blog pages only to the superuser. 
+    * All CRUD operations can be easily executed on the Admin site.
+
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
-2. To be able to provide a commision quote based on canvas size and number of pets. This would help to inform the user of the price before purchasing. 
+    * A webhook has been set up to nofify the superuser when an order has been submitted.
+
+2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
+    * 'Canvas size' and 'number of pets' fields have been included on the pet commissions form. This information, along with contact details for the user is designed to help the Artist calculate a rough quote.
 
 
 ## Manual Testing on Live Site

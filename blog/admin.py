@@ -13,7 +13,11 @@ class BlogAdmin(admin.ModelAdmin):
 
 
 class ReplyAdmin(admin.ModelAdmin):
-    list_display = ('blog', 'date')
+    list_display = (
+        'blog',
+        'author',
+        'date',
+    )
     list_filter = ('date',)
 
 

@@ -1,7 +1,7 @@
 <div class="toast" data-autohide="false">
     <!-- Toast header -->
     <div class="toast-header">
-        <strong class="mr-auto">
+        <strong class="mr-auto text-success">
             <i class="far fa-check-circle fa-lg"></i>
             Success!
         </strong>
@@ -15,11 +15,11 @@
         <div class="row">
             <div class="col">
                 {{ message }}
-                <hr class="toast-hr mt-2 mb-3">
             </div>
         </div>
         <!-- Shopping basket -->
-        {% if grand_total and not on_profile_page and not on_blog_page and not on_blog_post_page %}
+        {% if grand_total and not on_profile_page and not on_blog_page and not on_product_page %}
+        <hr class="toast-hr mt-2 mb-3">
         <p class="py-1">Your Basket ({{ product_count }} item{{ product_count|pluralize}})</p>
         <div class="bag-notification-wrapper">
             {% for item in bag_items %}

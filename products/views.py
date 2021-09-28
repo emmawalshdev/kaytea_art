@@ -65,6 +65,7 @@ def all_products(request):
         'current_categories': categories,
         'all_categories': all_categories,
         'current_sorting': current_sorting,
+        'on_product_page': True,
     }
 
     return render(request, 'products/products.html', context)
@@ -109,6 +110,7 @@ def product_detail(request, product_id):
         'form': form,
         'reviews': reviews,
         'avg_rating': avg_rating,
+        'on_product_page': True,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -136,6 +138,7 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'on_product_page': True,
     }
 
     return render(request, template, context)
@@ -166,6 +169,7 @@ def edit_product(request, product_id):
     context = {
         'form': form,
         'product': product,
+        'on_product_page': True,
     }
 
     return render(request, template, context)

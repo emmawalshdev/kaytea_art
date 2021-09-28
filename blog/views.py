@@ -20,6 +20,7 @@ def all_blogs(request):
     context = {
         'blogs': blogs,
         'page_obj': page_obj,
+        'on_blog_page': True,
     }
 
     return render(request, 'blog/blog.html', context)
@@ -50,7 +51,8 @@ def blog_detail(request, blog_id):
         'blog': blog,
         'replies': replies,
         'form': form,
-        'username': username
+        'username': username,
+        'on_blog_page': True,
     }
 
     return render(request, 'blog/blog_detail.html', context)
@@ -80,6 +82,7 @@ def add_blog(request):
     template = 'blog/add_blog.html'
     context = {
         'form': form,
+        'on_blog_page': True,
     }
 
     return render(request, template, context)
@@ -110,6 +113,7 @@ def edit_blog(request, blog_id):
     context = {
         'form': form,
         'blog': blog,
+        'on_blog_page': True,
     }
 
     return render(request, template, context)
@@ -188,6 +192,7 @@ def edit_reply(request, reply_id):
         'replies': replies,
         'blog': blog,
         'form': form,
+        'on_blog_page': True,
     }
 
     return render(request, template, context)

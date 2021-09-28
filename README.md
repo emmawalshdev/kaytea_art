@@ -335,7 +335,8 @@ The following are Features that were not included in this release. These points 
 
 * Sort by - average rating functionality
 * Structure change to allow multiple picture uploads for products
-* Development of the pet commissions app, to generate an automatic quote based on form field selection
+* Development of the pet commissions app, to generate an automatic quote based on form field selection 
+* Pagination for blog and product reviews
 * Social media sign up and login with allauth
 * Paypal integration for checkout
 * Allow users to set seperate billing and delivery addresses

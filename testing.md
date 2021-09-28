@@ -50,19 +50,26 @@ warnings and fix
 The Flake8 Python library was used to check the project code base against coding style (PEP8).
 The initial report can be found [here](https://www.dropbox.com/s/txpx7wyzxl74vck/flake8_results.txt?dl=0)
 
-**Fixed**
-* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines too long and innapropriate use of null=True on model fields.
-* Auto migration files were ignored. 
+**General information**
+* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines too long and innapropriate use of null=True on model fields. These were removed from all files with exception to the following:
+
+* All Auto migration files are ignored. 
+* In settings.py,  auto-generated lines are ignored
+* In all files, the Rule DJ01 - 'Avoid using null=True on string-based fields such as CharField and TextField' was ignored
+
+**Resolution**
 All the files passed with the following errors ignored/fixed:
 
-- ```error```
+- ```./products/widgets.py:9:80: E501 line too long (87 > 79 characters) ```
 
-    ```error msg
-    ```
+    this was ignored as the URL cannot be split.
+    URL = template_name = 'products/custom_widget_templates/custom_clearable_file_input.html'.
 
-    reason for ignoring/fix 
+- ```./contact/forms.py:5:1: DJ07 Do not use __all__ with ModelForm, use fields instead```
+    Not a critical error, ignored.
 
-
+- ```./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused```
+    Not a critical error, ignored.
 
 #### Unit Testing
 

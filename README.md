@@ -337,6 +337,9 @@ The following are Features that were not included in this release. These points 
 * Structure change to allow multiple picture uploads for products
 * Development of the pet commissions app, to generate an automatic quote based on form field selection 
 * Pagination for blog and product reviews
+* Allow multiple image uploads for products and blogs
+* Add a boolean 'published' value to control whether a product is public or not.
+* Add Privacy Policy and T&C pages. 
 * Social media sign up and login with allauth
 * Paypal integration for checkout
 * Allow users to set seperate billing and delivery addresses

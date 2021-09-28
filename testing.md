@@ -394,15 +394,26 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 
 ### Solved Bugs
 
-1. When attempting to add a new image to a blog/product and remove an existing image at the same time, an error occured.
+1. When attempting to add a new image to a blog/product and remove an existing image at the same time, a toast error message occured. I discovered this was caused by the image limitation of 1, set to this project. As multiple images is not a feauture planned for this release, no changes were made to this setting. A temporary fix to hide the 'select image' button (if an image already has been uploaded) was added instead. This forces the user to first remove the image before adding a new one. 
 
-2. Adding an item with zero stock dissallowed.
+2. Adding an item with zero stock disallowed.
+Understandably, Django threw an error for products with stock level < 0 which were added to the bag. Preferably, I would like to add a boolean 'publish' feature which would unpublish the product when stock level is 0.
+As a temporary fix, the 'Add to Bag' button was hidden and a short message shown.
 
 
+3. Model migrations not working on Heroku.
+After deployement, I continued to alter and create models. While this worked locally, no changes were reflected on Heroku.
+When attempting to access the models from the admin site, a 500 error was thrown. I discoved that the migrations had not successfully migrated to the live site and was able to resolve this by running ```python3 manage.py runserver``` directly on the heroku console.
 
 ### Unresolved Bugs
 
-2. After deploying to Heroku, Issues were encountered while working locally.
+2. After deploying to Heroku, issues were encountered while attempting to continue working locally. The error message states that (settings.DATABASES is improperly configured)[https://i.ibb.co/L85QJpQ/database-url-error.jpg].
+Thanks to the CI tutor support, I discoved this is caused by CI template and how it has configured the database within the dockerfile. While the command 
+```
+unset DATABASE_URL
+```  
+temporarily works for the working session, I am yet to find a permanent solution to the issue.
+
 This has temporarily been fixed by running command on workspage setup
 ```
 unset DATABASE_URL

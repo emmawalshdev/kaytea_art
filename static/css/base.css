@@ -346,8 +346,8 @@ button:focus:not(:focus-visible) {
     background-color: white;
     border: 1px solid #373737;
     color: #373737;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin: 0 auto;
     line-height: 4.5rem;

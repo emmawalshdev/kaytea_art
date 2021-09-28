@@ -10,7 +10,7 @@
     </a>
 </div>
 
-![Generated from Am I Responsive](https://i.ibb.co/WDmNFFv/amiresponsive.png)
+![Generated from Am I Responsive](https://i.ibb.co/D1mn86w/responsiveimg.png)
 
 
 The Kaytea Art webshop was designed, built and deployed by Emma Harte. The project was undertaken as the final milestone project for the Code Institute Full Stack; Web Development diploma.

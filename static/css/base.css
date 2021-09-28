@@ -516,7 +516,7 @@ footer li {
         display: none;
     }
     .header-container {
-        padding-top: 140px;
+        padding-top: 135px;
     }
     .text-lg-right {
         text-align: right !important;
@@ -566,6 +566,12 @@ footer li {
     }
 }
 
+@media (max-width:400px) {
+    .nav-link {
+        padding: .2rem .2rem;
+
+    }
+}
 /*.icon{
     align-items:center;
     display: inline-flex;

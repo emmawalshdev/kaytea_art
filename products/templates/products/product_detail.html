@@ -106,7 +106,14 @@
                     </div>
                     <!--quantity available-->
                     {% if product.stock == 0 %}
-                        <p class="red-text">Out of Stock</p>
+                        <p class="red-text font-weight-bold">Sorry, I'm out of stock.</p>
+                        <h5 class="font-weight-bold">Did you know..</h5>
+                        <p>
+                            I am also able to create beautiful custom commisions, just like this.
+                            If you are inspired by this piece, please feel free to get in touch with me via the <a href="{% url 'contact' %}" class ="font-weight-bold">contact page</a>
+                            <br>
+                            Custom Artwork can be as personalised as you, and takes approximately 4-6 weeks to lovingly create.
+                        </p>
                     {% endif %}
                     {% if product.stock > 0 %}
                     <!-- Add to basket form -->

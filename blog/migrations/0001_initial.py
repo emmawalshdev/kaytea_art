@@ -22,11 +22,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Blog',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                 serialize=False, verbose_name='ID')),
                 ('slug', models.SlugField(max_length=254, unique=True)),
                 ('date', models.DateTimeField(auto_now_add=True)),
                 ('title', models.CharField(max_length=254)),
-                ('body', models.TextField(validators=[django.core.validators.MinLengthValidator(20)])),
+                ('body', models.TextField(
+                    validators=[django.core.validators.MinLengthValidator(20)])),
                 ('image', models.URLField(blank=True, max_length=1000, null=True)),
                 ('keyword', models.ManyToManyField(blank=True, to='blog.Keyword')),
             ],

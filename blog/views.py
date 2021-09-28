@@ -1,13 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
 from .models import Blog, Reply
 from .forms import BlogForm, ReplyForm
 
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
 
 
 def all_blogs(request):
@@ -70,11 +68,12 @@ def add_blog(request):
         if form.is_valid():
             user = User.objects.get(username=request.user.username)
             form.instance.author = user
-            blog = form.save()
+            # blog = form.save()
             messages.success(request, 'Successfully added blog!')
             return redirect('blog')
         else:
-            messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add blog. \
+                Please ensure the form is valid.')
     else:
         form = BlogForm()
 
@@ -101,7 +100,8 @@ def edit_blog(request, blog_id):
             messages.success(request, 'Successfully updated blog!')
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
-            messages.error(request, 'Failed to update blog. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update blog. \
+                 Please ensure the form is valid.')
     else:
         form = BlogForm(instance=blog)
         messages.info(request, f'You are editing {blog.title}')
@@ -160,7 +160,7 @@ def edit_reply(request, reply_id):
     reply = get_object_or_404(Reply, pk=reply_id)
     blog_id = reply.blog.id
     blog = get_object_or_404(Blog, pk=blog_id)
-    user = User.objects.get(username=request.user.username)
+    # user = User.objects.get(username=request.user.username)
     replies = blog.replies.all().order_by('-id')
 
     if reply.author != request.user and not request.user.is_superuser:
@@ -174,10 +174,12 @@ def edit_reply(request, reply_id):
             messages.success(request, 'Successfully updated comment!')
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
-            messages.error(request, 'Failed to update comment. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update comment. \
+                Please ensure the form is valid.')
     else:
         form = ReplyForm(instance=reply)
-        messages.info(request, f'You are editing your comment for {reply.blog}')
+        messages.info(request, f'You are editing \
+             your comment for {reply.blog}')
 
     template = 'blog/edit_reply.html'
 

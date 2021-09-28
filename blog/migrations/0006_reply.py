@@ -21,8 +21,12 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(max_length=100)),
                 ('date', models.DateTimeField(auto_now_add=True)),
                 ('body', models.TextField(max_length=1000)),
-                ('blog', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='replies', to='blog.blog')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('blog', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    related_name='replies', to='blog.blog')),
+                ('user', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

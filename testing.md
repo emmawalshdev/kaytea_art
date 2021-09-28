@@ -47,8 +47,12 @@ warnings and fix
 
 #### PEP8
 
-The Flake8 Python library was used for checking the code base against the PEP8 coding style and for checking for programming errors.
+The Flake8 Python library was used to check the project code base against coding style (PEP8).
+The initial report can be found [here](https://www.dropbox.com/s/txpx7wyzxl74vck/flake8_results.txt?dl=0)
 
+**Fixed**
+* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines too long and innapropriate use of null=True on model fields.
+* Auto migration files were ignored. 
 All the files passed with the following errors ignored/fixed:
 
 - ```error```

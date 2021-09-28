@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator
 
-from django.contrib.auth.models import User  
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -20,14 +20,16 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    date_added = models.DateTimeField(auto_now_add=True, null=True) 
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    date_added = models.DateTimeField(auto_now_add=True, null=True)
     sku = models.CharField(max_length=200, null=True, blank=True)
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     size = models.CharField(max_length=200)
     media = models.CharField(max_length=200)
-    stock = models.PositiveSmallIntegerField(validators=[MaxValueValidator(20)])
+    stock = models.PositiveSmallIntegerField(
+                                            validators=[MaxValueValidator(20)])
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
 

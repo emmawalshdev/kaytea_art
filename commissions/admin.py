@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Commissions
 
+
 class CommissionsAdmin(admin.ModelAdmin):
     list_display = (
         'name',

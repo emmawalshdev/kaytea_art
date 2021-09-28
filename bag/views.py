@@ -10,6 +10,7 @@ def view_bag(request):
 
     return render(request, 'bag/bag.html')
 
+
 def add_to_bag(request, item_id):
     '''Add a quantity of the specified product to the bag'''
 
@@ -22,7 +23,7 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        # update quantity if item already exists 
+        # update quantity if item already exists
         bag[item_id] += quantity
         messages.success(
             request, f'Updated {product.name} quantity to {bag[item_id]}')
@@ -34,6 +35,7 @@ def add_to_bag(request, item_id):
     # overwrite the session var with updated version
     request.session['bag'] = bag
     return redirect(redirect_URL)
+
 
 def adjust_bag(request, item_id):
     '''Adjust the quantity of the specified product to the requested amount'''
@@ -51,6 +53,7 @@ def adjust_bag(request, item_id):
     # overwrite the session var with updated version
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
 
 def remove_from_bag(request, item_id):
     '''Remove the specified product from the bag'''

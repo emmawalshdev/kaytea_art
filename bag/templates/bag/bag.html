@@ -76,6 +76,10 @@
                                         Size: {{ item.product.size }}
                                         <br>
                                         Media: {{ item.product.media }}
+                                        <br>
+                                    </p>
+                                    <p class="mt-2 small">
+                                        x {{item.quantity}} @ €{{ item.product.price | calc_subtotal:item.quantity }}
                                     </p>
                                     <a class="remove-item text-danger ml-4" id="remove_{{ item.item_id }}">
                                         <i class="fas fa-trash-alt"></i>
@@ -143,8 +147,8 @@
                                                     Update
                                                 </small>
                                             </a>
-                                            <p class="mt-4 font-weight-bold">
-                                                €{{ item.product.price | calc_subtotal:item.quantity }}
+                                            <p class="mt-4">
+                                                x {{item.quantity}} @ €{{ item.product.price | calc_subtotal:item.quantity }}
                                             </p>
                                         </td>
                                     </tr>

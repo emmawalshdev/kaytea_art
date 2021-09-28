@@ -24,7 +24,7 @@
                 <div class="col-12">
                     <h1>
                         Katie's Blog
-                    <h1>
+                    </h1>
                 </div>
             </div>
         </div>
@@ -33,13 +33,11 @@
         <!-- introduction -->
             <div class="row">
                 <div class="col-12">
-                    <p>
                         <h2>Welcome to my blog!</h2>
-                        </br>
+                        <br>
                         Here you will find a collection of posts, inspired by my life in West Cork.
-                        </br>
+                        <br>
                         Please feel free to join the conversation, by leaving a comment after the post.
-                    </p>
                 </div>
             </div>
         <!-- admin add blog post button -->
@@ -77,11 +75,9 @@
                         <div class="blog-teaser-content mt-3 mt-md-0">
                             <h3 class="blog-tuncate"><strong>{{ blog.title|capfirst }}</strong></h3>
                             <p>{{ blog.date|date:'Y-m-d' }} by {{ blog.author }}</p>
-                            <p>
-                                {{ blog.teaser|truncatechars:200|safe }}
-                                <a href="{% url 'blog_detail' blog.id %}" class="blog-read-more"> Read more
-                                </a>
-                            </p>
+                            {{ blog.teaser|truncatechars:200|safe }}
+                            <a href="{% url 'blog_detail' blog.id %}" class="blog-read-more"> Read more
+                            </a>
                         </div>
                     </div>
                 </div>

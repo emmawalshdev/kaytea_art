@@ -27,6 +27,9 @@ MEDIA_CHOICES = (
 
 # Create your models here.
 class Commissions(models.Model):
+    class Meta:
+        verbose_name_plural = 'Commissions'
+
     date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=254, null=False, blank=False)

@@ -7,6 +7,7 @@ class CommissionsAdmin(admin.ModelAdmin):
         'name',
         'email',
         'image',
+        'date',
     )
 
 

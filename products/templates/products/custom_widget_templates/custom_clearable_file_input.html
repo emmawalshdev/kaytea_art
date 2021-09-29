@@ -5,13 +5,13 @@
     </a>
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
-            <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}-prod">
+            <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}">
             <label class="custom-control-label text-danger" for="{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
         </div>
     {% endif %}<br>
     {{ widget.input_text }}
 {% endif %}
 <span class="btn btn-file btn-second">
-    Select Image <input id="new-image-prod" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+    Select Image <input class="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <p class="text-danger font-weight-bold" id="filename"></p>

@@ -19,23 +19,23 @@
 
 {% endblock %}
 {% block content %}
+    <!-- page title -->
+    <section class="page-header-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1">
+                    <h1>
+                        {{ blog.title|capfirst }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- blog page contents -->
-    <section class="container">
+    <section class="container pt-2">
         <!-- image + details row -->
         <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 text-center">
-                <!-- keywords -->
-                {% if blog.keywords %}
-                <div class="blog-keywords my-3">
-                    {% for keyword in blog.keywords.all %}
-                    <span class="badge bg-secondary ">{{ keyword.name }} </span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-                <!--blog title-->
-                <h1 class="blue-text">
-                    {{ blog.title|capfirst }}
-                </h1>
+            <div class="col-12 col-md-10 offset-md-1">
                 <!-- Superuser edit & delete product buttons -->
                 {% if request.user.is_superuser %}
                 <div class="superuser-btn-wrappper">
@@ -52,8 +52,8 @@
                         </button>
                     </span>
                     <!-- delete modal -->
-                    <div class="modal fade" id="deleteBlog" tabindex="-1" role="dialog"
-                        aria-labelledby="deleteBlogModal" aria-hidden="true">
+                    <div class="modal fade" id="deleteBlog" tabindex="-1" role="dialog" aria-labelledby="deleteBlogModal"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -75,12 +75,6 @@
                     </div>
                 </div>
                 {% endif %}
-                <!-- blog author -->
-                <div class="blog-author-wrapper fs-5 text">
-                    {{ blog.author }}
-                    <span>•</span>
-                    {{ blog.date|date:'Y-m-d' }}
-                </div>
                 <!-- blog image -->
                 <div class="card my-3">
                     {% if blog.image %}
@@ -92,14 +86,28 @@
                         alt="{{ blog.title }}">
                     {% endif %}
                 </div>
+                <!-- keywords -->
+                {% if blog.keywords %}
+                <div class="blog-keywords my-3">
+                    {% for keyword in blog.keywords.all %}
+                    <h4 class="d-inline"><span class="badge bg-secondary">{{ keyword.name }} </span></h4>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <!-- blog author -->
+                <div class="blog-author-wrapper fs-5 text my-2">
+                    {{ blog.author }}
+                    <span>•</span>
+                    {{ blog.date|date:'Y-m-d' }}
+                </div>
             </div>
         </div>
-        <!-- blog body -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 ">
-                {{ blog.body|safe }}
+            <!-- blog body -->
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1 ">
+                    {{ blog.body|safe }}
+                </div>
             </div>
-        </div>
     </section>
     <!-- edit comments -->
     <section class="comments-section">

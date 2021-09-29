@@ -21,14 +21,11 @@
 
 ### HTML
 
-The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of this project.
+* The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of this project.
 
+* All issues causing errors were rectified. These included multiple id attributes in use, missing closing tags and the misuse of tags.
 
-- [page.html](pagelink) template errors:
-
-    - **Error:** *error msg*
-
-      **Fix:** txt.
+* Issues resulting in a warning have not been rectified. These will be dealt with in the future.
 
 
 ### CSS

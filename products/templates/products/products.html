@@ -145,7 +145,7 @@
 	</script>
     <script type="text/javascript">
         $('#sort-selector').change(function(){
-            var selector = $(this)
+            var selector = $(this);
             var currentUrl = new URL(window.location);
 
             var selectedVal = selector.val();
@@ -163,6 +163,6 @@
 
                     window.location.replace(currentUrl);
                 }
-            })
+            });
     </script>
 {% endblock %}

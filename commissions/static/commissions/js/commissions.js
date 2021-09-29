@@ -3,7 +3,7 @@ $('.new-image').change(function() {
     $('#filename').text(`Image will be set to: ${file.name}`);
 });
 
-let optionSelected = ""
+let optionSelected = "";
 $( "select option:first-child" ).attr("disabled","disabled");
 
 if (optionSelected == "") {
@@ -15,6 +15,6 @@ $('select').change(function () {
     if (optionSelectedDropdown == "") {
         $(this).css('color', '#aab7c4');
     } else {
-        $(this).css('color', 'black')
+        $(this).css('color', 'black');
     }
 });

@@ -27,18 +27,21 @@
 
 * Issues resulting in a warning have not been rectified. These will be dealt with in the future.
 
-
 ### CSS
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate the CSS code.
 
-- css file - errors found.
+* All issues casuing erros were rectified. These inluced minor issues including invalid CSS properties.
+
+* Issues resulting in a warning have not been rectified. These will be dealt with in the future.
 
 ### JavaScript
 
-[JSHint](https://jshint.com/) was used to validate the JavaScript code of the project.
+[JSHint](https://jshint.com/) was used to validate the JavaScript code.
 
-warnings and fix
+* All errors found, were concerend with missing semicolons. These added to rectify the code.
+
+* All warnings have been safely ignored. These have flagged the use of 'let' which is available in ES6 and jQuery code.
 
 ### Python
 

@@ -7,6 +7,6 @@ $('#id_default_country').change(function() {
     if(!countrySelected) {
         $(this).css('color', '#aab7c4');
     } else {
-        $(this).css('color', 'black')               
+        $(this).css('color', 'black');          
     }
-})
+});

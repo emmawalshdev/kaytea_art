@@ -49,6 +49,4 @@ class ProductReviewForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            # add class for styling
-            self.fields[field].widget.attrs['class'] = ''
             self.fields[field].label = False

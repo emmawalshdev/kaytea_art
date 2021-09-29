@@ -24,7 +24,7 @@
             <div class="col-12">
                 <h1>
                     Pet Commissions
-                <h1>
+                </h1>
             </div>
         </div>
     </div>
@@ -76,26 +76,26 @@
                 <h2>
                     The Process
                 </h2>
-                <p class="lead">Here's how the commission process works:</p>
-                <p>
-                    <ol>
-                        <li>
-                            Get in touch, by filling in the form below.
-                        </li>
-                        <li>
-                            Once a request has been made, I will be in touch to chat about your requirements. At this time, we can discuss all available options.
-                        </li>
-                        <li>
-                            Based on your preferences, I will confirm the total cost and approximate timescale.
-                        </li>
-                        <li>
-                            Once the quote is accepted, the artwork will commence. 
-                        </li>
-                        <li>
-                            When the Artwork is complete, I will send you photographs. If you are happy with the piece, I will request payment and the painting is yours.
-                        </li>
-                    </ol>
+                <p class="lead">
+                    Here's how the commission process works:
                 </p>
+                <ol>
+                    <li>
+                        Get in touch, by filling in the form below.
+                    </li>
+                    <li>
+                        Once a request has been made, I will be in touch to chat about your requirements. At this time, we can discuss all available options.
+                    </li>
+                    <li>
+                        Based on your preferences, I will confirm the total cost and approximate timescale.
+                    </li>
+                    <li>
+                        Once the quote is accepted, the artwork will commence. 
+                    </li>
+                    <li>
+                        When the Artwork is complete, I will send you photographs. If you are happy with the piece, I will request payment and the painting is yours.
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
@@ -113,7 +113,7 @@
                 <p>
                     Fill out the form below, specifying your preferences.
                 </p>
-                <form method="POST" action=""  class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}

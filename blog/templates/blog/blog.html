@@ -31,44 +31,45 @@
     </section>
     <section class="container">
         <!-- introduction -->
-            <div class="row">
-                <div class="col-12">
-                        <h2>Welcome to my blog!</h2>
-                        <br>
-                        Here you will find a collection of posts, inspired by my life in West Cork.
-                        <br>
-                        Please feel free to join the conversation, by leaving a comment after the post.
-                </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>Welcome to my blog!</h2>
+                <p>
+                    Here you will find a collection of posts, inspired by my life in West Cork.
+                    <br>
+                    Please feel free to join the conversation, by leaving a comment under the post.
+                </p>
             </div>
+        </div>
         <!-- admin add blog post button -->
-            <div class="row">
-                <div class="col-12">
-                    <!-- Add blog post button -->
-                    {% if request.user.is_superuser %}
-                    <a class="btn btn-gen btn-long btn-md mt-2" href="{% url 'add_blog' %}">Post blog</a>
-                    {% endif %}
-                </div>
+        <div class="row mb-4 mb-md-5">
+            <div class="col-12">
+                <!-- Add blog post button -->
+                {% if request.user.is_superuser %}
+                <a class="btn btn-gen btn-long btn-md mt-2" href="{% url 'add_blog' %}">Post blog</a>
+                {% endif %}
             </div>
-    </section>
-    <!-- show current blogs -->
-    <section class="container pb-0">
+        </div>
+        <!-- show current blogs -->
         <div class="row">
             {% for blog in page_obj %}
             <div class="col-12">
-                <div class="row mb-5">
+                <div class="row mb-4">
                     <div class="col-12 col-md-4 col-lg-4">
                         {% if blog.image %}
-                            <div class="image-container">
-                                <a href="{% url 'blog_detail' blog.id %}">
-                                    <img class="img-fluid img-top blog-img" src="{{ blog.image.url }}" alt="{{ blog.title }}">
-                                </a>
-                             </div>
+                        <div class="image-container">
+                            <a href="{% url 'blog_detail' blog.id %}">
+                                <img class="img-fluid img-top blog-img" src="{{ blog.image.url }}"
+                                    alt="{{ blog.title }}">
+                            </a>
+                        </div>
                         {% else %}
-                            <div class="image-container">
-                                <a href="{% url 'blog_detail' blog.id %}">
-                                    <img class="img-fluid img-top blog-img"  src="{{ MEDIA_URL }}noimage.jpg" alt="{{ blog.title }}">
-                                </a>
-                            </div>
+                        <div class="image-container">
+                            <a href="{% url 'blog_detail' blog.id %}">
+                                <img class="img-fluid img-top blog-img" src="{{ MEDIA_URL }}noimage.jpg"
+                                    alt="{{ blog.title }}">
+                            </a>
+                        </div>
                         {% endif %}
                     </div>
                     <div class="col-12 col-md-8 col-lg-8">

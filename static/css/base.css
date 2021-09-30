@@ -532,7 +532,7 @@ footer li {
 /* max 991px */
 @media (max-width:991px) {
     .header-container {
-        padding-top: 70px;
+        padding-top: 85px;
     }
 
     body {

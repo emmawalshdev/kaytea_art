@@ -35,18 +35,18 @@
         <div class="row">
             <div class="col-12">
                 {% for category in all_categories %}
-                <a class="btn btn-gen btn-md m-2" href="{% url 'products' %}?category={{ category.name }}">
+                <a class="btn btn-gen btn-sm m-2" href="{% url 'products' %}?category={{ category.name }}">
                     <span class="p-2 mt-2 ">{{ category.friendly_name }}</span>
                 </a>
                 {% endfor %}
-                <a class="btn btn-gen btn-md m-2" href="{% url 'commissions' %}">
+                <a class="btn btn-gen btn-sm m-2" href="{% url 'commissions' %}">
                     <span class="p-2 mt-2 ">Pet Commissions</span>
                 </a>
             </div>
         </div>
     </section>
     <!-- intro + image -->
-    <section class="container">
+    <section class="container pt-0 pt-md-3">
         <div class="row">
             <div class="col-12 col-md-6">
                 <p>
@@ -70,7 +70,7 @@
         </div>
     </section>
     <!-- process section -->
-    <section class="container">
+    <section class="container pt-0 pt-md-4">
         <div class="row">
             <div class="col-12 col-lg-10">
                 <h2>
@@ -99,7 +99,7 @@
             </div>
         </div>
     </section>
-    <section class="container">
+    <section class="container pt-0 pt-md-4">
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="image-container mb-3">

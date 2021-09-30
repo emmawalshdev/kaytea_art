@@ -45,11 +45,11 @@
             <div class="col-12">
                 {% for category in all_categories %}
                    
-                <a class="btn btn-gen m-2 btn-md" href="{% url 'products' %}?category={{ category.name }}">
+                <a class="btn btn-gen m-2 btn-sm" href="{% url 'products' %}?category={{ category.name }}">
                     <span class="p-2 mt-2 ">{{ category.friendly_name }}</span>
                 </a>
                 {% endfor %}
-                <a class="btn btn-gen m-2 btn-md" href="{% url 'commissions' %}">
+                <a class="btn btn-gen m-2 btn-sm" href="{% url 'commissions' %}">
                     <span class="p-2 mt-2 ">Pet Commissions</span>
                 </a>
 

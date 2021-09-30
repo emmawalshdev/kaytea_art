@@ -73,34 +73,31 @@ All the files passed with the following errors ignored/fixed:
 
 #### Unit Testing
 
-Unit testing was carried out on all the apps in this project. The project did not use a test driven development process, the test cases were written after development.
-which need more testing/which have been tested
+**How to run Python tests**
 
-To run these tests:
+1. Activate your virtual environment.
 
-1. Clone this project from the project's [repository](repo) by following the steps in the [README.md](readme.md) under 'Clone the GitHub Repository' and run the project on your own IDE. 
-
-2. To run all the project's tests, enter the following command in your terminal:
+2. To run all tests, enter the following command in your terminal:
 
     ```
     python3 manage.py test
     ```
 
-3. To run the tests for a specific app, enter the following command:
+3. To run tests for a specific app, enter the following command terminal:
 
     ```
-    python3 manage.py test <app name here>
+    python3 manage.py test <app name>
     ```
 
-4. To run the tests for a specific test file, enter the following command:
+3. Test results will be displayed in the terminal.
 
-    ```
-    python3 manage.py test <app name here>.<filename here>
-    ``` 
+![Python test results](https://i.ibb.co/JHCgV4g/Python-Tests.jpg)
 
-    Note: do not add the extension to the filename.
+#### Information on TDD
+At this time, the project does not use a Test Driven Development.
+As creating comprehensive texts can be a lengthy and complex process, TDD is something which will be revisted in the future. 
 
-5. Test results will be displayed in the terminal.
+At this time, the project scope allows for Basic URL and view testing.
 
 
 ## Testing User Stories

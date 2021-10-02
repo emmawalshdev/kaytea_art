@@ -247,24 +247,34 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - The search bar field, located on the navbar allows the user to search by title or description. 
   - A shopping cart icon changes color if the value is greater than 0. Underneath, the user's cart total is displayed.
 
+![navigation](https://media.giphy.com/media/qcc0dtIYnXryZ3ovf5/giphy.gif)
+
 - Footer
   - The footer contains the company logo, quick links, copyright information and social media icons.
 
+  - ![footer]](https://i.ibb.co/BNXXGBX/footer.jpg)
+
+
 - Toast messages
-  - These notifications are available across the site, showing information, success and error messages.
+  - These notifications are displayed across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
+  - ![toast message](https://i.ibb.co/qCR5mZv/toastmessage.jpg)
 
 - Custom 404, 403 and 500 pages
   - These error pages have been customised to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
+  - ![404 page](https://i.ibb.co/1sWTkZN/404page.jpg)
 
 #### Home Page
 * The Home page features snippets of the about and shop pages. This helps to introduce the artist and her work.
 Cards are used to display Artwork from each category, enticing the user to click into the page.
+  - ![category cards](https://i.ibb.co/mzSvjhn/homepage.jpg)
 
 #### About Page
 * The About page features descriptive text about Katie;  the artist behind the work, along with some personal imagery.
 * The aim of this page is to provide the user with more information and a way to connect with the artist.
 * A link to the contact page is also provided, welcoming all enquiries.
+
+![About page](https://i.ibb.co/nsYCX9M/aboutpage.jpg)
 
 #### Blog Page
 * The Blog page contains an overview of the blog collection. The title, teaser, date, author and image of each blog is displayed.

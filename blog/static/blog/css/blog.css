@@ -9,6 +9,10 @@
     font-weight: bold;
 }
 
+.blog-teaser-content p {
+    display:inline;
+ }
+
 .comments-section{
     background-color: #d4d3ff59;
 }

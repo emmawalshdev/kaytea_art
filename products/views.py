@@ -110,7 +110,6 @@ def product_detail(request, product_id):
         'form': form,
         'reviews': reviews,
         'avg_rating': avg_rating,
-        'on_product_page': True,
     }
 
     return render(request, 'products/product_detail.html', context)

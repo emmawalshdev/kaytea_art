@@ -13,8 +13,11 @@
 ![Generated from Am I Responsive](https://i.ibb.co/D1mn86w/responsiveimg.png)
 
 
-The Kaytea Art webshop was designed, built and deployed by Emma Harte. The project was undertaken as the final milestone project for the Code Institute Full Stack; Web Development diploma.
-The webstore was created to replace an existing Etsy account, allowing for a fully customizated shopping experience.
+The Kaytea Art Ecommerce website was designed, built and deployed by Emma Harte. This project completes her Diploma in Software Development, undertaken through the Code Institute. 
+
+This website was built for Katie Harte, a wildlife and animal artist based in West Cork, Ireland.  Through the new Artstore, Katie aims to connect with her clients, share her story and offer her wonderful artwork and commission service. 
+
+Previously, Katie has marketed her work through Etsy and social media.  In the future, the Artstore aims to become Katie's primary channel. This is a long term project, with many new exciting features planned. 
 
 ----------------------------
 
@@ -114,7 +117,7 @@ The webstore was created to replace an existing Etsy account, allowing for a ful
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
-2. To be able to provide a commision quote based on canvas size and number of pets. 2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them.  
+2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
 
 ### Project Scope
 
@@ -125,10 +128,10 @@ The following is a statement of the defined scope:
 * User feedback
   - If a user interacts with a website feature, user feedback will be shared.
   - This will be in the form of either a pop-up modal or email.
-  - Warning, error and success colors will be used for easy recognition.
+  - Success, error and information messages will be included. These will be customized for easy recognition.
 
 * Text search
-  - keywords can be used to search the site for a product at a very deep level.
+  - keywords can be used to search the site for a product at a deep level.
 
 * User acount registration with verification
   - A user will be asked to verify their email address before setup is complete. Email verification is designed to check accounts to make sure they are real.

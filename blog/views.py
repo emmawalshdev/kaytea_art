@@ -70,7 +70,7 @@ def add_blog(request):
         if form.is_valid():
             user = User.objects.get(username=request.user.username)
             form.instance.author = user
-            # blog = form.save()
+            form.save()
             messages.success(request, 'Successfully added blog!')
             return redirect('blog')
         else:

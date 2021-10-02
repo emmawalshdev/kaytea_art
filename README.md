@@ -131,35 +131,36 @@ The following is a statement of the defined scope:
   - Success, error and information messages will be included. These will be customized for easy recognition.
 
 * Text search
-  - keywords can be used to search the site for a product at a deep level.
+  - keywords can be used to search the site for a product by title of description.
 
 * User acount registration with verification
-  - A user will be asked to verify their email address before setup is complete. Email verification is designed to check accounts to make sure they are real.
-  - A user will be able to input personal details such as contact and shipping details. This will be stored in the database.
-  - if the user forgets their password, they will have the choice to reset it via an email link.
+  - A user will be asked to verify their email address before setup is complete. Email verification is designed to check accounts & ensure authenticity.
+  - A user will be able to input personal details such as contact and shipping details. This information will be stored in the database.
+  - If the user forgets their password, they will have the choice to reset it via an email link.
 
 * A website contact form
+  - This form will live on a seperate contact page and will handle all general enquiries from users.
 
 * An online store selling original artwork, prints and gifts
-  - The categories will be:
-    - original artwork, 
+  - The artsotre categories will be:
+    - original artwork 
     - prints
-    - greeting cards. 
-  - Within each category the user will be able to sort by price or easily switch categories.
+    - greeting cards
+  - Within each category the user will be able to sort by price & will easily be able to switch between categories.
   - Adding/editing and removing items from the shopping cart will be possible.
-  - If the user is logged in, any saved shipping details will autofill at the checkout.
+  - If the user is logged in, any saved shipping details will autofill at checkout.
   - A fully secure checkout process will be in place, using Stripe.
   - Orders above €50 will inlude free shipping.
 
 * Descriptive product pages
-  - The template will include the following information:
-    - Images
+  - The product page template will include the following information:
+    - Product mage
     - Canvas size
     - Media
     - Out of stock message (if applicable)
-  - Product reviews
+    - Product reviews
 
-* An about page
+* An About page
   - This will be focused on introducing the artist and their work.
   - As the focus will be on promoting contact, a 'contact me' button will be added to this page.
 
@@ -177,19 +178,19 @@ The following features have not been included in the first rollout of this proje
 * Online payment for commissions
 * Product filtering by rating
 * Discount code and voucher capabilities
-* functionality to add a keyword from the font-end site
-* URL structure change for blog and product detail pages
+* Functionality to add a blog keyword from the font-end site
+* URL structure change for blog and product detail pages (slugs)
 * Cart counter - showing number of items in cart instead of the cart cost
 * Automatic deduction of product stock (upon sale)
 * Automatic quote generation for pet commissions
-* Abandoned cart recovery
-* multiple media for products
+* Ability to add multiple images to product uploads
 * Integrated Social media share buttons on product pages
+* Customized allauth emails
 * Personalised product recommendations for users
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
-These layouts were created following research on the five planes of UX, and before coding.\
+These layouts were created in collaboration with Katie Harte and following research on the five planes of UX\
 \
 <strong>
 Please note, the final website layout contains slight variations to the original wireframes.
@@ -222,7 +223,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - #F9CFE4 (Mini Pink)
   - #0095FF (Dodger Blue)
 
-- Katie really wanted to acheive a playful, colour-rich website. The above color palette was chosen to create this, with the intention of using alot of whitespace inbetween. 
+- Katie really wanted to acheive a playful, colourful website. The above color palette was chosen to create this, with the intention of using alot of whitespace to prevent noise.
 
 
 #### Typography

@@ -561,6 +561,8 @@ The following are Features that were not included in this release. These points 
 
 * [botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html) - Botocore provides the low level clients, session, and credential & configuration data.
 
+*[coverage](https://coverage.readthedocs.io/en/coverage-5.5/)
+
 * [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility that allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
 
 * [Django](https://www.djangoproject.com/) - A Python-based free and open-source web framework that follows the model–template–views architectural pattern.

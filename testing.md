@@ -9,6 +9,7 @@
     - [**Python**](#python)
         - [**PEP8**](#pep8)
         - [**Unit Testing**](#unit-testing)
+        - [**Coverage**](#coverage)
 2. [**Testing User Stories**](#testing-user-stories)
 3. [**Manual Testing on Live Site**](#manual-testing-on-live-site)
     - [**Desktop Manual Testing**](#desktop-manual-testing)
@@ -97,7 +98,63 @@ All the files passed with the following errors ignored/fixed:
 At this time, the project does not use a Test Driven Development.
 As creating comprehensive texts can be a lengthy and complex process, TDD is something which will be revisted in the future. 
 
-At this time, the project scope allows for Basic URL and view testing.
+Currently, the project scope allows for Basic URL and view testing.
+
+#### Coverage
+[Coverage.py](https://coverage.readthedocs.io/en/coverage-5.5/) was used to measures the execution of Python files in this project.
+
+**How to run Python tests**
+
+1. Activate your virtual environment.
+
+2. Install coverage by runnning the following command:
+
+    ```
+    pip3 install coverage
+    ```
+
+2. To run all tests, enter the following command in your terminal:
+
+    ```
+    coverage run manage.py test -v 2 && coverage report
+    ```
+
+3. To run tests for a specific app, enter the following command terminal:
+
+    ```
+    coverage run --source "<app name>" manage.py test -v 2 && coverage report
+    ```
+
+3. Test results will be displayed in the terminal.
+
+**Results**
+- About app
+![About app coverage results](https://i.ibb.co/k30s0x1/about.jpg)
+
+- Bag app
+![Bag app coverage results](https://i.ibb.co/p0nvbQQ/bag.jpg)
+
+- Blog app
+![Blog app coverage results](https://i.ibb.co/ZJ1ZPG0/blog.jpg)
+
+- Checkout app
+![Checkout app coverage results](https://i.ibb.co/QdJCJnb/checkout.jpg)
+
+- Commissions app
+![Commissions app coverage results](https://i.ibb.co/D1bzjsX/commissions.jpg)
+
+- Contact app
+![Contact app coverage results](https://i.ibb.co/j6V0JM4/contact.jpg)
+
+- Home app
+![Home app coverage results](https://i.ibb.co/3mFL51y/home.jpg)
+
+- Products app
+![Products app coverage results](https://i.ibb.co/tXDwqjK/products.jpg)
+
+- Profiles app
+![Profiles app coverage results](https://i.ibb.co/wCV0rSw/profiles.jpg)
+
 
 
 ## Testing User Stories

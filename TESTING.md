@@ -468,7 +468,7 @@ First, Chrome developer tools was used to test the site on the iPhone5/SE, iPhon
 
 Secondly, the site was tested on physical devices. Specifically, the devices included a Samsung Galaxy s7, iPhone 11 and a Samsung Galaxy Tab A7.
 
-Additional manual testing included the following:
+The following features were altered to suit mobile devices & were tested as required.
 
 * Navigation
     * Confirm that the navigation collapses into a hamburger icon.

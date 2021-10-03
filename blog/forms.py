@@ -9,10 +9,10 @@ class BlogForm(forms.ModelForm):
         fields = '__all__'
         exclude = ['author']
         labels = {
-            'keywords': 'Keywords',
-            'title': 'Title',
-            'body': 'Body',
-            'teaser': 'Teaser',
+            'keywords': 'Keywords ',
+            'title': 'Title ',
+            'body': 'Body ',
+            'teaser': 'Teaser ',
         }
         widgets = {
             'keywords': forms.CheckboxSelectMultiple,

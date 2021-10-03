@@ -22,57 +22,66 @@
 
 ### HTML
 
-* The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of this project.
+The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate all HTML code.
 
-* All issues causing errors were rectified. These included multiple id attributes in use, missing closing tags and the misuse of tags.
+* All issues causing errors were rectified. Such errors included using multiple id attributes, missing closing tags and the misuse of tags.
 
-* Issues resulting in a warning have not been rectified. These will be dealt with in the future.
+* Issues resulting in a warning have not been rectified. These are not critical and will be dealt with in the future.
 
 ### CSS
 
-The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate the CSS code.
+The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate all CSS code.
 
-* All issues casuing erros were rectified. These inluced minor issues including invalid CSS properties.
+* All issues casuing erros were rectified. Such errors inluced minor issues including invalid CSS properties.
 
-* Issues resulting in a warning have not been rectified. These will be dealt with in the future.
+* Issues resulting in a warning have not been rectified. These are not critical and will be dealt with in the future.
 
 ### JavaScript
 
-[JSHint](https://jshint.com/) was used to validate the JavaScript code.
+[JSHint](https://jshint.com/) was used to validate all JavaScript code.
 
-* All errors found, were concerend with missing semicolons. These added to rectify the code.
+* All errors found, were concerend with missing semicolons. These were added to rectify the code.
 
-* All warnings have been safely ignored. These have flagged the use of 'let' which is available in ES6 and jQuery code.
+* All warnings are not critical and have been safely ignored. The use of 'let' which is available in ES6 was flagged.
 
 ### Python
 
 #### PEP8
 
 The Flake8 Python library was used to check the project code base against coding style (PEP8).
-The initial report can be found [here](https://www.dropbox.com/s/txpx7wyzxl74vck/flake8_results.txt?dl=0)
+The initial report can be found [here](https://www.dropbox.com/s/txpx7wyzxl74vck/flake8_results.txt?dl=0).
 
 **General information**
-* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines too long and innapropriate use of null=True on model fields. These were removed from all files with exception to the following:
+* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines which were too long and the innapropriate use of null=True on model fields. In rectifying these issues, the following files were ignored:
 
-* All Auto migration files are ignored. 
-* In settings.py,  auto-generated lines are ignored
-* In all files, the Rule DJ01 - 'Avoid using null=True on string-based fields such as CharField and TextField' was ignored
+    * All Auto migration files were ignored. 
+    * In settings.py,  auto-generated lines were ignored.
+    * In all files, the Rule DJ01 - 'Avoid using null=True on string-based fields such as CharField and TextField' was ignored.
 
 **Resolution**
-All the files passed with the following errors ignored/fixed:
+
+After adjusting the code, all files passed with the following errors being safely ignored:
 
 - ```./products/widgets.py:9:80: E501 line too long (87 > 79 characters) ```
 
-    this was ignored as the URL cannot be split.
-    URL = template_name = 'products/custom_widget_templates/custom_clearable_file_input.html'.
+    This was ignored as the URL cannot be split.
 
 - ```./contact/forms.py:5:1: DJ07 Do not use __all__ with ModelForm, use fields instead```
+    
     Not a critical error, ignored.
 
 - ```./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused```
+    
     Not a critical error, ignored.
 
 #### Unit Testing
+
+Basic view and URL testing has been carried out on all apps within this project. In future releases,  more extensive automated tests would be advised to thoroughly test the code. 
+
+**Information on TDD**
+
+At this time, the project does not use a Test Driven Development.
+As creating comprehensive texts can be a lengthy and complex process, TDD is something which will be attempted in the future. 
 
 **How to run Python tests**
 
@@ -92,18 +101,12 @@ All the files passed with the following errors ignored/fixed:
 
 3. Test results will be displayed in the terminal.
 
-![Python test results](https://i.ibb.co/JHCgV4g/Python-Tests.jpg)
-
-#### Information on TDD
-At this time, the project does not use a Test Driven Development.
-As creating comprehensive texts can be a lengthy and complex process, TDD is something which will be revisted in the future. 
-
-Currently, the project scope allows for Basic URL and view testing.
+    ![Python test results](https://i.ibb.co/JHCgV4g/Python-Tests.jpg)
 
 #### Coverage
 [Coverage.py](https://coverage.readthedocs.io/en/coverage-5.5/) was used to measures the execution of Python files in this project.
 
-**How to run Python tests**
+**How to run coverage**
 
 1. Activate your virtual environment.
 
@@ -128,48 +131,57 @@ Currently, the project scope allows for Basic URL and view testing.
 3. Test results will be displayed in the terminal.
 
 **Results**
+
 - About app
-![About app coverage results](https://i.ibb.co/k30s0x1/about.jpg)
+
+    ![About app coverage results](https://i.ibb.co/k30s0x1/about.jpg)
 
 - Bag app
-![Bag app coverage results](https://i.ibb.co/p0nvbQQ/bag.jpg)
+
+    ![Bag app coverage results](https://i.ibb.co/p0nvbQQ/bag.jpg)
 
 - Blog app
-![Blog app coverage results](https://i.ibb.co/ZJ1ZPG0/blog.jpg)
+
+    ![Blog app coverage results](https://i.ibb.co/ZJ1ZPG0/blog.jpg)
 
 - Checkout app
-![Checkout app coverage results](https://i.ibb.co/QdJCJnb/checkout.jpg)
+
+    ![Checkout app coverage results](https://i.ibb.co/QdJCJnb/checkout.jpg)
 
 - Commissions app
-![Commissions app coverage results](https://i.ibb.co/D1bzjsX/commissions.jpg)
+
+    ![Commissions app coverage results](https://i.ibb.co/D1bzjsX/commissions.jpg)
 
 - Contact app
-![Contact app coverage results](https://i.ibb.co/j6V0JM4/contact.jpg)
+
+    ![Contact app coverage results](https://i.ibb.co/j6V0JM4/contact.jpg)
 
 - Home app
-![Home app coverage results](https://i.ibb.co/3mFL51y/home.jpg)
+
+    ![Home app coverage results](https://i.ibb.co/3mFL51y/home.jpg)
 
 - Products app
-![Products app coverage results](https://i.ibb.co/tXDwqjK/products.jpg)
+
+    ![Products app coverage results](https://i.ibb.co/tXDwqjK/products.jpg)
 
 - Profiles app
-![Profiles app coverage results](https://i.ibb.co/wCV0rSw/profiles.jpg)
 
+    ![Profiles app coverage results](https://i.ibb.co/wCV0rSw/profiles.jpg)
 
 
 ## Testing User Stories
-The following section revisits the user stories identified in the UX section of README.md. The aim is to check that the site meets those needs.
+The following section revisits the previously outlined user stories. These have been listed in the UX section of [README.md](https://github.com/emmahartedev/kaytea_art/blob/main/README.md).
 
 ### Visitor stories:
 **As a visitor of the website I expect/want/need:**
 
 **Browsing**
 1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
-    * The placement of site elements including the navbar, search, footer, icons, products lists, and website forms have been designed and developed to satisfy this specific UX need. 
+    * The placement of site elements including the navbar, search bar, footer, icons, products lists, and website forms have been designed and developed to satisfy this specific UX need. 
     * The site's key pages can be accessed from both the navigation bar and the footer, which are included on all site pages.
 
 2. To be able to search for products by text, so that I can find something specific.
-    * A search bar located on the navigation bar allows the user to search by product title or description. Additionally, the user can sort the result to drill the search down even further.
+    * A search bar located on the navigation bar allows the user to search by product title or description. Additionally, the user can sort results to drill down their search even further.
 
 3. To browse orginal artwork and prints, as these are the main categories of an artshop which I would expect to see. 
     * These categories, along with 'All Artwork' have been included in the current rollout.
@@ -179,18 +191,22 @@ The following section revisits the user stories identified in the UX section of 
     * A 'Sort by' dropdown field is presented on each cateogory page. This allows the user to sort by price and also my name.
 
 5. To see the image, media used and canvas size of each product. This information is vital to me.
-    * This information has been included in the product upload form assessible to superusers.
-    * The size and media field are required. The image field is optional, and takes a default 'coming soon' image in case no picture has been saved.
+    * This information has been included in the product upload and the data is present on the product detail page.
+    * The size and media field are required (upon upload). The image field is optional, and takes a default 'coming soon' image if no picture has been saved.
 
 6. To be able to read product reviews as this helps me to decide on the quality and level of service delivered by the company.
-    * A  reviews section has been added to the product details template, allowing users to leave a review (text and rating ) and to view existing reviews.
+    * A  reviews section has been added to the product details template, allowing users to leave a review (text and rating) and to view existing reviews.
     * To help fish out disingenuous submissions, the user must be logged in to submit a form. Alongside each review, the author's username is posted.
     * An average star rating, pinned to the product section, is calculated based on existing reviews.
     * The reviews are ordered by date. This makes sure that the most recent comments are shown first.
 
 7. To request a quote for a pet commission so that I can decide myself whether this is something I would like to purchase. 
     * A form on the Pet Commissions page allows the user to make a service request. As stated in the page text, the Artist will then get in touch with the client to discuss a quote.
-    * As well as contact information, the commission form fields include media and canvas size preference,  number of pets and a textfield for extra comments. This allows the artist to calculate a preliminary quote, before speaking to the client. 
+    * As well as contact information, the commission form indludes the following fields: 
+        - Media preference
+        - Canvas size
+        - number of pets
+        - textfield for extra comments. This allows the artist to calculate a preliminary quote, before speaking to the client. 
 
 8. To receive feedback after I interact with the website so that I am aware if the interaction has or has not been a success.
     * Toast messages provides user feedback about an operation in a small popup.

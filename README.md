@@ -246,7 +246,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - The search bar field, located on the navbar allows the user to search by title or description. 
   - A shopping cart icon changes color if the value is greater than 0. Underneath, the user's cart total is displayed.
 
-![navigation](https://media.giphy.com/media/qcc0dtIYnXryZ3ovf5/giphy.gif)
+  ![navigation](https://media.giphy.com/media/qcc0dtIYnXryZ3ovf5/giphy.gif)
 
 - **Footer**
   - The footer contains the company logo, quick links, copyright information and social media icons.
@@ -258,7 +258,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - These notifications are displayed across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
 
-  <img src="https://i.ibb.co/qCR5mZv/toastmessage.jpg" alt="toast message" width="500"/>
+  <img src="https://i.ibb.co/qCR5mZv/toastmessage.jpg" alt="toast message" width="400"/>
   
 
 - **Custom 404, 403 and 500 pages**
@@ -870,7 +870,7 @@ The following material is not my own. Sources are listing below:
 * Coming soon default image -  [Pixabay, RossMannYYC](https://pixabay.com/photos/coming-soon-chalk-board-blackboard-2550190/)
 * Brid image, company logo - [flaticon](https://www.flaticon.com/free-icon/bird_3069186?term=bird&page=1&position=4&page=1&position=4&related_id=3069186&origin=tag)
 
-### Acknowledgments
+### Acknowledegments
 * Thank you to Gerard McBride for his guidance and support throughout this project. 
 * Thank you to the Code Institute tutors for their help in debugging issues.
 * Thank you to friends and family for their help in testing the site.

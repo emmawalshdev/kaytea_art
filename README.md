@@ -595,6 +595,8 @@ The following features are not included in this release. These points will be re
 
 * [GIPHY](https://giphy.com/) - Used to create GIF files for README.md.
 
+* [Article Generator Online](http://articlecreator.fullcontentrss.com/) - Used to generate blog content for this purpose of this project.
+
 * [Am I Responsive](http://ami.responsivedesign.is/) - Used to create responsive images for different devices.
 
 * [LottieFiles](https://lottiefiles.com/) - All free animations are sourced from here.
@@ -657,16 +659,16 @@ The following features are not included in this release. These points will be re
 
 ## Deployment
 
-To run this project on your own IDE, ensure that the following are installed on your machine:
+To run this project on your own IDE, the following must be installed on your machine:
 
   * [Python 3](https://www.python.org/download/releases/3.0/)
   * [PIP](https://pypi.org/project/pip/)
   * [Git](https://git-scm.com/)
 
-Additionally, make sure that you also have the following set up: 
+Secondly, make sure that you also have set up the following: 
   * [Heroku](https://www.heroku.com/)
   * [Stripe](https://stripe.com/)
-  * [Gmail](https://www.google.com/gmail/) with 2 step verification
+  * [Gmail](https://www.google.com/gmail/) (with 2 step verification)
   * [AWS S3 bucket](https://aws.amazon.com/s3/)
 
 ### Local Deployment
@@ -683,25 +685,25 @@ Additionally, make sure that you also have the following set up:
 
 * Type ```git clone```, and then paste the URL from step 2. 
 
-```
-git clone https://github.com/emmahartedev/kaytea_art.git
-```
+  ```
+  git clone https://github.com/emmahartedev/kaytea_art.git
+  ```
 
 2. Create a Virtual Environment
 
   * cd into the project directory and create a new virtual environment by typing:
-  ```
-  python -m .venv venv
-  ```
-  * Activate the virtual environment byt typing:
-  ```
-  .venv\Scripts\activate.bat
-  ```
+    ```
+    python -m .venv venv
+    ```
+  * Activate the virtual environment by typing the following command:
+    ```
+    .venv\Scripts\activate.bat
+    ```
 
-3. Install the project requirements by typing:
-  ```
-  pip install -r requirements.txt
-  ```
+3. Install the project requirements by typing the following command:
+    ```
+    pip install -r requirements.txt
+    ```
 
 4. Set up the environment variables.
 
@@ -716,84 +718,89 @@ git clone https://github.com/emmahartedev/kaytea_art.git
     os.environ["STRIPE_SECRET_KEY"] = "<Your Key>"
     os.environ["STRIPE_WH_SECRET"] = "<Your Key>"
     ```
-5. Migrate the models to create your database by typing:
+5. Migrate the models to create your database by typing the following command:
 
-  ```
-  python manage.py migrate
-  ```
-6. Load the products & category data by typing
+    ```
+    python manage.py migrate
+    ```
+6. Load the products & category data by typing the following command:
 
-  ```
-  python3 manage.py loaddata categories
+    ```
+    python3 manage.py loaddata categories
 
-  python3 manage.py loaddata products
-  ```
+    python3 manage.py loaddata products
+    ```
 
-7. Create a superuser account by typing:
+7. Create a superuser account by typing the following command:
 
-  ```
-  python manage.py createsuperuser
-  ```
+    ```
+    python manage.py createsuperuser
+    ```
 
-8. You should now be able to run the project locally by typing:
-  ```
-  python manage.py runserver
-  ```
+8. You should now be able to run the project locally by typing the following command:
+    ```
+    python manage.py runserver
+    ```
 
 6. Create an [env.py](https://pypi.org/project/env.py/) file to store environmental variables. Add this to the [.gitignore](https://git-scm.com/docs/gitignore/en) to ensure it is not uploaded.
 
-7. Run the application using the command: ```python3 app.py```
+7. Run the application by typing the following command: 
+    ```
+    python3 app.py
+    ```
 
 ### Heroku Deployment
 1. Set up the Heroku app.
 
 * Login to Heroku. On the dashboard, click on the 'New' button, then click 'Create new app'.
 * Name the app, pick your region and click 'Create app'.
-* In the 'Add-ons' search bar search for postgres and choose 'Heroku Postgres'.
+* In the 'Add-ons' search bar; search for 'postgres', then choose 'Heroku Postgres'.
 * Submit the form, choosing the free plan.
-* In the deployment tab, choose GitHub as the deployment method. Link the repository you cloned by searching it's name.
-* Choose the master branch to deploy and click 'Enable Automatic Deploys'.
+* In the deployment tab, choose GitHub as the deployment method. Link the repository you cloned by searching for it by name.
+* Choose the master branch to deploy, then click 'Enable Automatic Deploys'.
 * Navigate to the settings tab, click 'Reveal Config Vars' and add the following:
-```
-Key	Value
-AWS_ACCESS_KEY_ID	< your AWS access key ID >
-AWS_SECRET_ACCESS_KEY	< your AWS secret access key >
-DATABASE_URL	< your postgres database URL >
-EMAIL_HOST_PASS	< 16-character password from Gmail >
-EMAIL_HOST_USER	< your Gmail >
-SECRET_KEY	< your secret key >
-STRIPE_PUBLIC_KEY	< your stripe public key >
-STRIPE_SECRET_KEY	< your stripe secret key >
-STRIPE_WH_SECRET	< your stripe webhook key >
-USE_AWS	True
-```
+
+
+  | Key	| Value |
+  | ------| ----------- | 
+  | AWS_ACCESS_KEY_ID |	Your AWS access key ID |
+  | AWS_SECRET_ACCESS_KEY	| Your AWS secret access key |
+  | DATABASE_URL | Your postgres database URL |
+  | EMAIL_HOST_PASS	| 16-character password from Gmail |
+  | EMAIL_HOST_USER	| Your Gmail |
+  | SECRET_KEY	| Your secret key |
+  | STRIPE_PUBLIC_KEY	| Your stripe public key |
+  | STRIPE_SECRET_KEY	| Your stripe secret key |
+  | STRIPE_WH_SECRET	| Your stripe webhook key |
+  | USE_AWS	| True |
+
 
 2. Set up your Database
-  * In your settings.py file import dj_database_url
+  * In your settings.py file import dj_database_url.
   * Comment out the default DATABASES configuration and add the following:
 
-  ```
+    ```
     DATABASES = {
         'default': dj_database_url.parse('DATABASE_URL')
     }
-  ```
+    ```
   * Set up the database through the terminal by typing:
-  ```
-  python manage.py migrate
-  ```
+    ```
+    python manage.py migrate
+    ```
 
   * Load the products & category data through thr terminal by typing:
-  ```
-  python3 manage.py loaddata categories
+    ```
+    python3 manage.py loaddata categories
 
-  python3 manage.py loaddata products
-  ```
+    python3 manage.py loaddata products
+    ```
 
   * Create a superuser account through the terminal by typing:
 
-  ```
+    ```
     python manage.py createsuperuser
-  ```
+    ```
 
   * Replace the DATABASES configuration with the following:
 
@@ -829,7 +836,7 @@ USE_AWS	True
 
   * In your settings.py file add the following:
     ```
-      ALLOWED_HOSTS = ["<heroku app name>.herokuapp.com", "localhost"]
+    ALLOWED_HOSTS = ["<heroku app name>.herokuapp.com", "localhost"]
     ```
   * Git commit and Git push the changes to Github
 
@@ -840,9 +847,9 @@ USE_AWS	True
     ```
   * You're app should now be deployed to Heroku.
 
-  * As a final step, The AWS bucket can be linked to the project and COLLECTSTATIC can be re-enabled. This will gather all static files including media, CSS and js files. 
+  * As a final step, The AWS bucket [can be linked to the project](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html) and COLLECTSTATIC can be re-enabled. This will gather all static files including media, CSS and js files. 
  
-9. The website is now successfully deployed.
+9. The website has now been successfully deployed.
 
 ----------------------------
 
@@ -850,18 +857,20 @@ USE_AWS	True
 The following material is not my own. Sources are listing below:
 
 ### Code
-  * The code for this project has been created with the guidance of the Code Institute's; Boutique Ado Project.
+  * The code for this project uses the Code Institute's; 'Boutique Ado' project as a base.
   * Icon Hover effect - [Hover.CSS](https://ianlunn.github.io/Hover/)
-  * Responsive home page banner [Bill Raymond](https://dev.to/billraymond/creating-a-pure-responsive-css-grid-hero-image-or-banner-image-2pej)
+  * Responsive home page banner -  [Bill Raymond](https://dev.to/billraymond/creating-a-pure-responsive-css-grid-hero-image-or-banner-image-2pej)
 
 
 
 ###  Media
-* Body overlay - [Toptal Subtle Pattern, Pete Fecteau](https://www.toptal.com/designers/subtlepatterns/?s=foggy)
+* HTML body overlay - [Toptal Subtle Pattern, Pete Fecteau](https://www.toptal.com/designers/subtlepatterns/?s=foggy)
 * Contact page, bird animation - [Lottie files](https://lottiefiles.com/23100-happy-bird)
 * Bag page, empty bag animation - [Lottie files](https://lottiefiles.com/web-player?lottie_url=https%3A%2F%2Fassets8.lottiefiles.com%2Fprivate_files%2Flf30_94juvpzy.json)
-* Coming soon default image -  [Pexels, alleksana](https://www.pexels.com/photo/dirty-laptop-writing-business-4271927/)
-* Brid company logo - [flaticon](https://www.flaticon.com/free-icon/bird_3069186?term=bird&page=1&position=4&page=1&position=4&related_id=3069186&origin=tag)
+* Coming soon default image -  [Pixabay, RossMannYYC](https://pixabay.com/photos/coming-soon-chalk-board-blackboard-2550190/)
+* Brid image, company logo - [flaticon](https://www.flaticon.com/free-icon/bird_3069186?term=bird&page=1&position=4&page=1&position=4&related_id=3069186&origin=tag)
 
 ### Acknowledgments
 * Thank you to Gerard McBride for his guidance and support throughout this project. 
+* Thank you to the Code Institute tutors for their help in debugging issues.
+* Thank you to friends and family for their help in testing the site.

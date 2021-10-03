@@ -258,7 +258,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - These notifications are displayed across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
 
-  <img src="https://i.ibb.co/qCR5mZv/toastmessage.jpg" alt="toast message" width="200"/>
+  <img src="https://i.ibb.co/qCR5mZv/toastmessage.jpg" alt="toast message" width="500"/>
   
 
 - **Custom 404, 403 and 500 pages**
@@ -288,7 +288,8 @@ Cards are used to display Artwork from each category, enticing the user to click
 #### Blog Details Page
 * The Blog Details page contains two sections: Blog content and blog comments. 
 * In the blog content section, the image, author, date, keywords and body of text are displayed. For superusers, edit and delete button are visible.
-![Blog page - content](https://i.ibb.co/59BgsKX/blogdetail.jpg)
+
+  ![Blog page - content](https://i.ibb.co/59BgsKX/blogdetail.jpg)
 
 * In the comments section, a toggle link invites the user to join the conversation. Only logged in users are permitted to submit a comment.
 * Featured existing comments are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
@@ -318,7 +319,8 @@ In selecting a quantity, the user is able to add the product to their bag.
 
 * In the product reviews section, a toggle link invites the user to leave a review. Only logged in users are permitted to submit a review.
 * Featured existing reviews are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
-![product detail - reviews](https://i.ibb.co/6PCqtPb/products-reviews.jpg)
+
+  ![product detail - reviews](https://i.ibb.co/6PCqtPb/products-reviews.jpg)
 
 
 #### Product Admin Page
@@ -371,28 +373,27 @@ If a user is not logged in, they are prompted to 'Login or Register' to save the
 * A link directing users back to the shop is provided underneath.
 
 #### Additional Pages
-* The django-allauth library is used to manage user registrtion and authentication on the site. The allauth templates; inluding login, register, forgotten password etc hae been customised to suit the brand styling.
+* The django-allauth library is used to manage user registrtion and authentication on the site. The allauth templates; inluding login, register, forgotten password etc have been customised to suit the brand styling.
 
 
 ### Future Features
-The following are Features that were not included in this release. These points will be revisited in future rollouts.
+The following features are not included in this release. These points will be revisited in future rollouts.
 
-* Sort by - average rating functionality
-* Structure change to allow multiple picture uploads for products
-* Development of the pet commissions app, to generate an automatic quote based on form field selection 
-* Pagination for blog and product reviews
-* Allow multiple image uploads for products and blogs
-* Add a boolean 'published' value to control whether a product is public or not.
-* Add Privacy Policy and T&C pages. 
-* Social media sign up and login with allauth
-* Paypal integration for checkout
-* Allow users to set seperate billing and delivery addresses
-* Replace the cart total with an item counter, on the navigation link
-* Add user's name and email address to profile page
+* Improve 'Sort by' functionality on Prodcuts page - add sort by 'average rating'.
+* Build structure on product details page to allow for multiple picture uploads.
+* Further develop the Commissions app - build automatic quote feature.
+* Add pagination to reviews/comments section on blog detail and product detail pages.
+* Add a boolean 'published' value to product and blog detail records - This should control whether a product/blog is public or not.
+* Add Privacy Policy and Terms & condition pages. 
+* Add social media sign up and login functionality using allauth.
+* Integrate Paypal on the checkout page.
+* Build functionality to allow users to set up seperate billing and delivery addresses.
+* Replace the bag total value with an item counter, on the navigation bar.
+* Add functionality to allow users to update their username and email address.
 
 ## Information Architecture
 
-* SQLite was used in the development of this project as it is the default database used with Django. On deployment with Heroku, a Postgres database is used.
+* SQLite was used during development of this project. This is the default database used with Django. On deployment with Heroku, a Postgres database is used.
 
 ### Data Models
 
@@ -423,8 +424,8 @@ The following are Features that were not included in this release. These points 
 
 | **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
 | ---------- | ------------------ | ---------------- | --------------------- |
-| Name | name | CharField | max_length=254 |
-| Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True |
+| Name | name | CharField | max_length=200 |
+| Friendly Name | friendly_name | CharField | max_length=200, null=True, blank=True |
 
 `Product` model
 
@@ -434,9 +435,10 @@ The following are Features that were not included in this release. These points 
 | Date Added | date_added | DateTimeField | auto_now_add=True, null=True |
 | SKU | sku | CharField | max_length=200, null=True, blank=True |
 | Name | name | CharField | max_length=200 |
-| Description | description | TextField |
+| Description | description | TextField | null=True, blank=True |
 | Size | size | CharField | max_length=200 |
 | Media | media | CharField | max_length=200 |
+| Stock | stock | PositiveSmallIntegerField | MaxValueValidator(20) |
 | Price | price | DecimalField | max_digits=6, decimal_places=2 |
 | Image | image | ImageField | null=True, blank=True |
 
@@ -447,8 +449,8 @@ The following are Features that were not included in this release. These points 
 | Author | author | ForeignKey 'User' | null=True, blank=True, on_delete=models.CASCADE |
 | Date | date | DateTimeField | auto_now_add=True |
 | Product | product | ForeignKey 'Product' | related_name='reviews', on_delete=models.CASCADE |
-| Review Text | review_text | TextField | max_length=500 |
-| Rating | review_rating | CharField | max_length=1, choices=RATING, default='2' |
+| Review Text | review_text | TextField | max_length=600 |
+| Rating | review_rating | CharField | max_length=2, choices=RATING, default='Rating *' |
 
 **Checkout App**
 
@@ -472,8 +474,8 @@ The following are Features that were not included in this release. These points 
 | Delivery Cost | delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0 |
 | Order Total | order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
 | Grand Total | grand_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
-| Original Basket | original_basket | TextField | null=False, blank=False, default='' |
-| Stripe PID | stripe_pid | CharField | max_length=254, null=False, blank=False |
+| Original Bag | original_bag | TextField | null=False, blank=False, default='' |
+| Stripe PID | stripe_pid | CharField | max_length=254, null=False, blank=False, default='' |
 
 `OrderLineItem` model
 
@@ -490,8 +492,8 @@ The following are Features that were not included in this release. These points 
 
 | **Name**   | **Database Key**   | **Field Type**   | **Type Validation**   |
 | ---------- | ------------------ | ---------------- | --------------------- |
-| Name | name | CharField | max_length=20 |
-| Friendly Name | friendly_name | CharField | max_length=20 |
+| Name | name | CharField | max_length=80 |
+| Friendly Name | friendly_name | CharField | max_length=80 |
 
 `Blog` model
 
@@ -501,8 +503,8 @@ The following are Features that were not included in this release. These points 
 | Keywords | keywords | ManyToManyField 'Keyword' | blank=True |
 | Title | title | CharField | max_length=80 |
 | Author | author | ForeginKey 'User' | null=True, blank=True, on_delete=models.CASCADE |
-| Teaser | teaser | RichTextField | validators=[MinLengthValidator(70)] |
-| Body Text | body | RichTextField | validators=[MinLengthValidator(70)] |
+| Teaser | teaser | RichTextField | MinLengthValidator(70)|
+| Body Text | body | RichTextField | MinLengthValidator(70) |
 | Image | image | ImageField | null=True, blank=True |
 
 
@@ -527,7 +529,7 @@ The following are Features that were not included in this release. These points 
 | Email | email | EmailField | max_length=254, null=False, blank=False |
 | Size | size | CharField | max_length=30, choices=SIZE_CHOICES, default='Canvas size *'|
 | Number of Pets | pet_num | CharField | max_length=30, choices=PET_NUM_CHOICES, default='Number of Pets *'|
-| Media | media | CharField | max_length=30, choices=MEDIA_CHOICES, default='Media Preference *'|
+| Media | media | CharField | max_length=40, choices=MEDIA_CHOICES, default='Media Preference *'|
 | Message | message | TextField | null=True, blank=True |
 | Image | image | ImageField | null=True, blank=True |
 

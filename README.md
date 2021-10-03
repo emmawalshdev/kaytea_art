@@ -257,16 +257,19 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - **Toast messages**
   - These notifications are displayed across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
-  ![toast message](https://i.ibb.co/qCR5mZv/toastmessage.jpg)
+
+  <img src="https://i.ibb.co/qCR5mZv/toastmessage.jpg" alt="toast message" width="200"/>
+  
 
 - **Custom 404, 403 and 500 pages**
   - These error pages have been customised to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
+  
   ![404 page](https://i.ibb.co/1sWTkZN/404page.jpg)
 
 #### Home Page
 * The Home page features snippets of the about and shop pages. This helps to introduce the artist and her work.
 Cards are used to display Artwork from each category, enticing the user to click into the page.
-  ![category cards](https://i.ibb.co/mzSvjhn/homepage.jpg)
+![category cards](https://i.ibb.co/mzSvjhn/homepage.jpg)
 
 #### About Page
 * The About page features descriptive text about Katie;  the artist behind the work, along with some personal imagery.
@@ -290,7 +293,7 @@ Cards are used to display Artwork from each category, enticing the user to click
 * In the comments section, a toggle link invites the user to join the conversation. Only logged in users are permitted to submit a comment.
 * Featured existing comments are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 
-![Blog page - comments](https://i.ibb.co/Qk7q6C6/blogdetail-comments.jpg)
+  ![Blog page - comments](https://i.ibb.co/Qk7q6C6/blogdetail-comments.jpg)
 
 #### Products Page
 * The Products page contains an overview of products within the selected category. 
@@ -298,12 +301,12 @@ Cards are used to display Artwork from each category, enticing the user to click
 * The product count for the selected category is displayed alongside a button to 'view all artwork'.
 * A'sort by' dropdown field allows the user to sort by price or name. 
 
-![Products page - buttons](https://i.ibb.co/k3H0gsm/products-buttons.jpg)
+  ![Products page - buttons](https://i.ibb.co/k3H0gsm/products-buttons.jpg)
 
 * Each product's title, price and category name is displayed on a card. Clicking on the product card leads the user to the product details page.
 * A 'back to top' button allows the user to quickly navigate back up the page. Pagination was not included on this template as it is unlikely the product count will ever exceed 50. 
 
-![Products page - cards](https://i.ibb.co/Ht99SN9/products-cards.jpg)
+  ![Products page - cards](https://i.ibb.co/Ht99SN9/products-cards.jpg)
 
 #### Product Details Page
 * The Products Details page contains two sections: Product detail and product reviews.
@@ -311,12 +314,11 @@ Cards are used to display Artwork from each category, enticing the user to click
 *  Quantity available is displayed in a dropdown menu. This value derives from the stock available.
 In selecting a quantity, the user is able to add the product to their bag. 
 
-![product detail - content](https://i.ibb.co/z5BcvMW/product-details-page.jpg)
+    ![product detail - content](https://i.ibb.co/z5BcvMW/product-details-page.jpg)
 
 * In the product reviews section, a toggle link invites the user to leave a review. Only logged in users are permitted to submit a review.
 * Featured existing reviews are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 ![product detail - reviews](https://i.ibb.co/6PCqtPb/products-reviews.jpg)
-
 
 
 #### Product Admin Page
@@ -341,30 +343,30 @@ If an image is not added, a default picture will be shown.
 * A 'Secure Checkout' button leads the shopper to the checkout page. A 'Continue Shopping' link allows the shopper to navigate back to the store.
 * Progress steps at the top of the bag show the user where they stand on the chekout process.
 
-![Bag](https://i.ibb.co/LzGCwBk/bag.jpg)
+  ![Bag](https://i.ibb.co/LzGCwBk/bag.jpg)
 
 * A message notifying the user that their bag is empty is displayed, if no products have been added.
 
-![Empty bag](https://i.ibb.co/gtKb0Bm/empty-bag.jpg)
+  ![Empty bag](https://i.ibb.co/gtKb0Bm/empty-bag.jpg)
 
 #### Checkout Page
 * The checkout page contains an order form that shoppers must fill out to complete the checkout process.
 * If a user is logged in, they are promted to tick a checkbox in order to save their default information. 
 If a user is not logged in, they are prompted to 'Login or Register' to save their details.
 
-![Checkout page - save info](https://i.ibb.co/FV0tK8N/save-address-checkout.jpg)
+  ![Checkout page - save info](https://i.ibb.co/FV0tK8N/save-address-checkout.jpg)
 
 * An order summary reminds the shopper of their bag contents and the order total.  
 * Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payement is successful, a confirmation email is sent. 
 **Please note**: The website currently uses Stripe's test functionality as opposed to live payments.
 
-![Checkout page - error payment](https://i.ibb.co/6W0k41v/checkout-invalid-payment.jpg)
+  ![Checkout page - error payment](https://i.ibb.co/6W0k41v/checkout-invalid-payment.jpg)
 
 #### Checkout Success Page
 * The checkout success page provides a summary of the order, stating that it was successful.
 * The summary includes the order number, order date, the products ordered as well as delivery and billing information. 
 
-![Order history](https://i.ibb.co/54M1dzP/order-history.jpg)
+  ![Order history](https://i.ibb.co/54M1dzP/order-history.jpg)
 
 * A link directing users back to the shop is provided underneath.
 

@@ -216,7 +216,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 ### Design
 #### Colour Palette
 
-- ![Color Palette](https://i.ibb.co/HNzkKYt/Color-Palette.png) 
+![Color Palette](https://i.ibb.co/HNzkKYt/Color-Palette.png) 
   - #D4D3FF (Lavender Blue)
   - #FFCD69 (Maize Crayolla)
   - #2AA6B3 (Pacific Blue)
@@ -227,8 +227,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 
 #### Typography
-- All fonts used in this project derive from [Google Fonts](https://fonts.google.com/). 
-
+- All fonts used in this project derive from [Google Fonts](https://fonts.google.com/)
 - Fonts used include:
   - ['Sniglet'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of cursive, is used for h1 - h6.
   - [''Roboto'](https://fonts.google.com/specimen/Montserrat) with a fallback of sans-serif, is used and all other body text.
@@ -241,7 +240,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 #### Elements on all pages
 
-- Navigation
+- **Navigation**
   - The navigation features the company logo, which is present on both mobile and desktop screen sizes.
   - Links to the blog, shop, about and contact pages are featured on the navbar. These are contained within the hamburger menu on the mobile view.
   - The search bar field, located on the navbar allows the user to search by title or description. 
@@ -249,18 +248,18 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 ![navigation](https://media.giphy.com/media/qcc0dtIYnXryZ3ovf5/giphy.gif)
 
-- Footer
+- **Footer**
   - The footer contains the company logo, quick links, copyright information and social media icons.
 
   ![footer](https://i.ibb.co/BNXXGBX/footer.jpg)
 
 
-- Toast messages
+- **Toast messages**
   - These notifications are displayed across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
   ![toast message](https://i.ibb.co/qCR5mZv/toastmessage.jpg)
 
-- Custom 404, 403 and 500 pages
+- **Custom 404, 403 and 500 pages**
   - These error pages have been customised to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
   ![404 page](https://i.ibb.co/1sWTkZN/404page.jpg)
 

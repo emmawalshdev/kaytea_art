@@ -593,6 +593,8 @@ The following features are not included in this release. These points will be re
 
 * [IMgBB](https://imgbb.com/) - Used to store images.
 
+* [GIPHY](https://giphy.com/) - Used to create GIF files for README.md.
+
 * [Am I Responsive](http://ami.responsivedesign.is/) - Used to create responsive images for different devices.
 
 * [LottieFiles](https://lottiefiles.com/) - All free animations are sourced from here.
@@ -607,7 +609,7 @@ The following features are not included in this release. These points will be re
 
 * [botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html) - Botocore provides the low level clients, session, and credential & configuration data.
 
-*[coverage](https://coverage.readthedocs.io/en/coverage-5.5/)
+* [coverage](https://coverage.readthedocs.io/en/coverage-5.5/) - Used to measure the code coverage of Python programs.
 
 * [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility that allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
 
@@ -649,7 +651,7 @@ The following features are not included in this release. These points will be re
 
 
 ## Testing
-* All testing documentation for this project is stored in a separate [TESTING.md](https://github.com/emmahartedev/testing.md) file.
+* All testing documentation for this project is stored in a separate [TESTING.md](https://github.com/emmahartedev/kaytea_art/blob/main/TESTING.md) file.
 
 ----------------------------
 

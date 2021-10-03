@@ -462,6 +462,26 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
  
 ### Mobile and Tablet Manual Testing
 
+The desktop tests listed above were repeated for mobile and tablet devices.
+
+First, Chrome developer tools was used to test the site on the iPhone5/SE, iPhone 6/7/8, iPad and iPad Pro.
+
+Secondly, the site was tested on physical devices. Specifically, the devices included a Samsung Galaxy s7, iPhone 11 and a Samsung Galaxy Tab A7.
+
+Additional manual testing included the following:
+
+* Navigation
+    * Confirm that the navigation collapses into a hamburger icon.
+    * Confirm that all links are located within the collapsed menu and work as expected.
+    * Confirm that the main logo is displayed within the hamburger menu.
+    * Click on the search icon, confirm that the search bar opens below the navbar and functions correctly.
+    * Add a product to the bag, confirm the bag value updates and the icon changes color.
+
+* Footer
+    * Confirm that the mobile view behaves as expected. The logo should appear on top, with the links below.
+
+* Toast message
+    * Confirm that Toast message alignment is correct. This should appear below the navbar and to the far right.
 
 ## Bugs
 

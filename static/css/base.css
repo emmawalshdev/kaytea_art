@@ -215,6 +215,12 @@ hr{
     z-index: 0;
 }
 
+.search-dropdown {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    float: left;
+}
 /* navbar */
 .navbar {
     position: relative;
@@ -575,6 +581,8 @@ footer li {
     .card-img-top {
         height: 200px !important;
     }
+    .message-container {
+        right: 0;
 }
 
 @media (max-width:400px) {

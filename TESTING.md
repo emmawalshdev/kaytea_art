@@ -204,27 +204,31 @@ The following section revisits the previously outlined user stories. These have 
     * A form on the Pet Commissions page allows the user to make a service request. As stated in the page text, the Artist will then get in touch with the client to discuss a quote.
     * As well as contact information, the commission form indludes the following fields: 
         - Media preference
-        - Canvas size
-        - number of pets
-        - textfield for extra comments. This allows the artist to calculate a preliminary quote, before speaking to the client. 
+        - Canvas size preference
+        - Number of pets
+        - Textfield for extra comments
+    
+        This allows the artist to calculate a preliminary quote, before speaking to the client. 
 
 8. To receive feedback after I interact with the website so that I am aware if the interaction has or has not been a success.
-    * Toast messages provides user feedback about an operation in a small popup.
+    * Toast messages provide user feedback about an operation in a small popup.
     In this release, Information, Error and Success Toast messages have been included. 
 
-    * The user can quickly identify Success, information or error messages. Each Toast has been styled to clearly stand out with font color and icons.
+    * The user can quickly identify Success, information or error messages. Each Toast has been styled to clearly stand out with font colors and icons.
 
-    * These inform them of failed or successful interaction. Examples include form submission and user login. Toast messages also show Information and Success messages are triggered by user activity and inform the user if their interaction.
+    * The message informs the user of failed or successful interaction. Examples include form submission and user login.
+
     * On success Toast messages, a summary of the user's bag contents is included (if items have been added). This keeps the user updated with their activity.
  
 9. To learn more about the artist and the process behind the creations. As a supporter of small businessess, I like to feel a connection to the business owner.
-    * An about page containing imagery and text, allows the user to gain a detailed insight into the Artist's life. 
-    * links to the about page are feautred on the navigation bar and footer as well as on the homepage.
+    * An About page containing imagery and text, allows the user to gain a detailed insight into the Artist's life. 
+    * Links to the about page are feautred on the navigation bar and footer as well as on the homepage.
 
 **Shopping**
 1. To be able to navigate to my shopping cart easily so that I can quickly checkout.
     * The shopping cart is featured on the navbar which makes it easily assessible from all pages.
-    * The bag icon changes color and displayed the cost total when items have been added to it. This gives the user a visual represntation of their active session. 
+    * The bag icon changes color and displays the cost total when items have been added to it. This gives the user a visual represntation of their active session. 
+
 2. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
     * Within the bag page, the user can easily update quantities or remove products entirely.
     * With every successful update or product removal, a toast message is triggered notifying the user of their action.
@@ -236,7 +240,7 @@ The following section revisits the previously outlined user stories. These have 
     * Once an order is complete, an email confirmation is sent to the supplied email address.
     * A Toast message stating the transaction has been a success, is displayed.
     * The user is redirected to a 'Checkout Success' page. This contains a thank you message and a summary of the order.
-    * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
+    * If the user is registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 5. My shipping details should autofill if I am logged in so that I can quickly checkout.
     * The Profile page gives the logged in user the ability to update their personal and shipping information. This infomation is used to prefill the order form on the checkout page.
@@ -244,8 +248,8 @@ The following section revisits the previously outlined user stories. These have 
 
 **Customer care**
 1. To be able to set up an account, so that I can login on return and view my data.
-    * Customised allauth Login and Register pages have been developed, allowing the user to set up and login to an account.
-    * On the Profile page. the user is able to add and edit their personal and shipping information.
+    * Customised allauth Login and Register pages have been built, allowing the user to register and login to an account.
+    * On the Profile page, the user is able to add and edit their personal and shipping information.
     * Setting up an account and logging in allows the user to review products and leave blog comments. 
        
 2. To be able to contact the shop owner easily in case I have a question related to my order.
@@ -253,36 +257,37 @@ The following section revisits the previously outlined user stories. These have 
     * The contact form welcomes all general enquiries from users.
 
 3. To see a summary of my order after I make a purchase so that I can review the details.
-    * After an order has been submitted, an email confirmation is sent to the supplied email address. This can be kept by the customer for personal record.  
+    * After an order has been submitted, an email confirmation is sent to the supplied email address. This can be kept by the customer for their own personal record.  
     * Upon order submission, the user is redirected to a 'Checkout Success' page. This contains a thank you message and a summary of the order.
-    * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
+    * If registered (and logged in), the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 
 4. To see a list of my order history so that I can check up on my recent activity. 
-    * If registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
+    * If the user is registered (and logged in), the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 
 5. To be able to update my account details in case a change is required.
     * The Account page gives the logged in user the ability to update their first name, last name and mobile number.
-    At the moment the user cannot change their email adress, username password. This will be included in future releases. 
+    At the moment the user cannot change their email address, username or password. This will be included in future releases. 
 
 
 6. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
-    * Social media links are located in the website footer. These are visible on all pages.
+    * Social media links are located on the website footer, which is visible on all pages.
 
 
 ### Business stories:
-**As the website owner**:
+
 **As a superuser of the website I expect/want/need:**
 
 **General**
 1. Build a beautiful, easy-to-use, trustworthy website so that I can build brand awareness and sell artwork.
-    * The website has been designed 
-
+    * The website has been designed in collaboration with Katie, who had a clear idea on color scheme and layout.
+    * The placement of site elements including the navbar, search bar, footer, icons, products lists, and website forms have been designed and developed to satisfy this specific UX need. 
+    * The site's key pages can be accessed from both the navigation bar and the footer, which are included on all site pages.
 
 2. To be able to view customer/order/product data so that I easily pull up information if required. 
-    * The admin site allows the superuser to view a host of information including form submissions, orders, products, customer and user data 
-    * The super user has full CRUD capabilities within the admin panel. E.g, adding, editing and removing a product.
+    * The admin site allows the superuser to view a host of information including form submissions, orders, products, customer and user data.
+    * The supe user has full CRUD capabilities within the admin panel. E.g, adding, editing and removing a product.
 
 
 **Website admin**
@@ -290,22 +295,22 @@ The following section revisits the previously outlined user stories. These have 
     * The 'Product Admin' link under 'Account' on the navigation bar allows the user to add a product to the store.
     * The 'Post Blog' button on the blog overview page allows the user to add a blog to the site.
     * Edit and delete buttons are visible within product pages only to the superuser. 
-    * All CRUD operations can be easily executed on the Admin site.
+    * All CRUD operations can be easily executed from the Admin site.
 
 
 2. To be able to add/edit and delete blog content on the website so that I can keep the page fresh.
     * The 'Post Blog' button on the blog overview page allows the user to add a blog to the site.
-    * Edit and delete buttons are visible within product and blog pages only to the superuser. 
-    * All CRUD operations can be easily executed on the Admin site.
+    * Edit and delete buttons are visible within blog detail pages, only to the superuser. 
+    * All CRUD operations can be easily executed from the Admin site.
 
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
-    * A webhook has been set up to nofify the superuser when an order has been submitted.
+    * The order will be saved to both stripe and the admin panel.
+    * In a future release, a webhook will also be setup to notify the superuser by email.
 
 2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
     * 'Canvas size' and 'number of pets' fields have been included on the pet commissions form. This information, along with contact details for the user is designed to help the Artist calculate a rough quote.
-
 
 ## Manual Testing on Live Site
 
@@ -315,18 +320,18 @@ Manual testing was carried on a desktop computer using Google Chrome.
 
 #### Navigation
 - Click the navbar company logo, confirm redirect to home page.
-- Click the 'About' link, confirm confirm that redirect to About page.
+- Click the 'About' link, confirm confirm redirect to About page.
 - Click the 'Blog' link, confirm redirect to Blog page.
 - Click the 'Shop' link, confirm that correct sub-links appear in dropdown menu.
-- Click each link in the 'shop' dropdown menu, confirm redirect to the correct page.
-- While logged out, click the 'Accoount' link. Confirm that correct sub-links appear in dropdown menu (Login and Register).
-- Log in as a non-superuser, click on the 'Account' link. Confirm that the dropdown-menu displays 'My Profile' and 'Logout'.
-- Log in as a superuser, click on 'Account'. 
+- Click each link in the 'Shop' dropdown menu, confirm redirect to the correct page.
+- While logged out, click the 'Account' link. Confirm that correct sub-links appear in dropdown menu (Login and Register).
+- Login as a non-superuser, click on the 'Account' link. Confirm that the dropdown-menu displays 'My Profile' and 'Logout'.
+- Login as a superuser, click on 'Account'. 
 Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logout'.
 - Click each link in the 'Account' dropdown menu. Confirm redirects to correct pages.
 - Add an item to the user's bag, confirm that the bag total updates to the correct value and the icon color changes to blue.
 - Delete all bag items, confirm that the bag total updates to €0.00 and the icon color changes to black.
-- Search for a product with in the search bar, confirm that the results of the search are displayed correctly.
+- Search for a product within the search bar, confirm that the results of the search are displayed correctly.
 
 #### Footer
 - Click on footer links, confirm redirect to correct page.
@@ -337,19 +342,18 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Click on the 'About' link, confirm redirect to about page.
 - Hover over the category cards, confirm text color change to blue and hover effect.
 - Click on each category card, confirm redirect to correct page.
-- Click on the Pet Commision 'Read More' link, confirm redirect to commissions page.
+- Click on the Pet Commision 'Read More' link, confirm redirect to Commissions page.
 
 #### Products Page
 - Click on each of the category buttons. Confirm redirect to correct page. 
-- Click each option within the 'Sort by' dropdown menu, confirm the the expected result appears.
+- Click each option within the 'Sort by' dropdown menu, confirm that the expected result appears.
 - Click on the card image for each product, confirm redirect to correct page.
-- Click on the each of the card category tags, confirm redirect to correct category page.  
+- Click on each of the card category tags, confirm redirect to correct category page.  
 - Hover over each product card, confirm that a shadow effect is applied.
-- Click the category for each product, confirm each product for that category is displayed.
-- Click on the 'back to top' button. Confirm navigation to the top of page.
+- Click on the 'back to top' button. Confirm navigation back up to the top of the page.
 
 #### Product Admin Page
-- Attempt to access the 'Product Admin' page while logged in as a non superuser by URL. Confirm redirect to homepage, along with the display of an Error toast message.
+- Attempt to access the 'Product Admin' page while logged in as a non superuser. Confirm redirect to homepage, along with the display of an Error toast message.
 - Attempt to access the 'Product Admin' page while logged out. Confirm redirect to Login page.
 * Form submission
     - Submit the form with incorrect data, confirm the relevant warning messages are displayed.
@@ -363,51 +367,50 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
     - Click on the product category, confirm redirect to correct category page.
     - Login as a superuser, confirm that the edit and delete buttons are visible. Click on each button, confirm that the correct template/popup is rendered.
     - Delete the product, confirm that it is removed from the store.
-    - Choose a quantity and 'Add to Bad'. 'Confirm that the navbar bag quantity and total updates.
-    - Click the 'Keep Shopping' button, confirm redirect to the all products category page.
-    - Confirm that the average rating is correct based on the existing product reviews.
+    - Choose a quantity and click 'Add to Bag'. Confirm that the bag quantity and total updates on the navigation nag icon.
+    - Click the 'Keep Shopping' button, confirm redirect to the 'All Artwork' category page.
+    - Confirm that the average rating is correct, based on the existing product reviews.
 
 * Reviews section
     - Confirm the message 'No reviews yet!' is displayed for a product that has no reviews. 
     - Logout. Confirm that the 'Please Login' to leave a review message is displayed.
     - Login, confirm that the review form is visible.
     - Attempt to submit the form with invalid data, confirm the relevant warning message is displayed.
-    - Submit a valid form, confirm that new review is added. Check that reviews are ordered by date, showing the username, rating and comment.
+    - Submit a valid form, confirm that the new review is added. Check that the reviews are ordered by date, showing the username, rating and comment.
     - Confirm that the product average rating updates, based on the new submitted rating.
  
 #### Bag Page
 - Click on the bag icon with no items added. Confirm that message 'Your bag is empty!' is displayed. Confirm that both the 'Login' and 'Continue Shopping' buttons are working.
 
-- Click on the bag icon having added items. Confirm the correct products and quantities are present. Confirm secondly, confirm that the subtotal, delivery and total figures are correct.
+- Click on the bag icon having added items. Confirm the correct products and quantities are present. Secondly, confirm that the subtotal, delivery and total figures are correct.
 
 - Adjust the quantity of a product within the bag and click the update button. Confirm that the quantity, subtotal, delivery and total costs update.
 
-- Click the 'Remove' button for a product, confirm that the product is deleted from the bag and the basket and the quantity, subtotal, delivery and total costs update.
+- Click the 'Remove' button for a product, confirm that the product is deleted from the bag. Secondly, confirm that the bag quantity, subtotal, delivery and total costs update.
 
-- Confirm that a bag total that is less than €50 has a delivery charge of 20% the subtotal.
+- Confirm that a bag total of less than €50 has a delivery charge of 20% the subtotal.
 
-- Confirm that a bag total that is more than €50 has no delivery charge.
+- Confirm that a bag total of more than €50 has no delivery charge.
 
-- Click the 'Secure Checkout' button, confirm redirect to the checkout page.
+- Click the 'Secure Checkout' button, confirm redirect to the Checkout page.
 
 #### Checkout Page
-- Attempt to access the checkout page by URL with an empty bag, Confirm redirect to the homepage with an error message.
+- Attempt to access the Checkout page by URL with an empty bag, Confirm redirect to the homepage with an error message.
 
-- Confirm that the products in the order summary box are correct.
-    Secondly, confirm that the quantity, subtotal, delivery and total costs update.
+- Within the order summary box, confirm that the products in the are correct.
 
-- Login to an account with saved delivery information on their profile, confirm that the order form is prepopulated with this delivery information.
+- Login to an account with saved delivery information, confirm that the order form is prepopulated with this delivery information.
 
 - Confirm that a 'Save this delivery information' checkbox is shown for logged in users, under the checkout form. For logged out users, confirm that this is replaced by 'Login or Register' links. Confirm that each of these behaves correctly.
 
-- Click the 'Adjust basket' button, confirm redirect to the bag page.
+- Click the 'Adjust basket' button, confirm redirect to the Bag page.
 
 - Attempt to submit the form with incorrect data, confirm the correct warning messages are displayed.
 
-* Submitting a Valid form
+* Submitting a valid form
     - Confirm that the loading overlay is displayed followed by a redirect to the 'Checkout Success' page.  Confirm that a success toast message is shown, stating that a confirmation email has been sent. On the template page, confirm that the correct details are displayed in the 'Order summary box'.
 
-    - Click on the 'Continue Shopping' link, confirm redirect to the 'view all' products page.
+    - Click on the 'Continue Shopping' link, confirm redirect to the 'All Artwork' products page.
 
     - Confirm that a confirmation email is sent to the user.
 
@@ -416,19 +419,19 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
     - Confirm the order history correctly contains a list of past orders.
     - Click on an order number, confirm that the correct order details are rendered.
     Confirm that an information message is displayed, stating that this is a past order.
-    - Click on the 'Back to Profile' button, confirm redirect to profile page.
+    - Click on the 'Back to Profile' button, confirm redirect to Profile page.
 
 * Profile form
     - Add or edit default delivery information, click the 'Update Information' button. Confirm that the information correctly updates.
-    - Click on the bag icon having added items. Confirm that the order form is pre-filled with the users delivery details.
+    - Click on the bag icon having added items. Confirm that the order form is pre-filled with the user's delivery details.
 
 #### Blog Page
 
-- Confirm the 'Blog Blog' button is only visible to logged in superusers. Click button. Confirm redirect to 'Add Blog' page.
+- Confirm the 'Post Blog' button is only visible to logged in superusers. Click button, confirm redirect to 'Add Blog' page.
 
-- Click on a blog image, confirm it directs to the correct blog details page.
+- Click on a blog image, confirm redirect to the correct blog detail page.
 
-- Click on the 'read more' link and blog image, confirm redirect to the correct blog detail page.
+- Click on the 'read more' link, confirm redirect to the correct blog detail page.
 
 - Confirm pagination links are working correctly.
 
@@ -464,31 +467,32 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 
 ### Solved Bugs
 
-1. When attempting to add a new image to a blog/product and remove an existing image at the same time, a toast error message occured. I discovered this was caused by the image limitation of 1, set to this project. As multiple images is not a feauture planned for this release, no changes were made to this setting. A temporary fix to hide the 'select image' button (if an image already has been uploaded) was added instead. This forces the user to first remove the image before adding a new one. 
+1. **Multiple image uploads**
 
-2. Adding an item with zero stock disallowed.
-Understandably, Django threw an error for products with stock level < 0 which were added to the bag. Preferably, I would like to add a boolean 'publish' feature which would unpublish the product when stock level is 0.
+    When attempting to add a new image to a blog/product and remove an existing image at the same time, a toast error message occured. I discovered this was caused by the image limitation of 1, set to this project. As allowing multiple images is not a feauture planned for this release, no changes were made to this setting. 
+    A temporary fix to hide the 'select image' button (if an image already has been uploaded) was added instead. This forces the user to first remove the image before adding a new one. 
+
+2. **Adding an item with zero stock disallowed.**
+
+    Understandably, Django threw an error for products with stock level < 0 which were added to the bag. Preferably, I would like to add a boolean 'publish' feature which would unpublish the product when stock level is 0.
 As a temporary fix, the 'Add to Bag' button was hidden and a short message shown.
 
 
-3. Model migrations not working on Heroku.
-After deployement, I continued to alter and create models. While this worked locally, no changes were reflected on Heroku.
-When attempting to access the models from the admin site, a 500 error was thrown. I discoved that the migrations had not successfully migrated to the live site and was able to resolve this by running ```python3 manage.py runserver``` directly on the heroku console.
+3. **Model migrations not working on Heroku.**
+
+    After deployement, I continued to alter and create models. While this worked locally, no changes were reflected on the deployed site.
+    When attempting to access the models from the admin site, a 500 error was thrown. I discoved that the migrations had not successfully migrated to the live site and was able to resolve this by running ```python3 manage.py runserver``` directly on the heroku console.
 
 ### Unresolved Bugs
 
-2. After deploying to Heroku, issues were encountered while attempting to continue working locally. The error message states that (settings.DATABASES is improperly configured)[https://i.ibb.co/L85QJpQ/database-url-error.jpg].
-Thanks to the CI tutor support, I discoved this is caused by CI template and how it has configured the database within the dockerfile. While the command 
-```
-unset DATABASE_URL
-```  
-temporarily works for the working session, I am yet to find a permanent solution to the issue.
+2. **DATABASES is improperly configured**
 
-This has temporarily been fixed by running command on workspage setup
-```
-unset DATABASE_URL
-```
-To permanently fix this issue, futher investigation is required.
+    After deploying to Heroku, issues were encountered on the locally site. The error message states that [settings.DATABASES is improperly configured](https://i.ibb.co/L85QJpQ/database-url-error.jpg).
+    I discoved that this issue is casued by the CI template and how it has configured the database within the dockerfile. As a short term fix, the following command is run on startup: 
+    ```
+    unset DATABASE_URL
+    ```  
+    While this temporarily fixes the issue for the active session, I am yet to find a permanent solution.
 
 
 > [Back to Top](#table-of-contents)

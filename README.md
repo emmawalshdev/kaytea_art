@@ -104,7 +104,7 @@ Previously, Katie has marketed her work through Etsy and social media.  In the f
 
 
 #### Business stories:
-**As the website owner**:
+
 **As a superuser of the website I expect/want/need:**
 
 **General**

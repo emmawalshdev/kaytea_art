@@ -252,22 +252,22 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - Footer
   - The footer contains the company logo, quick links, copyright information and social media icons.
 
-  - ![footer]](https://i.ibb.co/BNXXGBX/footer.jpg)
+  ![footer](https://i.ibb.co/BNXXGBX/footer.jpg)
 
 
 - Toast messages
   - These notifications are displayed across the site, showing information, success and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
-  - ![toast message](https://i.ibb.co/qCR5mZv/toastmessage.jpg)
+  ![toast message](https://i.ibb.co/qCR5mZv/toastmessage.jpg)
 
 - Custom 404, 403 and 500 pages
   - These error pages have been customised to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
-  - ![404 page](https://i.ibb.co/1sWTkZN/404page.jpg)
+  ![404 page](https://i.ibb.co/1sWTkZN/404page.jpg)
 
 #### Home Page
 * The Home page features snippets of the about and shop pages. This helps to introduce the artist and her work.
 Cards are used to display Artwork from each category, enticing the user to click into the page.
-  - ![category cards](https://i.ibb.co/mzSvjhn/homepage.jpg)
+  ![category cards](https://i.ibb.co/mzSvjhn/homepage.jpg)
 
 #### About Page
 * The About page features descriptive text about Katie;  the artist behind the work, along with some personal imagery.
@@ -286,23 +286,25 @@ Cards are used to display Artwork from each category, enticing the user to click
 #### Blog Details Page
 * The Blog Details page contains two sections: Blog content and blog comments. 
 * In the blog content section, the image, author, date, keywords and body of text are displayed. For superusers, edit and delete button are visible.
-* ![Blog page - content](https://i.ibb.co/59BgsKX/blogdetail.jpg)
+![Blog page - content](https://i.ibb.co/59BgsKX/blogdetail.jpg)
 
 * In the comments section, a toggle link invites the user to join the conversation. Only logged in users are permitted to submit a comment.
 * Featured existing comments are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 
-* ![Blog page - comments](https://i.ibb.co/Qk7q6C6/blogdetail-comments.jpg)
+![Blog page - comments](https://i.ibb.co/Qk7q6C6/blogdetail-comments.jpg)
 
 #### Products Page
 * The Products page contains an overview of products within the selected category. 
 * Category buttons at the top of the page allow the user to switch easy between categories.
 * The product count for the selected category is displayed alongside a button to 'view all artwork'.
 * A'sort by' dropdown field allows the user to sort by price or name. 
-* ![Products page - buttons](https://i.ibb.co/k3H0gsm/products-buttons.jpg)
+
+![Products page - buttons](https://i.ibb.co/k3H0gsm/products-buttons.jpg)
 
 * Each product's title, price and category name is displayed on a card. Clicking on the product card leads the user to the product details page.
 * A 'back to top' button allows the user to quickly navigate back up the page. Pagination was not included on this template as it is unlikely the product count will ever exceed 50. 
-*![Products page - cards](https://i.ibb.co/Ht99SN9/products-cards.jpg)
+
+![Products page - cards](https://i.ibb.co/Ht99SN9/products-cards.jpg)
 
 #### Product Details Page
 * The Products Details page contains two sections: Product detail and product reviews.
@@ -311,6 +313,7 @@ Cards are used to display Artwork from each category, enticing the user to click
 In selecting a quantity, the user is able to add the product to their bag. 
 
 ![product detail - content](https://i.ibb.co/z5BcvMW/product-details-page.jpg)
+
 * In the product reviews section, a toggle link invites the user to leave a review. Only logged in users are permitted to submit a review.
 * Featured existing reviews are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 ![product detail - reviews](https://i.ibb.co/6PCqtPb/products-reviews.jpg)
@@ -361,6 +364,9 @@ If a user is not logged in, they are prompted to 'Login or Register' to save the
 #### Checkout Success Page
 * The checkout success page provides a summary of the order, stating that it was successful.
 * The summary includes the order number, order date, the products ordered as well as delivery and billing information. 
+
+![Order history](https://i.ibb.co/54M1dzP/order-history.jpg)
+
 * A link directing users back to the shop is provided underneath.
 
 #### Additional Pages

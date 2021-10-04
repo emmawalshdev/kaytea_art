@@ -498,6 +498,8 @@ The following features were altered to suit mobile devices & were tested as requ
 As a temporary fix, the 'Add to Bag' button was hidden and a short message shown.
 
 
+3. Safe tag all auth
+
 3. **Model migrations not working on Heroku.**
 
     After deployement, I continued to alter and create models. While this worked locally, no changes were reflected on the deployed site.
@@ -505,7 +507,7 @@ As a temporary fix, the 'Add to Bag' button was hidden and a short message shown
 
 ### Unresolved Bugs
 
-2. **DATABASES is improperly configured**
+1. **DATABASES is improperly configured**
 
     After deploying to Heroku, issues were encountered on the locally site. The error message states that [settings.DATABASES is improperly configured](https://i.ibb.co/L85QJpQ/database-url-error.jpg).
     I discoved that this issue is casued by the CI template and how it has configured the database within the dockerfile. As a short term fix, the following command is run on startup: 
@@ -513,6 +515,22 @@ As a temporary fix, the 'Add to Bag' button was hidden and a short message shown
     unset DATABASE_URL
     ```  
     While this temporarily fixes the issue for the active session, I am yet to find a permanent solution.
+
+2. **allauth error messages not displaying**
+    On invalid form submissions, some error messages are not getting displayed.
+    This has been witnessed on both the blog and product forms, on the CharField 'Title' field. 
+    Upon submission, the page jumps up, with an autofocus being applied to the invalid field.
+    I tried to resolve this issue by using the following [code snippet](https://stackoverflow.com/questions/49345665/how-can-i-display-the-form-errors-under-each-field).
+    Unfortunately, this did not work and the bug needs further investigation.
+
+3. **allauth error message innaccurate character count**
+    On the Add Blog and Edit Blog pages, I have integrated [CKEditor](https://django-ckeditor.readthedocs.io/en/latest/).
+    With a minimum length validator on fields, the form is deemed as invalid if this character length requirement is not met.
+    Upon submission of an invalid field, allauth displays the error message stating the required character length.
+    I discoved that allauth is counting the HTML characters, therefor the message appears inaccurate.
+    Unfortunatly I did not have adequate time to fully research this issue. This will be re-evaluated in the future.
+
+    ![Blog CKEditor error](https://i.ibb.co/dQwfWfT/blogckeditor.png)
 
 
 > [Back to Top](#table-of-contents)

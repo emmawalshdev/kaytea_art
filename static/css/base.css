@@ -16,6 +16,10 @@ h3,
     font-family: 'Sniglet', cursive;
 }
 
+.alert-error{
+    color: #dc3545!important
+}
+
 .red-text{
     color: rgb(155, 4, 4);
 }
@@ -438,7 +442,6 @@ form input[type=password],
     padding: 6px 8px;
     margin: 8px 0 !important;
     display: block;
-    width: 100%;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -449,6 +452,10 @@ form input[type=password],
     appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#id_email{
+    width:100%;
 }
 
 .form textarea{

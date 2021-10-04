@@ -8,6 +8,18 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+        labels = {
+            'sku': 'Product Code ',
+            'name': 'Title ',
+            'description': 'Description ',
+            'size': 'Canvas size ',
+            'media': 'Media type ',
+            'teaser': 'Teaser ',
+            'teaser': 'Teaser ',
+            'stock': 'Num in stock ',
+            'price': 'Price '
+
+        }
 
     image = forms.ImageField(label='Image',
                              required=False,

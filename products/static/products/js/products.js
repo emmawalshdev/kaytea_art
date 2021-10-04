@@ -4,11 +4,12 @@ $('.new-image').change(function() {
 });
 
 let optionSelected = "";
-$("option[value='']").attr("disabled", "disabled");
+$('option[value=""]').prop("disabled", true);
 
 
 if (optionSelected == "") {
     $('select').css('color', '#aab7c4');
+
 }
 
 $('select').change(function () {

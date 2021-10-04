@@ -498,7 +498,11 @@ The following features were altered to suit mobile devices & were tested as requ
 As a temporary fix, the 'Add to Bag' button was hidden and a short message shown.
 
 
-3. Safe tag all auth
+3. **Safe tag all auth**
+    upon posting a blog, the teaser along with the title are featured on the blog overview page.
+    After uploading, I noticed that HTML tags were mistakenly also getting rendered in the template. 
+    After researching, I discoved this was due to CKEditor. The output does not strip HTML tags by default.
+    I was able to fix this issue by applying a [safe filter](https://stackoverflow.com/questions/57799669/get-only-text-in-richtextfield-in-ckeditor) from within the template.
 
 3. **Model migrations not working on Heroku.**
 

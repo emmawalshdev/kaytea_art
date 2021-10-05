@@ -17,7 +17,7 @@ The Kaytea Art Ecommerce website was designed, built and deployed by Emma Harte.
 
 This website was built for Katie Harte, a wildlife and animal artist based in West Cork, Ireland.  Through the new Artstore, Katie aims to connect with her clients, share her story and offer her wonderful artwork and commission service. 
 
-Previously, Katie has marketed her work through Etsy and social media.  In the future, the Artstore aims to become Katie's primary channel. This is a long term project, with many new exciting features planned. 
+Previously, Katie has marketed her work through Etsy and social media.  In the future, the Artstore aims to become Katie's primary sales channel. This is a long term project, with many new exciting features planned for the future.
 
 ----------------------------
 
@@ -40,23 +40,24 @@ Previously, Katie has marketed her work through Etsy and social media.  In the f
     - [Future Features](#future-features)
 
 3. [Information Architecture](#information-architecture)
+    - [Data Models](#data-models)
 
 4. [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
     - [Dependencies](#dependencies)
 
-5. [Testing](https://github.com/emmahartedev/The-Book-bar/blob/master/testing.md)
+5. [Testing](#testing)
     
 6. [Deployment](#deployment)
     - [Local Deployment](#local-deployment)
     - [Heroku Deployment](#heroku-deployment)
 
-7. [Credits](#credits "goto credits")
-    - [Content](#content "goto Content")
-    - [Code](#code "goto code")
-    - [Media](#media "goto media")
-    - [Acknowledgments](#acknowledgments "goto acknowledgments")
+7. [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
+    - [Content](#content)
+    - [Acknowledegments](#acknowledegments)
 
 ----------------------------
 
@@ -73,7 +74,7 @@ Previously, Katie has marketed her work through Etsy and social media.  In the f
 
 ### User Stories
 
-#### Visitor stories:
+#### Visitor Stories:
 **As a visitor of the website I expect/want/need:**
 
 **Browsing**
@@ -103,7 +104,7 @@ Previously, Katie has marketed her work through Etsy and social media.  In the f
 6. To be able to connect to the company owner on social media channels so that I can keep up-to-date. 
 
 
-#### Business stories:
+#### Business Stories:
 
 **As a superuser of the website I expect/want/need:**
 
@@ -121,9 +122,9 @@ Previously, Katie has marketed her work through Etsy and social media.  In the f
 
 ### Project Scope
 
-The following is a statement of the defined scope:
+The following is a statement of the defined scope.
 
-#### In scope
+#### In Scope
 
 * User feedback
   - If a user interacts with a website feature, user feedback will be shared.
@@ -142,7 +143,7 @@ The following is a statement of the defined scope:
   - This form will live on a seperate contact page and will handle all general enquiries from users.
 
 * An online store selling original artwork, prints and gifts
-  - The artsotre categories will be:
+  - The artstore categories will be:
     - original artwork 
     - prints
     - greeting cards
@@ -171,7 +172,7 @@ The following is a statement of the defined scope:
 * A Pet commision contact service
   - The user can fill out the form and the admin will be in contact.
 
-#### Out of scope
+#### Out of Scope
 
 The following features have not been included in the first rollout of this project. At this time, the focus will be on launching the webshop with the most fundamental features covered.
 
@@ -214,7 +215,8 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 - [Checkout - Complete](https://i.ibb.co/FbkNqCP/Checkout-Complete.png)
 
 ### Design
-#### Colour Palette
+
+#### Color Scheme
 
 ![Color Palette](https://i.ibb.co/HNzkKYt/Color-Palette.png) 
   - #D4D3FF (Lavender Blue)
@@ -223,14 +225,15 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - #F9CFE4 (Mini Pink)
   - #0095FF (Dodger Blue)
 
-- Katie really wanted to acheive a playful, colourful website. The above color palette was chosen to create this, with the intention of using alot of whitespace to prevent noise.
+ Katie really wanted to acheive a playful, colourful website. The above color palette was chosen to create this, with the intention of using alot of whitespace to prevent noise.
 
 
 #### Typography
+
 - All fonts used in this project derive from [Google Fonts](https://fonts.google.com/)
 - Fonts used include:
-  - ['Sniglet'](https://fonts.google.com/specimen/Roboto+Mono#about) with a fallback of cursive, is used for h1 - h6.
-  - [''Roboto'](https://fonts.google.com/specimen/Montserrat) with a fallback of sans-serif, is used and all other body text.
+  - ['Sniglet'](https://fonts.google.com/specimen/Sniglet?query=sniglet) with a fallback of cursive, is used for h1 - h6.
+  - ['Roboto'](https://fonts.google.com/specimen/Roboto?query=roboto) with a fallback of sans-serif, is used and all other body text.
 
 --------------------------------------------------------------------------------------------
 
@@ -282,7 +285,9 @@ Cards are used to display Artwork from each category, enticing the user to click
 * The Blog page contains an overview of the blog collection. The title, teaser, date, author and image of each blog is displayed.
 * The title and teaser text are truncated to prevent large unslight strings. To view a specific blog, the user can click either the image or 'read more' teaser link.  
 * Pagination restricts the number of blogs per page to 3.
-![Blog page](https://media.giphy.com/media/x8nCTyEldV5NUCy1rQ/giphy.gif)
+  \
+  \
+  ![Blog page](https://media.giphy.com/media/x8nCTyEldV5NUCy1rQ/giphy.gif)
 
 
 #### Blog Details Page
@@ -581,7 +586,7 @@ The following features are not included in this release. These points will be re
 
 * [Git](https://www.gitpod.io/docs/) - Used to handle version control.
 
-* [Gitpod](https://www.gitpod.io/docs/) - The IDE used for this project.
+* [Gitpod](https://git-scm.com/) - The IDE used for this project.
 
 * [Github](https://github.com/) - Used for repository hosting.
 
@@ -591,7 +596,7 @@ The following features are not included in this release. These points will be re
 
 * [Favicon.io](https://favicon.io/) - Used to generate the favicons.
 
-* [IMgBB](https://imgbb.com/) - Used to store images.
+* [ImgBB](https://imgbb.com/) - Used to store images.
 
 * [GIPHY](https://giphy.com/) - Used to create GIF files for README.md.
 
@@ -870,7 +875,10 @@ The following material is not my own. Sources are listing below:
 * Coming soon default image -  [Pixabay, RossMannYYC](https://pixabay.com/photos/coming-soon-chalk-board-blackboard-2550190/)
 * Brid image, company logo - [flaticon](https://www.flaticon.com/free-icon/bird_3069186?term=bird&page=1&position=4&page=1&position=4&related_id=3069186&origin=tag)
 
+### Content
+* Blog content - [Article Generator Online](https://articlegenerator.org/)
+
 ### Acknowledegments
 * Thank you to Gerard McBride for his guidance and support throughout this project. 
-* Thank you to the Code Institute tutors for their help in debugging issues.
-* Thank you to friends and family for their help in testing the site.
+* Thank you to the Code Institute tutors for their help in debugging tricky issues.
+* Thank you to friends and family for their help in testing the functionality and responsiveness of the site.

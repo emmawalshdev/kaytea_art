@@ -78,89 +78,96 @@
 <section class="container">
     <div class="row">
         <div class="col-12">
-            <div class="order-history borderless rounded bg-white shadow p-3">
-                <h2>Order History</h2>
-                <!--mobile view-->
-                <div class="table table-responsive d-block d-md-none">
-                    <table class="table table-sm table-borderless">
-                        <tbody>
-                            {% for order in orders %}
-                            <tr>
-                                <!--order num, cost, total items ordered-->
-                                <td>
-                                    <span class="font-weight-bold">
-                                        Total cost:
-                                    </span>                                    
-                                    € {{ order.grand_total }}
-                                    </br>
-                                    <span class="font-weight-bold">
-                                        Total items:
-                                    </span>
-                                    {{order.lineitems.count }}
-                                    </br>
-                                    <span class="font-weight-bold">
-                                        Order num:
-                                    </span>
-                                    <a href="{% url 'order_history' order.order_number %}">
-                                        {{ order.order_number|truncatechars:8 }}
-                                    </a>
-                                </td>
-                                <!--items ordered - details-->
-                                <td>
-                                    {{ order.date|date }}
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <!--end mobile view-->
+            {% if orders %}
+                <div class="order-history borderless rounded bg-white shadow p-3">
+                    <h2>Order History</h2>
+                    <!--mobile view-->
+                    <div class="table table-responsive d-block d-md-none">
+                        <table class="table table-sm table-borderless">
+                            <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <!--order num, cost, total items ordered-->
+                                    <td>
+                                        <span class="font-weight-bold">
+                                            Total cost:
+                                        </span>                                    
+                                        € {{ order.grand_total }}
+                                        </br>
+                                        <span class="font-weight-bold">
+                                            Total items:
+                                        </span>
+                                        {{order.lineitems.count }}
+                                        </br>
+                                        <span class="font-weight-bold">
+                                            Order num:
+                                        </span>
+                                        <a href="{% url 'order_history' order.order_number %}">
+                                            {{ order.order_number|truncatechars:8 }}
+                                        </a>
+                                    </td>
+                                    <!--items ordered - details-->
+                                    <td>
+                                        {{ order.date|date }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--end mobile view-->
 
-                <!--desktop view-->
-                <div class="table table-responsive d-none d-md-block">
-                    <table class="table table-sm table-borderless">
-                        <tbody>
-                            {% for order in orders %}
-                            <tr>
-                                <!--order num, cost, total items ordered-->
-                                <td>
-                                    <span class="font-weight-bold">
-                                        Total cost:
-                                    </span>                                    
-                                    € {{ order.grand_total }}
-                                    </br>
-                                    <span class="font-weight-bold">
-                                        Total items:
-                                    </span>
-                                    {{order.lineitems.count }}
-                                    </br>
-                                    <span class="font-weight-bold">
-                                        Order num:
-                                    </span>
-                                    <a href="{% url 'order_history' order.order_number %}">
-                                        {{ order.order_number|truncatechars:8 }}
-                                    </a>
-                                </td>
-                                <!--items ordered - details-->
-                                <td>
-                                    <ul class="list-unstyled">
-                                        {% for item in order.lineitems.all %}
-                                        <li>
-                                            {{ item.product.name }} x {{ item.quantity }}
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                </td>
-                                <td>
-                                    {{ order.date|date }}
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                    <!--desktop view-->
+                    <div class="table table-responsive d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <!--order num, cost, total items ordered-->
+                                    <td>
+                                        <span class="font-weight-bold">
+                                            Total cost:
+                                        </span>                                    
+                                        € {{ order.grand_total }}
+                                        </br>
+                                        <span class="font-weight-bold">
+                                            Total items:
+                                        </span>
+                                        {{order.lineitems.count }}
+                                        </br>
+                                        <span class="font-weight-bold">
+                                            Order num:
+                                        </span>
+                                        <a href="{% url 'order_history' order.order_number %}">
+                                            {{ order.order_number|truncatechars:8 }}
+                                        </a>
+                                    </td>
+                                    <!--items ordered - details-->
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                            <li>
+                                                {{ item.product.name }} x {{ item.quantity }}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        {{ order.date|date }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--end desktop view-->
                 </div>
-                <!--end desktop view-->
-            </div>
+            {% else %}
+                <h2> No past orders found!</h2>
+                <a class="btn btn-long btn-md btn-gen my-3" href="{% url 'products' %}?category=original_artwork,prints,greeting_cards">
+                    Visit Shop
+                </a>
+            {% endif %}
         </div>
     </div>
 </section>

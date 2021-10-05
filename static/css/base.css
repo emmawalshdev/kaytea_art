@@ -160,6 +160,12 @@ hr{
     background-color:white
 }
 
+.btn-gen:focus {
+    border-color: #1abfd0;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #2aa6b3 inset, 0 0 0 0 #2aa6b3;
+}
+
 .btn-second {
     border-color: #32c9d9;
     color: #fff;
@@ -172,6 +178,12 @@ hr{
     box-shadow: 0 0 2px 0 #32c9d9 inset, 0 0 2px 2px #32c9d9;
     color: #32c9d9;
     background-color:white
+}
+
+.btn-second:focus {
+    border-color: #32c9d9;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #32c9d9 inset, 0 0 0 0 #32c9d9;
 }
 
 .back-to-top-button{

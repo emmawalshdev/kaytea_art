@@ -1,6 +1,6 @@
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
     {% csrf_token %}
-        <div class="form-group w-50 form-quantity">
+        <div class="form-group form-quantity">
             <!-- show quantity -->
             <select class="form-control form-select qty_input" type="number" 
                 name="quantity" value="{{ item.quantity }}" 

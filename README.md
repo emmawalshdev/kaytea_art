@@ -13,11 +13,11 @@
 ![Generated from Am I Responsive](https://i.ibb.co/D1mn86w/responsiveimg.png)
 
 
-The Kaytea Art Ecommerce website was designed, built and deployed by Emma Harte. This project completes her Diploma in Software Development, undertaken through the Code Institute. 
+The Kaytea Art ecommerce website was designed, built, and deployed by Emma Harte. This project completes her Diploma in Software Development, undertaken through the Code Institute. 
 
-This website was built for Katie Harte, a wildlife and animal artist based in West Cork, Ireland.  Through the new Artstore, Katie aims to connect with her clients, share her story and offer her wonderful artwork and commission service. 
+This website was built for Katie Harte, a wildlife and animal artist based in West Cork, Ireland.  Through the new Art store, Katie aims to connect with her clients, share her story, and offer her wonderful artwork and commission service. 
 
-Previously, Katie has marketed her work through Etsy and social media.  In the future, the Artstore aims to become Katie's primary sales channel. This is a long term project, with many new exciting features planned for the future.
+Previously, Katie has marketed her work through Etsy and social media.  In the future, the Art store aims to become Katie's primary sales channel. This is a long-term project, with many new exciting features planned for the future.
 
 ----------------------------
 
@@ -69,7 +69,7 @@ ZIP: 42424
     - [Code](#code)
     - [Media](#media)
     - [Content](#content)
-    - [Acknowledegments](#acknowledegments)
+    - [Acknowledgments](#acknowledgments)
 
 ----------------------------
 
@@ -79,7 +79,7 @@ ZIP: 42424
 
 **Target Audience:**
 * People who are interested in realistic wildlife and animal art.
-* Pet owners, interested in pet comissions.
+* Pet owners, interested in pet commissions.
 * People looking for unique art at an affordable price.
 * People looking for unique gift ideas.
 
@@ -90,15 +90,15 @@ ZIP: 42424
 **As a visitor of the website I expect/want/need:**
 
 **Browsing**
-1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
+1. To be able to browse the website easily without feeling confused or overwhelmed. It should have an easy-to-follow layout on all device sizes.
 2. To be able to search for products by text, so that I can find something specific.
-3. To browse orginal artwork and prints, as these are the main categories of an artshop which I would expect to see. 
+3. To browse original artwork and prints, as these are the main categories of an art shop which I would expect to see. 
 4. To be able to filter by price within category pages so that I can find a product to suit my budget.
-5. To see the image, media used and canvas size of each product. This information is vital to me.
-6. To be able to read product reviews as this helps me to decide on the quality and level of service delivered by the company.
+5. To see the image, media used, and canvas size of each product. This information is vital to me.
+6. To be able to read product reviews. This helps me to decide on the quality and level of service delivered by the company.
 7. To request a quote for a pet commission so that I can decide myself whether this is something I would like to purchase.
 8. To receive feedback after I interact with the website so that I am aware if the interaction has or has not been a success.
-9. To learn more about the artist and the process behind the creations. As a supporter of small businessess, I like to feel a connection to the business owner.
+9. To learn more about the artist and the process behind the creations. As a supporter of small usinesses, I like to feel a connection to the business owner.
 
 **Shopping**
 1. To be able to navigate to my shopping cart easily so that I can quickly checkout.
@@ -108,7 +108,7 @@ ZIP: 42424
 5. My shipping details should autofill if I am logged in so that I can quickly checkout.
 
 **Customer care**
-1. To be able to set up an account, so that I can login on return and view my data.
+1. To be able to set up an account, so that I can log in on return, and view my data.
 2. To be able to contact the shop owner easily in case I have a question related to my order.
 3. To see a summary of my order after I make a purchase so that I can review the details.
 4. To see a list of my order history so that I can check up on my recent activity. 
@@ -130,7 +130,7 @@ ZIP: 42424
 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
-2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
+2. To be able to provide a commission quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
 
 ### Project Scope
 
@@ -141,10 +141,10 @@ The following is a statement of the defined scope.
 * User feedback
   - If a user interacts with a website feature, user feedback will be shared.
   - This will be in the form of either a pop-up modal or email.
-  - Success, error and information messages will be included. These will be customized for easy recognition.
+  - Success, error, and information messages will be included. These will be customized for easy recognition.
 
 * Text search
-  - keywords can be used to search the site for a product by title of description.
+  - keywords can be used to search the site for a product by title or description.
 
 * User acount registration with verification
   - A user will be asked to verify their email address before setup is complete. Email verification is designed to check accounts & ensure authenticity.
@@ -152,18 +152,18 @@ The following is a statement of the defined scope.
   - If the user forgets their password, they will have the choice to reset it via an email link.
 
 * A website contact form
-  - This form will live on a seperate contact page and will handle all general enquiries from users.
+  - This form will live on a separate contact page and will handle all general inquiries from users.
 
-* An online store selling original artwork, prints and gifts
-  - The artstore categories will be:
+* An online store selling original artwork, prints, and gifts
+  - The art store categories will be:
     - original artwork 
     - prints
     - greeting cards
-  - Within each category the user will be able to sort by price & will easily be able to switch between categories.
+  - Within each category, the user will be able to sort by price & will easily be able to switch between categories.
   - Adding/editing and removing items from the shopping cart will be possible.
   - If the user is logged in, any saved shipping details will autofill at checkout.
   - A fully secure checkout process will be in place, using Stripe.
-  - Orders above €50 will inlude free shipping.
+  - Orders above €50 will include free shipping.
 
 * Descriptive product pages
   - The product page template will include the following information:
@@ -181,7 +181,7 @@ The following is a statement of the defined scope.
   - The business owner will be able to upload new content, edit and/or delete existing content.
   - Logged in users will be able to add comments.
 
-* A Pet commision contact service
+* A Pet commission contact service
   - The user can fill out the form and the admin will be in contact.
 
 #### Out of Scope
@@ -193,13 +193,13 @@ The following features have not been included in the first rollout of this proje
 * Discount code and voucher capabilities
 * Functionality to add a blog keyword from the font-end site
 * URL structure change for blog and product detail pages (slugs)
-* Cart counter - showing number of items in cart instead of the cart cost
+* Cart counter - showing the number of items in the cart instead of the cart cost
 * Automatic deduction of product stock (upon sale)
 * Automatic quote generation for pet commissions
 * Ability to add multiple images to product uploads
 * Integrated Social media share buttons on product pages
 * Customized allauth emails
-* Personalised product recommendations for users
+* Personalized product recommendations for users
 
 ### Wireframes
 All wireframes were created using the software [Balsamiq](https://balsamiq.com/). 
@@ -207,7 +207,7 @@ These layouts were created in collaboration with Katie Harte and following resea
 \
 <strong>
 Please note, the final website layout contains slight variations to the original wireframes.
-Each of the following files contain wireframes for desktop, tablet, and mobile devices.
+Each of the following files contains wireframes for desktop, tablet, and mobile devices.
 </strong>
  
 - [Homepage](https://i.ibb.co/QYHKLWC/Home.png)
@@ -237,7 +237,7 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
   - #F9CFE4 (Mini Pink)
   - #0095FF (Dodger Blue)
 
- Katie really wanted to acheive a playful, colourful website. The above color palette was chosen to create this, with the intention of using alot of whitespace to prevent noise.
+ Katie wanted to achieve a playful, colorful website. The above color palette was chosen to create this, with the intention of using a lot of whitespace to prevent noise.
 
 
 #### Typography
@@ -257,27 +257,27 @@ Each of the following files contain wireframes for desktop, tablet, and mobile d
 
 - **Navigation**
   - The navigation features the company logo, which is present on both mobile and desktop screen sizes.
-  - Links to the blog, shop, about and contact pages are featured on the navbar. These are contained within the hamburger menu on the mobile view.
+  - Links to the blog, shop, about, and contact pages are featured on the navbar. These are contained within the hamburger menu on the mobile view.
   - The search bar field, located on the navbar allows the user to search by title or description. 
   - A shopping cart icon changes color if the value is greater than 0. Underneath, the user's cart total is displayed.
 
   ![navigation](https://media.giphy.com/media/qcc0dtIYnXryZ3ovf5/giphy.gif)
 
 - **Footer**
-  - The footer contains the company logo, quick links, copyright information and social media icons.
+  - The footer contains the company logo, quick links, copyright information, and social media icons.
 
   ![footer](https://i.ibb.co/BNXXGBX/footer.jpg)
 
 
 - **Toast messages**
-  - These notifications are displayed across the site, showing information, success and error messages.
+  - These notifications are displayed across the site, showing information, success, and error messages.
   - The messages are triggered by CRUD operations. I.e., adding, editing or deleting a product.
 
   <img src="https://i.ibb.co/qCR5mZv/toastmessage.jpg" alt="toast message" width="400"/>
   
 
-- **Custom 404, 403 and 500 pages**
-  - These error pages have been customised to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
+- **Custom 404, 403, and 500 pages**
+  - These error pages have been customized to fit the brand. A button redirecting the user back to the main site is included on each page. This ensures that the user does not run into a dead end.
   
   ![404 page](https://i.ibb.co/1sWTkZN/404page.jpg)
 
@@ -288,13 +288,13 @@ Cards are used to display Artwork from each category, enticing the user to click
 
 #### About Page
 * The About page features descriptive text about Katie;  the artist behind the work, along with some personal imagery.
-* The aim of this page is to provide the user with more information and a way to connect with the artist.
-* A link to the contact page is also provided, welcoming all enquiries.
+* This page aims to provide the user with more information and a way to connect with the artist.
+* A link to the contact page is also provided, welcoming all inquiries.
 
 ![About page](https://i.ibb.co/nsYCX9M/aboutpage.jpg)
 
 #### Blog Page
-* The Blog page contains an overview of the blog collection. The title, teaser, date, author and image of each blog is displayed.
+* The Blog page contains an overview of the blog collection. The title, teaser, date, author, and image of each blog are displayed.
 * The title and teaser text are truncated to prevent large unslight strings. To view a specific blog, the user can click either the image or 'read more' teaser link.  
 * Pagination restricts the number of blogs per page to 3.
   \
@@ -303,25 +303,25 @@ Cards are used to display Artwork from each category, enticing the user to click
 
 
 #### Blog Details Page
-* The Blog Details page contains two sections: Blog content and blog comments. 
-* In the blog content section, the image, author, date, keywords and body of text are displayed. For superusers, edit and delete button are visible.
+* The Blog Details page contains two sections: Blog content, and blog comments. 
+* In the blog content section, the image, author, date, keywords and body of text are displayed. For superusers, edit and delete buttons are visible.
 
   ![Blog page - content](https://i.ibb.co/59BgsKX/blogdetail.jpg)
 
-* In the comments section, a toggle link invites the user to join the conversation. Only logged in users are permitted to submit a comment.
+* In the comments section, a toggle link invites the user to join the conversation. Only logged-in users are permitted to submit a comment.
 * Featured existing comments are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 
   ![Blog page - comments](https://i.ibb.co/Qk7q6C6/blogdetail-comments.jpg)
 
 #### Products Page
 * The Products page contains an overview of products within the selected category. 
-* Category buttons at the top of the page allow the user to switch easy between categories.
+* Category buttons at the top of the page allow the user to switch easily between categories.
 * The product count for the selected category is displayed alongside a button to 'view all artwork'.
-* A'sort by' dropdown field allows the user to sort by price or name. 
+* A 'sort by' dropdown field allows the user to sort by price or name. 
 
   ![Products page - buttons](https://i.ibb.co/k3H0gsm/products-buttons.jpg)
 
-* Each product's title, price and category name is displayed on a card. Clicking on the product card leads the user to the product details page.
+* Each product's title, price, and category name is displayed on a card. Clicking on the product card leads the user to the product details page.
 * A 'back to top' button allows the user to quickly navigate back up the page. Pagination was not included on this template as it is unlikely the product count will ever exceed 50. 
 
   ![Products page - cards](https://i.ibb.co/Ht99SN9/products-cards.jpg)
@@ -330,11 +330,11 @@ Cards are used to display Artwork from each category, enticing the user to click
 * The Products Details page contains two sections: Product detail and product reviews.
 * In the product detail section, the title, image, description, average rating, media, size and product price are displayed. For superusers, edit and delete button are visible.
 *  Quantity available is displayed in a dropdown menu. This value derives from the stock available.
-In selecting a quantity, the user is able to add the product to their bag. 
+In selecting a quantity, the user can add the product to their bag. 
 
     ![product detail - content](https://i.ibb.co/z5BcvMW/product-details-page.jpg)
 
-* In the product reviews section, a toggle link invites the user to leave a review. Only logged in users are permitted to submit a review.
+* In the product reviews section, a toggle link invites the user to leave a review. Only logged-in users are permitted to submit a review.
 * Featured existing reviews are ordered by date. If the user is the author or a superuser, edit and delete buttons are visible.
 
   ![product detail - reviews](https://i.ibb.co/6PCqtPb/products-reviews.jpg)
@@ -343,24 +343,24 @@ In selecting a quantity, the user is able to add the product to their bag.
 #### Product Admin Page
 * The Product Admin page is accessible to superusers only and is accessible through the 'Account' icon dropdown on the navbar.
 * The page contains a form, from which a new product can be added to the store.
-* As well as the product title, description, media, size, SKU and price, the user can select which category the product will live in. 
+* As well as the product title, description, media, size, SKU, and price, the user can select which category the product will live in. 
 Furthermore, an image can be selected which will be displayed on the front-end.
 If an image is not added, a default picture will be shown. 
 
 
 #### Pet Commissions Page
 * The Pet Commissions page contains service information and a customer contact form.
-* The user can submit a commision request, stating their preferences for media type, canvas size and the number of pets per commission.
+* The user can submit a commission request, stating their preferences for media type, canvas size and the number of pets per commission.
 
 #### Contact Page
-* The Contact page contains an enquiry form, taking the user's name, email address and message as required fields. 
+* The Contact page contains an inquiry form, taking the user's name, email address, and message as required fields. 
 
 #### Bag Page
 * The Bag Page displays each product (plus the quantity), which the user has 'added to bag'.
-* The user is able to update the quantities or entirely remove products from their basket.
-* A bag summary shows the subtotal, delivery cost and the order grand total. If a shopper does not currently qualify for free shipping, a message is displayed. This communicates the total extra cost required to avail of free delivery. 
+* The user can update the quantities or entirely remove products from their basket.
+* A bag summary shows the subtotal, delivery cost, and the order grand total. If a shopper does not currently qualify for free shipping, a message is displayed. This communicates the total extra cost required to avail of free delivery. 
 * A 'Secure Checkout' button leads the shopper to the checkout page. A 'Continue Shopping' link allows the shopper to navigate back to the store.
-* Progress steps at the top of the bag show the user where they stand on the chekout process.
+* Progress steps at the top of the bag show the user where they stand on the checkout process.
 
   ![Bag](https://i.ibb.co/LzGCwBk/bag.jpg)
 
@@ -370,13 +370,13 @@ If an image is not added, a default picture will be shown.
 
 #### Checkout Page
 * The checkout page contains an order form that shoppers must fill out to complete the checkout process.
-* If a user is logged in, they are promted to tick a checkbox in order to save their default information. 
+* If a user is logged in, they are prompted to tick a checkbox to save their default information. 
 If a user is not logged in, they are prompted to 'Login or Register' to save their details.
 
   ![Checkout page - save info](https://i.ibb.co/FV0tK8N/save-address-checkout.jpg)
 
 * An order summary reminds the shopper of their bag contents and the order total.  
-* Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payement is successful, a confirmation email is sent. 
+* Payments are handled by Stripe. If card details are incorrect, an error message is triggered. If payment is successful, a confirmation email is sent. 
 **Please note**: The website currently uses Stripe's test functionality as opposed to live payments.
 
   ![Checkout page - error payment](https://i.ibb.co/6W0k41v/checkout-invalid-payment.jpg)
@@ -390,27 +390,27 @@ If a user is not logged in, they are prompted to 'Login or Register' to save the
 * A link directing users back to the shop is provided underneath.
 
 #### Additional Pages
-* The django-allauth library is used to manage user registrtion and authentication on the site. The allauth templates; inluding login, register, forgotten password etc have been customised to suit the brand styling.
+* The django-allauth library is used to manage user registration and authentication on the site. The allauth templates; including login, register, forgotten password, etc have been customized to suit the brand styling.
 
 
 ### Future Features
 The following features are not included in this release. These points will be revisited in future rollouts.
 
-* Improve 'Sort by' functionality on Prodcuts page - add sort by 'average rating'.
-* Build structure on product details page to allow for multiple picture uploads.
+* Improve 'Sort by' functionality on Products page - add sort by 'average rating'.
+* Build a structure on product details page to allow for multiple picture uploads.
 * Further develop the Commissions app - build automatic quote feature.
 * Add pagination to reviews/comments section on blog detail and product detail pages.
 * Add a boolean 'published' value to product and blog detail records - This should control whether a product/blog is public or not.
 * Add Privacy Policy and Terms & condition pages. 
-* Add social media sign up and login functionality using allauth.
+* Add social media sign-up and login functionality using allauth.
 * Integrate Paypal on the checkout page.
-* Build functionality to allow users to set up seperate billing and delivery addresses.
+* Build functionality to allow users to set up separate billing and delivery addresses.
 * Replace the bag total value with an item counter, on the navigation bar.
 * Add functionality to allow users to update their username and email address.
 
 ## Information Architecture
 
-* SQLite was used during development of this project. This is the default database used with Django. On deployment with Heroku, a Postgres database is used.
+* SQLite was used during the development phase of this project. This is the default database used with Django. On deployment with Heroku, a Postgres database is used.
 
 ### Data Models
 
@@ -576,7 +576,7 @@ The following features are not included in this release. These points will be re
 
 * [Python](https://www.python.org/)
 
-### Frameworks, Libraries and Programs
+### Frameworks, Libraries, and Programs
 
 * [Django](https://www.djangoproject.com/) - A Python-based free and open-source web framework that follows the model–template–views architectural pattern.
 
@@ -590,7 +590,7 @@ The following features are not included in this release. These points will be re
 
 * [AWS](https://aws.amazon.com/) - AWS Simple Cloud Storage S3 is used for storing static and media files.
 
-* [Stripe](https://stripe.com/en-de) - The platfrom used for online payment and credit card processing.
+* [Stripe](https://stripe.com/en-de) - The platform used for online payment and credit card processing.
 
 * [SQLite](https://www.sqlite.org/index.html) - The default database used with Django. Used throughout the development phase of this project.
 
@@ -604,7 +604,7 @@ The following features are not included in this release. These points will be re
 
 * [Balsamiq](https://balsamiq.com/) - Used to create the wireframes during the design process.
 
-* [Google Fonts](https://fonts.google.com/) - Usedd to obtain the website font.
+* [Google Fonts](https://fonts.google.com/) - Used to obtain the website font.
 
 * [Favicon.io](https://favicon.io/) - Used to generate the favicons.
 
@@ -612,7 +612,7 @@ The following features are not included in this release. These points will be re
 
 * [GIPHY](https://giphy.com/) - Used to create GIF files for README.md.
 
-* [Article Generator Online](http://articlecreator.fullcontentrss.com/) - Used to generate blog content for this purpose of this project.
+* [Article Generator Online](http://articlecreator.fullcontentrss.com/) - Used to generate blog content for the purpose of this project.
 
 * [Am I Responsive](http://ami.responsivedesign.is/) - Used to create responsive images for different devices.
 
@@ -626,7 +626,7 @@ The following features are not included in this release. These points will be re
 
 * [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Used to create, configure, and manage AWS S3.
 
-* [botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html) - Botocore provides the low level clients, session, and credential & configuration data.
+* [botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html) - Botocore provides the low-level clients, session, and credential & configuration data.
 
 * [coverage](https://coverage.readthedocs.io/en/coverage-5.5/) - Used to measure the code coverage of Python programs.
 
@@ -640,7 +640,7 @@ The following features are not included in this release. These points will be re
 
 * [django-countries](https://pypi.org/project/django-countries/) - A Django application that provides country choices for use with forms, flag icons static files, and a country field for models.
 
-* [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that allows for control over the rendering behaviour of Django forms in a very elegant and DRY way.
+* [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that allows for control over the rendering behavior of Django forms in a very elegant and DRY way.
 
 * [django-js-asset](https://pypi.org/project/django-js-asset/) - Provides a way of inserting script tags into Django templates that provide extra attributes such as `id` and `data-*` for CSP-compatible data injection.
 
@@ -658,13 +658,13 @@ The following features are not included in this release. These points will be re
 
 * [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support the use of the OpenID decentralized identity system in applications.
 
-* [pytz](https://pypi.org/project/pytz/) - Brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python 2.4 or higher.
+* [pytz](https://pypi.org/project/pytz/) - Brings the Olson tz database into Python. This library allows accurate and cross-platform timezone calculations using Python 2.4 or higher.
 
 * [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - Uses the Python Requests and OAuthlib libraries to provide an easy-to-use Python interface for building OAuth1 and OAuth2 clients. 
 
 * [s3transfer](https://pypi.org/project/s3transfer/) - A Python library for managing Amazon S3 transfers.
 
-* [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+* [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser for Python. It provides support for parsing, splitting, and formatting SQL statements.
 
 * [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
 
@@ -692,7 +692,7 @@ Secondly, make sure that you also have set up the following:
 
 1. Clone the GitHub Repository
 
-* Login to GitHub and Navigate to the [project repository](https://github.com/emmahartedev/kaytea_art).
+* Log in to GitHub and Navigate to the [project repository](https://github.com/emmahartedev/kaytea_art).
 
 * Click 'Code' and in the Clone with HTTPS window, copy the provided repository URL. 
 
@@ -806,7 +806,7 @@ Secondly, make sure that you also have set up the following:
     python manage.py migrate
     ```
 
-  * Load the products & category data through thr terminal by typing:
+  * Load the products & category data through the terminal by typing:
     ```
     python3 manage.py loaddata categories
 
@@ -862,9 +862,9 @@ Secondly, make sure that you also have set up the following:
     heroku git:remote -a <heroku app name>
     git push heroku master
     ```
-  * You're app should now be deployed to Heroku.
+  * Your app should now be deployed to Heroku.
 
-  * As a final step, The AWS bucket [can be linked to the project](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html) and COLLECTSTATIC can be re-enabled. This will gather all static files including media, CSS and js files. 
+  * As a final step, The AWS bucket [can be linked to the project](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html) and COLLECTSTATIC can be re-enabled. This will gather all static files including media, CSS, and js files. 
  
 9. The website has now been successfully deployed.
 
@@ -890,7 +890,7 @@ The following material is not my own. Sources are listing below:
 ### Content
 * Blog content - [Article Generator Online](https://articlegenerator.org/)
 
-### Acknowledegments
+### Acknowledgments
 * Thank you to Gerard McBride for his guidance and support throughout this project. 
 * Thank you to the Code Institute tutors for their help in debugging tricky issues.
 * Thank you to friends and family for their help in testing the functionality and responsiveness of the site.

@@ -26,7 +26,7 @@ To return to README.md click [HERE](https://github.com/emmahartedev/kaytea_art#r
 
 The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate all HTML code.
 
-* All issues causing errors were rectified. Such errors included using multiple id attributes, missing closing tags and the misuse of tags.
+* All issues causing errors were rectified. Such errors included using multiple id attributes, missing closing tags, and the misuse of tags.
 
 * Issues resulting in a warning have not been rectified. These are not critical and will be dealt with in the future.
 
@@ -34,7 +34,7 @@ The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service 
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate all CSS code.
 
-* All issues casuing erros were rectified. Such errors inluced minor issues including invalid CSS properties.
+* All issues causing errors were rectified. Such errors included minor issues including invalid CSS properties.
 
 * Issues resulting in a warning have not been rectified. These are not critical and will be dealt with in the future.
 
@@ -42,7 +42,7 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 
 [JSHint](https://jshint.com/) was used to validate all JavaScript code.
 
-* All errors found, were concerend with missing semicolons. These were added to rectify the code.
+* All errors found, were concerned with missing semicolons. These were added to rectify the code.
 
 * All warnings are not critical and have been safely ignored. The use of 'let' which is available in ES6 was flagged.
 
@@ -54,7 +54,7 @@ The Flake8 Python library was used to check the project code base against coding
 The initial report can be found [here](https://www.dropbox.com/s/txpx7wyzxl74vck/flake8_results.txt?dl=0).
 
 **General information**
-* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines which were too long and the innapropriate use of null=True on model fields. In rectifying these issues, the following files were ignored:
+* Errors generated were concerned with trailing whitepaces, libraries imported but never used, unnecessary blank lines, missing blank lines, lines which were too long, and the inappropriate use of null=True on model fields. In rectifying these issues, the following files were ignored:
 
     * All Auto migration files were ignored. 
     * In settings.py,  auto-generated lines were ignored.
@@ -78,7 +78,7 @@ After adjusting the code, all files passed with the following errors being safel
 
 #### Unit Testing
 
-Basic view and URL testing has been carried out on all apps within this project. In future releases,  more extensive automated tests would be advised to thoroughly test the code. 
+Basic view and URL testing have been carried out on all apps within this project. In future releases,  more extensive automated tests would be advised to thoroughly test the code. 
 
 **Information on TDD**
 
@@ -112,7 +112,7 @@ As creating comprehensive texts can be a lengthy and complex process, TDD is som
 
 1. Activate your virtual environment.
 
-2. Install coverage by runnning the following command:
+2. Install coverage by running the following command:
 
     ```
     pip3 install coverage
@@ -178,21 +178,21 @@ The following section revisits the previously outlined user stories. These have 
 **As a visitor of the website I expect/want/need:**
 
 **Browsing**
-1. To be able to browse the website easily without feeling confused or overwhelmed. It should have a easy-to-follow layout on all device sizes.
+1. To be able to browse the website easily without feeling confused or overwhelmed. It should have an easy-to-follow layout on all device sizes.
     * The placement of site elements including the navbar, search bar, footer, icons, products lists, and website forms have been designed and developed to satisfy this specific UX need. 
     * The site's key pages can be accessed from both the navigation bar and the footer, which are included on all site pages.
 
 2. To be able to search for products by text, so that I can find something specific.
     * A search bar located on the navigation bar allows the user to search by product title or description. Additionally, the user can sort results to drill down their search even further.
 
-3. To browse orginal artwork and prints, as these are the main categories of an artshop which I would expect to see. 
+3. To browse original artwork and prints, as these are the main categories of an art shop which I would expect to see. 
     * These categories, along with 'All Artwork' have been included in the current rollout.
-    * Buttons for each category are also present within each individial page, allowing the user to easily switch views.
+    * Buttons for each category are also present within each individual page, allowing the user to easily switch views.
 
 4. To be able to filter by price within category pages so that I can find a product to suit my budget.
-    * A 'Sort by' dropdown field is presented on each cateogory page. This allows the user to sort by price and also my name.
+    * A 'Sort by' dropdown field is presented on each category page. This allows the user to sort by price and also my name.
 
-5. To see the image, media used and canvas size of each product. This information is vital to me.
+5. To see the image, media used, and canvas size of each product. This information is vital to me.
     * This information has been included in the product upload and the data is present on the product detail page.
     * The size and media field are required (upon upload). The image field is optional, and takes a default 'coming soon' image if no picture has been saved.
 
@@ -204,7 +204,7 @@ The following section revisits the previously outlined user stories. These have 
 
 7. To request a quote for a pet commission so that I can decide myself whether this is something I would like to purchase. 
     * A form on the Pet Commissions page allows the user to make a service request. As stated in the page text, the Artist will then get in touch with the client to discuss a quote.
-    * As well as contact information, the commission form indludes the following fields: 
+    * As well as contact information, the commission form includes the following fields: 
         - Media preference
         - Canvas size preference
         - Number of pets
@@ -218,18 +218,18 @@ The following section revisits the previously outlined user stories. These have 
 
     * The user can quickly identify Success, information or error messages. Each Toast has been styled to clearly stand out with font colors and icons.
 
-    * The message informs the user of failed or successful interaction. Examples include form submission and user login.
+    * The message informs the user of failed or successful interactions. Examples include form submission and user login.
 
     * On success Toast messages, a summary of the user's bag contents is included (if items have been added). This keeps the user updated with their activity.
  
-9. To learn more about the artist and the process behind the creations. As a supporter of small businessess, I like to feel a connection to the business owner.
+9. To learn more about the artist and the process behind the creations. As a supporter of small businesses, I like to feel a connection to the business owner.
     * An About page containing imagery and text, allows the user to gain a detailed insight into the Artist's life. 
-    * Links to the about page are feautred on the navigation bar and footer as well as on the homepage.
+    * Links to the about page are featured on the navigation bar and footer as well as on the Home page.
 
 **Shopping**
 1. To be able to navigate to my shopping cart easily so that I can quickly checkout.
-    * The shopping cart is featured on the navbar which makes it easily assessible from all pages.
-    * The bag icon changes color and displays the cost total when items have been added to it. This gives the user a visual represntation of their active session. 
+    * The shopping cart is featured on the navbar which makes it easily accessible from all pages.
+    * The bag icon changes color and displays the cost total when items have been added to it. This gives the user a visual representation of their active session. 
 
 2. To be able to add, edit or delete items or item quantities from my shopping cart so that I can easily modify my choices.
     * Within the bag page, the user can easily update quantities or remove products entirely.
@@ -240,36 +240,36 @@ The following section revisits the previously outlined user stories. These have 
 
 4. To receive an email after I submit an order so that I am aware the interaction had been a success.
     * Once an order is complete, an email confirmation is sent to the supplied email address.
-    * A Toast message stating the transaction has been a success, is displayed.
+    * A Toast message stating the transaction has been a success is displayed.
     * The user is redirected to a 'Checkout Success' page. This contains a thank you message and a summary of the order.
     * If the user is registered, the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 5. My shipping details should autofill if I am logged in so that I can quickly checkout.
-    * The Profile page gives the logged in user the ability to update their personal and shipping information. This infomation is used to prefill the order form on the checkout page.
-    * Shipping details can also be updated on the checkout page. If the user is logged in, a checkbox labelled 'Save this delivery information to my profile' handles the request. If the user is not logged in, the message 'Login or Register to save this information.' is displayed instead.
+    * The Profile page gives the logged-in user the ability to update their personal and shipping information. This information is used to prefill the order form on the checkout page.
+    * Shipping details can also be updated on the checkout page. If the user is logged in, a checkbox labeled 'Save this delivery information to my profile' handles the request. If the user is not logged in, the message 'Login or Register to save this information.' is displayed instead.
 
 **Customer care**
-1. To be able to set up an account, so that I can login on return and view my data.
-    * Customised allauth Login and Register pages have been built, allowing the user to register and login to an account.
+1. To be able to set up an account, so that I can log in on return and view my data.
+    * Customized allauth Login, and Register pages have been built, allowing the user to register and log in to an account.
     * On the Profile page, the user is able to add and edit their personal and shipping information.
     * Setting up an account and logging in allows the user to review products and leave blog comments. 
        
 2. To be able to contact the shop owner easily in case I have a question related to my order.
     * A Contact page is accessible from the navigation bar and footer,  which is visible on all website pages.
-    * The contact form welcomes all general enquiries from users.
+    * The contact form welcomes all general inquiries from users.
 
 3. To see a summary of my order after I make a purchase so that I can review the details.
     * After an order has been submitted, an email confirmation is sent to the supplied email address. This can be kept by the customer for their own personal record.  
     * Upon order submission, the user is redirected to a 'Checkout Success' page. This contains a thank you message and a summary of the order.
-    * If registered (and logged in), the order summary is stored on the user's profile page and can be accessed at any time in the future.
+    * If registered (and logged-in), the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 
 4. To see a list of my order history so that I can check up on my recent activity. 
-    * If the user is registered (and logged in), the order summary is stored on the user's profile page and can be accessed at any time in the future.
+    * If the user is registered (and logged-in), the order summary is stored on the user's profile page and can be accessed at any time in the future.
 
 
 5. To be able to update my account details in case a change is required.
-    * The Account page gives the logged in user the ability to update their first name, last name and mobile number.
+    * The Account page gives the logged-in user the ability to update their first name, last name, and mobile number.
     At the moment the user cannot change their email address, username or password. This will be included in future releases. 
 
 
@@ -283,13 +283,13 @@ The following section revisits the previously outlined user stories. These have 
 
 **General**
 1. Build a beautiful, easy-to-use, trustworthy website so that I can build brand awareness and sell artwork.
-    * The website has been designed in collaboration with Katie, who had a clear idea on color scheme and layout.
+    * The website has been designed in collaboration with Katie, who had a clear idea on the color scheme and layout.
     * The placement of site elements including the navbar, search bar, footer, icons, products lists, and website forms have been designed and developed to satisfy this specific UX need. 
     * The site's key pages can be accessed from both the navigation bar and the footer, which are included on all site pages.
 
 2. To be able to view customer/order/product data so that I easily pull up information if required. 
     * The admin site allows the superuser to view a host of information including form submissions, orders, products, customer and user data.
-    * The supe user has full CRUD capabilities within the admin panel. E.g, adding, editing and removing a product.
+    * The superuser has full CRUD capabilities within the admin panel. E.g, adding, editing and removing a product.
 
 
 **Website admin**
@@ -309,9 +309,9 @@ The following section revisits the previously outlined user stories. These have 
 **Online shop admin**
 1. To receive order notifications so that I begin preparing these.
     * The order will be saved to both stripe and the admin panel.
-    * In a future release, a webhook will also be setup to notify the superuser by email.
+    * In a future release, a webhook will also be set up to notify the superuser by email.
 
-2. To be able to provide a commision quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
+2. To be able to provide a commission quote based on canvas size and number of pets. This would help me to better understand the user's needs before I contact them. 
     * 'Canvas size' and 'number of pets' fields have been included on the pet commissions form. This information, along with contact details for the user is designed to help the Artist calculate a rough quote.
 
 ## Manual Testing on Live Site
@@ -322,7 +322,7 @@ Manual testing was carried on a desktop computer using Google Chrome.
 
 #### Navigation
 - Click the navbar company logo, confirm redirect to home page.
-- Click the 'About' link, confirm confirm redirect to About page.
+- Click the 'About' link, confirm redirect to About page.
 - Click the 'Blog' link, confirm redirect to Blog page.
 - Click the 'Shop' link, confirm that correct sub-links appear in dropdown menu.
 - Click each link in the 'Shop' dropdown menu, confirm redirect to the correct page.
@@ -332,19 +332,19 @@ Manual testing was carried on a desktop computer using Google Chrome.
 Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logout'.
 - Click each link in the 'Account' dropdown menu. Confirm redirects to correct pages.
 - Add an item to the user's bag, confirm that the bag total updates to the correct value and the icon color changes to blue.
-- Delete all bag items, confirm that the bag total updates to €0.00 and the icon color changes to black.
+- Delete all bag items, confirm that the bag total updates to €0.00 and the icon color change to black.
 - Search for a product within the search bar, confirm that the results of the search are displayed correctly.
 
 #### Footer
 - Click on footer links, confirm redirect to correct page.
-- Click the company logo, confirm redirect to home page.
+- Click the company logo, confirm redirect to Home page.
 - Click on social media links, confirm redirect to correct site.
 
 #### Homepage
 - Click on the 'About' link, confirm redirect to about page.
 - Hover over the category cards, confirm text color change to blue and hover effect.
 - Click on each category card, confirm redirect to correct page.
-- Click on the Pet Commision 'Read More' link, confirm redirect to Commissions page.
+- Click on the Pet Commission 'Read More' link, confirm redirect to Commissions page.
 
 #### Products Page
 - Click on each of the category buttons. Confirm redirect to correct page. 
@@ -355,7 +355,7 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Click on the 'back to top' button. Confirm navigation back up to the top of the page.
 
 #### Product Admin Page
-- Attempt to access the 'Product Admin' page while logged in as a non superuser. Confirm redirect to homepage, along with the display of an Error toast message.
+- Attempt to access the 'Product Admin' page while logged in as a non superuser. Confirm redirect to Home page, along with the display of an Error toast message.
 - Attempt to access the 'Product Admin' page while logged out. Confirm redirect to Login page.
 * Form submission
     - Submit the form with incorrect data, confirm the relevant warning messages are displayed.
@@ -397,9 +397,9 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Click the 'Secure Checkout' button, confirm redirect to the Checkout page.
 
 #### Checkout Page
-- Attempt to access the Checkout page by URL with an empty bag, Confirm redirect to the homepage with an error message.
+- Attempt to access the Checkout page by URL with an empty bag, Confirm redirect to the Home page with an error message.
 
-- Within the order summary box, confirm that the products in the are correct.
+- Within the order summary box, confirm that the products are correct.
 
 - Login to an account with saved delivery information, confirm that the order form is prepopulated with this delivery information.
 
@@ -438,7 +438,7 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 - Confirm pagination links are working correctly.
 
 #### Add Blog Page
-- Attempt to access the 'Add Blog' page while logged in as a non superuser by URL. Confirm redirect to homepage, along with the display of an Error toast message.
+- Attempt to access the 'Add Blog' page while logged in as a non superuser by URL. Confirm redirect to Home page, along with the display of an Error toast message.
 
 - Attempt to access the 'Add Blog' page while logged out. Confirm redirect to Login page.
 
@@ -452,14 +452,14 @@ Confirm that the dropdown-menu displays 'Product Admin', 'My Profile' and 'Logou
 * Blog section
     - Click on the blog image, confirm that the image opens in a new tab.
     - Login as a superuser, confirm that the edit and delete buttons are visible. Click on each button, confirm that the correct template/popup is rendered.
-    - Delete the blog, confirm that it is removed from overview page.
+    - Delete the blog, confirm that it is removed from the overview page.
 
 * Comments section
     - Confirm the message 'No comments yet!' is displayed for a blog that has no comments. 
     - Logout. Confirm that the 'Please Login' to leave a comment message is displayed.
     - Login, confirm that the comment form is visible.
     - Attempt to submit the form with invalid data, confirm the relevant warning message is displayed.
-    - Submit a valid form, confirm that new comment is added. Check that comments are ordered by date, showing the username and comment.
+    - Submit a valid form, confirm that the new comment is added. Check that comments are ordered by date, showing the username and comment.
 
  
 ### Mobile and Tablet Manual Testing
@@ -491,32 +491,32 @@ The following features were altered to suit mobile devices & were tested as requ
 
 1. **Multiple image uploads**
 
-    When attempting to add a new image to a blog/product and remove an existing image at the same time, a toast error message occured. I discovered this was caused by the image limitation of 1, set to this project. As allowing multiple images is not a feauture planned for this release, no changes were made to this setting. 
+    When attempting to add a new image to a blog/product and remove an existing image at the same time, a toast error message occurred. I discovered this was caused by the image limitation of 1, set to this project. As allowing multiple images is not a feature planned for this release, no changes were made to this setting. 
     A temporary fix to hide the 'select image' button (if an image already has been uploaded) was added instead. This forces the user to first remove the image before adding a new one. 
 
 2. **Adding an item with zero stock disallowed.**
 
-    Understandably, Django threw an error for products with stock level < 0 which were added to the bag. Preferably, I would like to add a boolean 'publish' feature which would unpublish the product when stock level is 0.
-As a temporary fix, the 'Add to Bag' button was hidden and a short message shown.
+    Understandably, Django threw an error for products with stock level < 0 which were added to the bag. Preferably, I would like to add a boolean 'publish' feature which would unpublish the product when the stock level is 0.
+As a temporary fix, the 'Add to Bag' button was hidden and a short message is shown.
 
 
 3. **CKEditor rendering HTML tags**
     upon posting a blog, the teaser along with the title are featured on the blog overview page.
     After uploading, I noticed that HTML tags were mistakenly also getting rendered in the template. 
-    After researching, I discoved this was due to CKEditor. The output does not strip HTML tags by default.
+    After researching, I discovered this was due to CKEditor. The output does not strip HTML tags by default.
     I was able to fix this issue by applying a [safe filter](https://stackoverflow.com/questions/57799669/get-only-text-in-richtextfield-in-ckeditor) from within the template.
 
 3. **Model migrations not working on Heroku.**
 
-    After deployement, I continued to alter and create models. While this worked locally, no changes were reflected on the deployed site.
-    When attempting to access the models from the admin site, a 500 error was thrown. I discoved that the migrations had not successfully migrated to the live site and was able to resolve this by running ```python3 manage.py runserver``` directly on the heroku console.
+    After deployment, I continued to alter and create models. While this worked locally, no changes were reflected on the deployed site.
+    When attempting to access the models from the admin site, a 500 error was thrown. I discovered that the migrations had not successfully migrated to the live site. Fortunately, I was able to resolve this by running ```python3 manage.py runserver``` directly on the heroku console.
 
 ### Unresolved Bugs
 
 1. **DATABASES is improperly configured**
 
     After deploying to Heroku, issues were encountered on the locally site. The error message states that [settings.DATABASES is improperly configured](https://i.ibb.co/L85QJpQ/database-url-error.jpg).
-    I discoved that this issue is casued by the CI template and how it has configured the database within the dockerfile. As a short term fix, the following command is run on startup: 
+    I discovered that this issue is casued by the CI template and how it has configured the database within the dockerfile. As a short term fix, the following command is run on startup: 
     ```
     unset DATABASE_URL
     ```  
@@ -525,16 +525,16 @@ As a temporary fix, the 'Add to Bag' button was hidden and a short message shown
 2. **allauth error messages not displaying**
     On invalid form submissions, some error messages are not getting displayed.
     This has been witnessed on both the blog and product forms, on the CharField 'Title' field. 
-    Upon submission, the page jumps up, with an autofocus being applied to the invalid field.
+    Upon submission, the page jumps up, with autofocus being applied to the invalid field.
     I tried to resolve this issue by using the following [code snippet](https://stackoverflow.com/questions/49345665/how-can-i-display-the-form-errors-under-each-field).
     Unfortunately, this did not work and the bug needs further investigation.
 
-3. **allauth error message innaccurate character count**
+3. **allauth error message inaccurate character count**
     On the Add Blog and Edit Blog pages, I have integrated [CKEditor](https://django-ckeditor.readthedocs.io/en/latest/).
-    With a minimum length validator on fields, the form is deemed as invalid if this character length requirement is not met.
+    With a minimum length validator on fields, the form is deemed invalid if this character length requirement is not met.
     Upon submission of an invalid field, allauth displays the error message stating the required character length.
-    I discoved that allauth is counting the HTML characters, therefor the message appears inaccurate.
-    Unfortunatly I did not have adequate time to fully research this issue. This will be re-evaluated in the future.
+    I discovered that allauth is counting the HTML characters, therefor the message appears inaccurate.
+    Unfortunately I did not have adequate time to fully research this issue. This will be re-evaluated in the future.
 
     ![Blog CKEditor error](https://i.ibb.co/dQwfWfT/blogckeditor.png)
 

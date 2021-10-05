@@ -21,6 +21,18 @@ Previously, Katie has marketed her work through Etsy and social media.  In the f
 
 ----------------------------
 
+**Test card details**
+
+Card number: 4242 4242 4242 4242
+
+Expiry date: 04 / 24
+
+CVC: 424
+
+ZIP: 42424
+
+----------------------------
+
 ## Contents
 1. [UX](#ux)
       - [Goals](#goals)

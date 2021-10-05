@@ -70,9 +70,9 @@ def add_blog(request):
         if form.is_valid():
             user = User.objects.get(username=request.user.username)
             form.instance.author = user
-            form.save()
+            blog = form.save()
             messages.success(request, 'Successfully added blog!')
-            return redirect('blog')
+            return redirect(reverse('blog_detail', args=[blog.id]))
         else:
             messages.error(request, 'Failed to add blog. \
                 Please ensure the form is valid.')

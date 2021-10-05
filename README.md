@@ -680,7 +680,7 @@ Secondly, make sure that you also have set up the following:
 
 1. Clone the GitHub Repository
 
-* Login to GitHub and Navigate to the [project repository](https://github.com/emmahartedev/kaytea_art.).
+* Login to GitHub and Navigate to the [project repository](https://github.com/emmahartedev/kaytea_art).
 
 * Click 'Code' and in the Clone with HTTPS window, copy the provided repository URL. 
 

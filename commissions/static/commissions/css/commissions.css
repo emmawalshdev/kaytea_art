@@ -6,6 +6,11 @@ select option:first-child{
     color: #aab7c4;
 }
 
+.main-commission-img img{
+    align-self: left;
+    max-width: 340px;
+}
+
 #id_message{
     height:100px !important;
 }

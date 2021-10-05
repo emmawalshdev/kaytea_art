@@ -2,10 +2,16 @@
 .about-img {
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
     border-radius: 8px;
     -webkit-transition: 0.2s all ease-in-out 0.2s;
     transition: 0.2s all ease-in-out 0.2s;
     background-position: top;
+}
+.about-img img{
+    align-self: left;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .card-img-about{

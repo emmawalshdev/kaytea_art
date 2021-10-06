@@ -265,9 +265,14 @@ a,
 .navbar-light .navbar-nav .nav-link{
     color: black;
     text-decoration: none;
-    outline: none;
+    outline: 0 !important;
+    border:none;
 }
 
+a:focus{
+    outline: 0 !important;
+    border:none;
+}
 .nav-link:hover,
 a:hover,
 .navbar-light .navbar-nav .nav-link:hover,

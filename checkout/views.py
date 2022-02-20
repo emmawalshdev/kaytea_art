@@ -57,6 +57,7 @@ def checkout(request):
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
+            # fetch bag tuple
             order.original_bag = json.dumps(bag)
             order.save()
             for item_id, item_data in bag.items():
@@ -90,13 +91,14 @@ def checkout(request):
             return redirect(reverse('home'))
 
         current_bag = bag_contents(request)
-        total = current_bag['total']
+        total = current_bag['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY
         )
+        
 
         if request.user.is_authenticated:
             try:

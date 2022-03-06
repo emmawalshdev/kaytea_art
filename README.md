@@ -220,7 +220,7 @@ Each of the following files contains wireframes for desktop, tablet, and mobile 
 - [Register](https://i.ibb.co/yq92r4Z/Register.png)
 - [Get in touch](https://i.ibb.co/MpvvwVr/Connect.png)
 - [Shop - Categories](https://i.ibb.co/M9tDYLN/Shop-Categories.png)
-- [Shop - Commissions](https://i.ibb.co/BtXZRD8/Shop-Pet-Commission.png)
+- [Shop - Commissions](https://i.ibb.co/jTmmDS1/Shop-Pet-Commission.png)
 - [Product page](https://i.ibb.co/CW02BCw/Product-page.png)
 - [Shopping bag](https://i.ibb.co/5KBJLWy/Shopping-bag.png)
 - [Checkout - Information + Payment](https://i.ibb.co/HnsrbMX/Checkout-Info.png)

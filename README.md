@@ -2,10 +2,11 @@
 
 ## Full Stack Development - Milestone Project
 
-[View the Live Site here.](https://katie-harte-art.herokuapp.com/)
+[View the Live Site here.](https://katie-harte-art.onrender.com/)
+* Website content is pending as of 05/03/2023
 
 <div align="center">
-    <a href="https://katie-harte-art.herokuapp.com/" target="_blank">
+    <a href="https://katie-harte-art.onrender.com/" target="_blank">
       <img src="https://i.ibb.co/t4wz8DR/logo.png" alt="Katie Harte Art webshop">
     </a>
 </div>
